@@ -3534,7 +3534,7 @@ US16 - Como joven adulto, quiero visualizar métricas de mi progreso para entend
 </br>
 
 <p align = "center">
-<img src="assets/img/landing/wireflow-16-web.png" alt="wireflow app" width="550"/>
+<img src="assets/img/landing/wireflow-16-web.png" alt="wireflow app" width=git"550"/>
 </br>
 
 
@@ -3891,6 +3891,12 @@ En esta etapa del proyecto, JSON Server se utiliza únicamente como una solució
 
 ---
 #### 5.2.1.3. Sprint Backlog 1
+
+El Sprint 1 tuvo como objetivo implementar y desplegar la Landing Page de Bloomie con todas sus secciones informativas. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
+
+[Sprint-Backlog-1](https://trello.com/b/PA2Tjn3g/sprint-1-bloomie)
+
+URL del board: https://trello.com/b/PA2Tjn3g/sprint-1-bloomie
 
 | User Story ID | Título | Task ID | Descripción de tarea | Estimación | Responsable | Estado |
 |---|---|---|---|---|---|---|
