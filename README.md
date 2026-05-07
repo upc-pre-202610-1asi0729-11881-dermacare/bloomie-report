@@ -1666,6 +1666,32 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E7(Atención dermatológica)</td>
   </tr>
+
+    <tr>
+    <td><strong>US34</strong></td>
+    <td>Participar en consulta virtual</td>
+    <td>Como joven adulto, quiero unirme a mi consulta virtual y enviar fotografías de mi piel para que el dermatólogo pueda evaluarme correctamente.</td>
+    <td>
+      <strong>Escenario 1: Consulta iniciada exitosamente</strong><br>
+      Dado que el usuario tiene una cita confirmada en el horario programado
+      Cuando accede a la consulta virtual
+      Entonces el sistema habilita la sesión
+      Y permite la comunicación en tiempo real con el dermatólogo
+      <p></p>
+      <strong>Escenario 2: Foto enviada exitosamente</strong><br>
+      Dado que la consulta está activa
+      Cuando el usuario adjunta una fotografía de su piel
+      Entonces el sistema envía la imagen al dermatólogo
+      Y la muestra en el chat de la consulta
+      <p></p>
+      <strong>Escenario 3: Error al enviar foto</strong><br>
+      Dado que el usuario intenta adjuntar una fotografía
+      Cuando ocurre un error al procesar la imagen
+      Entonces el sistema informa que la foto no pudo enviarse
+      Y permite reintentar
+    </td>
+    <td>E7(Atención dermatológica)</td>
+  </tr>
  
   <!-- E8 -->
   <tr>
@@ -1959,23 +1985,23 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
  
   <tr>
     <td><strong>US31</strong></td>
-    <td>Registrar fotografías clínicas</td>
-    <td>Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.</td>
+    <td>Guardar fotografías clínicas del paciente</td>
+    <td>Como dermatólogo, quiero visualizar las fotografías que el paciente envió durante la consulta y guardar las relevantes para documentar el caso clínico.</td>
     <td>
-      <strong>Escenario 1: Foto registrada exitosamente</strong><br>
-      Dado que el dermatólogo tiene una consulta activa
-      Cuando sube una fotografía clínica del paciente
-      Entonces el sistema almacena la imagen
-      Y la asocia a la consulta correspondiente
+      <strong>Escenario 1: Foto guardada exitosamente</strong><br>
+      Dado que el dermatólogo visualiza las fotografías enviadas por el paciente durante la consulta
+      Cuando selecciona una y confirma guardarla
+      Entonces el sistema la almacena como fotografía clínica
+      Y la asocia a esa consulta para consultas futuras
       <p></p>
-      <strong>Escenario 2: Sin fotos registradas</strong><br>
+      <strong>Escenario 2: Sin fotos en la consulta</strong><br>
       Dado que el dermatólogo accede al historial de una consulta
-      Cuando no existen fotografías registradas
+      Cuando el paciente no envió fotografías durante la sesión
       Entonces el sistema informa que no hay imágenes disponibles
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
- 
+  
   <tr>
     <td><strong>US32</strong></td>
     <td>Consultar historial de consultas atendidas</td>
