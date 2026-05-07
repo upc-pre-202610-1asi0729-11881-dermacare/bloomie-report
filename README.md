@@ -3942,15 +3942,15 @@ Durante el Sprint se desarrolló la estructura de la landing page de Bloomy orie
 
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
-En esta sección se detallan los procesos realizados para el despliegue de la solución durante el Sprint 1.La prioridad principal del sprint fue poner en producción la versión inicial de la Landing Page, lo que permite modelar de forma más adecuada cómo nuestros segmentos objetivos esperan que se visualice de forma profesional.
+En esta sección se detallan los procesos realizados para el despliegue de la solución durante el Sprint 1.La prioridad principal del sprint fue producir el primer hito de la landing page donde se muestre nuestra propuesta de forma clara y precisa. En ello, la versión inicial de la Landing Page, lo que permite modelar de forma más adecuada cómo nuestros segmentos objetivos esperan que se visualice de forma profesional.
 
-La landing page fue desarrollada en visual studio code con aplicación de javascript, CSS y HTML. Partimos de esta sintaxis por la gran variedad de apoyo que tienen como lenguajes debido a su robustez.
+La landing page fue desarrollada en visual studio code con aplicación de javascript, CSS y HTML. Partimos de esta sintaxis por la gran variedad de apoyo que tienen como lenguajes debido a su robustez. 
 
 <p align = "center">
 Desarrollo de la landing (Editor de código)
 
 
- <img src="assets/img/landing-codigo.png" alt="codigo_landing" width="650"/>  
+ <img src="assets/img/landing/landing-codigo.png" alt="codigo_landing" width="650"/>  
 
 
 Para el despliegue, se utilizó vercel, aprovechando su versatilidad como servicio gratuito para un despliegue seguro y rápido. El proceso consistió en los siguientes pasos estratégicos:
@@ -3960,14 +3960,17 @@ Luego, para el seguimiento de trabajo de cada integrante, utilizamos Github repo
   <p align = "center">
   Vista Principal de la landing page
   <p align = "center">
- <img src="assets/img/landing-deploy.png" alt="deploy" width="650"/>
+ <img src="assets/img/landing/landing-deploy.png" alt="deploy" width="650"/>
 
 <p align = "center">
 Apartado de suscripciones del modelo de negocio definido
-<img src="assets/img/landing-pagos.png" alt="deploy-cod" width="650"/>
+<img src="assets/img/landing/landing-sus.png" alt="deploy-cod" width="650"/>
 
 Se puede acceder a nuestra lading page ya deployada a través del siguiente enlace: https://bloomie-landing-page.vercel.app/index.html
 
+A continuación, para ilustrar el contenido e interacciones logradas en la landing page en el sprint 1, se realizó un video demostrativo. En este registro se evidencia el funcionamiento de componentes clave, así como también un claro diseño y uso ingeniería de software aplicada. 
+
+URL de acceso al video sobre la landing page: 
 
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
@@ -3997,39 +4000,86 @@ A continuación, se presentan los analíticos extraídos de GitHub (Insights) qu
 
 <img src="assets/img/landing-codigo.png" alt="codigo_landing" width="650"/>  
 
-#### 5.2.1.8. Team Collaboration Insights during Sprint
+### 5.2.2. Sprint 2
 
-Durante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
+#### 5.2.2.1. Sprint Planning 2
+| Campo | Detalle                                                                                                                                                                                                                                                                                                               |
+|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint #** | Sprint 2                                                                                                                                                                                                                                                                                                            |
+| **Sprint Planning Date** | 05 de mayo de 2026                                                                                                                                                                                                                                                                                                   |
+| **Time** | 8:00 p.m. – 11:00 p.m.                                                                                                                                                                                                                                                                                             |
+| **Location** | Reunión virtual vía Discord                                                                                                                                                                                                                                                                                           |
+| **Prepared By** | Asmat Alminco, Martin                                                                                                                                                                                                                                                                                    |
+| **Attendees** | Asmat Alminco, Martin Alejandro · Contreras Torres, Arturo Valentino · Gallardo Morales, Carla Alejandra · Mechan Montenegro, Luciana Carolina · Ramirez Ruiz, Nickolas                                                                                                                                               |
+| **Sprint 2 – 1 Review Summary** | En el anterior sprint se realizó el deploy de la landing page, donde se alcanzó producir la el apartado de suscripciones, la descripción de la propuesta de valor en compañia de las features relevantes para nuestra propuesta. También, se definió la interacción con el usuario para que a futuro sea responsive con registro de datos.                                                                                                                                                                                                                                     |
+| **Sprint 2 – 1 Retrospective Summary** | El equipo considera que el Sprint 1 tuvo resultados positivos debido a la correcta distribución de responsabilidades y la comunicación continua entre los integrantes. Esto permitió completar satisfactoriamente el despliegue inicial de la landing page y definir elementos clave de la propuesta de valor del producto.
 
-A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
+Sin embargo, se identificó como oportunidad de mejora una mejor planificación de tiempos y seguimiento interno de tareas, especialmente en etapas de integración y revisión final. Se ve como posible mejora verificar los commits de cada integrante y practicar el correcto uso de gitflow. Luego, considerar el cumplimiento de deadlines para los integrantes aplicando SCRUM. 
 
-##### Resumen de actividad del Sprint
+El PO considera pertinente la revisión de la landing page para futuras mejoras e integraciones de las funcionalidades y cualidades responsive.                                                                                                                                                                                                                                 |
+| **Sprint 2 Goal** | Our focus is on enabling users to experience Bloomie’s personalized skincare analysis through the web and mobile application.
 
-<img src="assets/img/resumen.png" alt="resumen" width="400"/>
+We believe it delivers personalized guidance and engagement to young adults seeking effective skincare support.
 
-#### 5.2.1.6. Services Documentation Evidence for Sprint Review
-
-En este Sprint se definieron y documentaron los endpoints necesarios para la gestión del perfil de usuario dentro de la aplicación. Aunque los servicios aún no se encuentran desplegados en un entorno productivo, se ha desarrollado su especificación utilizando OpenAPI, permitiendo validar la estructura de las solicitudes y respuestas, así como su integración futura con el frontend.}
-
-
-| Endpoint       | Método | Acción            | Descripción               | URL documentación   |
-| -------------- | ------ | ----------------- | ------------------------- | ------------------- |
-| /profile       | GET    | Obtener perfil    | Retorna datos del usuario | localhost:3000/docs |
-| /profile       | PUT    | Actualizar perfil | Actualiza nombre y correo | localhost:3000/docs |
-| /profile/photo | PATCH  | Cambiar foto      | Actualiza avatar          | localhost:3000/docs |
+This will be confirmed when users successfully complete the skin profile setup, perform a facial scan, and receive a preliminary skin analysis within the application. |
+| **Sprint 2 Velocity** | 45 story points                                                                                                                                                                                                                                                                                                       |
+| **Sum of Story Points** | 40 story points                                                                                                                                                                                                                                                                                                       |
+#### 5.2.2.2. Aspect Leaders and Collaborators
 
 
-#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+#### 5.2.2.3. Sprint Backlog 2
 
 
-#### 5.2.1.8. Team Collaboration Insights during Sprint
+#### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
 
-A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
+#### 5.2.2.5. Execution Evidence for Sprint Review
+En esta sección se detallan los procesos realizados para el despliegue de la solución durante el Sprint 1.La prioridad principal del sprint fue producir el primer hito de la landing page donde se muestre nuestra propuesta de forma clara y precisa. En ello, la versión inicial de la Landing Page, lo que permite modelar de forma más adecuada cómo nuestros segmentos objetivos esperan que se visualice de forma profesional.
 
-##### Resumen de actividad del Sprint
+La landing page fue desarrollada en visual studio code con aplicación de javascript, CSS y HTML. Partimos de esta sintaxis por la gran variedad de apoyo que tienen como lenguajes debido a su robustez. 
 
-<img src="assets/img/resumen.png" alt="resumen" width="400"/>
+<p align = "center">
+Desarrollo de la landing (Editor de código)
+
+
+ <img src="assets/img/landing/landing-codigo.png" alt="codigo_landing" width="650"/>  
+
+
+Para el despliegue, se utilizó vercel, aprovechando su versatilidad como servicio gratuito para un despliegue seguro y rápido. El proceso consistió en los siguientes pasos estratégicos:
+
+Luego, para el seguimiento de trabajo de cada integrante, utilizamos Github repository como herramienta de repositorio en la nube para un correcto manejo de flujo en el trabajo. Para ello, cada usuario debió revisar conceptos sobre GitFlow.
+
+  <p align = "center">
+  Vista Principal de la landing page
+  <p align = "center">
+ <img src="assets/img/landing/landing-deploy.png" alt="deploy" width="650"/>
+
+<p align = "center">
+Apartado de suscripciones del modelo de negocio definido
+<img src="assets/img/landing/landing-sus.png" alt="deploy-cod" width="650"/>
+
+Se puede acceder a nuestra lading page ya deployada a través del siguiente enlace: https://bloomie-landing-page.vercel.app/index.html
+
+A continuación, para ilustrar el contenido e interacciones logradas en la landing page en el sprint 1, se realizó un video demostrativo. En este registro se evidencia el funcionamiento de componentes clave, así como también un claro diseño y uso ingeniería de software aplicada. 
+
+URL de acceso al video sobre la landing page: 
+
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+
+
+
+
+
+
+
+
 
 
