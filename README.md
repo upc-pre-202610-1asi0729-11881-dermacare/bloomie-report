@@ -3906,15 +3906,6 @@ Activación del Servicio: Se importó el formato nativo de html de modo que el v
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-urante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
-
-A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
-
-
-<img src="assets/img/landing-codigo.png" alt="codigo_landing" width="650"/>  
-
-#### 5.2.1.8. Team Collaboration Insights during Sprint
-
 Durante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
 
 A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
@@ -3922,30 +3913,3 @@ A continuación, se presentan los analíticos extraídos de GitHub (Insights) qu
 ##### Resumen de actividad del Sprint
 
 <img src="assets/img/resumen.png" alt="resumen" width="400"/>
-
-#### 5.2.1.6. Services Documentation Evidence for Sprint Review
-
-En este Sprint se definieron y documentaron los endpoints necesarios para la gestión del perfil de usuario dentro de la aplicación. Aunque los servicios aún no se encuentran desplegados en un entorno productivo, se ha desarrollado su especificación utilizando OpenAPI, permitiendo validar la estructura de las solicitudes y respuestas, así como su integración futura con el frontend.}
-
-
-| Endpoint       | Método | Acción            | Descripción               | URL documentación   |
-| -------------- | ------ | ----------------- | ------------------------- | ------------------- |
-| /profile       | GET    | Obtener perfil    | Retorna datos del usuario | localhost:3000/docs |
-| /profile       | PUT    | Actualizar perfil | Actualiza nombre y correo | localhost:3000/docs |
-| /profile/photo | PATCH  | Cambiar foto      | Actualiza avatar          | localhost:3000/docs |
-
-
-#### 5.2.1.7. Software Deployment Evidence for Sprint Review
-
-
-#### 5.2.1.8. Team Collaboration Insights during Sprint
-
-Durante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
-
-A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
-
-##### Resumen de actividad del Sprint
-
-<img src="assets/img/resumen.png" alt="resumen" width="400"/>
-
-
