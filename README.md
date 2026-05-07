@@ -70,12 +70,39 @@ u202415551 - Ramirez Ruiz, Nickolas
       Ramirez Ruiz, Nickolas <br>
     </td>
     <td>
-    Capítulo I: Introducción <br>
-    Capítulo II: Requirements Elicitation & Analysis <br>
-    Capítulo III: Requirements Specification <br>
-    Capítulo IV: Product Design <br>
-    Capítulo V: Product Implementation, Validation & Deployment (5.1. & 5.2. Sprint 1) <br>
-    Codificación Landing Page
+      Capítulo I: Introducción <br>
+      Capítulo II: Requirements Elicitation & Analysis <br>
+      Capítulo III: Requirements Specification <br>
+      Capítulo IV: Product Design <br>
+      Capítulo V: Product Implementation, Validation & Deployment (5.1. & 5.2. Sprint 1) <br>
+      Codificación Landing Page
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>Segunda Entrega (TB1)</b></td>
+    <td>4/05/2026</td>
+    <td>
+      Asmat Alminco, Martin Alejandro <br>
+      <br>
+      <p></p>
+      Contreras Torres, Arturo Valentino <br>
+      <br>
+      <p></p>
+      Gallardo Morales, Carla Alejandra <br>
+      <br>
+      <p></p>
+      Mechan Montenegro, Luciana Carolina <br>
+      <br>
+      <p></p>
+      Ramirez Ruiz, Nickolas <br>
+    </td>
+    <td>
+      Corrección del reporte <br>
+      Mejora de artefactos <br>
+      Nueva versión desplegada de Landing Page <br>
+      Primera versión desplegada de Frontend Web Applications <br>
+      Capítulo V: Product Implementation, Validation & Deployment (Sprint 2) <br>
     </td>
   </tr>
 
