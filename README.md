@@ -1241,7 +1241,7 @@ El conjunto de User Stories se encuentra organizado en Epics, los cuales agrupan
 Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario final como Technical Stories asociadas a la implementación de servicios RESTful, permitiendo cubrir tanto la perspectiva del negocio como los aspectos necesarios para la construcción del sistema.
 
 <table border="1" cellspacing="0" cellpadding="8">
-
+ 
   <tr>
     <th>Epic / Story ID</th>
     <th>Título</th>
@@ -1249,23 +1249,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     <th>Criterios de Aceptación</th>
     <th>Relacionado con (Epic ID)</th>
   </tr>
-
+ 
+  <!-- E1 -->
   <tr>
     <td><strong>E1</strong></td>
     <td>Onboarding de usuario</td>
-    <td>
-      Como joven adulto, quiero completar el proceso de registro e inicio para acceder a Bloomie.
-    </td>
+    <td>Como joven adulto, quiero completar el proceso de registro e inicio para acceder a Bloomie.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US01</strong></td>
     <td>Registro de cuenta</td>
-    <td>
-      Como joven adulto, quiero registrarme con mis datos personales para crear una cuenta y acceder a Bloomie.
-    </td>
+    <td>Como joven adulto, quiero registrarme con mis datos personales para crear una cuenta y acceder a Bloomie.</td>
     <td>
       <strong>Escenario 1: Registro exitoso</strong><br>
       Dado que el usuario proporciona nombre, apellido, email y contraseña válidos
@@ -1281,13 +1278,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E1(Onboarding de usuario)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US02</strong></td>
     <td>Completar perfil de piel</td>
-    <td>
-      Como joven adulto, quiero completar un cuestionario inicial sobre mis condiciones de piel en mi primer ingreso para que la aplicación configure mi perfil correctamente.
-    </td>
+    <td>Como joven adulto, quiero completar un cuestionario inicial sobre mis condiciones de piel en mi primer ingreso para que la aplicación configure mi perfil correctamente.</td>
     <td>
       <strong>Escenario 1: Cuestionario presentado</strong><br>
       Dado que el usuario accede por primera vez tras registrarse
@@ -1302,23 +1297,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E1(Onboarding de usuario)</td>
   </tr>
-
+ 
+  <!-- E2 -->
   <tr>
     <td><strong>E2</strong></td>
     <td>Análisis de piel</td>
-    <td>
-      Como joven adulto, quiero analizar mi piel mediante escaneo facial para obtener un diagnóstico personalizado.
-    </td>
+    <td>Como joven adulto, quiero analizar mi piel mediante escaneo facial para obtener un diagnóstico personalizado.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US03</strong></td>
     <td>Escaneo facial</td>
-    <td>
-      Como joven adulto, quiero realizar un escaneo facial con la cámara para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
-    </td>
+    <td>Como joven adulto, quiero realizar un escaneo facial con la cámara para que la aplicación capture mi piel y obtenga un diagnóstico preciso.</td>
     <td>
       <strong>Escenario 1: Escaneo completado</strong><br>
       Dado que el usuario inicia el proceso de escaneo facial
@@ -1334,13 +1326,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E2(Análisis de piel)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US04</strong></td>
     <td>Diagnóstico preliminar automático</td>
-    <td>
-      Como joven adulto, quiero recibir un diagnóstico generado por IA después del escaneo para conocer el estado de mi piel y los cuidados que necesito.
-    </td>
+    <td>Como joven adulto, quiero recibir un diagnóstico generado por IA después del escaneo para conocer el estado de mi piel y los cuidados que necesito.</td>
     <td>
       <strong>Escenario 1: Diagnóstico generado correctamente</strong><br>
       Dado que el usuario completó el escaneo facial
@@ -1356,23 +1346,105 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E2(Análisis de piel)</td>
   </tr>
-
+ 
   <tr>
-    <td><strong>E4</strong></td>
-    <td>Descubrimiento de productos</td>
+    <td><strong>US12</strong></td>
+    <td>Consultar historial de escaneos faciales</td>
+    <td>Como joven adulto, quiero consultar mis escaneos faciales anteriores dentro de la sección Skin Scan para revisar mi evolución y los resultados de cada análisis.</td>
     <td>
-      Como joven adulto, quiero explorar productos de skincare para tomar decisiones informadas según mi tipo de piel.
+      <strong>Escenario 1: Historial disponible</strong><br>
+      Dado que el usuario accede a la sección de escaneos pasados dentro de Skin Scan
+      Cuando el sistema carga su historial
+      Entonces muestra la lista de escaneos ordenados por fecha con score general, tipo de piel y scores de hidratación, textura y brillo de cada uno
+      <p></p>
+      <strong>Escenario 2: Sin escaneos registrados</strong><br>
+      Dado que el usuario accede a la sección de escaneos pasados
+      Cuando no existen análisis previos registrados
+      Entonces el sistema informa que no hay escaneos disponibles
+      Y sugiere realizar el primer escaneo facial
     </td>
+    <td>E2(Análisis de piel)</td>
+  </tr>
+ 
+  <!-- E3 -->
+  <tr>
+    <td><strong>E3</strong></td>
+    <td>Gestión de rutina personalizada</td>
+    <td>Como joven adulto, quiero gestionar mi rutina de cuidado de piel para seguir un tratamiento adecuado y constante.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
+  <tr>
+    <td><strong>US05</strong></td>
+    <td>Generar rutina personalizada</td>
+    <td>Como joven adulto, quiero recibir una rutina personalizada con productos basados en mi diagnóstico de piel para seguir un tratamiento adecuado.</td>
+    <td>
+      <strong>Escenario 1: Rutina generada exitosamente</strong><br>
+      Dado que el usuario cuenta con un diagnóstico de piel completado
+      Cuando accede a su rutina
+      Entonces el sistema genera una rutina personalizada
+      Y asigna productos específicos para cada paso con su horario programado
+      <p></p>
+      <strong>Escenario 2: Error en la generación</strong><br>
+      Dado que el usuario cuenta con un diagnóstico registrado
+      Cuando ocurre un error en la generación de la rutina
+      Entonces el sistema informa la situación
+      Y permite reintentar
+    </td>
+    <td>E3(Gestión de rutina personalizada)</td>
+  </tr>
+ 
+  <tr>
+    <td><strong>US06</strong></td>
+    <td>Reemplazar producto de la rutina</td>
+    <td>Como joven adulto, quiero reemplazar un producto de mi rutina por una alternativa recomendada para adaptar mi tratamiento.</td>
+    <td>
+      <strong>Escenario 1: Alternativas mostradas</strong><br>
+      Dado que el usuario tiene una rutina activa
+      Cuando selecciona la opción de reemplazar un producto
+      Entonces el sistema muestra hasta cuatro alternativas compatibles ordenadas por score de compatibilidad
+      <p></p>
+      <strong>Escenario 2: Reemplazo confirmado</strong><br>
+      Dado que el usuario visualiza las alternativas
+      Cuando selecciona una y confirma el cambio
+      Entonces el sistema actualiza la rutina
+      Y reemplaza el producto anterior por el seleccionado
+    </td>
+    <td>E3(Gestión de rutina personalizada)</td>
+  </tr>
+ 
+  <tr>
+    <td><strong>US07</strong></td>
+    <td>Registrar cumplimiento de rutina diaria</td>
+    <td>Como joven adulto, quiero marcar si completé mi rutina del día para llevar un seguimiento de mi progreso.</td>
+    <td>
+      <strong>Escenario 1: Rutina marcada como completada</strong><br>
+      Dado que el usuario visualiza su rutina del día
+      Cuando indica que completó todos los pasos
+      Entonces el sistema registra el día como completado
+      <p></p>
+      <strong>Escenario 2: Rutina marcada como no completada</strong><br>
+      Dado que el usuario visualiza su rutina del día
+      Cuando indica que no completó la rutina
+      Entonces el sistema registra el día como no completado
+    </td>
+    <td>E3(Gestión de rutina personalizada)</td>
+  </tr>
+ 
+  <!-- E4 -->
+  <tr>
+    <td><strong>E4</strong></td>
+    <td>Descubrimiento de productos</td>
+    <td>Como joven adulto, quiero explorar productos de skincare para tomar decisiones informadas según mi tipo de piel.</td>
+    <td></td>
+    <td></td>
+  </tr>
+ 
   <tr>
     <td><strong>US08</strong></td>
     <td>Explorar catálogo de productos</td>
-    <td>
-      Como joven adulto, quiero explorar el catálogo de productos y aplicar filtros para encontrar opciones relevantes a mis necesidades.
-    </td>
+    <td>Como joven adulto, quiero explorar el catálogo de productos y aplicar filtros para encontrar opciones relevantes a mis necesidades.</td>
     <td>
       <strong>Escenario 1: Catálogo cargado</strong><br>
       Dado que el usuario accede al catálogo de productos
@@ -1391,23 +1463,57 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E4(Descubrimiento de productos)</td>
   </tr>
-
+ 
+  <tr>
+    <td><strong>US09</strong></td>
+    <td>Ver detalle y compatibilidad de producto</td>
+    <td>Como joven adulto, quiero ver el detalle de un producto y su compatibilidad con mi piel para tomar decisiones informadas.</td>
+    <td>
+      <strong>Escenario 1: Producto compatible</strong><br>
+      Dado que el usuario accede al detalle de un producto
+      Cuando el sistema carga la información
+      Entonces muestra el score de compatibilidad, la explicación y los beneficios del producto
+      <p></p>
+      <strong>Escenario 2: Producto con baja compatibilidad</strong><br>
+      Dado que el usuario accede al detalle de un producto no adecuado para su piel
+      Cuando el sistema carga la información
+      Entonces indica el bajo nivel de compatibilidad
+      Y explica las razones asociadas a su perfil de piel
+    </td>
+    <td>E4(Descubrimiento de productos)</td>
+  </tr>
+ 
+  <tr>
+    <td><strong>US10</strong></td>
+    <td>Guardar producto como favorito</td>
+    <td>Como joven adulto, quiero guardar productos en mis favoritos para acceder a ellos fácilmente después.</td>
+    <td>
+      <strong>Escenario 1: Producto guardado</strong><br>
+      Dado que el usuario visualiza un producto
+      Cuando selecciona guardarlo como favorito
+      Entonces el sistema lo agrega a su lista de favoritos
+      <p></p>
+      <strong>Escenario 2: Producto eliminado de favoritos</strong><br>
+      Dado que el usuario tiene un producto en favoritos
+      Cuando selecciona eliminarlo
+      Entonces el sistema lo remueve de la lista
+    </td>
+    <td>E4(Descubrimiento de productos)</td>
+  </tr>
+ 
+  <!-- E5 -->
   <tr>
     <td><strong>E5</strong></td>
     <td>Seguimiento y progreso del usuario</td>
-    <td>
-      Como joven adulto, quiero visualizar mi progreso para entender mi constancia y evolución en el cuidado de mi piel.
-    </td>
+    <td>Como joven adulto, quiero visualizar mi progreso para entender mi constancia y evolución en el cuidado de mi piel.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US11</strong></td>
     <td>Visualizar métricas de progreso</td>
-    <td>
-      Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
-    </td>
+    <td>Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.</td>
     <td>
       <strong>Escenario 1: Métricas disponibles</strong><br>
       Dado que el usuario accede a la sección de progreso
@@ -1422,44 +1528,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E5(Seguimiento y progreso del usuario)</td>
   </tr>
-
-  <tr>
-    <td><strong>US12</strong></td>
-    <td>Consultar historial de escaneos faciales</td>
-    <td>
-      Como joven adulto, quiero consultar mis escaneos faciales anteriores dentro de la sección Skin Scan para revisar mi evolución y los resultados de cada análisis.
-    </td>
-    <td>
-      <strong>Escenario 1: Historial disponible</strong><br>
-      Dado que el usuario accede a la sección de escaneos pasados dentro de Skin Scan
-      Cuando el sistema carga su historial
-      Entonces muestra la lista de escaneos ordenados por fecha con score general, tipo de piel y scores de hidratación, textura y brillo de cada uno
-      <p></p>
-      <strong>Escenario 2: Sin escaneos registrados</strong><br>
-      Dado que el usuario accede a la sección de escaneos pasados
-      Cuando no existen análisis previos registrados
-      Entonces el sistema informa que no hay escaneos disponibles
-      Y sugiere realizar el primer escaneo facial
-    </td>
-    <td>E2(Análisis de piel)</td>
-  </tr>
-
+ 
+  <!-- E6 -->
   <tr>
     <td><strong>E6</strong></td>
     <td>Soporte inteligente</td>
-    <td>
-      Como joven adulto, quiero consultar dudas sobre mi piel para recibir orientación personalizada.
-    </td>
+    <td>Como joven adulto, quiero consultar dudas sobre mi piel para recibir orientación personalizada.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US13</strong></td>
     <td>Consultar asistente virtual de skincare</td>
-    <td>
-      Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
-    </td>
+    <td>Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.</td>
     <td>
       <strong>Escenario 1: Consulta respondida</strong><br>
       Dado que el usuario envía una consulta al asistente
@@ -1475,23 +1557,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E6(Soporte inteligente)</td>
   </tr>
-
+ 
+  <!-- E7 -->
   <tr>
     <td><strong>E7</strong></td>
     <td>Atención dermatológica</td>
-    <td>
-      Como joven adulto, quiero acceder a consultas con dermatólogos para recibir atención especializada.
-    </td>
+    <td>Como joven adulto, quiero acceder a consultas con dermatólogos para recibir atención especializada.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US14</strong></td>
     <td>Listar y seleccionar dermatólogo</td>
-    <td>
-      Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
-    </td>
+    <td>Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.</td>
     <td>
       <strong>Escenario 1: Lista disponible</strong><br>
       Dado que el usuario accede a la sección de consultas dermatológicas
@@ -1505,13 +1584,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E7(Atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US15</strong></td>
     <td>Pagar y confirmar cita dermatológica</td>
-    <td>
-      Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
-    </td>
+    <td>Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.</td>
     <td>
       <strong>Escenario 1: Pago exitoso</strong><br>
       Dado que el usuario ha seleccionado un dermatólogo y horario
@@ -1527,13 +1604,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E7(Atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US16</strong></td>
     <td>Cancelar cita dermatológica</td>
-    <td>
-      Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
-    </td>
+    <td>Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.</td>
     <td>
       <strong>Escenario 1: Cancelación con reembolso</strong><br>
       Dado que el usuario tiene una cita confirmada
@@ -1551,23 +1626,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E7(Atención dermatológica)</td>
   </tr>
-
+ 
+  <!-- E8 -->
   <tr>
     <td><strong>E8</strong></td>
     <td>Gestión de suscripción</td>
-    <td>
-      Como joven adulto, quiero gestionar mi plan de suscripción para acceder a las funcionalidades de la aplicación.
-    </td>
+    <td>Como joven adulto, quiero gestionar mi plan de suscripción para acceder a las funcionalidades de la aplicación.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US17</strong></td>
     <td>Seleccionar y pagar plan de suscripción</td>
-    <td>
-      Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
-    </td>
+    <td>Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.</td>
     <td>
       <strong>Escenario 1: Plan seleccionado y pago exitoso</strong><br>
       Dado que el usuario visualiza los planes disponibles con sus características y precios
@@ -1583,13 +1655,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E8(Gestión de suscripción)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US18</strong></td>
     <td>Gestionar suscripción activa</td>
-    <td>
-      Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
-    </td>
+    <td>Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.</td>
     <td>
       <strong>Escenario 1: Cambio de plan exitoso</strong><br>
       Dado que el usuario tiene una suscripción activa
@@ -1605,23 +1675,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E8(Gestión de suscripción)</td>
   </tr>
-
+ 
+  <!-- E9 -->
   <tr>
     <td><strong>E9</strong></td>
     <td>Gestión de perfil del usuario</td>
-    <td>
-      Como joven adulto, quiero gestionar mi información personal para mantener mi cuenta actualizada.
-    </td>
+    <td>Como joven adulto, quiero gestionar mi información personal para mantener mi cuenta actualizada.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US19</strong></td>
     <td>Editar perfil e información personal</td>
-    <td>
-      Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
-    </td>
+    <td>Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.</td>
     <td>
       <strong>Escenario 1: Edición exitosa</strong><br>
       Dado que el usuario modifica su nombre, apellido o email
@@ -1636,13 +1703,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E9(Gestión de perfil del usuario)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US20</strong></td>
     <td>Actualizar características de piel</td>
-    <td>
-      Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
-    </td>
+    <td>Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.</td>
     <td>
       <strong>Escenario 1: Actualización exitosa</strong><br>
       Dado que el usuario modifica su tipo de piel o nivel de sensibilidad
@@ -1652,13 +1717,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E9(Gestión de perfil del usuario)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US21</strong></td>
     <td>Cambiar contraseña</td>
-    <td>
-      Como joven adulto, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.
-    </td>
+    <td>Como joven adulto, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
     <td>
       <strong>Escenario 1: Cambio exitoso</strong><br>
       Dado que el usuario ingresa una nueva contraseña válida
@@ -1673,23 +1736,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E9(Gestión de perfil del usuario)</td>
   </tr>
-
+ 
+  <!-- E10 -->
   <tr>
     <td><strong>E10</strong></td>
     <td>Experiencia web — Landing Page</td>
-    <td>
-      Como visitante, quiero explorar el sitio web de Bloomie para entender su propuesta de valor antes de registrarme.
-    </td>
+    <td>Como visitante, quiero explorar el sitio web de Bloomie para entender su propuesta de valor antes de registrarme.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US22</strong></td>
     <td>Comprender la propuesta de valor</td>
-    <td>
-      Como visitante, quiero comprender qué ofrece Bloomie para evaluar si resuelve mis necesidades.
-    </td>
+    <td>Como visitante, quiero comprender qué ofrece Bloomie para evaluar si resuelve mis necesidades.</td>
     <td>
       <strong>Escenario 1: Contenido disponible</strong><br>
       Dado que el visitante accede a la landing page
@@ -1698,13 +1758,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E10(Experiencia web — Landing Page)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US23</strong></td>
     <td>Explorar planes y precios</td>
-    <td>
-      Como visitante, quiero visualizar los planes disponibles y sus precios para elegir la opción que mejor se adapte a mis necesidades.
-    </td>
+    <td>Como visitante, quiero visualizar los planes disponibles y sus precios para elegir la opción que mejor se adapte a mis necesidades.</td>
     <td>
       <strong>Escenario 1: Planes mostrados</strong><br>
       Dado que el visitante accede a la sección de precios
@@ -1718,13 +1776,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E10(Experiencia web — Landing Page)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US24</strong></td>
     <td>Navegar entre secciones del sitio</td>
-    <td>
-      Como visitante, quiero navegar entre las secciones de la landing page para explorar todo el contenido disponible.
-    </td>
+    <td>Como visitante, quiero navegar entre las secciones de la landing page para explorar todo el contenido disponible.</td>
     <td>
       <strong>Escenario 1: Navegación exitosa</strong><br>
       Dado que el visitante accede a la landing page
@@ -1733,23 +1789,20 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E10(Experiencia web — Landing Page)</td>
   </tr>
-
+ 
+  <!-- E11 — DERMATÓLOGOS -->
   <tr>
     <td><strong>E11</strong></td>
     <td>Gestión de atención dermatológica</td>
-    <td>
-      Como dermatólogo, quiero gestionar mi práctica clínica en Bloomie para ofrecer consultas eficientes y de calidad.
-    </td>
+    <td>Como dermatólogo, quiero gestionar mi práctica clínica en Bloomie para ofrecer consultas eficientes y de calidad.</td>
     <td></td>
     <td></td>
   </tr>
-
+ 
   <tr>
     <td><strong>US25</strong></td>
     <td>Registro de dermatólogo</td>
-    <td>
-      Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
-    </td>
+    <td>Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.</td>
     <td>
       <strong>Escenario 1: Registro exitoso</strong><br>
       Dado que el dermatólogo proporciona nombre, apellido, email, contraseña y especialidad válidos
@@ -1765,13 +1818,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US26</strong></td>
     <td>Configurar perfil profesional</td>
-    <td>
-      Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
-    </td>
+    <td>Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.</td>
     <td>
       <strong>Escenario 1: Perfil configurado exitosamente</strong><br>
       Dado que el dermatólogo accede a la configuración de perfil
@@ -1787,13 +1838,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US27</strong></td>
     <td>Definir disponibilidad de atención</td>
-    <td>
-      Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
-    </td>
+    <td>Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.</td>
     <td>
       <strong>Escenario 1: Disponibilidad registrada</strong><br>
       Dado que el dermatólogo accede a la configuración de disponibilidad
@@ -1809,13 +1858,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US28</strong></td>
     <td>Visualizar agenda de consultas</td>
-    <td>
-      Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
-    </td>
+    <td>Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.</td>
     <td>
       <strong>Escenario 1: Agenda con citas</strong><br>
       Dado que el dermatólogo accede a su agenda
@@ -1829,13 +1876,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US29</strong></td>
     <td>Realizar consulta virtual en tiempo real</td>
-    <td>
-      Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
-    </td>
+    <td>Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.</td>
     <td>
       <strong>Escenario 1: Consulta iniciada</strong><br>
       Dado que el dermatólogo accede a una cita confirmada en el horario programado
@@ -1851,13 +1896,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US30</strong></td>
     <td>Registrar notas y recomendaciones clínicas</td>
-    <td>
-      Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
-    </td>
+    <td>Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.</td>
     <td>
       <strong>Escenario 1: Notas registradas exitosamente</strong><br>
       Dado que el dermatólogo tiene una consulta activa
@@ -1873,13 +1916,11 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US31</strong></td>
     <td>Registrar fotografías clínicas</td>
-    <td>
-      Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.
-    </td>
+    <td>Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.</td>
     <td>
       <strong>Escenario 1: Foto registrada exitosamente</strong><br>
       Dado que el dermatólogo tiene una consulta activa
@@ -1892,15 +1933,13 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
       Cuando no existen fotografías registradas
       Entonces el sistema informa que no hay imágenes disponibles
     </td>
-    <td>11(Gestión de atención dermatológica)</td>
+    <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US32</strong></td>
     <td>Consultar historial de consultas atendidas</td>
-    <td>
-      Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
-    </td>
+    <td>Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.</td>
     <td>
       <strong>Escenario 1: Historial disponible</strong><br>
       Dado que el dermatólogo accede a su historial
@@ -1912,15 +1951,13 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
       Cuando no existen consultas registradas
       Entonces el sistema informa que no hay consultas disponibles
     </td>
-    <td>E9(Gestión de atención dermatológica)</td>
+    <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
+ 
   <tr>
     <td><strong>US33</strong></td>
     <td>Actualizar perfil profesional</td>
-    <td>
-      Como dermatólogo, quiero actualizar mi información profesional para mantener mi perfil al día.
-    </td>
+    <td>Como dermatólogo, quiero actualizar mi información profesional para mantener mi perfil al día.</td>
     <td>
       <strong>Escenario 1: Actualización exitosa</strong><br>
       Dado que el dermatólogo modifica su especialidad, tarifa o años de experiencia
@@ -1936,9 +1973,7 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     </td>
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
-
-<!-- Technical Stories -->
-
+  
 <tr>
   <td><strong>TS01</strong></td>
   <td>Procesar pago de consulta dermatológica</td>
