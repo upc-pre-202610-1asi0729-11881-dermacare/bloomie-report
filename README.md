@@ -220,7 +220,20 @@ La evidencia presentada en esta sección se encuentra alineada con el Registro d
       - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
       - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
       - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
-
+    - [5.2.2. Sprint 2](#522-sprint-2)
+      - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+      - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+      - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+      - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+      - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+      - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+      - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+      - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
+- [Conclusiones](#conclusiones)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  - [Video About-the-Team](#video-about-the-team)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
 ---
 
 # Student Outcome
@@ -3852,3 +3865,39 @@ A continuación, se presentan los analíticos extraídos de GitHub (Insights) qu
 ##### Resumen de actividad del Sprint
 
 <img src="assets/img/resumen.png" alt="resumen" width="400"/>
+
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+#### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.2.2.3. Sprint Backlog 2
+#### 5.2.2.4. Development Evidence for Sprint Review
+#### 5.2.2.5. Execution Evidence for Sprint Review
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+# Conclusiones
+## Conclusiones y recomendaciones
+## Video About-the-Team
+
+# Bibliografía
+
+- Cámara de Comercio de Lima. (2024). Sector cosméticos e higiene personal facturaría más de S/ 9 000 millones en 2024. COPECOH–CCL. https://lacamara.pe/sector-cosmeticos-e-higiene-personal-facturaria-mas-de-s-9-000-millones-en-2024/
+
+- Carrasco Freitas, M. (2025, septiembre 10). EsSalud admite demoras de hasta 155 días en atenciones, pero destaca que superó el millón de citas este 2025. Infobae. https://www.infobae.com/peru/2025/09/11/essalud-admite-demoras-de-hasta-155-dias-en-atenciones-pero-destaca-que-supero-el-millon-de-citas-este-2025/
+
+- Instituto de Economía y Desarrollo Empresarial – Cámara de Comercio de Lima, & ICEX España. (2024). El mercado de cosmética e higiene personal en Perú 2024: Resumen ejecutivo. ICEX. https://www.icex.es/content/dam/icex/centros/peru/documentos/2024/estudio-mercado-mercado-cosmetica-higiene-personal-peru-2024.pdf
+
+- Instituto Nacional de Estadística e Informática. (2023). Se incrementa búsqueda de atención en salud de mujeres y hombres. https://m.inei.gob.pe/prensa/noticias/se-incrementa-busqueda-de-atencion-en-salud-de-mujeres-y-hombres-14549/
+
+- Instituto Nacional de Estadística e Informática. (2024). Aumentó la población usuaria de Internet en todos los grupos de edad en el primer trimestre de 2024. https://m.inei.gob.pe/prensa/noticias/aumento-la-poblacion-usuaria-de-internet-en-todos-los-grupos-de-edad-en-el-primer-trimestre-de-2024-15248/
+
+- Instituto Nacional de Estadística e Informática. (2025, marzo 20). Más del 90,0 % de la población del país cuenta con algún seguro de salud. Gobierno del Perú. https://www.gob.pe/institucion/inei/noticias/1129447-mas-del-90-0-de-la-poblacion-del-pais-cuenta-con-algun-seguro-de-salud
+
+- Instituto Nacional de Estadística e Informática. (2025, junio 23). 38,1% de la población con algún problema de salud acudió a un establecimiento en busca de atención. Gobierno del Perú. https://www.gob.pe/institucion/inei/noticias/1192559-38-1-de-la-poblacion-con-algun-problema-de-salud-acudio-a-un-establecimiento-en-busca-de-atencion
+
+- Ministerio de Trabajo y Promoción del Empleo. (2024). Informe trimestral del mercado laboral: Situación del empleo, primer trimestre 2024. https://cdn.www.gob.pe/uploads/document/file/6653196/5783668-ite-2024-t1.pdf
+
+- Statista. (2023). Frecuencia de utilización de las redes sociales en Perú en 2023. https://es.statista.com/estadisticas/1412986/uso-de-redes-sociales-por-frecuencia-en-peru/
+# Anexos
