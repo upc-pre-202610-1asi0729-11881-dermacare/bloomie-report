@@ -316,43 +316,59 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
   <tr>
     <td><b>Comunica oralmente con efectividad a diferentes rangos de audiencia.</b></td>
     <td>
-      Asmat Alminco, Martin Alejandro – <b>AV1</b><br>
-Redacción de antecedentes e hipótesis con claridad y coherencia.<br><br>
-
-Contreras Torres, Arturo Valentino – <b>AV1</b><br>
-Documentación de arquitectura de información de forma estructurada.<br><br>
-
-Gallardo Morales, Carla Alejandra – <b>AV1</b><br>
-Desarrollo de secciones de diseño con explicaciones claras y contextualizadas.<br><br>
-
-Mechan Montenegro, Luciana Carolina – <b>AV1</b><br>
-Redacción detallada de wireflows y flujos de interacción del usuario.<br><br>
-
-Ramirez Ruiz, Nickolas – <b>AV1</b><br>
-Consolidación y revisión del documento final asegurando coherencia global.
+      <b>Asmat Alminco, Martin Alejandro</b> <br>
+      <u>AV1</u> <br>
+      Participó en la explicación de User Stories, configuración del entorno de desarrollo, evidencias de desarrollo para Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron comunicar la validación del problema, la definición funcional del producto y los avances técnicos iniciales del proyecto.
+      <br> <br>
+      <b>Contreras Torres, Arturo Valentino</b> <br>
+      <u>AV1</u> <br>
+      Participó en la exposición de Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Su participación permitió comunicar aspectos del dominio del problema, arquitectura, diseño de software y estructura de datos del sistema.
+      <br> <br>
+      <b>Gallardo Morales, Carla Alejandra</b> <br>
+      <u>AV1</u> <br>
+      Sustentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Estas actividades permitieron explicar de forma clara las necesidades del usuario, las hipótesis del producto, la planificación funcional y los elementos de posicionamiento web.
+      <br> <br>
+      <b>Mechan Montenegro, Luciana Carolina</b> <br>
+      <u>AV1</u> <br>
+      Participó en la sustentación del Lean UX Canvas, segmentos objetivo, análisis de competidores, análisis competitivo, lenguaje ubicuo, Landing Page Wireframe, Software Architecture Component, Systems Diagrams y Class Diagrams. Durante estas actividades, comunicó ideas relacionadas con la propuesta de valor, el mercado, el diseño visual y la arquitectura del sistema, adecuando su explicación a una audiencia técnica y no técnica.
+      <br> <br>
+      <b>Ramirez Ruiz, Nickolas</b> <br>
+      <u>AV1</u> <br>
+      Sustentó Startup Profile, descripción de la startup, User Journey Mapping, Empathy Mapping, Landing Page Mock-up, General Style Guidelines, Web Style Guidelines, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1 y estrategias frente a competidores. Sus aportes permitieron comunicar la identidad del proyecto, la experiencia del usuario, la línea visual del producto y la organización del primer sprint.
     </td>
-    <td></td>
+    <td>
+    <u>AV1</u> <br>
+    Como equipo, durante el AV1 se fortaleció la comunicación oral mediante la sustentación de avances relacionados con investigación de usuarios, análisis competitivo, definición del producto, diseño visual, arquitectura, requerimientos y planificación inicial. La presentación permitió mejorar la claridad del mensaje, el uso de recursos visuales y la capacidad para justificar decisiones tomadas durante el desarrollo del proyecto.
+    </td>
   </tr>
 
   <tr>
     <td><b>Comunica por escrito con efectividad a diferentes rangos de audiencia.</b></td>
     <td>
-      Asmat Alminco, Martin Alejandro – <b>AV1</b><br>
-Redacción de antecedentes e hipótesis con claridad y coherencia.<br><br>
-
-Contreras Torres, Arturo Valentino – <b>AV1</b><br>
-Documentación de arquitectura de información de forma estructurada.<br><br>
-
-Gallardo Morales, Carla Alejandra – <b>AV1</b><br>
-Desarrollo de secciones de diseño con explicaciones claras y contextualizadas.<br><br>
-
-Mechan Montenegro, Luciana Carolina – <b>AV1</b><br>
-Redacción detallada de wireflows y flujos de interacción del usuario.<br><br>
-
-Ramirez Ruiz, Nickolas – <b>AV1</b><br>
-Consolidación y revisión del documento final asegurando coherencia global.
+    <b>Asmat Alminco, Martin Alejandro</b> <br>
+      <u>AV1</u> <br>
+      Elaboró la documentación de User Stories, Software Development Environment Configuration, Development Evidence for Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron registrar de forma escrita las funcionalidades, la configuración técnica, las evidencias de desarrollo y la validación inicial del producto.
+      <br> <br>
+      <b>Contreras Torres, Arturo Valentino</b> <br>
+      <u>AV1</u> <br>
+      Redactó y organizó Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Estas actividades aportaron a la documentación técnica del dominio, la arquitectura, el modelado del sistema y la base de datos.
+      <br> <br>
+      <b>Gallardo Morales, Carla Alejandra</b> <br>
+      <u>AV1</u> <br>
+      Documentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Su trabajo permitió estructurar por escrito el problema, las hipótesis, los requerimientos, el backlog y los elementos de posicionamiento web.
+      <br> <br>
+      <b>Mechan Montenegro, Luciana Carolina</b> <br>
+      <u>AV1</u> <br>
+      Redactó y documentó el Lean UX Canvas, segmentos objetivo, competidores, análisis competitivo, lenguaje ubicuo, Landing Page Wireframe, Software Architecture Component, Systems Diagrams y Class Diagrams. Estas secciones contribuyeron a organizar información sobre el mercado, el dominio del producto, el diseño de interfaz y la arquitectura del sistema.
+      <br> <br>
+      <b>Ramirez Ruiz, Nickolas</b> <br>
+      <u>AV1</u> <br>
+      Elaboró Startup Profile, descripción de la startup, User Journey Mapping, Empathy Mapping, Landing Page Mock-up, General Style Guidelines, Web Style Guidelines, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1 y estrategias frente a competidores. Su documentación permitió presentar la identidad de la startup, la experiencia del usuario, la propuesta visual y la planificación del sprint inicial.
     </td>
-    <td></td>
+    <td>
+    <u>AV1</u> <br>
+    Como equipo, durante el AV1 se desarrolló la comunicación escrita mediante la elaboración del informe técnico, integrando análisis de negocio, investigación de usuarios, requerimientos, diseño visual, arquitectura, base de datos y planificación inicial del desarrollo. La documentación permitió sintetizar ideas, mantener coherencia entre secciones y presentar información comprensible para audiencias técnicas y no técnicas. Asimismo, el uso de tablas, diagramas, mockups, backlog y evidencias contribuyó a mejorar la calidad y claridad del informe.
+    </td>
   </tr>
 </table>
 ---
