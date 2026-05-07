@@ -3616,6 +3616,40 @@ Ejemplo: <br>
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
+Para el desarrollo de Bloomie, el equipo adoptará convenciones estándar de codificación para mantener un código ordenado, legible y fácil de mantener. Todos los nombres técnicos del proyecto estarán escritos en inglés, incluyendo variables, métodos, clases, archivos, componentes, endpoints y selectores. Esto permitirá mantener una base de código consistente, clara y adecuada para el trabajo colaborativo del equipo.
+
+**General Conventions**
+
+| Elemento            | Convención          | Ejemplo                             |
+| ------------------- | ------------------- | ----------------------------------- |
+| Variables y métodos | `lowerCamelCase`    | `userEmail`, `createAppointment()`  |
+| Clases e interfaces | `UpperCamelCase`    | `UserService`, `AppointmentRequest` |
+| Constantes          | `UPPER_SNAKE_CASE`  | `MAX_LOGIN_ATTEMPTS`                |
+| Archivos y carpetas | `kebab-case`        | `appointment-form.ts`               |
+| Clases CSS          | `kebab-case`        | `.product-card`                     |
+| Paquetes Java       | minúsculas          | `com.bloomie.appointment`           |
+| Endpoints REST      | plural y minúsculas | `/api/products`                     |
+
+**HTML and CSS**
+
+Para HTML y CSS se seguirán las recomendaciones de HTML Style Guide and Coding Conventions y Google HTML/CSS Style Guide. Se usarán etiquetas en minúsculas, atributos con comillas dobles, indentación consistente y código válido. En CSS se utilizarán clases descriptivas en kebab-case, evitando selectores por ID y nombres visuales como .green-button.
+
+**JavaScript, TypeScript and Angular**
+
+Para JavaScript, TypeScript y Angular se adoptarán las convenciones de Google TypeScript Style Guide y Angular Coding Style Guide. Se usarán nombres descriptivos en inglés, lowerCamelCase para variables y métodos, y UpperCamelCase para clases, interfaces y tipos.
+
+En Angular, los archivos se organizarán por funcionalidad y usarán nombres en kebab-case.
+
+**Java and Spring Boot**
+
+Para Java se seguirá la Google Java Style Guide. Las clases usarán UpperCamelCase, los métodos y variables lowerCamelCase, y las constantes UPPER_SNAKE_CASE.
+
+En Spring Boot se organizará el backend por capas: controller, service, repository, model, dto, config y exception.
+
+**Gherkin**
+
+Para los escenarios BDD se utilizará Gherkin siguiendo una estructura clara con Feature, Scenario, Given, When y Then. Los escenarios se escribirán en inglés y representarán comportamientos específicos del sistema.
+
 ### 5.1.4. Software Deployment Configuration
 
 Para la configuración de despliegue de la solución, el equipo ha definido el uso de Vercel como plataforma principal para publicar los productos web del proyecto. En esta etapa, la solución contempla el despliegue de la Landing Page y la Frontend Web Application desde sus respectivos repositorios de GitHub, permitiendo que cada cambio integrado a la rama principal pueda generar una versión publicada de forma automática.
