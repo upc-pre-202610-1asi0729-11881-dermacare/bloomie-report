@@ -3371,6 +3371,117 @@ US20: Como joven adulto, quiero actualizar mis características de piel para rec
  <p align = "center">
 <img src="assets/img/landing/wireframe-20-app.png" alt="wireflow app" width="550"/>
 
+20) <strong> Wireframe 20: </strong> Registro de dermatólogo
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe25_web.png" alt="wireframe" width="550"/>
+
+21) <strong> Wireframe 22: </strong> Configurar perfil profesional
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US26: Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe26.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe26_web.png" alt="wireframe" width="550"/>
+ 
+22)  <strong> Wireframe 22: </strong> Definir disponibilidad de atención
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US27: Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe27.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe27_web.png" alt="wireframe" width="550"/>
+
+23)  <strong> Wireframe 23: </strong> Visualizar agenda de consultas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US28: Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe28.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe28_web.png" alt="wireframe" width="550"/>
+
+24)  <strong> Wireframe 24: </strong> Realizar consulta virtual en tiempo real
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US29: Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe29.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe29_web.png" alt="wireframe" width="550"/>
+
+25)  <strong> Wireframe 25: </strong> Registrar notas y recomendaciones clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US30: Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe30.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe30_web.png" alt="wireframe" width="550"/>
+
+26)  <strong> Wireframe 26: </strong> Registrar fotografías clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US31: Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe33.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe33_web.png" alt="wireframe" width="550"/>
+
+27)   <strong> Wireframe 27: </strong> Consultar historial de consultas atendidas
+  
+<br> <strong> User Story asociada: </br> </strong>
+
+US32: Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe32.png" alt="wireframe" width="550"/>
+
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe32_web.png" alt="wireframe" width="550"/>
 
 
 ### 4.4.2. Web Applications Wireflow Diagrams
@@ -3498,79 +3609,6 @@ US20: Como joven adulto, quiero actualizar mis características de piel para rec
 <p align = "center"> 
 
 <img src="assets/img/landing/wireflow-20-app.png" alt="wireflow app" width="550"/>
-
-20) <strong> Wireframe 21: </strong> Registro de dermatólogo
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
-
-21) <strong> Wireframe 22: </strong> Configurar perfil profesional
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US26: Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe26.png" alt="wireframe" width="550"/>
- 
-22)  <strong> Wireframe 22: </strong> Definir disponibilidad de atención
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US27: Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe27.png" alt="wireframe" width="550"/>
-
-23)  <strong> Wireframe 23: </strong> Visualizar agenda de consultas
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US28: Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe28.png" alt="wireframe" width="550"/>
-
-24)  <strong> Wireframe 24: </strong> Realizar consulta virtual en tiempo real
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US29: Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe29.png" alt="wireframe" width="550"/>
-
-25)  <strong> Wireframe 25: </strong> Registrar notas y recomendaciones clínicas
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US30: Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe30.png" alt="wireframe" width="550"/>
-
-26)  <strong> Wireframe 26: </strong> Registrar fotografías clínicas
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US31: Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe33.png" alt="wireframe" width="550"/>
-
-27)  <strong> Wireframe 27: </strong> Consultar historial de consultas atendidas
-  
-<br> <strong> User Story asociada: </br> </strong>
-
-US32: Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
-
- <p align = "center">
-<img src="assets/img/wireframes/wireframe32.png" alt="wireframe" width="550"/>
-
 
 ### 4.4.3. Web Applications Mock-ups
 
