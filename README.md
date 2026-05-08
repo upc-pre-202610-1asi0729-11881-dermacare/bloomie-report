@@ -3735,19 +3735,22 @@ En esta etapa del proyecto, JSON Server se utiliza únicamente como una solució
 ### 5.2.1. Sprint 1
 
 #### 5.2.1.1. Sprint Planning 1
-| Campo | Detalle                                                                                                                                                                                                                                                                                                               |
-|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Sprint #** | Sprint 1                                                                                                                                                                                                                                                                                                              |
-| **Sprint Planning Date** | 13 de abril de 2026                                                                                                                                                                                                                                                                                                   |
-| **Time** | 9:00 p.m. – 11:00 p.m.                                                                                                                                                                                                                                                                                             |
-| **Location** | Reunión virtual vía Discord                                                                                                                                                                                                                                                                                           |
-| **Prepared By** | Ramirez Ruiz, Nickolas y Asmat Alminco, Martin                                                                                                                                                                                                                                                                                    |
-| **Attendees** | Asmat Alminco, Martin Alejandro · Contreras Torres, Arturo Valentino · Gallardo Morales, Carla Alejandra · Mechan Montenegro, Luciana Carolina · Ramirez Ruiz, Nickolas                                                                                                                                               |
-| **Sprint 1 – 0 Review Summary** | No aplica. Este es el primer sprint del proyecto. No existen reviews previas.                                                                                                                                                                                                                                         |
-| **Sprint 1 – 0 Retrospective Summary** | No aplica. Este es el primer sprint del proyecto. No existen retrospectivas previas.                                                                                                                                                                                                                                  |
-| **Sprint 1 Goal** | Nuestro enfoque está en validar nuestra propuesta de valor a través de una landing page. Creemos que esto brinda claridad y confianza a jóvenes adultos que buscan soluciones confiables para el cuidado de la piel. Esto se confirmará cuando al menos el 10% de los visitantes se registren en nuestra plataforma y permanezcan más de 5 minutos en la página. |
-| **Sprint 1 Velocity** | 10 story points                                                                                                                                                                                                                                                                                                       |
-| **Sum of Story Points** | 8 story points                                                                                                                                                                                                                                                                                                       |
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 1 |
+| **Sprint Planning Background** | |
+| **Date** | 2026-04-13 |
+| **Time** | 9:00 p.m. – 11:00 p.m. |
+| **Location** | Universidad Peruana de Ciencias Applicadas - Pabellón I |
+| **Prepared By** | Contreras Torres, Arturo |
+| **Attendees (to planning meeting)** | Asmat Alminco, Martin Alejandro / Contreras Torres, Arturo Valentino / Gallardo Morales, Carla Alejandra / Mechan Montenegro, Luciana Carolina / Ramirez Ruiz, Nickolas |
+| **Sprint 1 – 0 Review Summary** | No aplica. Este es el primer sprint del proyecto. No existen reviews previas. |
+| **Sprint 1 – 0 Retrospective Summary** | No aplica. Este es el primer sprint del proyecto. No existen retrospectivas previas. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 1 Goal** | Our focus is on presenting Bloomie's value proposition to potential users through a fully deployed landing page. We believe it delivers clarity and confidence to young adults seeking reliable skincare solutions. This will be confirmed when the Landing Page is publicly accessible via a deployed web link with responsive design across devices, and the software architecture diagrams, including the C4 Model Context, Container and Component levels, along with the Domain-Driven Design artifacts and Database Entity-Relationship diagrams, are fully documented in the project report.|
+| **Sprint 1 Velocity** | 10 |
+| **Sum of Story Points** | 8 |
+
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
 | Aspecto / Sección | User Story | Líder | Colaborador |
