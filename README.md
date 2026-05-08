@@ -3733,99 +3733,181 @@ general y su lista personalizada de forma rápida y sencilla.
   únicamente los productos guardados, sin elementos distractores.
 
 
+11) **Wireframe 11:** Métricas del progreso
+
+**User Story relacionada:**
+US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+
+![wireframe 11](assets/img/wireframes/wireframe-11-app.png)
+
+**Principios y elementos de diseño:**
+La pantalla de inicio presenta un saludo personalizado ("Hello, Sofia") acompañado de una tarjeta de llamada a la acción para iniciar el análisis de piel. El contenido se organiza en tarjetas modulares que agrupan funcionalidades clave: cita con dermatólogo, productos en tendencia, progreso de piel y rutina de cuidado. La jerarquía visual se establece mediante el tamaño y peso de los elementos, guiando la atención del usuario de arriba hacia abajo de forma natural. Por otro lado, se tiene en cuenta tarjetas compactas  que destacan indicadores clave, como tasa de adherencia. 
+
+**Diseño inclusivo:**
+Cada tarjeta incluye etiquetas de texto descriptivas que complementan los elementos visuales, garantizando la comprensión del contenido sin depender únicamente de íconos. La barra de navegación inferior cuenta con íconos acompañados de etiquetas textuales (Home, Consult, My Routine, Profile), reduciendo la ambigüedad para usuarios con menor familiaridad digital. Luego, existen valores númericos acompañados de etiquetas que facilita la lectura. 
+**Arquitectura de información:**
+La pantalla actúa como hub central de la aplicación. El contenido se prioriza según frecuencia de uso: la rutina activa y la próxima cita aparecen en primer plano, mientras que las secciones secundarias como tiendas cercanas se ubican al final. La navegación global en la parte inferior permite acceder a las secciones principales desde cualquier punto de la app. Luego, el contenido en el siguiente donde se muestra la información sigue una progresión lógica: primero el desempeño, luego, el puntaje global con su tendencia, para finalmente se encuentra la actividad semanal. Ahora,las heurísticas de Nielsen aplicadas: 
+
+- *Visibilidad del estado del sistema*: la tarjeta de cita muestra fecha, hora y nombre del médico, manteniendo al usuario informado sobre sus compromisos activos.
+- Reconocimiento antes que recuerdo: las tarjetas con títulos visibles permiten al usuario identificar las secciones disponibles sin necesidad de memorizar rutas de navegación.
+- *Flexibilidad y eficiencia de uso*: el botón "Get started" en la tarjeta principal ofrece un acceso directo al flujo de análisis, acelerando la interacción para usuarios recurrentes.
+- *Estética y diseño minimalista*: el layout limpio con tarjetas bien delimitadas evita la sobrecarga de información, presentando solo lo esencial en cada bloque.
+
+12) **Wireframe 13:** Consulta al asistente virtual
+
+**User Story relacionada:**
+US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
+
+![wireframe 13](assets/img/wireframes/wireframe-13-app.png)
 
 
+**Principios y elementos de diseño:**
+La interfaz del asistente adopta el patrón de chat conversacional, diferenciando visualmente los mensajes del usuario (burbujas claras, alineadas a la derecha) de las respuestas del asistente (burbujas grises, alineadas a la izquierda). En la parte superior se presentan preguntas frecuentes como chips horizontales deslizables, ofreciendo puntos de entrada rápidos a consultas comunes. El flujo muestra dos estados del chat: uno inicial donde el asistente solicita información sobre el tipo de piel, y uno avanzado donde, ante una consulta fuera de su alcance, redirige al usuario con un dermatólogo.
+**Diseño inclusivo:**
+El campo de entrada ("Escriba aquí...") está claramente etiquetado y ubicado en la parte inferior de la pantalla, zona de fácil alcance en dispositivos móviles. Las preguntas frecuentes predefinidas reducen la carga cognitiva del usuario al ofrecer opciones concretas sin requerir que redacte sus dudas desde cero. El lenguaje del asistente es simple, directo y empático en ambos estados del flujo.
+**Arquitectura de información:**
+El contenido se estructura en tres niveles: accesos rápidos mediante preguntas frecuentes en la parte superior, historial de conversación en el área central con scroll, y campo de entrada fijo en la parte inferior. Esta disposición sigue el modelo estándar de interfaces de chat, minimizando la curva de aprendizaje. La redirección al dermatólogo cuando el asistente no puede resolver una consulta actúa como nodo de escape hacia otra sección del sistema.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: las burbujas de respuesta aparecen progresivamente, mostrando el avance de la conversación y el estado actual del diálogo.
+- *Prevención de errores*: las preguntas frecuentes preformuladas orientan al usuario hacia consultas que el asistente puede responder correctamente, reduciendo interacciones fallidas.
+- *Ayuda a los usuarios a reconocer y corregir errores*: cuando el asistente no puede responder ("Sorry I can not help you with that"), ofrece una alternativa concreta recomendando agendar una consulta con un dermatólogo.
+- *Ayuda y documentación*: las preguntas frecuentes funcionan como guía integrada, orientando al usuario sobre qué tipo de consultas puede realizar sin necesidad de salir de la pantalla.
+
+13) **Wireframe 14:** Selección de dermatólogos para pacientes
+
+**User Story relacionada:**
+US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
+
+![wireframe 14](assets/img/wireframes/wireframe-14-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo de wireframes conforma el flujo completo de contratación de una consulta dermatológica, compuesto por cuatro etapas secuenciales. La pantalla de selección presenta a los dermatólogos en tarjetas verticales con información relevante (especialidad, precio, rating y próxima disponibilidad), facilitando la comparación rápida entre profesionales. La pantalla de agendamiento muestra el perfil detallado del médico con estadísticas clave (pacientes, años de experiencia, rating) junto a un calendario semanal y bloques de horario seleccionables. El flujo de pago se desarrolla en tres estados progresivos: selección del método de pago (tarjeta o billetera digital), ingreso de datos del medio elegido, y confirmación de pago exitoso mediante un banner de "Success Payment".
+**Diseño inclusivo:**
+Cada tarjeta de dermatólogo incluye su especialidad descrita en texto, permitiendo que el usuario tome decisiones informadas sin depender únicamente de nombres o imágenes. Los campos del formulario de pago cuentan con placeholders descriptivos ("Sofia Mendez", "0000 0000 0000 0000", "dd/mm/yyyy") que guían el formato de ingreso esperado. Un mensaje de seguridad ("Your payment info is encrypted and secure") acompañado de un ícono de candado refuerza la confianza del usuario durante el proceso de pago.
+Arquitectura de información:
+El flujo sigue una progresión lineal y guiada: listado → perfil y agendamiento → método de pago → datos de pago → confirmación. Esta estructura evita que el usuario tome decisiones en paralelo, reduciendo errores y garantizando que cada paso se complete antes de avanzar al siguiente. La flecha de retroceso presente en todas las pantallas permite navegar hacia atrás sin perder el contexto acumulado.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el banner "Success Payment" confirma visualmente que la transacción fue completada, cerrando el flujo con un estado claro y reconocible.
+- *Coincidencia entre el sistema y el mundo real*: los bloques de horario (08:00–9:00, 10:00–11:00) y el calendario semanal replican el formato que los usuarios ya conocen de agendas y calendarios físicos.
+- *Control y libertad del usuario*: la flecha de retroceso en cada pantalla permite al usuario corregir decisiones previas (cambiar de médico, de horario o de método de pago) sin reiniciar el flujo completo.
+- *Reconocimiento antes que recuerdo*: los métodos de pago se presentan como opciones visibles con radio buttons, evitando que el usuario recuerde qué opciones están disponibles.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario orientan sobre el formato correcto de ingreso, previniendo errores antes de que ocurran.
+
+14) **Wireframe 15:** Pago de consulta dermatológica
+
+**User Story relacionada:**
+US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
+
+![wireframe 15](assets/img/wireframes/wireframe-15-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo conforma el flujo completo de contratación de una consulta dermatológica en cuatro etapas secuenciales. La pantalla de selección presenta a los dermatólogos en tarjetas verticales con información relevante (especialidad, precio, rating y próxima disponibilidad), facilitando la comparación rápida entre profesionales. La pantalla de agendamiento muestra el perfil detallado del médico con estadísticas clave (pacientes, años de experiencia, rating) junto a un calendario semanal y bloques de horario seleccionables. El flujo de pago avanza en tres estados progresivos: selección del método de pago, ingreso de datos del medio elegido, y confirmación mediante un banner de "Success Payment".
+**Diseño inclusivo:**
+Cada tarjeta de dermatólogo describe su especialidad en texto plano, permitiendo decisiones informadas sin depender de imágenes. Los campos del formulario de pago incluyen placeholders descriptivos que guían el formato de ingreso esperado. Un mensaje de seguridad ("Your payment info is encrypted and secure") acompañado de un ícono de candado refuerza la confianza del usuario durante la transacción.
+Arquitectura de información:
+El flujo sigue una progresión lineal y guiada: listado → perfil y agendamiento → método de pago → datos de pago → confirmación. Esta estructura garantiza que cada paso se complete antes de avanzar al siguiente, reduciendo errores de decisión. La flecha de retroceso presente en todas las pantallas permite navegar hacia atrás sin perder el contexto acumulado.
+**Heurísticas de Nielsen aplicadas:**
+
+- *Visibilidad del estado del sistema*: el banner "Success Payment" confirma visualmente que la transacción fue completada, cerrando el flujo con un estado claro y reconocible.
+- *Coincidencia entre el sistema y el mundo real*: los bloques de horario y el calendario semanal replican el formato que los usuarios ya conocen de agendas físicas o digitales.
+- *Control y libertad del usuario*: la flecha de retroceso en cada pantalla permite corregir decisiones previas (cambiar médico, horario o método de pago) sin reiniciar el flujo.
+- *Reconocimiento antes que recuerdo*: los métodos de pago se presentan como opciones visibles con radio buttons, evitando que el usuario deba recordar qué alternativas están disponibles.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario orientan sobre el formato correcto de ingreso, previniendo errores antes de que ocurran.
 
 
+15) **Wireframe 16:** Cancelar cita dermatológica
+
+**User Story relacionada:**
+US16 - Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+
+![wireframe 16](assets/img/wireframes/wireframe-16-app.png)
+
+16) **Wireframe 17:** Selección y pago de una suscripción
+
+**User Story relacionada:**
+US17 - Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
+
+![wireframe 17](assets/img/wireframes/wireframe-17-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo cubre el flujo de suscripción a la plataforma, iniciando con una pantalla de comparación de planes donde se destacan las características incluidas en cada uno. El plan "Advanced" aparece visualmente resaltado con una etiqueta "Most Popular" y su precio mensual en tipografía prominente ($19/month), orientando la decisión del usuario hacia la opción recomendada. El flujo de pago posterior es estructuralmente idéntico al de la consulta dermatológica (selección de método → ingreso de datos → confirmación), garantizando coherencia visual entre los dos flujos transaccionales de la app.
+**Diseño inclusivo:**
+Las características de cada plan se presentan en listas con íconos de verificación, permitiendo comparar beneficios de forma clara y sin ambigüedad. El indicador "All plans include a 7-day free trial" se ubica en la parte superior como información destacada, asegurando que el usuario conozca este beneficio antes de tomar cualquier decisión. Los campos del formulario de pago mantienen los mismos placeholders y mensajes de seguridad del flujo anterior, reduciendo la curva de aprendizaje.
+**Arquitectura de información:**
+El flujo se organiza en dos grandes bloques: decisión de plan y ejecución del pago. La pantalla de selección agrupa los planes verticalmente, priorizando el plan recomendado mediante jerarquía visual. Una vez seleccionado el plan, el usuario ingresa al mismo flujo de pago reutilizado de otros contextos de la app, lo que reduce la necesidad de aprender nuevas interacciones.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el banner "Success Payment" al final del flujo confirma que la suscripción fue activada correctamente, cerrando el proceso con un estado explícito.
+- *Consistencia y estándares*: el flujo de pago reutiliza exactamente la misma estructura de pantallas que el pago de consulta, lo que genera coherencia y familiaridad dentro de la aplicación.
+- *Reconocimiento antes que recuerdo*: la lista de beneficios por plan con íconos de verificación permite al usuario comparar opciones directamente en pantalla, sin necesidad de recordar las características de cada plan.
+- *Estética y diseño minimalista*: el resaltado visual del plan "Advanced" dirige la atención sin sobrecargar la pantalla, presentando la información esencial de forma jerarquizada y ordenada.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario de pago guían el ingreso correcto de datos, previniendo errores antes de ejecutar la transacción.
+
+17) **Wireframe 18:** Gestionar suscripción realizada
+
+**User Story relacionada:**
+US18 - Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
+
+![wireframe 18](assets/img/wireframes/wireframe-18-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo cubre el flujo de administración de una suscripción ya activa. La pantalla principal "My Plan" presenta de forma destacada el plan contratado (Plan Advanced, $19/month) con su estado "Active" y la fecha del próximo cobro, seguido de la información del método de pago registrado y las opciones de cambio de plan o cancelación. Cuando el usuario decide actualizar su método de pago, se desencadena el mismo flujo transaccional reutilizado en otros contextos de la app: selección del método → ingreso de datos → confirmación con "Success Payment", garantizando consistencia visual en toda la experiencia.
+**Diseño inclusivo:**
+La información crítica de facturación (fecha de próximo cobro, últimos dígitos de la tarjeta y vencimiento) se presenta en texto plano y legible, sin depender de colores o íconos para transmitir su significado. El botón "Cancel subscription" se ubica al final de la pantalla con menor jerarquía visual que las demás acciones, reduciendo el riesgo de cancelaciones accidentales sin eliminar la opción.
+**Arquitectura de información:**
+La pantalla "My Plan" agrupa toda la información de suscripción en un único punto de gestión: estado del plan, método de pago y opciones de cambio o cancelación. Esta concentración evita que el usuario deba navegar entre múltiples secciones para administrar su cuenta. El flujo de actualización de pago se ramifica desde esta pantalla y retorna a ella una vez completada la transacción.
+
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: la etiqueta "Active" y la fecha de próximo cobro mantienen al usuario informado sobre el estado actual de su suscripción en todo momento.
+- *Control y libertad del usuario*: las opciones "Upgrade or downgrade your plan" y "Cancel subscription" ofrecen al usuario control total sobre su suscripción desde una sola pantalla.
+- *Consistencia y estándares*: el flujo de actualización de método de pago reutiliza exactamente la misma estructura de pantallas que los demás flujos transaccionales de la app.
+- *Ayuda a los usuarios a reconocer y corregir errores*: el resumen del método de pago activo (número parcial y fecha de vencimiento) permite al usuario verificar sus datos antes de iniciar cualquier actualización.
+
+18) **Wireframe 19:** Editar información personal
+
+**User Story relacionada:**
+US19 - Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
+
+![wireframe 19](assets/img/wireframes/wireframe-19-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo abarca la sección de perfil personal y sus ajustes de configuración. La pantalla "Profile" centraliza la información del usuario (nombre, email y foto) junto con accesos directos a subsecciones: Skin Profile, Settings y Favourites. La pantalla de "Settings" presenta tres controles de preferencia (Notifications, Dark Mode y Language) mediante toggles y un selector de idioma con dos opciones (English / Spanish), mostrando tres estados del flujo: configuración inicial activa, configuración modificada y confirmación de guardado ("Changes saved!").
+**Diseño inclusivo:**
+La opción de idioma (English / Spanish) directamente en los ajustes reconoce la diversidad lingüística de los usuarios y permite adaptar la experiencia sin acceder a configuraciones externas del dispositivo. Los toggles de Notifications y Dark Mode son controles estándar de alta familiaridad en entornos móviles, reduciendo la curva de aprendizaje. El subtítulo descriptivo bajo cada sección del perfil ("Type of skin and habits", "Language and preferences", "Products saved") orienta al usuario sobre el contenido antes de ingresar.
+**Arquitectura de información:**
+El perfil funciona como hub de configuración personal, organizando las preferencias en tres categorías claramente diferenciadas. La sección Settings agrupa exclusivamente los ajustes del sistema, separándolos del perfil de piel y los favoritos, lo que facilita la navegación por contexto. El flujo de guardado se resuelve en la misma pantalla mediante el cambio del botón "Save Changes" a "Changes saved!", evitando redireccionamientos innecesarios.
+
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el botón que cambia a "Changes saved!" confirma inmediatamente que los ajustes fueron guardados, sin necesidad de navegar a otra pantalla.
+- *Consistencia y estándares*: el uso de toggles para activar/desactivar opciones sigue los patrones de interacción estándar de interfaces móviles, generando familiaridad inmediata.
+ Reconocimiento antes que recuerdo: los subtítulos descriptivos bajo cada sección del perfil permiten al usuario identificar el contenido de cada subsección sin necesidad de ingresar para descubrirlo.
+- *Flexibilidad y eficiencia de uso*: la disponibilidad del selector de idioma directamente en Settings permite a usuarios hispanohablantes adaptar la app a su idioma de forma rápida y autónoma.
 
 
+19) **Wireframe 20:** Actualizar características de piel
 
+**User Story relacionada:**
+US20 - Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
 
+![wireframe 20](assets/img/wireframes/wireframe-20-app.png)
 
-11) <strong> Wireframe 11: </strong> Métricas del progeso 
+**Principios y elementos de diseño:**
+Este conjunto de wireframes representa el flujo de perfil y configuración de la aplicación móvil Bloomie. La pantalla “Profile” concentra la información personal del usuario, incluyendo fotografía, nombre y correo electrónico, además de accesos rápidos a las secciones “Skin Profile”, “Settings” y “Favourites”. La propuesta utiliza una jerarquía visual clara mediante títulos destacados, subtítulos descriptivos y separación por bloques de contenido. En la sección “Settings”, los controles de preferencias se presentan mediante toggles y selectores simples, priorizando la simplicidad visual y la facilidad de interacción. Asimismo, el botón de acción principal (“Save Changes”) mantiene una posición fija y visible para reforzar la claridad de las acciones disponibles.
 
-<br> <strong> User Story relacionada: </strong > </br>
+**Diseño inclusivo:**
+La interfaz incorpora principios de accesibilidad y diseño inclusivo mediante controles familiares y fáciles de reconocer, como interruptores tipo toggle y botones de selección de idioma. La posibilidad de cambiar entre English y Spanish permite adaptar la experiencia a distintos perfiles lingüísticos sin depender de configuraciones externas del dispositivo. El uso de etiquetas descriptivas y subtítulos debajo de cada sección facilita la comprensión del contenido para usuarios con distintos niveles de experiencia tecnológica. Además, la estructura visual limpia y minimalista reduce la carga cognitiva y mejora la legibilidad en pantallas móviles.
 
-US11: Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+**Arquitectura de información:**
+La organización de la información sigue una estructura jerárquica y modular. La pantalla “Profile” funciona como punto central de acceso a configuraciones personales y preferencias del usuario. Cada subsección cumple una función específica: “Skin Profile” reúne información dermatológica y hábitos, “Settings” concentra preferencias generales de uso y “Favourites” almacena productos guardados. Dentro de “Settings”, las opciones se agrupan según su propósito funcional (notificaciones, apariencia y lenguaje), permitiendo una navegación intuitiva y consistente. El flujo de guardado se resuelve en la misma vista mediante retroalimentación inmediata del botón (“Changes saved!”), evitando interrupciones innecesarias en la experiencia.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-11-app.png" alt="wireflow app" width="550"/>
+**Heurísticas de Nielsen aplicadas:**
 
+- *Visibilidad del estado del sistema*: el cambio del botón de “Save Changes” a “Changes saved!” informa de manera inmediata que la acción fue completada correctamente.
+- Consistencia y estándares: los toggles y selectores utilizados siguen patrones comunes en aplicaciones móviles modernas, favoreciendo la familiaridad del usuario.
+- *Reconocimiento antes que recuerdo*: las descripciones breves debajo de cada categoría ayudan al usuario a identificar rápidamente el contenido de cada sección sin necesidad de exploración adicional.
+- *Control y libertad del usuario*: los usuarios pueden activar o desactivar preferencias libremente antes de confirmar los cambios realizados.
+- *Flexibilidad y eficiencia de uso*: el acceso directo a configuraciones importantes, como idioma o modo oscuro, permite personalizar rápidamente la experiencia de uso.
 
-12) <strong> Wireframe 13: </strong> consulta al asistente virtual
-<br> <strong> User Story relacionada: </strong > </br> 
-
-US13: Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-13-app.png" alt="wireflow app" width="550"/>
-
-13) <strong > Wireframe 14: </strong> Selección de dermatólogos para pacientes
-
-<br> <strong> User Story relacionada: </strong > </br>
-
-US14: Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-14-app.png" alt="wireflow app" width="550"/>
-
-14) <strong> Wireframe 15: </strong> pago de consulta dermatológica
-
-<br> <strong> User Story asociada: </br> </strong>
-
- US15: Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-15-app.png" alt="wireflow app" width="550"/>
-  
-
-15) <strong> Wireframe 16: </strong> Cancelar cita dermatológica
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-16-app.png" alt="wireflow app" width="550"/>
-
-
-16) <strong> Wireframe 17: </strong> selección y pago de una suscripción
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-17-app.png" alt="wireflow app" width="550"/>
-
-17) <strong> Wireframe 18: </strong> Gestionar suscripción realizada
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-18-app.png" alt="wireflow app" width="550"/>
-
-18) <strong> Wireframe 19: </strong> Editar información personal
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-19-app.png" alt="wireflow app" width="550"/>
-
-19) <strong> Wireframe 20: </strong> Actualizar características de piel
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-20-app.png" alt="wireflow app" width="550"/>
-
-20) <strong> Wireframe 20: </strong> Registro de dermatólogo
+20) <strong> Wireframe 21: </strong> Registro de dermatólogo
 
 <br> <strong> User Story asociada: </br> </strong>
 
@@ -4178,10 +4260,10 @@ actualizando la vista.
 US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
 
 <p align = "center">
-<img src="assets/img/landing/wireflow-11-app.png" alt="wireflow app" width="550"/>
+<img src="assets/img/wireflow/wireflow-11-app.png" alt="wireflow app" width="550"/>
 
 <p align = "center">
-<img src="assets/img/landing/wireflow-11-web.png" alt="wireflow app" width="550"/>
+<img src="assets/img/wireflow/wireflow-11-web.png" alt="wireflow app" width="550"/>
 
 
 
@@ -4193,7 +4275,7 @@ Como joven adulto, quiero consultar productos en línea y recibir orientación s
 US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
 <p align = "center">
-<img src="assets/img/landing/wireflow-13-app.png" alt="wireflow app" width="550"/>
+<img src="assets/img/wireflow/wireflow-13-app.png" alt="wireflow app" width="550"/>
 
 
 14) <strong> Wireflow 13: </strong> Selección de dermatólogos para pacientes
@@ -4206,6 +4288,8 @@ US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibl
 
 <p align = "center">
 <img src="assets/img/landing/wireflow-14-app.png" alt="wireflow app" width="550"/>
+
+**Descripción del flujo:**
 
 
 15) <strong>Wireflow 14:</strong> Pagar y confirmar cita
@@ -4394,428 +4478,6 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 <img src="assets/img/wireflow/wireflow31_web.png" alt="wireflow app" width="550"/>
 
 ### 4.4.3. Web Applications Mock-ups
-
-1) **Mock-up 1:** Registro de cuenta
-
-**User Story relacionada:**
-US01 - Como joven adulto, quiero registrarme con mis datos personales para
-crear una cuenta y acceder a Bloomie.
-
-**Desktop**
-![mockup 1 desktop](assets/img/mockups/mockup-01-web.png)
-
-
-**Mobile**
-![mockup 1 mobile](assets/img/mockups/mockup-01-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores definida en el Design System de
-Bloomie, utilizando el color primario #A26769 en los botones de acción y
-fondos de pantalla de bienvenida, junto con el fondo claro #FDFFF8 en las
-pantallas del formulario. La tipografía Montserrat Semibold se emplea en
-títulos y botones, mientras que Montserrat Regular se usa en los campos
-del formulario, manteniendo consistencia con la guía de estilos establecida.
-
-**Diseño inclusivo:**
-Los campos del formulario cuentan con etiquetas visibles, placeholders
-orientativos y un indicador de fortaleza de contraseña. Se incluyen
-opciones alternativas de registro mediante Google y Apple, reduciendo
-barreras de acceso para distintos tipos de usuarios. El contraste entre
-el texto oscuro #333333 y el fondo claro garantiza legibilidad adecuada.
-
-**Arquitectura de información:**
-El contenido se organiza de forma secuencial y progresiva, guiando al
-usuario desde la pantalla de bienvenida hasta la completación del
-formulario con email, contraseña, nombre y apellido. Cada pantalla
-presenta únicamente la información necesaria para ese paso del proceso.
-
-**Design System aplicado:**
-- Colores: #A26769 (botones y fondos), #FDFFF8 (fondo claro), #333333 (texto)
-- Tipografía: Montserrat Semibold 16px (botones), Montserrat Regular 16px (campos)
-- Espaciado: mínimo 16px entre elementos interactivos
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-
-2) **Mock-up 2:** Completar perfil de piel
-
-**User Story relacionada:**
-US02 - Como joven adulto, quiero completar un cuestionario inicial sobre mis
-condiciones de piel en mi primer ingreso para que la aplicación configure mi
-perfil correctamente.
-
-**Desktop**
-![mockup 2 desktop](assets/img/mockups/mockup-02-web.png)
-
-**Mobile**
-![mockup 2 mobile](assets/img/mockups/mockup-02-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el fondo claro #FDFFF8 en el formulario y el color primario
-#A26769 en el botón Next y elementos destacados. La tipografía Montserrat
-se emplea en títulos, etiquetas y opciones, manteniendo consistencia visual
-con el resto de la aplicación.
-
-**Diseño inclusivo:**
-Los campos de selección cuentan con etiquetas descriptivas en español e
-inglés y una guía de tipos de piel desplegable con descripciones detalladas
-para cada categoría, facilitando la comprensión para usuarios sin
-conocimiento previo sobre skincare. La pantalla de preparación para el
-escaneo presenta instrucciones numeradas en lenguaje simple.
-
-**Arquitectura de información:**
-El contenido se organiza en pasos secuenciales mediante un indicador de
-progreso en la parte superior, agrupando preguntas sobre tipo de piel,
-consumo de agua, exposición solar y hábitos de sueño. Al completar el
-cuestionario, el sistema redirige al usuario a la pantalla de preparación
-para el escaneo facial.
-
-**Design System aplicado:**
-- Colores: #A26769 (botón Next), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (campos)
-- Espaciado: mínimo 16px entre campos del formulario
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-3) **Mock-up 3:** Escaneo facial y diagnóstico preliminar
-
-**User Stories relacionadas:**
-US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
-para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
-US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
-después del escaneo para conocer el estado de mi piel y los cuidados
-que necesito.
-
-**Desktop**
-![mockup 3 desktop](assets/img/mockups/mockup-03-web.png)
-
-
-**Mobile**
-![mockup 3 mobile](assets/img/mockups/mockup-03-mobile.png)
-
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en la barra lateral de navegación
-y botones de acción. Los scores de hidratación, barrera y textura se
-presentan con colores diferenciados para facilitar la lectura visual
-de los resultados. La tipografía Montserrat se emplea en todos los
-elementos manteniendo consistencia con el sistema de diseño.
-
-**Diseño inclusivo:**
-Las instrucciones previas al escaneo están numeradas y redactadas en
-lenguaje simple. Los resultados del análisis se presentan mediante
-porcentajes y etiquetas descriptivas comprensibles para cualquier
-usuario. La pantalla de error incluye posibles causas del fallo y
-consejos para mejorar el escaneo, con opciones claras de reintento
-o contacto con soporte.
-
-**Arquitectura de información:**
-El flujo se organiza en cuatro etapas secuenciales: preparación,
-escaneo en progreso, análisis y reporte final. El reporte organiza
-la información en secciones diferenciadas: scores generales, análisis
-preliminar y próximos pasos recomendados.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar y botones), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre secciones del reporte
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-4) **Mock-up 4:** Generar rutina personalizada
-
-**User Story relacionada:**
-US05 - Como joven adulto, quiero recibir una rutina personalizada con
-productos basados en mi diagnóstico de piel para seguir un tratamiento
-adecuado.
-
-**Desktop**
-![mockup 4 desktop](assets/img/mockups/mockup-04-web.png)
-
-**Mobile**
-![mockup 4 mobile](assets/img/mockups/mockup-04-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en la barra lateral y elementos
-destacados. Los pasos de la rutina se diferencian mediante colores
-suaves (verde, azul, rosa) para cada categoría de producto, facilitando
-la identificación visual de cada paso. La barra de progreso durante la
-generación de la rutina utiliza el color primario de la marca.
-
-**Diseño inclusivo:**
-Cada paso de la rutina incluye imagen del producto, nombre, horario y
-categoría, facilitando la comprensión para usuarios con distintos niveles
-de experiencia en skincare. La pantalla de error presenta las posibles
-causas del fallo con íconos descriptivos y consejos numerados para
-resolver el problema, con opciones claras de reintento o contacto con
-soporte.
-
-**Arquitectura de información:**
-El contenido se organiza en dos niveles: una vista mensual en calendario
-que muestra el resumen de la rutina y una vista diaria que detalla los
-pasos y productos específicos con su horario. El panel lateral muestra
-el perfil de piel, racha de días consecutivos y recordatorios de
-reposición de productos.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar y barra de progreso), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas de productos
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-5) **Mock-up 5:** Generar rutina personalizada
-
-**User Story relacionada:**
-US05 - Como joven adulto, quiero recibir una rutina personalizada con
-productos basados en mi diagnóstico de piel para seguir un tratamiento
-adecuado.
-
-**Desktop**
-![mockup 5 desktop](assets/img/mockups/mockup_05-web.png)
-
-
-**Mobile**
-![mockup 5 mobile](assets/img/mockups/mockup-05-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en la barra lateral y elementos
-destacados. La rutina generada presenta los pasos del día con
-codificación de colores por categoría de producto, facilitando la
-identificación visual de cada paso.
-
-**Diseño inclusivo:**
-La pantalla de carga muestra un mensaje claro "Generating routine" con
-barra de progreso, informando al usuario que el sistema está trabajando.
-Los pasos de la rutina incluyen imagen del producto, nombre y horario,
-facilitando la comprensión para cualquier tipo de usuario.
-
-**Arquitectura de información:**
-El flujo se organiza en dos etapas: generación de la rutina con barra
-de progreso y vista final con calendario mensual y detalle diario de
-los pasos. El panel lateral muestra el perfil de piel, racha de días
-y recordatorios de reposición de productos.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar y barra de progreso), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas de productos
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-6) **Mock-up 6:** Reemplazar producto de la rutina
-
-**User Story relacionada:**
-US06 - Como joven adulto, quiero reemplazar un producto de mi rutina por
-una alternativa recomendada para adaptar mi tratamiento.
-
-**Desktop**
-![mockup 6 desktop](assets/img/mockups/mockup-06-web.png)
-
-**Mobile**
-![mockup 6 mobile](assets/img/mockups/mockup-06-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en la barra lateral, botones de
-acción y elementos destacados. Las alternativas compatibles se presentan
-en tarjetas con imagen, nombre, precio y barra de compatibilidad. La
-pantalla de confirmación destaca el score de 95% con el color primario
-de la marca para reforzar visualmente la decisión del usuario.
-
-**Diseño inclusivo:**
-Cada alternativa incluye una barra de compatibilidad con porcentaje
-visible y una guía de rangos (90-100% Excellent Match, 80-89% Good Match,
-menor a 80% Fair Match), facilitando la toma de decisiones sin requerir
-conocimiento técnico. La pantalla de confirmación explica en lenguaje
-simple por qué el producto es adecuado para la piel del usuario.
-
-**Arquitectura de información:**
-El flujo se organiza en tres etapas: visualización del producto actual
-con alternativas compatibles ordenadas por score, confirmación del
-reemplazo con detalle del producto seleccionado y vista actualizada de
-la rutina con el nuevo producto incorporado.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar, botones y score destacado), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas de alternativas
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-
-7) **Mock-up 7:** Registrar cumplimiento de rutina diaria
-
-**User Story relacionada:**
-US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
-llevar un seguimiento de mi progreso.
-
-**Desktop**
-![mockup 7 desktop](assets/img/mockups/mockup-07-web.png)
-
-**Mobile**
-![mockup 7 mobile](assets/img/mockups/mockup-07-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en la barra lateral y elementos
-destacados. El dashboard presenta métricas clave como skin score, racha
-de días, próxima cita y pasos en rutina en tarjetas con íconos,
-manteniendo consistencia visual con el sistema de diseño. El botón
-"Routine completed" cambia visualmente al registrar el cumplimiento,
-reforzando el feedback al usuario.
-
-**Diseño inclusivo:**
-Las métricas del dashboard se presentan con íconos y etiquetas
-descriptivas, facilitando la comprensión del progreso sin requerir
-interpretación técnica. El cambio visual en el calendario y el botón
-al marcar la rutina como completada confirma la acción de forma clara
-e intuitiva para cualquier tipo de usuario.
-
-**Arquitectura de información:**
-El contenido se organiza en dos niveles: el dashboard general con
-resumen del progreso semanal, recomendaciones personalizadas y acciones
-pendientes, y la vista detallada de la rutina diaria con los pasos
-específicos. Al marcar la rutina como completada, el sistema actualiza
-el estado visual del día en el calendario.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar y elementos destacados), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas de métricas y pasos de rutina
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-8) **Mock-up 8:** Explorar catálogo de productos
-
-**User Story relacionada:**
-US08 - Como joven adulto, quiero explorar el catálogo de productos y
-aplicar filtros para encontrar opciones relevantes a mis necesidades.
-
-**Desktop**
-![mockup 8 desktop](assets/img/mockups/mockup-08-web.png)
-
-**Mobile**
-![mockup 8 mobile](assets/img/mockups/mockup-08-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando fondos suaves diferenciados por categoría de producto en
-las tarjetas del catálogo. El panel de filtros lateral presenta opciones
-por categoría y recomendación de IA con radio buttons, manteniendo
-consistencia visual con el sistema de diseño. La pantalla de detalle
-del producto muestra una barra de compatibilidad en color verde para
-scores altos.
-
-**Diseño inclusivo:**
-El badge "AI Recommended" identifica visualmente los productos sugeridos
-según el perfil de piel del usuario. En caso de no encontrar resultados,
-el sistema muestra un mensaje "Search Failed" con fondo rosado suave,
-informando al usuario de forma clara y no agresiva. Los botones "Apply
-Filters" y "Clear all" permiten gestionar los filtros con facilidad.
-
-**Arquitectura de información:**
-El contenido se organiza mediante pestañas (All Products, Favorites) y
-un panel de filtros lateral por categoría y recomendación de IA. La
-pantalla de detalle presenta imagen del producto, descripción, score de
-compatibilidad con explicación y beneficios clave, permitiendo al usuario
-tomar una decisión informada.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar), #FDFFF8 (fondo), #333333 (texto), verde para scores altos
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas del catálogo
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-9) **Mock-up 9:** Ver detalle y compatibilidad de producto
-
-**User Story relacionada:**
-US09 - Como joven adulto, quiero ver el detalle de un producto y su
-compatibilidad con mi piel para tomar decisiones informadas.
-
-**Desktop**
-![mockup 9 desktop](assets/img/mockups/mockup-09-web.png)
-
-**Mobile**
-![mockup 9 mobile](assets/img/mockups/mockup-09-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando el color primario #A26769 en el botón principal y barra
-lateral. Las barras de compatibilidad utilizan colores diferenciados
-según el nivel de adecuación: verde para Excellent Match (90-100%),
-amarillo para Good Match (80-89%) y rojo para Fair Match (menor a 80%),
-facilitando la lectura visual de los resultados.
-
-**Diseño inclusivo:**
-La guía de compatibilidad lateral presenta los rangos con indicadores
-de color y etiquetas descriptivas, permitiendo al usuario interpretar
-los scores sin conocimiento técnico previo. El badge "Best Match"
-destaca visualmente la opción más adecuada. El panel de perfil de piel
-muestra las características del usuario (Normal to Dry, Sensitive, Low
-Hydration) como referencia para la selección.
-
-**Arquitectura de información:**
-El contenido se organiza en tres secciones: el producto actual en
-rutina, las alternativas compatibles ordenadas por score y el panel
-lateral con la guía de compatibilidad y perfil de piel. La rutina
-diaria en la pantalla izquierda mantiene el contexto del usuario
-durante el proceso de selección.
-
-**Design System aplicado:**
-- Colores: #A26769 (navbar y botón principal), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas de alternativas
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-10) **Mock-up 10:** Guardar producto como favorito
-
-**User Story relacionada:**
-US10 - Como joven adulto, quiero guardar productos en mis favoritos para
-acceder a ellos fácilmente después.
-
-**Desktop**
-![mockup 10 desktop](assets/img/mockups/mockup-10-web.png)
-
-**Mobile**
-![mockup 10 mobile](assets/img/mockups/mockup-10-mobile.png)
-
-**Principios y elementos de diseño:**
-El mock-up aplica la paleta de colores del Design System de Bloomie,
-utilizando fondos suaves diferenciados por categoría de producto en
-las tarjetas del catálogo. El ícono de corazón cambia a color primario
-#A26769 al guardar un producto como favorito, proporcionando feedback
-visual inmediato. La barra de navegación inferior en mobile mantiene
-consistencia con el sistema de diseño.
-
-**Diseño inclusivo:**
-El ícono de corazón es un elemento universalmente reconocido para
-indicar favoritos, reduciendo la necesidad de instrucciones adicionales.
-El contador en la pestaña "Favourites" informa al usuario cuántos
-productos tiene guardados. Las tarjetas mantienen un tamaño adecuado
-para interacción táctil en dispositivos móviles.
-
-**Arquitectura de información:**
-El contenido se organiza mediante dos pestañas: "All Products" para
-explorar el catálogo completo y "Favourites" para acceder únicamente
-a los productos guardados con su contador actualizado. La navegación
-inferior en mobile permite acceder rápidamente a las secciones
-principales de la aplicación.
-
-**Design System aplicado:**
-- Colores: #A26769 (ícono favorito activo y navbar mobile), #FDFFF8 (fondo), #333333 (texto)
-- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
-- Espaciado: mínimo 16px entre tarjetas del catálogo
-- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
-
-
-
-
-
 20) <strong> Mock-up 20: </strong> Registro de dermatólogo
 
 <br> <strong> User Story asociada: </br> </strong>
