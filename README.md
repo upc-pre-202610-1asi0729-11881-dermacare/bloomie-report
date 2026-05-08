@@ -3295,6 +3295,11 @@ crear una cuenta y acceder a Bloomie.
 
 ![wireframe 1](assets/img/wireframes/wireframe-01-web.png)
 
+![wireframe 1 mobile](assets/img/wireframes/wireframe-01-mobile.png)
+
+
+
+
 **Principios y elementos de diseño:**
 La pantalla aplica jerarquía visual clara, ubicando el nombre y slogan de
 Bloomie como elemento principal, seguido de los botones de acceso. Se
@@ -3332,6 +3337,9 @@ perfil correctamente.
 
 ![wireframe 2](assets/img/wireframes/wireframe-02-web.png)
 
+---
+
+![wireframe 2 mobile](assets/img/wireframes/wireframe-02-mobile.png)
 
 **Principios y elementos de diseño:**
 La pantalla aplica una jerarquía visual progresiva mediante un indicador de
@@ -3373,7 +3381,12 @@ US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
 después del escaneo para conocer el estado de mi piel y los cuidados
 que necesito.
 
-![wireframe 3](assets/img/wireframes/wireframe-03-web.png)
+![wireframe 3](assets/img/wireframes/wireframe_03-web.png)
+
+
+![wireframe 3 mobile](assets/img/wireframes/wireframe-03-mobile.png)
+
+
 
 **Principios y elementos de diseño:**
 La pantalla aplica una jerarquía visual clara, guiando al usuario desde
@@ -3413,6 +3426,9 @@ después del escaneo para conocer el estado de mi piel y los cuidados
 que necesito.
 
 ![wireframe 4](assets/img/wireframes/wireframe-04-web.png)
+
+![wireframe 4 mobile](assets/img/wireframes/wireframe-04-mobile.png)
+
 
 **Principios y elementos de diseño:**
 La pantalla presenta los resultados del análisis mediante scores visuales
@@ -3456,6 +3472,9 @@ productos basados en mi diagnóstico de piel para seguir un tratamiento
 adecuado.
 
 ![wireframe 5](assets/img/wireframes/wireframe-05-web.png)
+
+![wireframe 5 mobile](assets/img/wireframes/wireframe-05-mobile.png)
+
 
 **Principios y elementos de diseño:**
 La pantalla presenta una animación de carga durante la generación de la
@@ -3952,7 +3971,7 @@ US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
 para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
 
 
-![wireflow 3](assets/img/wireflow/wireflow-03-web.png)
+![wireflow 3](assets/img/wireflow/wireflow_03-web.png)
 
 4) **Wireflow 4:** Diagnóstico preliminar automático
 - User goal:
