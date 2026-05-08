@@ -3549,6 +3549,7 @@ para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
 ![wireflow 03 mobile](assets/img/wireflow/wireflow-03-mobile.png)
 
 
+
 4) **Wireflow 4:** Diagnóstico preliminar automático
 - User goal:
   Como joven adulto, quiero recibir un diagnóstico generado por IA después
@@ -3562,6 +3563,7 @@ que necesito.
 ![wireflow 4](assets/img/wireflow/wireflow-04-web.png)
 
 ![wireflow 04 mobile](assets/img/wireflow/wireflow-04-mobile.png)
+
 
 
 
