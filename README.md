@@ -3430,6 +3430,7 @@ que necesito.
 ![wireframe 4 mobile](assets/img/wireframes/wireframe-04-mobile.png)
 
 
+
 **Principios y elementos de diseño:**
 La pantalla presenta los resultados del análisis mediante scores visuales
 de hidratación, barrera y textura, acompañados de un score general y áreas
@@ -3517,6 +3518,8 @@ una alternativa recomendada para adaptar mi tratamiento.
 
 ![wireframe 6](assets/img/wireframes/wireframe-06-web.png)
 
+![wireframe 6 mobile](assets/img/wireframes/wireframe-06-mobile.png)
+
 
 **Principios y elementos de diseño:**
 La pantalla presenta las alternativas compatibles en tarjetas con imagen,
@@ -3558,6 +3561,9 @@ US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
 llevar un seguimiento de mi progreso.
 
 ![wireframe 7](assets/img/wireframes/wireframe-07-web.png)
+
+![wireframe 7 mobile](assets/img/wireframes/wireframe-07-mobile.png)
+
 
 **Principios y elementos de diseño:**
 El dashboard principal presenta métricas clave como el skin score, racha
@@ -3602,6 +3608,9 @@ aplicar filtros para encontrar opciones relevantes a mis necesidades.
 
 ![wireframe 8](assets/img/wireframes/wireframe-08-web.png)
 
+![wireframe 8 mobile](assets/img/wireframes/wireframe-08-mobile.png)
+
+
 **Principios y elementos de diseño:**
 El catálogo presenta los productos en tarjetas con imagen, nombre y precio,
 organizadas en una cuadrícula que facilita la exploración visual. Se incluye
@@ -3640,6 +3649,10 @@ US09 - Como joven adulto, quiero ver el detalle de un producto y su
 compatibilidad con mi piel para tomar decisiones informadas.
 
 ![wireframe 9](assets/img/wireframes/wireframe-09-web.png)
+
+
+![wireframe 9 mobile](assets/img/wireframes/wireframe-09-mobile.png)
+
 
 **Principios y elementos de diseño:**
 La pantalla presenta las alternativas compatibles en tarjetas con imagen,
@@ -3682,6 +3695,10 @@ US10 - Como joven adulto, quiero guardar productos en mis favoritos para
 acceder a ellos fácilmente después.
 
 ![wireframe 10](assets/img/wireframes/wireframe-10-web.png)
+
+![wireframe 10 mobile](assets/img/wireframes/wireframe-10-mobile.png)
+
+
 
 **Principios y elementos de diseño:**
 El catálogo presenta los productos en tarjetas con imagen, nombre y precio,
