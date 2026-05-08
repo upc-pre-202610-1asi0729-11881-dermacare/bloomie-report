@@ -3287,193 +3287,6 @@ usuario con los productos digitales.
 
 ### 4.4.1. Web Applications Wireframes
 
-1) **Wireflow 1:** Registro de cuenta
-- User goal:
-  Como joven adulto, quiero registrarme en Bloomie con mis datos personales
-  para crear una cuenta y acceder a la aplicación.
-
-**User Story asociada:**
-US01 - Como joven adulto, quiero registrarme con mis datos personales para
-crear una cuenta y acceder a Bloomie.
-
-![wireflow 1](assets/img/wireflow/wireflow-01-web.png)
-El usuario inicia en la pantalla de bienvenida y selecciona la opción de
-registro. A continuación, completa el formulario con sus datos personales
-(nombre, apellido, email y contraseña). Si los datos son válidos, el sistema
-crea la cuenta y redirige al cuestionario inicial de perfil de piel. En caso
-de ingresar datos incorrectos o incompletos, el sistema muestra un mensaje
-de error indicando el campo correspondiente.
-
-2) **Wireflow 2:** Completar perfil de piel
-- User goal:
-  Como joven adulto, quiero completar el cuestionario inicial sobre mis
-  condiciones de piel para que la aplicación configure mi perfil correctamente.
-
-**User Story asociada:**
-US02 - Como joven adulto, quiero completar un cuestionario inicial sobre mis
-condiciones de piel en mi primer ingreso para que la aplicación configure mi
-perfil correctamente.
-
-![wireflow 2](assets/img/wireflow/wireflow_02-web.png)
-
-
-Tras completar el registro, el sistema redirige automáticamente al
-cuestionario inicial de perfil de piel. El usuario responde preguntas sobre
-su tipo de piel y nivel de sensibilidad. Si completa el formulario
-correctamente, el sistema guarda el perfil y redirige al proceso de escaneo
-facial. En caso de no completar todos los campos requeridos, el sistema
-notifica los datos faltantes.
-
-
-3) **Wireflow 3:** Escaneo facial
-- User goal:
-  Como joven adulto, quiero realizar un escaneo facial con la cámara para que
-  la aplicación capture mi piel y obtenga un diagnóstico preciso.
-
-**User Story asociada:**
-US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
-para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
-
-
-![wireflow 3](assets/img/wireflow/wireflow-03-web.png)
-
-4) **Wireflow 4:** Diagnóstico preliminar automático
-- User goal:
-  Como joven adulto, quiero recibir un diagnóstico generado por IA después
-  del escaneo para conocer el estado de mi piel y los cuidados que necesito.
-
-**User Story asociada:**
-US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
-después del escaneo para conocer el estado de mi piel y los cuidados
-que necesito.
-
-![wireflow 4](assets/img/wireflow/wireflow-04-web.png)
-
-
-Una vez completado el escaneo facial, el sistema procesa la imagen mediante
-IA y genera un diagnóstico con scores de hidratación, textura, sensibilidad
-y brillo. El usuario visualiza el reporte con los resultados de su análisis
-de piel. A partir de este diagnóstico, el sistema redirige al usuario hacia
-la generación de su rutina personalizada. En caso de ocurrir un error en el
-procesamiento, el sistema informa al usuario y permite reintentar el escaneo.
-
-El usuario accede a la sección de escaneo facial y el sistema solicita
-permiso para usar la cámara. Si el permiso es concedido, el sistema activa
-la cámara y guía al usuario para posicionar correctamente su rostro. Una vez
-capturada la imagen, el sistema procesa el escaneo y redirige al diagnóstico
-preliminar. Si la captura no se realiza correctamente, el sistema notifica
-al usuario y permite reintentar el escaneo.
-
-5) **Wireflow 5:** Generar rutina personalizada
-- User goal:
-  Como joven adulto, quiero recibir una rutina personalizada con productos
-  basados en mi diagnóstico de piel para seguir un tratamiento adecuado.
-
-**User Story asociada:**
-US05 - Como joven adulto, quiero recibir una rutina personalizada con
-productos basados en mi diagnóstico de piel para seguir un tratamiento
-adecuado.
-
-![wireflow 5](assets/img/wireflow/wireflow-05-web.png)
-
-Una vez generado el diagnóstico de piel, el sistema crea automáticamente
-una rutina personalizada asignando productos específicos para cada paso
-con su horario programado (mañana y noche). El usuario visualiza su rutina
-completa con los productos recomendados. Si ocurre un error en la
-generación, el sistema notifica al usuario y permite reintentar el proceso.
-
-6) **Wireflow 6:** Reemplazar producto de la rutina
-- User goal:
-  Como joven adulto, quiero reemplazar un producto de mi rutina por una
-  alternativa recomendada para adaptar mi tratamiento.
-
-**User Story asociada:**
-US06 - Como joven adulto, quiero reemplazar un producto de mi rutina por
-una alternativa recomendada para adaptar mi tratamiento.
-
-![wireflow 6](assets/img/wireflow/wireflow_06-web.png)
-
-El usuario accede a su rutina activa y selecciona el producto que desea
-reemplazar. El sistema muestra hasta cuatro alternativas compatibles
-ordenadas por score de compatibilidad. El usuario selecciona una alternativa
-y confirma el cambio. El sistema actualiza la rutina reemplazando el producto
-anterior por el seleccionado y muestra la rutina actualizada al usuario.
-
-
-7) **Wireflow 7:** Registrar cumplimiento de rutina diaria
-- User goal:
-  Como joven adulto, quiero marcar si completé mi rutina del día para llevar
-  un seguimiento de mi progreso.
-
-**User Story asociada:**
-US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
-llevar un seguimiento de mi progreso.
-
-![wireflow 7](assets/img/wireflow/wireflow-07-web.png)
-
-El usuario accede a su rutina del día y visualiza los pasos pendientes.
-Una vez realizados los pasos, el usuario indica que completó su rutina
-del día. El sistema registra el día como completado y actualiza las
-métricas de progreso y racha de días consecutivos. En caso de que el
-usuario no haya completado la rutina, puede indicarlo y el sistema
-registra el día como no completado.
-
-8) **Wireflow 8:** Explorar catálogo de productos
-- User goal:
-  Como joven adulto, quiero explorar el catálogo de productos y aplicar
-  filtros para encontrar opciones relevantes a mis necesidades.
-
-**User Story asociada:**
-US08 - Como joven adulto, quiero explorar el catálogo de productos y
-aplicar filtros para encontrar opciones relevantes a mis necesidades.
-
-![wireflow 8](assets/img/wireflow/wireflow-08-web.png)
-
-El usuario accede a la sección de catálogo de productos y el sistema
-carga la lista de productos disponibles con su categoría y score de
-compatibilidad. El usuario puede aplicar filtros por categoría para
-reducir los resultados. Si existen productos que cumplen el criterio,
-el sistema muestra únicamente los productos filtrados. En caso de no
-existir productos para ese filtro, el sistema informa al usuario que
-no hay productos disponibles.
-
-
-9) **Wireflow 9:** Ver detalle y compatibilidad de producto
-- User goal:
-  Como joven adulto, quiero ver el detalle de un producto y su
-  compatibilidad con mi piel para tomar decisiones informadas.
-
-**User Story asociada:**
-US09 - Como joven adulto, quiero ver el detalle de un producto y su
-compatibilidad con mi piel para tomar decisiones informadas.
-
-![wireflow 9](assets/img/wireflow/wireflow-09-web.png)
-
-El usuario selecciona un producto del catálogo y el sistema carga la
-pantalla de detalle mostrando el score de compatibilidad, la explicación
-y los beneficios del producto. Si el producto es compatible con el perfil
-de piel del usuario, el sistema lo indica claramente junto con sus
-beneficios. En caso de que el producto tenga baja compatibilidad, el
-sistema notifica al usuario e indica las razones asociadas a su perfil
-de piel.
-
-
-10) **Wireflow 10:** Guardar producto como favorito
-- User goal:
-  Como joven adulto, quiero guardar productos en mis favoritos para
-  acceder a ellos fácilmente después.
-
-**User Story asociada:**
-US10 - Como joven adulto, quiero guardar productos en mis favoritos
-para acceder a ellos fácilmente después.
-
-![wireflow 10](assets/img/wireflow/wireflow-10-web.png)
-
-El usuario visualiza un producto desde el catálogo y selecciona la opción de guardarlo como favorito. El sistema
-agrega el producto a su lista de favoritos y confirma la acción al
-usuario. En caso de que el usuario desee eliminarlo, selecciona la
-opción de quitar de favoritos y el sistema lo remueve de la lista
-actualizando la vista.
 
 
 
@@ -3677,18 +3490,194 @@ US32: Como dermatólogo, quiero consultar el historial de mis consultas atendida
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-1) <strong>Wireflow 1:</strong> Registro básico
-- User goal: 
-<br> Como joven adulto, quiero registrarme en Bloomie.
+1) **Wireflow 1:** Registro de cuenta
+- User goal:
+  Como joven adulto, quiero registrarme en Bloomie con mis datos personales
+  para crear una cuenta y acceder a la aplicación.
 
-<br><strong>User Story asociada: </br></strong>
-US01 - Como joven adulto, quiero registrarme con mis datos personales para crear una cuenta y acceder a Bloomie.
+**User Story asociada:**
+US01 - Como joven adulto, quiero registrarme con mis datos personales para
+crear una cuenta y acceder a Bloomie.
 
-<p align = "center">
-<img src="assets/img/landing/wireflow-1-app.png" alt="wireflow app" width="550"/>
+![wireflow 1](assets/img/wireflow/wireflow-01-web.png)
+El usuario inicia en la pantalla de bienvenida y selecciona la opción de
+registro. A continuación, completa el formulario con sus datos personales
+(nombre, apellido, email y contraseña). Si los datos son válidos, el sistema
+crea la cuenta y redirige al cuestionario inicial de perfil de piel. En caso
+de ingresar datos incorrectos o incompletos, el sistema muestra un mensaje
+de error indicando el campo correspondiente.
 
-<p align = "center">
-<img src="assets/img/landing/wireflow-1-web.png" alt="wireflow app" width="550"/>
+2) **Wireflow 2:** Completar perfil de piel
+- User goal:
+  Como joven adulto, quiero completar el cuestionario inicial sobre mis
+  condiciones de piel para que la aplicación configure mi perfil correctamente.
+
+**User Story asociada:**
+US02 - Como joven adulto, quiero completar un cuestionario inicial sobre mis
+condiciones de piel en mi primer ingreso para que la aplicación configure mi
+perfil correctamente.
+
+![wireflow 2](assets/img/wireflow/wireflow_02-web.png)
+
+
+Tras completar el registro, el sistema redirige automáticamente al
+cuestionario inicial de perfil de piel. El usuario responde preguntas sobre
+su tipo de piel y nivel de sensibilidad. Si completa el formulario
+correctamente, el sistema guarda el perfil y redirige al proceso de escaneo
+facial. En caso de no completar todos los campos requeridos, el sistema
+notifica los datos faltantes.
+
+
+3) **Wireflow 3:** Escaneo facial
+- User goal:
+  Como joven adulto, quiero realizar un escaneo facial con la cámara para que
+  la aplicación capture mi piel y obtenga un diagnóstico preciso.
+
+**User Story asociada:**
+US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
+para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
+
+
+![wireflow 3](assets/img/wireflow/wireflow-03-web.png)
+
+4) **Wireflow 4:** Diagnóstico preliminar automático
+- User goal:
+  Como joven adulto, quiero recibir un diagnóstico generado por IA después
+  del escaneo para conocer el estado de mi piel y los cuidados que necesito.
+
+**User Story asociada:**
+US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
+después del escaneo para conocer el estado de mi piel y los cuidados
+que necesito.
+
+![wireflow 4](assets/img/wireflow/wireflow-04-web.png)
+
+
+Una vez completado el escaneo facial, el sistema procesa la imagen mediante
+IA y genera un diagnóstico con scores de hidratación, textura, sensibilidad
+y brillo. El usuario visualiza el reporte con los resultados de su análisis
+de piel. A partir de este diagnóstico, el sistema redirige al usuario hacia
+la generación de su rutina personalizada. En caso de ocurrir un error en el
+procesamiento, el sistema informa al usuario y permite reintentar el escaneo.
+
+El usuario accede a la sección de escaneo facial y el sistema solicita
+permiso para usar la cámara. Si el permiso es concedido, el sistema activa
+la cámara y guía al usuario para posicionar correctamente su rostro. Una vez
+capturada la imagen, el sistema procesa el escaneo y redirige al diagnóstico
+preliminar. Si la captura no se realiza correctamente, el sistema notifica
+al usuario y permite reintentar el escaneo.
+
+5) **Wireflow 5:** Generar rutina personalizada
+- User goal:
+  Como joven adulto, quiero recibir una rutina personalizada con productos
+  basados en mi diagnóstico de piel para seguir un tratamiento adecuado.
+
+**User Story asociada:**
+US05 - Como joven adulto, quiero recibir una rutina personalizada con
+productos basados en mi diagnóstico de piel para seguir un tratamiento
+adecuado.
+
+![wireflow 5](assets/img/wireflow/wireflow-05-web.png)
+
+Una vez generado el diagnóstico de piel, el sistema crea automáticamente
+una rutina personalizada asignando productos específicos para cada paso
+con su horario programado (mañana y noche). El usuario visualiza su rutina
+completa con los productos recomendados. Si ocurre un error en la
+generación, el sistema notifica al usuario y permite reintentar el proceso.
+
+6) **Wireflow 6:** Reemplazar producto de la rutina
+- User goal:
+  Como joven adulto, quiero reemplazar un producto de mi rutina por una
+  alternativa recomendada para adaptar mi tratamiento.
+
+**User Story asociada:**
+US06 - Como joven adulto, quiero reemplazar un producto de mi rutina por
+una alternativa recomendada para adaptar mi tratamiento.
+
+![wireflow 6](assets/img/wireflow/wireflow_06-web.png)
+
+El usuario accede a su rutina activa y selecciona el producto que desea
+reemplazar. El sistema muestra hasta cuatro alternativas compatibles
+ordenadas por score de compatibilidad. El usuario selecciona una alternativa
+y confirma el cambio. El sistema actualiza la rutina reemplazando el producto
+anterior por el seleccionado y muestra la rutina actualizada al usuario.
+
+
+7) **Wireflow 7:** Registrar cumplimiento de rutina diaria
+- User goal:
+  Como joven adulto, quiero marcar si completé mi rutina del día para llevar
+  un seguimiento de mi progreso.
+
+**User Story asociada:**
+US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
+llevar un seguimiento de mi progreso.
+
+![wireflow 7](assets/img/wireflow/wireflow-07-web.png)
+
+El usuario accede a su rutina del día y visualiza los pasos pendientes.
+Una vez realizados los pasos, el usuario indica que completó su rutina
+del día. El sistema registra el día como completado y actualiza las
+métricas de progreso y racha de días consecutivos. En caso de que el
+usuario no haya completado la rutina, puede indicarlo y el sistema
+registra el día como no completado.
+
+8) **Wireflow 8:** Explorar catálogo de productos
+- User goal:
+  Como joven adulto, quiero explorar el catálogo de productos y aplicar
+  filtros para encontrar opciones relevantes a mis necesidades.
+
+**User Story asociada:**
+US08 - Como joven adulto, quiero explorar el catálogo de productos y
+aplicar filtros para encontrar opciones relevantes a mis necesidades.
+
+![wireflow 8](assets/img/wireflow/wireflow-08-web.png)
+
+El usuario accede a la sección de catálogo de productos y el sistema
+carga la lista de productos disponibles con su categoría y score de
+compatibilidad. El usuario puede aplicar filtros por categoría para
+reducir los resultados. Si existen productos que cumplen el criterio,
+el sistema muestra únicamente los productos filtrados. En caso de no
+existir productos para ese filtro, el sistema informa al usuario que
+no hay productos disponibles.
+
+
+9) **Wireflow 9:** Ver detalle y compatibilidad de producto
+- User goal:
+  Como joven adulto, quiero ver el detalle de un producto y su
+  compatibilidad con mi piel para tomar decisiones informadas.
+
+**User Story asociada:**
+US09 - Como joven adulto, quiero ver el detalle de un producto y su
+compatibilidad con mi piel para tomar decisiones informadas.
+
+![wireflow 9](assets/img/wireflow/wireflow-09-web.png)
+
+El usuario selecciona un producto del catálogo y el sistema carga la
+pantalla de detalle mostrando el score de compatibilidad, la explicación
+y los beneficios del producto. Si el producto es compatible con el perfil
+de piel del usuario, el sistema lo indica claramente junto con sus
+beneficios. En caso de que el producto tenga baja compatibilidad, el
+sistema notifica al usuario e indica las razones asociadas a su perfil
+de piel.
+
+
+10) **Wireflow 10:** Guardar producto como favorito
+- User goal:
+  Como joven adulto, quiero guardar productos en mis favoritos para
+  acceder a ellos fácilmente después.
+
+**User Story asociada:**
+US10 - Como joven adulto, quiero guardar productos en mis favoritos
+para acceder a ellos fácilmente después.
+
+![wireflow 10](assets/img/wireflow/wireflow-10-web.png)
+
+El usuario visualiza un producto desde el catálogo y selecciona la opción de guardarlo como favorito. El sistema
+agrega el producto a su lista de favoritos y confirma la acción al
+usuario. En caso de que el usuario desee eliminarlo, selecciona la
+opción de quitar de favoritos y el sistema lo remueve de la lista
+actualizando la vista.
+
 
 
 11) <strong>Wireflow 11:</strong> Visualizar métricas de progreso
