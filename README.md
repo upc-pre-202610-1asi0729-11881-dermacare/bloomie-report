@@ -2264,9 +2264,6 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
 <img src="assets/img/impactmap-3.png" alt="impact mapping photo" width="550"/>
 
 
-
-## 3.3. Product Backlog
-## 3.3. Product Backlog
 ## 3.3. Product Backlog
 <table border="1" cellspacing="0" cellpadding="8">
 
