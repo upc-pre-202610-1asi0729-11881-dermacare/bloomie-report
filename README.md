@@ -3154,15 +3154,89 @@ usuario con los productos digitales.
 
 ### 4.4.1. Web Applications Wireframes
 
-15) <strong> Wireframe 15: </strong> pago de consulta dermatológica
-  <br> <strong> User Story asociada: </br> </strong>
 
- US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
+11) <strong> Wireframe 11: </strong> Métricas del progeso 
+
+<br> <strong> User Story relacionada: </strong > </br>
+
+US11: Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-11-app.png" alt="wireflow app" width="550"/>
+
+
+12) <strong> Wireframe 13: </strong>
+<br> <strong> User Story relacionada: </strong > </br> consulta al asistente virtual
+
+US13: Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-13-app.png" alt="wireflow app" width="550"/>
+
+13) <strong > Wireframe 14: </strong> Selección de dermatólogos para pacientes
+
+<br> <strong> User Story relacionada: </strong > </br>
+
+US14: Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-14-app.png" alt="wireflow app" width="550"/>
+
+14) <strong> Wireframe 15: </strong> pago de consulta dermatológica
+
+<br> <strong> User Story asociada: </br> </strong>
+
+ US15: Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
 
  <p align = "center">
 <img src="assets/img/landing/wireframe-15-app.png" alt="wireflow app" width="550"/>
+  
+
+15) <strong> Wireframe 16: </strong> : Cancelar cita dermatológica
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-16-app.png" alt="wireflow app" width="550"/>
 
 
+16) <strong> Wireframe 17: </strong> selección y pago de una suscripción
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-17-app.png" alt="wireflow app" width="550"/>
+
+17) <strong> Wireframe 18: </strong> Gestionar suscripción realizada
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-18-app.png" alt="wireflow app" width="550"/>
+
+18) <strong> Wireframe 19: </strong> Editar información personal
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-19-app.png" alt="wireflow app" width="550"/>
+
+19) <strong> Wireframe 20: </strong> Actualizar características de piel
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
+
+ <p align = "center">
+<img src="assets/img/landing/wireframe-20-app.png" alt="wireflow app" width="550"/>
 
 
 
