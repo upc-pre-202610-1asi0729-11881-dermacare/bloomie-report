@@ -140,52 +140,146 @@ La evidencia presentada en esta sección se encuentra alineada con el Registro d
 
 ## Tabla de Contenidos
 
+- [Universidad Peruana de Ciencias Aplicadas](#universidad-peruana-de-ciencias-aplicadas)
+  - [Facultad de Ingeniería](#facultad-de-ingeniería)
+  - [Programa Académico de Ingeniería de Software](#programa-académico-de-ingeniería-de-software)
+- [Informe de Trabajo Final](#informe-de-trabajo-final)
+  - [Integrantes](#integrantes)
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Contenido](#contenido)
   - [Tabla de Contenidos](#tabla-de-contenidos)
 - [Student Outcome](#student-outcome)
+  - [](#)
 - [Capítulo I: Introducción](#capítulo-i-introducción)
   - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [Misión](#misión)
+    - [Visión](#visión)
+    - [Valores](#valores)
     - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+    - [Perfil del Integrante](#perfil-del-integrante)
   - [1.2. Solution Profile](#12-solution-profile)
+    - [Descripción de la Solución](#descripción-de-la-solución)
     - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+        - [Metodología 5W+2H](#metodología-5w2h)
+          - [What (Qué)](#what-qué)
+          - [When (Cuándo)](#when-cuándo)
+          - [Where (Dónde)](#where-dónde)
+          - [Who (Quién)](#who-quién)
+          - [Why (Por qué)](#why-por-qué)
+          - [How (Cómo)](#how-cómo)
+        - [How much (Cuánto)](#how-much-cuánto)
     - [1.2.2. Lean UX Process](#122-lean-ux-process)
       - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
       - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
       - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
       - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
   - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+      - [Segmento 1: Jóvenes adultos de 21 a 30 años interesados en el cuidado de la piel](#segmento-1-jóvenes-adultos-de-21-a-30-años-interesados-en-el-cuidado-de-la-piel)
+      - [Segmento 2: Dermatólogos certificados](#segmento-2-dermatólogos-certificados)
 - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
   - [2.1. Competidores](#21-competidores)
+      - [Skin Bliss](#skin-bliss)
+      - [Miiskin Skin Tracker](#miiskin-skin-tracker)
+      - [First Derm](#first-derm)
     - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+  - [Competitive Analysis Landscape](#competitive-analysis-landscape)
     - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
   - [2.2. Entrevistas](#22-entrevistas)
     - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+      - [Segmento 1: Jóvenes adultos interesados en skincare](#segmento-1-jóvenes-adultos-interesados-en-skincare)
+      - [Segmento 2: Dermatólogos certificados](#segmento-2-dermatólogos-certificados-1)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+      - [Segmento 1:  Jóvenes adultos interesados en el skin care](#segmento-1--jóvenes-adultos-interesados-en-el-skin-care)
+          - [Proceso de atención](#proceso-de-atención)
+          - [Información esencial del paciente](#información-esencial-del-paciente)
+          - [Dificultades antes de la consulta presencial](#dificultades-antes-de-la-consulta-presencial)
+          - [Seguimiento de pacientes](#seguimiento-de-pacientes)
+          - [Limitaciones de herramientas digitales](#limitaciones-de-herramientas-digitales)
+          - [Problemas en pacientes con skincare propio](#problemas-en-pacientes-con-skincare-propio)
+          - [Nivel de información del paciente](#nivel-de-información-del-paciente)
+          - [Uso de IA en diagnósticos preliminares](#uso-de-ia-en-diagnósticos-preliminares)
+          - [Historial visual estructurado](#historial-visual-estructurado)
+          - [Funcionalidades indispensables](#funcionalidades-indispensables)
+          - [Casos de uso recomendados](#casos-de-uso-recomendados)
+      - [Segmento 2:  Dermatólogos certificados](#segmento-2--dermatólogos-certificados)
+          - [Rutina de cuidado de la piel](#rutina-de-cuidado-de-la-piel)
+          - [Fuentes de información para decisiones](#fuentes-de-información-para-decisiones)
+          - [Proceso de elección de productos](#proceso-de-elección-de-productos)
+          - [Problemas con productos de skincare](#problemas-con-productos-de-skincare)
+          - [Relación con dermatólogos y expertos](#relación-con-dermatólogos-y-expertos)
+          - [Nivel de confianza en la información presente en internet](#nivel-de-confianza-en-la-información-presente-en-internet)
+          - [Interés en aplicaciones de skincare](#interés-en-aplicaciones-de-skincare)
+          - [Expectativas de la solución](#expectativas-de-la-solución)
+          - [Barreras o preocupaciones](#barreras-o-preocupaciones)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
     - [2.3.2. User Task Matrix](#232-user-task-matrix)
     - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+      - [2.3.3.1 Segmento 1: Jóvenes adultos](#2331-segmento-1-jóvenes-adultos)
+      - [2.3.3.2 Segmento 2: Dermatólogos certificados](#2332-segmento-2-dermatólogos-certificados)
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+      - [2.3.4.1 Segmento 1: Jóvenes adultos](#2341-segmento-1-jóvenes-adultos)
+      - [2.3.4.2 Segmento 2: Dermatólogos certificados](#2342-segmento-2-dermatólogos-certificados)
   - [2.4. Big Picture Event Storming](#24-big-picture-event-storming)
   - [2.5. Ubiquitous Language](#25-ubiquitous-language)
 - [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
   - [3.1. User Stories](#31-user-stories)
   - [3.2. Impact Mapping](#32-impact-mapping)
+      - [3.2.1. Business Goal 1:](#321-business-goal-1)
+      - [3.2.2. Business Goal 2:](#322-business-goal-2)
+      - [3.2.3. Business Goal 3:](#323-business-goal-3)
   - [3.3. Product Backlog](#33-product-backlog)
 - [Capítulo IV: Product Design](#capítulo-iv-product-design)
   - [4.1. Style Guidelines](#41-style-guidelines)
     - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
+      - [4.1.1.1. Branding](#4111-branding)
+      - [Logo de la marca](#logo-de-la-marca)
+      - [4.1.1.2. Spacing](#4112-spacing)
+      - [Sistema modular](#sistema-modular)
+      - [4.1.1.3. Typography](#4113-typography)
+      - [4.1.1.4. Tono de comunicación y lenguaje aplicado](#4114-tono-de-comunicación-y-lenguaje-aplicado)
+      - [4.1.1.5. Colores](#4115-colores)
+      - [Botones](#botones)
+      - [Cabecera](#cabecera)
+      - [Iconografía](#iconografía)
     - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
   - [4.2. Information Architecture](#42-information-architecture)
     - [4.2.1. Organization Systems](#421-organization-systems)
     - [4.2.2. Labeling Systems](#422-labeling-systems)
+        - [Labeling System Landing Page](#labeling-system-landing-page)
+        - [Labeling System App para Jóvenes adultos](#labeling-system-app-para-jóvenes-adultos)
+          - [Iconografía estándar](#iconografía-estándar)
+          - [Elementos de interacción activa](#elementos-de-interacción-activa)
+          - [Elementos de validación](#elementos-de-validación)
+          - [Labeling System App para Dermatólogos certificados](#labeling-system-app-para-dermatólogos-certificados)
     - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+    - [Principal](#principal)
+    - [Features](#features)
+    - [How it Works](#how-it-works)
+    - [Pricing](#pricing)
+    - [Results](#results)
+    - [About Us](#about-us)
     - [4.2.4. Searching Systems](#424-searching-systems)
     - [4.2.5. Navigation Systems](#425-navigation-systems)
+      - [Organización jerárquica](#organización-jerárquica)
+      - [Organización secuencial](#organización-secuencial)
+          - [Registro de usuario:](#registro-de-usuario)
+          - [Consulta dermatológica:](#consulta-dermatológica)
+      - [Uso de nodos de decisión (decisiones del usuario)](#uso-de-nodos-de-decisión-decisiones-del-usuario)
+      - [Organización matricial](#organización-matricial)
+      - [Categorización del contenido](#categorización-del-contenido)
+          - [Por audiencia:](#por-audiencia)
+          - [Cronológica:](#cronológica)
+          - [Alfabética:](#alfabética)
+    - [Segmento 2: Dermatólogos certificados](#segmento-2-dermatólogos-certificados-2)
+        - [Organización jerárquica](#organización-jerárquica-1)
+        - [Organización secuencial](#organización-secuencial-1)
+        - [Uso de nodos de decisión](#uso-de-nodos-de-decisión)
+        - [Organización matricial](#organización-matricial-1)
+        - [Categorización del contenido](#categorización-del-contenido-1)
   - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
     - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
     - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
@@ -220,6 +314,7 @@ La evidencia presentada en esta sección se encuentra alineada con el Registro d
       - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
       - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
       - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+        - [Resumen de actividad del Sprint](#resumen-de-actividad-del-sprint)
     - [5.2.2. Sprint 2](#522-sprint-2)
       - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
       - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
@@ -3403,7 +3498,79 @@ US20: Como joven adulto, quiero actualizar mis características de piel para rec
 <p align = "center"> 
 
 <img src="assets/img/landing/wireflow-20-app.png" alt="wireflow app" width="550"/>
+
+20) <strong> Wireframe 21: </strong> Registro de dermatólogo
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
+
+21) <strong> Wireframe 22: </strong> Configurar perfil profesional
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US26: Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe26.png" alt="wireframe" width="550"/>
  
+22)  <strong> Wireframe 22: </strong> Definir disponibilidad de atención
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US27: Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe27.png" alt="wireframe" width="550"/>
+
+23)  <strong> Wireframe 23: </strong> Visualizar agenda de consultas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US28: Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe28.png" alt="wireframe" width="550"/>
+
+24)  <strong> Wireframe 24: </strong> Realizar consulta virtual en tiempo real
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US29: Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe29.png" alt="wireframe" width="550"/>
+
+25)  <strong> Wireframe 25: </strong> Registrar notas y recomendaciones clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US30: Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe30.png" alt="wireframe" width="550"/>
+
+26)  <strong> Wireframe 26: </strong> Registrar fotografías clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US31: Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe33.png" alt="wireframe" width="550"/>
+
+27)  <strong> Wireframe 27: </strong> Consultar historial de consultas atendidas
+  
+<br> <strong> User Story asociada: </br> </strong>
+
+US32: Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe32.png" alt="wireframe" width="550"/>
+
 
 ### 4.4.3. Web Applications Mock-ups
 
