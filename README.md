@@ -3165,8 +3165,8 @@ US11: Como joven adulto, quiero visualizar métricas de mi constancia y evoluci�
 <img src="assets/img/landing/wireframe-11-app.png" alt="wireflow app" width="550"/>
 
 
-12) <strong> Wireframe 13: </strong>
-<br> <strong> User Story relacionada: </strong > </br> consulta al asistente virtual
+12) <strong> Wireframe 13: </strong> consulta al asistente virtual
+<br> <strong> User Story relacionada: </strong > </br> 
 
 US13: Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
@@ -3192,7 +3192,7 @@ US14: Como joven adulto, quiero visualizar una lista de dermatólogos disponible
 <img src="assets/img/landing/wireframe-15-app.png" alt="wireflow app" width="550"/>
   
 
-15) <strong> Wireframe 16: </strong> : Cancelar cita dermatológica
+15) <strong> Wireframe 16: </strong> Cancelar cita dermatológica
 
 <br> <strong> User Story asociada: </br> </strong>
 
