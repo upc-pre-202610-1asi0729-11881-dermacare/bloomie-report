@@ -3287,6 +3287,456 @@ usuario con los productos digitales.
 
 ### 4.4.1. Web Applications Wireframes
 
+1) **Wireframe 1:** Registro de cuenta
+
+**User Story relacionada:**
+US01 - Como joven adulto, quiero registrarme con mis datos personales para
+crear una cuenta y acceder a Bloomie.
+
+![wireframe 1](assets/img/wireframes/wireframe-01-web.png)
+
+![wireframe 1 mobile](assets/img/wireframes/wireframe-01-mobile.png)
+
+
+
+
+**Principios y elementos de diseño:**
+La pantalla aplica jerarquía visual clara, ubicando el nombre y slogan de
+Bloomie como elemento principal, seguido de los botones de acceso. Se
+mantiene consistencia en tipografía, espaciado y colores alineados con el
+sistema de diseño de la aplicación.
+
+**Diseño inclusivo:**
+Los campos del formulario cuentan con etiquetas visibles y placeholder
+orientativo. Se incluye un indicador de fortaleza de contraseña y opciones
+alternativas de registro mediante Google y Apple, reduciendo barreras de
+acceso para distintos tipos de usuarios.
+
+**Arquitectura de información:**
+El contenido se organiza de forma secuencial y progresiva, guiando al
+usuario desde la bienvenida hasta la completación del formulario con
+email, contraseña, nombre y apellido.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el indicador de fortaleza de
+  contraseña informa al usuario en tiempo real sobre el estado de su entrada.
+- **#4 Consistencia y estándares:** los botones de Login y Sign Up siguen
+  convenciones reconocidas por el usuario.
+- **#6 Reconocimiento antes que recuerdo:** los placeholders y etiquetas
+  visibles en cada campo reducen la carga cognitiva del usuario.
+- **#8 Diseño estético y minimalista:** la pantalla presenta solo la
+  información necesaria para completar el registro, sin elementos distractores.
+
+
+2) **Wireframe 2:** Completar perfil de piel
+
+**User Story relacionada:**
+US02 - Como joven adulto, quiero completar un cuestionario inicial sobre mis
+condiciones de piel en mi primer ingreso para que la aplicación configure mi
+perfil correctamente.
+
+![wireframe 2](assets/img/wireframes/wireframe-02-web.png)
+
+---
+
+![wireframe 2 mobile](assets/img/wireframes/wireframe-02-mobile.png)
+
+**Principios y elementos de diseño:**
+La pantalla aplica una jerarquía visual progresiva mediante un indicador de
+pasos en la parte superior, permitiendo al usuario conocer su avance dentro
+del cuestionario. Los elementos se organizan con espaciado consistente y
+tipografía alineada al sistema de diseño de Bloomie.
+
+**Diseño inclusivo:**
+Los campos de selección cuentan con etiquetas descriptivas y una guía de
+tipos de piel con imágenes de referencia, facilitando la comprensión para
+usuarios sin conocimiento previo sobre skincare. Los mensajes de validación
+indican claramente los campos pendientes.
+
+**Arquitectura de información:**
+El contenido se organiza en pasos secuenciales, agrupando preguntas
+relacionadas sobre tipo de piel, consumo de agua, exposición solar y hábitos
+de sueño. Al completar el cuestionario, el sistema redirige al usuario a la
+pantalla de preparación para el escaneo facial, donde se presentan las
+instrucciones necesarias antes de iniciar el análisis.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el indicador de progreso en la
+  parte superior informa al usuario en qué paso del cuestionario se encuentra.
+- **#6 Reconocimiento antes que recuerdo:** la guía de tipos de piel con
+  descripciones visuales ayuda al usuario a identificar su tipo sin necesidad
+  de conocimiento previo.
+- **#9 Ayuda a los usuarios a reconocer y corregir errores:** los mensajes
+  de validación indican claramente los campos requeridos que faltan completar.
+- **#8 Diseño estético y minimalista:** cada pantalla presenta únicamente
+  las preguntas necesarias, evitando sobrecargar al usuario con información.
+
+
+3) **Wireframe 3:** Escaneo facial y diagnóstico preliminar
+
+**User Stories relacionadas:**
+US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
+para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
+US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
+después del escaneo para conocer el estado de mi piel y los cuidados
+que necesito.
+
+![wireframe 3](assets/img/wireframes/wireframe_03-web.png)
+
+
+![wireframe 3 mobile](assets/img/wireframes/wireframe-03-mobile.png)
+
+
+
+**Principios y elementos de diseño:**
+La pantalla aplica una jerarquía visual clara, guiando al usuario desde
+la preparación del escaneo hasta la visualización del reporte de análisis.
+Se utiliza una barra de progreso durante el procesamiento y scores
+visuales (hidratación, brillo, textura) para presentar los resultados
+de forma comprensible.
+
+**Diseño inclusivo:**
+Las instrucciones previas al escaneo están redactadas en lenguaje simple
+y numeradas, facilitando su comprensión. Los resultados del análisis se
+presentan mediante porcentajes y etiquetas descriptivas, permitiendo que
+cualquier usuario entienda el estado de su piel sin conocimiento técnico.
+
+**Arquitectura de información:**
+El flujo se organiza en cuatro etapas secuenciales: preparación, escaneo
+en progreso, análisis y reporte final. Cada etapa presenta únicamente la
+información relevante para ese momento, evitando sobrecargar al usuario.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** la barra de progreso durante
+  el análisis informa al usuario que el sistema está procesando su escaneo.
+- **#4 Consistencia y estándares:** los scores de hidratación, brillo y
+  textura siguen un formato visual uniforme y reconocible.
+- **#6 Reconocimiento antes que recuerdo:** las instrucciones numeradas
+  y los resultados con etiquetas descriptivas reducen la carga cognitiva
+  del usuario.
+- **#8 Diseño estético y minimalista:** cada pantalla presenta únicamente
+  la información necesaria para cada etapa del proceso de escaneo.
+
+
+4) **Wireframe 4:** Diagnóstico preliminar automático
+
+**User Story relacionada:**
+US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
+después del escaneo para conocer el estado de mi piel y los cuidados
+que necesito.
+
+![wireframe 4](assets/img/wireframes/wireframe-04-web.png)
+
+![wireframe 4 mobile](assets/img/wireframes/wireframe-04-mobile.png)
+
+
+
+**Principios y elementos de diseño:**
+La pantalla presenta los resultados del análisis mediante scores visuales
+de hidratación, barrera y textura, acompañados de un score general y áreas
+de enfoque con niveles de prioridad (high, medium). Se mantiene consistencia
+visual con el resto de la aplicación mediante tipografía y espaciado
+alineados al sistema de diseño de Bloomie.
+
+**Diseño inclusivo:**
+Los resultados se presentan con etiquetas descriptivas y porcentajes
+comprensibles para cualquier usuario, sin requerir conocimiento técnico
+dermatológico. En caso de error en el procesamiento, el sistema muestra
+una pantalla de fallo con causas posibles, consejos para mejorar el escaneo
+y opciones de reintento o contacto con soporte.
+
+**Arquitectura de información:**
+El reporte organiza la información en secciones claramente diferenciadas:
+scores generales, análisis preliminar, áreas de enfoque y próximos pasos
+recomendados. Esto permite al usuario comprender su diagnóstico de forma
+progresiva y tomar decisiones informadas sobre su rutina.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** la barra de progreso durante
+  el análisis y el indicador de "Scan Complete" informan al usuario sobre
+  el estado del procesamiento.
+- **#5 Prevención de errores:** la pantalla de error detalla las posibles
+  causas del fallo y ofrece consejos para realizar un mejor escaneo.
+- **#9 Ayuda a los usuarios a reconocer y corregir errores:** el mensaje
+  de error indica claramente qué ocurrió y presenta opciones concretas como
+  Try Again, Contact Support o Go Back.
+- **#8 Diseño estético y minimalista:** el reporte presenta únicamente la
+  información relevante del diagnóstico, organizada en secciones claras y
+  sin elementos distractores.
+
+
+5) **Wireframe 5:** Generar rutina personalizada
+
+**User Story relacionada:**
+US05 - Como joven adulto, quiero recibir una rutina personalizada con
+productos basados en mi diagnóstico de piel para seguir un tratamiento
+adecuado.
+
+![wireframe 5](assets/img/wireframes/wireframe-05-web.png)
+
+![wireframe 5 mobile](assets/img/wireframes/wireframe-05-mobile.png)
+
+
+**Principios y elementos de diseño:**
+La pantalla presenta una animación de carga durante la generación de la
+rutina, seguida de una vista de calendario mensual con los pasos diarios
+asignados. Los productos recomendados se muestran en tarjetas con imagen,
+nombre y horario, manteniendo consistencia visual con el sistema de diseño
+de Bloomie.
+
+**Diseño inclusivo:**
+La vista de calendario permite al usuario identificar fácilmente los días
+con rutina asignada. Cada paso de la rutina incluye el nombre del producto,
+imagen de referencia y horario, facilitando la comprensión para usuarios
+con distintos niveles de experiencia en skincare.
+
+**Arquitectura de información:**
+El contenido se organiza en dos niveles: una vista mensual que muestra el
+resumen de la rutina y una vista diaria que detalla los pasos y productos
+específicos para ese día. Esto permite al usuario navegar entre una
+perspectiva general y una vista detallada de su tratamiento.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** la animación de carga con el
+  mensaje "Generating routine" informa al usuario que el sistema está
+  procesando su rutina personalizada.
+- **#4 Consistencia y estándares:** las tarjetas de productos siguen un
+  formato uniforme con imagen, nombre y horario en todas las entradas.
+- **#7 Flexibilidad y eficiencia de uso:** el botón "Add Step" permite al
+  usuario personalizar su rutina agregando pasos adicionales según sus
+  necesidades.
+- **#8 Diseño estético y minimalista:** la vista diaria presenta únicamente
+  los pasos del día seleccionado, evitando sobrecargar al usuario con
+  información innecesaria.
+
+
+6) **Wireframe 6:** Reemplazar producto de la rutina
+
+**User Story relacionada:**
+US06 - Como joven adulto, quiero reemplazar un producto de mi rutina por
+una alternativa recomendada para adaptar mi tratamiento.
+
+![wireframe 6](assets/img/wireframes/wireframe-06-web.png)
+
+![wireframe 6 mobile](assets/img/wireframes/wireframe-06-mobile.png)
+
+
+**Principios y elementos de diseño:**
+La pantalla presenta las alternativas compatibles en tarjetas con imagen,
+nombre, precio y score de compatibilidad, permitiendo una comparación
+visual clara entre opciones. La pantalla de confirmación destaca el score
+de compatibilidad del producto seleccionado junto con las razones por las
+que funciona para el perfil del usuario.
+
+**Diseño inclusivo:**
+Cada alternativa incluye una barra de compatibilidad con porcentaje visible,
+facilitando la toma de decisiones sin requerir conocimiento técnico. La
+pantalla de confirmación explica en lenguaje simple por qué el producto
+es adecuado para la piel del usuario.
+
+**Arquitectura de información:**
+El flujo se organiza en tres etapas: visualización del producto actual,
+selección de alternativa compatible y confirmación del reemplazo. Esto
+guía al usuario de forma progresiva hasta completar el cambio en su rutina.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el badge "Best Match" en la
+  alternativa más compatible orienta al usuario hacia la mejor opción
+  disponible.
+- **#3 Control y libertad del usuario:** el botón "Go Back" en la pantalla
+  de confirmación permite al usuario cancelar el reemplazo si cambia de
+  opinión.
+- **#6 Reconocimiento antes que recuerdo:** las barras de compatibilidad
+  y los scores visibles permiten comparar opciones sin necesidad de recordar
+  información previa.
+- **#8 Diseño estético y minimalista:** cada pantalla presenta únicamente
+  la información relevante para cada etapa del proceso de reemplazo.
+
+
+
+7) **Wireframe 7:** Registrar cumplimiento de rutina diaria
+
+**User Story relacionada:**
+US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
+llevar un seguimiento de mi progreso.
+
+![wireframe 7](assets/img/wireframes/wireframe-07-web.png)
+
+![wireframe 7 mobile](assets/img/wireframes/wireframe-07-mobile.png)
+
+
+**Principios y elementos de diseño:**
+El dashboard principal presenta métricas clave como el skin score, racha
+de días, próxima cita y pasos en rutina de forma destacada en la parte
+superior. La rutina diaria se muestra con los productos asignados por
+horario, y el botón "Mark as done" permite registrar el cumplimiento de
+forma rápida y directa.
+
+**Diseño inclusivo:**
+Las métricas se presentan con íconos y etiquetas descriptivas, facilitando
+la comprensión del progreso sin requerir interpretación técnica. El cambio
+visual en el calendario al marcar la rutina como completada refuerza el
+feedback al usuario de forma clara e intuitiva.
+
+**Arquitectura de información:**
+El contenido se organiza en dos niveles: el dashboard general con un
+resumen del progreso semanal, y la vista detallada de la rutina diaria
+con los pasos específicos. Al marcar la rutina como completada, el sistema
+actualiza el estado visual del día en el calendario y las métricas de
+progreso.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el calendario actualiza
+  visualmente el día marcado como completado, confirmando al usuario que
+  su acción fue registrada correctamente.
+- **#4 Consistencia y estándares:** el botón "Mark as done" se mantiene
+  en la misma posición y con el mismo estilo en todas las vistas de rutina
+  diaria.
+- **#7 Flexibilidad y eficiencia de uso:** el dashboard permite al usuario
+  ver su progreso general y acceder rápidamente a su rutina del día desde
+  una sola pantalla.
+- **#8 Diseño estético y minimalista:** cada sección presenta únicamente
+  la información relevante para ese contexto, evitando sobrecargar al
+  usuario con datos innecesarios.
+
+
+8) **Wireframe 8:** Explorar catálogo de productos
+
+**User Story relacionada:**
+US08 - Como joven adulto, quiero explorar el catálogo de productos y
+aplicar filtros para encontrar opciones relevantes a mis necesidades.
+
+![wireframe 8](assets/img/wireframes/wireframe-08-web.png)
+
+![wireframe 8 mobile](assets/img/wireframes/wireframe-08-mobile.png)
+
+
+**Principios y elementos de diseño:**
+El catálogo presenta los productos en tarjetas con imagen, nombre y precio,
+organizadas en una cuadrícula que facilita la exploración visual. Se incluye
+un panel de filtros lateral con opciones por categoría y recomendación de IA,
+permitiendo reducir los resultados de forma eficiente.
+
+**Diseño inclusivo:**
+La barra de búsqueda y los filtros están claramente etiquetados y son
+accesibles desde la parte superior de la pantalla. En caso de no encontrar
+resultados, el sistema muestra un mensaje de "Search Failed" informando al
+usuario que el producto no está disponible en ese momento.
+
+**Arquitectura de información:**
+El contenido se organiza mediante pestañas (All Products, Favorites) y
+filtros por categoría (cleansers, toners, serums, sunscreen) y recomendación
+de IA, permitiendo al usuario navegar el catálogo desde una vista general
+hasta encontrar productos específicos según sus necesidades.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el badge "AI Recommended" en
+  las tarjetas informa al usuario qué productos son sugeridos según su perfil
+  de piel.
+- **#3 Control y libertad del usuario:** los botones "Clear all" y "Apply
+  filters" permiten al usuario gestionar los filtros aplicados con facilidad.
+- **#6 Reconocimiento antes que recuerdo:** los filtros visibles en el panel
+  lateral permiten al usuario seleccionar categorías sin necesidad de recordar
+  las opciones disponibles.
+- **#9 Ayuda a los usuarios a reconocer y corregir errores:** el mensaje
+  "Search Failed" informa claramente al usuario cuando no hay resultados
+  disponibles para su búsqueda.
+
+9) **Wireframe 9:** Ver detalle y compatibilidad de producto
+
+**User Story relacionada:**
+US09 - Como joven adulto, quiero ver el detalle de un producto y su
+compatibilidad con mi piel para tomar decisiones informadas.
+
+![wireframe 9](assets/img/wireframes/wireframe-09-web.png)
+
+
+![wireframe 9 mobile](assets/img/wireframes/wireframe-09-mobile.png)
+
+
+**Principios y elementos de diseño:**
+La pantalla presenta las alternativas compatibles en tarjetas con imagen,
+nombre, precio y barra de compatibilidad. Se incluye una guía de
+compatibilidad lateral que explica los rangos de puntuación y el perfil
+de piel del usuario, manteniendo consistencia visual con el sistema de
+diseño de Bloomie.
+
+**Diseño inclusivo:**
+La guía de compatibilidad con rangos claramente definidos (90-100%
+Excellent Match, 80-89% Good Match, menor a 80% Fair Match) permite al
+usuario interpretar los resultados sin conocimiento técnico previo. El
+badge "Best Match" destaca visualmente la opción más adecuada para el
+perfil del usuario.
+
+**Arquitectura de información:**
+El contenido se organiza en tres secciones: el producto actual en rutina,
+las alternativas compatibles ordenadas por score y el panel lateral con
+la guía de compatibilidad y perfil de piel del usuario. Esto permite al
+usuario comparar opciones de forma clara y tomar una decisión informada.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** las barras de compatibilidad
+  con porcentaje visible informan al usuario en tiempo real sobre el nivel
+  de adecuación de cada producto.
+- **#6 Reconocimiento antes que recuerdo:** la guía de compatibilidad
+  lateral permite al usuario interpretar los scores sin necesidad de recordar
+  los criterios de evaluación.
+- **#4 Consistencia y estándares:** todas las tarjetas de producto siguen
+  el mismo formato con imagen, nombre, precio y barra de compatibilidad.
+- **#8 Diseño estético y minimalista:** la pantalla presenta únicamente
+  la información necesaria para comparar y seleccionar un producto
+  compatible.
+
+
+10) **Wireframe 10:** Guardar producto como favorito
+
+**User Story relacionada:**
+US10 - Como joven adulto, quiero guardar productos en mis favoritos para
+acceder a ellos fácilmente después.
+
+![wireframe 10](assets/img/wireframes/wireframe-10-web.png)
+
+![wireframe 10 mobile](assets/img/wireframes/wireframe-10-mobile.png)
+
+
+
+**Principios y elementos de diseño:**
+El catálogo presenta los productos en tarjetas con imagen, nombre y precio,
+cada una con un ícono de corazón en la esquina superior derecha para
+guardar como favorito. La pestaña "Favorites" en la parte superior permite
+acceder rápidamente a los productos guardados, diferenciándose visualmente
+de la pestaña "All Products".
+
+**Diseño inclusivo:**
+El ícono de corazón es un elemento reconocido universalmente para indicar
+favoritos, reduciendo la necesidad de instrucciones adicionales. El cambio
+visual del ícono al guardar un producto confirma la acción realizada de
+forma clara e intuitiva para cualquier tipo de usuario.
+
+**Arquitectura de información:**
+El contenido se organiza mediante dos pestañas: "All Products" para
+explorar el catálogo completo y "Favorites" para acceder únicamente a los
+productos guardados. Esto permite al usuario alternar entre una vista
+general y su lista personalizada de forma rápida y sencilla.
+
+**Heurísticas de Nielsen aplicadas:**
+- **#1 Visibilidad del estado del sistema:** el cambio visual del ícono de
+  corazón al guardar un producto confirma al usuario que la acción fue
+  registrada correctamente.
+- **#3 Control y libertad del usuario:** el usuario puede guardar y
+  eliminar productos de favoritos en cualquier momento desde el catálogo
+  o desde la pestaña de favoritos.
+- **#4 Consistencia y estándares:** el ícono de corazón se mantiene en
+  la misma posición en todas las tarjetas de producto, siguiendo
+  convenciones reconocidas por el usuario.
+- **#8 Diseño estético y minimalista:** la pestaña de favoritos presenta
+  únicamente los productos guardados, sin elementos distractores.
+
+
+
+
+
+
 
 
 
@@ -3544,7 +3994,7 @@ US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
 para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
 
 
-![wireflow 3](assets/img/wireflow/wireflow-03-web.png)
+![wireflow 3](assets/img/wireflow/wireflow_03-web.png)
 
 ![wireflow 03 mobile](assets/img/wireflow/wireflow-03-mobile.png)
 
@@ -3560,7 +4010,8 @@ US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
 después del escaneo para conocer el estado de mi piel y los cuidados
 que necesito.
 
-![wireflow 4](assets/img/wireflow/wireflow-04-web.png)
+![wireflow 4](assets/img/wireflow/wireflow_04-web.png)
+
 
 ![wireflow 04 mobile](assets/img/wireflow/wireflow-04-mobile.png)
 
@@ -3700,8 +4151,11 @@ para acceder a ellos fácilmente después.
 
 ![wireflow 10](assets/img/wireflow/wireflow-10-web.png)
 
+<<<<<<< HEAD
 ![wireflow 10 mobile](assets/img/wireflow/wireflow-10-mobile.png)
 
+=======
+>>>>>>> e7ae3da5b1248be83a0720f3dc4451f9d99b8106
 
 El usuario visualiza un producto desde el catálogo y selecciona la opción de guardarlo como favorito. El sistema
 agrega el producto a su lista de favoritos y confirma la acción al
@@ -3809,7 +4263,7 @@ US19: Como joven adulto, quiero editar mi información personal para mantener mi
 <img src="assets/img/landing/wireflow-19-app.png" alt="wireflow app" width="550"/>
  
 
-20) <strong> Wireflow 19: </strong> Actualizar características de piel
+20) <strong> Wireflow 20: </strong> Actualizar características de piel
 - User goal: 
 
 Como jóven adulto, quiero actualizar los datos con respecto a mi piel. 
@@ -3821,7 +4275,231 @@ US20: Como joven adulto, quiero actualizar mis características de piel para rec
 
 <img src="assets/img/landing/wireflow-20-app.png" alt="wireflow app" width="550"/>
 
+21) <strong>Wireflow 21:</strong> Registro de dermatólogo
+    
+- User goal: 
+<br> Como dermatólogo, quiero registrar mis credenciales profesionales.
+
+<br><strong>User Story asociada: </br></strong>
+US25 - Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
+
+<p align = "center">
+<img src="assets/img/wireflow/Wireflow1.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow1_web.png" alt="wireflow app" width="550"/>
+
+
+21)  <strong>Wireflow 22:</strong> Configurar perfil profesional
+    
+- User goal: 
+<br> Como dermatólogo, quiero configurar mi perfil profesional.
+
+<br><strong>User Story asociada: </br></strong>
+US25 - Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow26.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow26_web.png" alt="wireflow app" width="550"/>
+
+22)  <strong>Wireflow 23:</strong> Definir disponibilidad de atención
+    
+- User goal: 
+<br> Como dermatólogo, quiero definir mis horarios de disponibilidad.
+
+<br><strong>User Story asociada: </br></strong>
+US26 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow27.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow27_web.png" alt="wireflow app" width="550"/>
+
+23) <strong>Wireflow 23:</strong> Visualizar agenda de consultas
+    
+- User goal: 
+<br> Como dermatólogo, quiero visualizar mis consultas programadas
+
+<br><strong>User Story asociada: </br></strong>
+US28 - Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow28.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow28_web.png" alt="wireflow app" width="550"/>
+
+24) <strong>Wireflow 24:</strong> Realizar consulta virtual en tiempo real
+    
+- User goal: 
+<br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual.
+
+<br><strong>User Story asociada: </br></strong>
+US29 - Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow29.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow29_web.png" alt="wireflow app" width="550"/>
+
+25)  <strong>Wireflow 25:</strong> Registrar notas y recomendaciones clínicas
+    
+- User goal: 
+<br> Como dermatólogo, quiero registrar notas clínicas y recomendaciones.
+
+<br><strong>User Story asociada: </br></strong>
+US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow30.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow30_web.png" alt="wireflow app" width="550"/>
+
+26) <strong>Wireflow 26:</strong> Guardar fotografías clínicas del paciente
+    
+- User goal: 
+<br> Como dermatólogo, quiero visualizar las fotografías que el paciente envia.
+
+<br><strong>User Story asociada: </br></strong>
+US31 - Como dermatólogo, quiero visualizar las fotografías que el paciente envió durante la consulta y guardar las relevantes para documentar el caso clínico.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow33.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow33.png" alt="wireflow app" width="550"/>
+
+27)  <strong>Wireflow 27:</strong> Consultar historial de consultas atendidas
+    
+- User goal: 
+<br> Como dermatólogo, quiero consultar el historial de mis consultas.
+
+<br><strong>User Story asociada: </br></strong>
+US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow31.png" alt="wireflow app" width="550"/>
+
+<p align = "center">
+<img src="assets/img/wireflow/wireflow31_web.png" alt="wireflow app" width="550"/>
+
 ### 4.4.3. Web Applications Mock-ups
+20) <strong> Mock-up 20: </strong> Registro de dermatólogo
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup25.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup25_web.png" alt="mockup" width="550"/>
+
+21) <strong> Mock-up 22: </strong> Configurar perfil profesional
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US26: Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup26.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup26_web.png" alt="mockup" width="550"/>
+ 
+22)  <strong> Mock-up 22: </strong> Definir disponibilidad de atención
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US27: Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup27.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup27_web.png" alt="mockup" width="550"/>
+
+23)  <strong> Mock-up 23: </strong> Visualizar agenda de consultas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US28: Como dermatólogo, quiero visualizar mis consultas programadas para gestionar mi tiempo de atención.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup28.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup28_web.png" alt="mockup" width="550"/>
+
+24)  <strong> Mock-up 24: </strong> Realizar consulta virtual en tiempo real
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US29: Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup29.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup29_web.png" alt="mockup" width="550"/>
+
+25)  <strong> Mock-up 25: </strong> Registrar notas y recomendaciones clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US30: Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup30.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup30_web.png" alt="mockup" width="550"/>
+
+26)  <strong> Mock-up 26: </strong> Registrar fotografías clínicas
+
+<br> <strong> User Story asociada: </br> </strong>
+
+US31: Como dermatólogo, quiero registrar fotografías clínicas del paciente durante la consulta para documentar su evolución.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup33.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup33_web.png" alt="mockup" width="550"/>
+
+27)   <strong> Mock-up 27: </strong> Consultar historial de consultas atendidas
+  
+<br> <strong> User Story asociada: </br> </strong>
+
+US32: Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+- mobile mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup32.png" alt="mockup" width="550"/>
+
+- web mock-up:
+ <p align = "center">
+<img src="assets/img/mockups/mockup32_web.png" alt="mockup" width="550"/>
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
