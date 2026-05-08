@@ -4394,6 +4394,428 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 <img src="assets/img/wireflow/wireflow31_web.png" alt="wireflow app" width="550"/>
 
 ### 4.4.3. Web Applications Mock-ups
+
+1) **Mock-up 1:** Registro de cuenta
+
+**User Story relacionada:**
+US01 - Como joven adulto, quiero registrarme con mis datos personales para
+crear una cuenta y acceder a Bloomie.
+
+**Desktop**
+![mockup 1 desktop](assets/img/mockups/mockup-01-web.png)
+
+
+**Mobile**
+![mockup 1 mobile](assets/img/mockups/mockup-01-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores definida en el Design System de
+Bloomie, utilizando el color primario #A26769 en los botones de acción y
+fondos de pantalla de bienvenida, junto con el fondo claro #FDFFF8 en las
+pantallas del formulario. La tipografía Montserrat Semibold se emplea en
+títulos y botones, mientras que Montserrat Regular se usa en los campos
+del formulario, manteniendo consistencia con la guía de estilos establecida.
+
+**Diseño inclusivo:**
+Los campos del formulario cuentan con etiquetas visibles, placeholders
+orientativos y un indicador de fortaleza de contraseña. Se incluyen
+opciones alternativas de registro mediante Google y Apple, reduciendo
+barreras de acceso para distintos tipos de usuarios. El contraste entre
+el texto oscuro #333333 y el fondo claro garantiza legibilidad adecuada.
+
+**Arquitectura de información:**
+El contenido se organiza de forma secuencial y progresiva, guiando al
+usuario desde la pantalla de bienvenida hasta la completación del
+formulario con email, contraseña, nombre y apellido. Cada pantalla
+presenta únicamente la información necesaria para ese paso del proceso.
+
+**Design System aplicado:**
+- Colores: #A26769 (botones y fondos), #FDFFF8 (fondo claro), #333333 (texto)
+- Tipografía: Montserrat Semibold 16px (botones), Montserrat Regular 16px (campos)
+- Espaciado: mínimo 16px entre elementos interactivos
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+
+2) **Mock-up 2:** Completar perfil de piel
+
+**User Story relacionada:**
+US02 - Como joven adulto, quiero completar un cuestionario inicial sobre mis
+condiciones de piel en mi primer ingreso para que la aplicación configure mi
+perfil correctamente.
+
+**Desktop**
+![mockup 2 desktop](assets/img/mockups/mockup-02-web.png)
+
+**Mobile**
+![mockup 2 mobile](assets/img/mockups/mockup-02-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el fondo claro #FDFFF8 en el formulario y el color primario
+#A26769 en el botón Next y elementos destacados. La tipografía Montserrat
+se emplea en títulos, etiquetas y opciones, manteniendo consistencia visual
+con el resto de la aplicación.
+
+**Diseño inclusivo:**
+Los campos de selección cuentan con etiquetas descriptivas en español e
+inglés y una guía de tipos de piel desplegable con descripciones detalladas
+para cada categoría, facilitando la comprensión para usuarios sin
+conocimiento previo sobre skincare. La pantalla de preparación para el
+escaneo presenta instrucciones numeradas en lenguaje simple.
+
+**Arquitectura de información:**
+El contenido se organiza en pasos secuenciales mediante un indicador de
+progreso en la parte superior, agrupando preguntas sobre tipo de piel,
+consumo de agua, exposición solar y hábitos de sueño. Al completar el
+cuestionario, el sistema redirige al usuario a la pantalla de preparación
+para el escaneo facial.
+
+**Design System aplicado:**
+- Colores: #A26769 (botón Next), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (campos)
+- Espaciado: mínimo 16px entre campos del formulario
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+3) **Mock-up 3:** Escaneo facial y diagnóstico preliminar
+
+**User Stories relacionadas:**
+US03 - Como joven adulto, quiero realizar un escaneo facial con la cámara
+para que la aplicación capture mi piel y obtenga un diagnóstico preciso.
+US04 - Como joven adulto, quiero recibir un diagnóstico generado por IA
+después del escaneo para conocer el estado de mi piel y los cuidados
+que necesito.
+
+**Desktop**
+![mockup 3 desktop](assets/img/mockups/mockup-03-web.png)
+
+
+**Mobile**
+![mockup 3 mobile](assets/img/mockups/mockup-03-mobile.png)
+
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en la barra lateral de navegación
+y botones de acción. Los scores de hidratación, barrera y textura se
+presentan con colores diferenciados para facilitar la lectura visual
+de los resultados. La tipografía Montserrat se emplea en todos los
+elementos manteniendo consistencia con el sistema de diseño.
+
+**Diseño inclusivo:**
+Las instrucciones previas al escaneo están numeradas y redactadas en
+lenguaje simple. Los resultados del análisis se presentan mediante
+porcentajes y etiquetas descriptivas comprensibles para cualquier
+usuario. La pantalla de error incluye posibles causas del fallo y
+consejos para mejorar el escaneo, con opciones claras de reintento
+o contacto con soporte.
+
+**Arquitectura de información:**
+El flujo se organiza en cuatro etapas secuenciales: preparación,
+escaneo en progreso, análisis y reporte final. El reporte organiza
+la información en secciones diferenciadas: scores generales, análisis
+preliminar y próximos pasos recomendados.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar y botones), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre secciones del reporte
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+4) **Mock-up 4:** Generar rutina personalizada
+
+**User Story relacionada:**
+US05 - Como joven adulto, quiero recibir una rutina personalizada con
+productos basados en mi diagnóstico de piel para seguir un tratamiento
+adecuado.
+
+**Desktop**
+![mockup 4 desktop](assets/img/mockups/mockup-04-web.png)
+
+**Mobile**
+![mockup 4 mobile](assets/img/mockups/mockup-04-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en la barra lateral y elementos
+destacados. Los pasos de la rutina se diferencian mediante colores
+suaves (verde, azul, rosa) para cada categoría de producto, facilitando
+la identificación visual de cada paso. La barra de progreso durante la
+generación de la rutina utiliza el color primario de la marca.
+
+**Diseño inclusivo:**
+Cada paso de la rutina incluye imagen del producto, nombre, horario y
+categoría, facilitando la comprensión para usuarios con distintos niveles
+de experiencia en skincare. La pantalla de error presenta las posibles
+causas del fallo con íconos descriptivos y consejos numerados para
+resolver el problema, con opciones claras de reintento o contacto con
+soporte.
+
+**Arquitectura de información:**
+El contenido se organiza en dos niveles: una vista mensual en calendario
+que muestra el resumen de la rutina y una vista diaria que detalla los
+pasos y productos específicos con su horario. El panel lateral muestra
+el perfil de piel, racha de días consecutivos y recordatorios de
+reposición de productos.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar y barra de progreso), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas de productos
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+5) **Mock-up 5:** Generar rutina personalizada
+
+**User Story relacionada:**
+US05 - Como joven adulto, quiero recibir una rutina personalizada con
+productos basados en mi diagnóstico de piel para seguir un tratamiento
+adecuado.
+
+**Desktop**
+![mockup 5 desktop](assets/img/mockups/mockup_05-web.png)
+
+
+**Mobile**
+![mockup 5 mobile](assets/img/mockups/mockup-05-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en la barra lateral y elementos
+destacados. La rutina generada presenta los pasos del día con
+codificación de colores por categoría de producto, facilitando la
+identificación visual de cada paso.
+
+**Diseño inclusivo:**
+La pantalla de carga muestra un mensaje claro "Generating routine" con
+barra de progreso, informando al usuario que el sistema está trabajando.
+Los pasos de la rutina incluyen imagen del producto, nombre y horario,
+facilitando la comprensión para cualquier tipo de usuario.
+
+**Arquitectura de información:**
+El flujo se organiza en dos etapas: generación de la rutina con barra
+de progreso y vista final con calendario mensual y detalle diario de
+los pasos. El panel lateral muestra el perfil de piel, racha de días
+y recordatorios de reposición de productos.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar y barra de progreso), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas de productos
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+6) **Mock-up 6:** Reemplazar producto de la rutina
+
+**User Story relacionada:**
+US06 - Como joven adulto, quiero reemplazar un producto de mi rutina por
+una alternativa recomendada para adaptar mi tratamiento.
+
+**Desktop**
+![mockup 6 desktop](assets/img/mockups/mockup-06-web.png)
+
+**Mobile**
+![mockup 6 mobile](assets/img/mockups/mockup-06-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en la barra lateral, botones de
+acción y elementos destacados. Las alternativas compatibles se presentan
+en tarjetas con imagen, nombre, precio y barra de compatibilidad. La
+pantalla de confirmación destaca el score de 95% con el color primario
+de la marca para reforzar visualmente la decisión del usuario.
+
+**Diseño inclusivo:**
+Cada alternativa incluye una barra de compatibilidad con porcentaje
+visible y una guía de rangos (90-100% Excellent Match, 80-89% Good Match,
+menor a 80% Fair Match), facilitando la toma de decisiones sin requerir
+conocimiento técnico. La pantalla de confirmación explica en lenguaje
+simple por qué el producto es adecuado para la piel del usuario.
+
+**Arquitectura de información:**
+El flujo se organiza en tres etapas: visualización del producto actual
+con alternativas compatibles ordenadas por score, confirmación del
+reemplazo con detalle del producto seleccionado y vista actualizada de
+la rutina con el nuevo producto incorporado.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar, botones y score destacado), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas de alternativas
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+
+7) **Mock-up 7:** Registrar cumplimiento de rutina diaria
+
+**User Story relacionada:**
+US07 - Como joven adulto, quiero marcar si completé mi rutina del día para
+llevar un seguimiento de mi progreso.
+
+**Desktop**
+![mockup 7 desktop](assets/img/mockups/mockup-07-web.png)
+
+**Mobile**
+![mockup 7 mobile](assets/img/mockups/mockup-07-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en la barra lateral y elementos
+destacados. El dashboard presenta métricas clave como skin score, racha
+de días, próxima cita y pasos en rutina en tarjetas con íconos,
+manteniendo consistencia visual con el sistema de diseño. El botón
+"Routine completed" cambia visualmente al registrar el cumplimiento,
+reforzando el feedback al usuario.
+
+**Diseño inclusivo:**
+Las métricas del dashboard se presentan con íconos y etiquetas
+descriptivas, facilitando la comprensión del progreso sin requerir
+interpretación técnica. El cambio visual en el calendario y el botón
+al marcar la rutina como completada confirma la acción de forma clara
+e intuitiva para cualquier tipo de usuario.
+
+**Arquitectura de información:**
+El contenido se organiza en dos niveles: el dashboard general con
+resumen del progreso semanal, recomendaciones personalizadas y acciones
+pendientes, y la vista detallada de la rutina diaria con los pasos
+específicos. Al marcar la rutina como completada, el sistema actualiza
+el estado visual del día en el calendario.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar y elementos destacados), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas de métricas y pasos de rutina
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+8) **Mock-up 8:** Explorar catálogo de productos
+
+**User Story relacionada:**
+US08 - Como joven adulto, quiero explorar el catálogo de productos y
+aplicar filtros para encontrar opciones relevantes a mis necesidades.
+
+**Desktop**
+![mockup 8 desktop](assets/img/mockups/mockup-08-web.png)
+
+**Mobile**
+![mockup 8 mobile](assets/img/mockups/mockup-08-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando fondos suaves diferenciados por categoría de producto en
+las tarjetas del catálogo. El panel de filtros lateral presenta opciones
+por categoría y recomendación de IA con radio buttons, manteniendo
+consistencia visual con el sistema de diseño. La pantalla de detalle
+del producto muestra una barra de compatibilidad en color verde para
+scores altos.
+
+**Diseño inclusivo:**
+El badge "AI Recommended" identifica visualmente los productos sugeridos
+según el perfil de piel del usuario. En caso de no encontrar resultados,
+el sistema muestra un mensaje "Search Failed" con fondo rosado suave,
+informando al usuario de forma clara y no agresiva. Los botones "Apply
+Filters" y "Clear all" permiten gestionar los filtros con facilidad.
+
+**Arquitectura de información:**
+El contenido se organiza mediante pestañas (All Products, Favorites) y
+un panel de filtros lateral por categoría y recomendación de IA. La
+pantalla de detalle presenta imagen del producto, descripción, score de
+compatibilidad con explicación y beneficios clave, permitiendo al usuario
+tomar una decisión informada.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar), #FDFFF8 (fondo), #333333 (texto), verde para scores altos
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas del catálogo
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+9) **Mock-up 9:** Ver detalle y compatibilidad de producto
+
+**User Story relacionada:**
+US09 - Como joven adulto, quiero ver el detalle de un producto y su
+compatibilidad con mi piel para tomar decisiones informadas.
+
+**Desktop**
+![mockup 9 desktop](assets/img/mockups/mockup-09-web.png)
+
+**Mobile**
+![mockup 9 mobile](assets/img/mockups/mockup-09-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando el color primario #A26769 en el botón principal y barra
+lateral. Las barras de compatibilidad utilizan colores diferenciados
+según el nivel de adecuación: verde para Excellent Match (90-100%),
+amarillo para Good Match (80-89%) y rojo para Fair Match (menor a 80%),
+facilitando la lectura visual de los resultados.
+
+**Diseño inclusivo:**
+La guía de compatibilidad lateral presenta los rangos con indicadores
+de color y etiquetas descriptivas, permitiendo al usuario interpretar
+los scores sin conocimiento técnico previo. El badge "Best Match"
+destaca visualmente la opción más adecuada. El panel de perfil de piel
+muestra las características del usuario (Normal to Dry, Sensitive, Low
+Hydration) como referencia para la selección.
+
+**Arquitectura de información:**
+El contenido se organiza en tres secciones: el producto actual en
+rutina, las alternativas compatibles ordenadas por score y el panel
+lateral con la guía de compatibilidad y perfil de piel. La rutina
+diaria en la pantalla izquierda mantiene el contexto del usuario
+durante el proceso de selección.
+
+**Design System aplicado:**
+- Colores: #A26769 (navbar y botón principal), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas de alternativas
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+10) **Mock-up 10:** Guardar producto como favorito
+
+**User Story relacionada:**
+US10 - Como joven adulto, quiero guardar productos en mis favoritos para
+acceder a ellos fácilmente después.
+
+**Desktop**
+![mockup 10 desktop](assets/img/mockups/mockup-10-web.png)
+
+**Mobile**
+![mockup 10 mobile](assets/img/mockups/mockup-10-mobile.png)
+
+**Principios y elementos de diseño:**
+El mock-up aplica la paleta de colores del Design System de Bloomie,
+utilizando fondos suaves diferenciados por categoría de producto en
+las tarjetas del catálogo. El ícono de corazón cambia a color primario
+#A26769 al guardar un producto como favorito, proporcionando feedback
+visual inmediato. La barra de navegación inferior en mobile mantiene
+consistencia con el sistema de diseño.
+
+**Diseño inclusivo:**
+El ícono de corazón es un elemento universalmente reconocido para
+indicar favoritos, reduciendo la necesidad de instrucciones adicionales.
+El contador en la pestaña "Favourites" informa al usuario cuántos
+productos tiene guardados. Las tarjetas mantienen un tamaño adecuado
+para interacción táctil en dispositivos móviles.
+
+**Arquitectura de información:**
+El contenido se organiza mediante dos pestañas: "All Products" para
+explorar el catálogo completo y "Favourites" para acceder únicamente
+a los productos guardados con su contador actualizado. La navegación
+inferior en mobile permite acceder rápidamente a las secciones
+principales de la aplicación.
+
+**Design System aplicado:**
+- Colores: #A26769 (ícono favorito activo y navbar mobile), #FDFFF8 (fondo), #333333 (texto)
+- Tipografía: Montserrat Semibold 18px (títulos), Montserrat Regular 16px (contenido)
+- Espaciado: mínimo 16px entre tarjetas del catálogo
+- Botones: mínimo 44x44px siguiendo estándares de accesibilidad
+
+
+
+
+
 20) <strong> Mock-up 20: </strong> Registro de dermatólogo
 
 <br> <strong> User Story asociada: </br> </strong>
