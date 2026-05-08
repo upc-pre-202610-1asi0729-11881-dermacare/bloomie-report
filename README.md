@@ -4046,6 +4046,7 @@ adecuado.
 
 ![wireflow 05 mobile](assets/img/wireflow/wireflow-05-mobile.png)
 
+
 Una vez generado el diagnóstico de piel, el sistema crea automáticamente
 una rutina personalizada asignando productos específicos para cada paso
 con su horario programado (mañana y noche). El usuario visualiza su rutina
@@ -4064,6 +4065,7 @@ una alternativa recomendada para adaptar mi tratamiento.
 ![wireflow 6](assets/img/wireflow/wireflow_06-web.png)
 
 ![wireflow 06 mobile](assets/img/wireflow/wireflow-06-mobile.png)
+
 
 
 El usuario accede a su rutina activa y selecciona el producto que desea
@@ -4087,6 +4089,7 @@ llevar un seguimiento de mi progreso.
 ![wireflow 07 mobile](assets/img/wireflow/wireflow-07-mobile.png)
 
 
+
 El usuario accede a su rutina del día y visualiza los pasos pendientes.
 Una vez realizados los pasos, el usuario indica que completó su rutina
 del día. El sistema registra el día como completado y actualiza las
@@ -4106,6 +4109,7 @@ aplicar filtros para encontrar opciones relevantes a mis necesidades.
 ![wireflow 8](assets/img/wireflow/wireflow-08-web.png)
 
 ![wireflow 08 mobile](assets/img/wireflow/wireflow-08-mobile.png)
+
 
 
 El usuario accede a la sección de catálogo de productos y el sistema
@@ -4131,6 +4135,7 @@ compatibilidad con mi piel para tomar decisiones informadas.
 ![wireflow 09 mobile](assets/img/wireflow/wireflow-09-mobile.png)
 
 
+
 El usuario selecciona un producto del catálogo y el sistema carga la
 pantalla de detalle mostrando el score de compatibilidad, la explicación
 y los beneficios del producto. Si el producto es compatible con el perfil
@@ -4151,11 +4156,11 @@ para acceder a ellos fácilmente después.
 
 ![wireflow 10](assets/img/wireflow/wireflow-10-web.png)
 
-<<<<<<< HEAD
+
 ![wireflow 10 mobile](assets/img/wireflow/wireflow-10-mobile.png)
 
-=======
->>>>>>> e7ae3da5b1248be83a0720f3dc4451f9d99b8106
+
+
 
 El usuario visualiza un producto desde el catálogo y selecciona la opción de guardarlo como favorito. El sistema
 agrega el producto a su lista de favoritos y confirma la acción al
