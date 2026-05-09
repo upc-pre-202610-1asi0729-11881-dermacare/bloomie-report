@@ -3262,22 +3262,94 @@ Utilizada en listas de pacientes o registros, facilitando la búsqueda rápida d
 
 ### 4.3.2. Landing Page Mock-up
 
-- Dashboard
+Los mock-ups del Landing Page de Bloomie para la versión Desktop Web Browser materializan visualmente las decisiones de diseño establecidas en el Style Guidelines del proyecto. Cada sección ha sido construida respetando la paleta cromática, tipografía, sistema de espaciado, tono de comunicación y arquitectura de información definidos para el producto. A continuación se presenta el análisis de cada pantalla.
+
+- <strong> Home: </strong> 
 <p align = "center">
 <img src="assets/img/landing/LandingPage 3.png" alt="dermatologos-system" width="500"/>
 
-- Information
+1. Descripción visual: La sección de inicio presenta el encabezado principal "Your skin deserves more than a questionnaire" apoyado en tipografía Montserrat Semibold en peso H1 (62 px desktop), donde la palabra clave en cursiva adopta el color de acento de la marca (#A26769, cobre/terracota). A la derecha se despliega una imagen de análisis facial con etiquetas flotantes de diagnóstico (Hydration 82%, Mild acne, Texture: Even, Score of Skin: 87/100). Los botones principales Analyze your skin for free y How it works → respetan las especificaciones del sistema de botones: Montserrat Semibold 16 px, con el CTA principal en fondo oscuro (#333333) y el secundario con borde tenue. En la parte inferior se presentan tres indicadores estadísticos de credibilidad del producto.
+
+2. Design System aplicado:
+
+- Tipografía: Montserrat Semibold 62 px (H1) para el headline; Montserrat Regular 16 px (Body) para el párrafo descriptivo; Montserrat Semibold 16 px (Button) para los CTAs.
+- Colores: Fondo #FDFFF8 (fondo principal cálido), texto principal #333333, acento #A26769 en la palabra en cursiva y el badge superior.
+- Espaciado: Márgenes horizontales amplios conforme al sistema modular de múltiplos de 4 px; separación entre el texto y los botones mínima de 16 px según las guías.
+Botones: Tamaño mínimo de 44×44 px garantizado en ambos CTAs, alineado con estándares de accesibilidad.
+
+3. Heurísticas de Nielsen aplicadas:
+
+- H1 – Visibilidad del estado del sistema: Las etiquetas flotantes del análisis facial (Hydration, Mild acne, Texture, Score) simulan el output en tiempo real del producto, dejando claro al usuario qué puede esperar del servicio desde el primer contacto.
+- H6 – Reconocimiento antes que recuerdo: Los indicadores visuales superpuestos sobre la imagen hacen explícitas las capacidades del sistema sin requerir que el usuario navegue o recuerde información previa.
+- H8 – Diseño estético y minimalista: La sección presenta únicamente los elementos esenciales para comunicar la propuesta de valor y motivar la conversión, sin elementos decorativos que desvíen la atención.
+
+4. Diseño inclusivo: El contraste entre texto #333333 sobre fondo #FDFFF8 cumple con el estándar WCAG AA de accesibilidad cromática. El uso de dos CTAs diferenciados visualmente (oscuro vs. borde tenue) no depende exclusivamente del color para distinguir la acción principal de la secundaria, sino también del contraste de relleno. Los íconos de soporte tienen un tamaño mínimo de 30×30 px según lo especificado en el sistema de espaciado.
+
+
+- <strong> Results: </strong> 
 <p align = "center">
 <img src="assets/img/landing/LandingPage 1.png" alt="dermatologos-system" width="500"/>
 
-- Pricing 
+1. Descripción visual: La sección presenta el encabezado "Real data. Skins that flourished." en Montserrat Semibold H1, con la palabra en cursiva destacada en #A26769. Debajo aparecen cuatro tarjetas de métricas con íconos emoji, números grandes en tipografía H2 (48 px Semibold) y descripciones en Body Regular. A la derecha se ubican tres tarjetas de testimonios con calificación de 5 estrellas, cita en cursiva, avatar de iniciales, nombre, plan de suscripción y ciudad del usuario.
+
+2. Design System aplicado:
+
+- Tipografía: H1 (62 px) para el titular; H2 (48 px) para los valores numéricos de las métricas; Body Regular (16 px, line-height 150%) para descripciones y citas.
+- Colores: Fondo #FDFFF8; tarjetas en blanco con borde sutil; avatares de iniciales con fondo #CEBEBE (color secundario de bloques de la paleta oficial).
+- Iconografía: Emojis nativos en rol de íconos funcionales, alineados con el uso de iconografía minimalista que comunica acciones de forma inmediata según el Style Guide.
+- Espaciado: Separación entre secciones de 24–32 px (desktop), con padding interno uniforme en cada tarjeta conforme al sistema modular.
+
+3. Heurísticas de Nielsen aplicadas:
+
+- H2 – Correspondencia entre el sistema y el mundo real: Los testimonios incluyen nombre real, tipo de plan (Premium User, Clinical Plan) y ciudad de origen (Mexico City, Bogotá, Lima), haciendo el contenido identificable y creíble para el segmento objetivo latinoamericano.
+- H4 – Consistencia y estándares: El sistema de valoración de 5 estrellas es un patrón reconocido universalmente que no requiere aprendizaje adicional por parte del usuario.
+- H8 – Diseño estético y minimalista: La división en dos columnas equilibradas (métricas izquierda, testimonios derecha) organiza el contenido sin saturarlo, manteniendo la densidad informativa bajo control.
+
+4. Arquitectura de informaciòn: Esta sección corresponde al nodo Results del Labeling System del Landing Page definido en el Information Architecture. Su posición en el flujo narrativo de la página responde a la progresión lógica: primero el usuario comprende que es el producto y luego recibe evidencia de sus resultados reales antes de conocer cómo funciona y cuánto cuesta.
+
+- <strong> Pricing: </strong> 
 <p align = "center">
 <img src="assets/img/landing/landingpage-5.png" alt="dermatologos-system" width="500"/>
 
-- Needing
+1. Descripción visual: La sección centra el titular "Invest in your skin, not in uncertainty" en Montserrat Semibold H1, con uncertainty en color acento #A26769. Un toggle Monthly/Annual con badge "Save 30%" en verde permite cambiar entre modos de facturación. Se presentan tres tarjetas de planes: Starter ($9/mes), Advanced ($19/mes, marcado como "Most Popular" en fondo oscuro #333333) y Elite ($39/mes). Cada plan detalla su lista de funcionalidades con íconos de check, usando Body Regular 16 px.
+
+2. Design System aplicado:
+
+- Tipografía: H1 (62 px Semibold) para el titular; Small (12 px Regular) para textos auxiliares como "per month · billed monthly"; Button (Semibold 16 px) para los CTAs dentro de cada tarjeta; Label (Medium 14 px) para el badge "MOST POPULAR" y las etiquetas de plan.
+- Colores: Plan Advanced con fondo #333333 (color de botones de acceso según el Style Guide) y texto blanco, creando alto contraste y distinción inmediata; planes Starter y Elite sobre fondo blanco con borde sutil sobre #FDFFF8.
+- Espaciado: Separación entre tarjetas de 24 px; padding interno de 32 px por tarjeta; distancia entre ítem de lista y siguiente de 16 px mínimo.
+- Botones: CTA de cada plan con mínimo 44×44 px, Montserrat Semibold 16 px, con variante oscura en el plan destacado y variante con borde en los laterales.
+
+3. Heurísticas de Nielsen aplicadas:
+
+- H7 – Flexibilidad y eficiencia de uso: El toggle Monthly/Annual permite al usuario comparar precios en ambas modalidades de forma inmediata, sin abandonar la página ni recargarla.
+- H3 – Control y libertad del usuario: El plan Starter como punto de entrada de bajo compromiso ("Start free, scale as you see results") reduce la fricción inicial y permite al usuario probar el producto antes de escalar.
+- H1 – Visibilidad del estado del sistema: El badge "Save 30%" comunica en tiempo real el beneficio de seleccionar el modo anual, y el badge "Most Popular" orienta visualmente la decisión sin obligar al usuario a comparar manualmente.
+- H8 – Diseño estético y minimalista: Las listas de funcionalidades usan íconos de check minimalistas sin fondo adicional, preservando la legibilidad sin añadir ruido visual.
+
+4. Diseño inclusivo: 
+El toggle de facturación tiene estado activo/inactivo claramente distinguible por contraste (no solo por color). Los precios están expresados de forma directa y transparente, sin letra pequeña oculta en la vista principal, en alineación con el tono de comunicación honesto y cercano definido en las guías. La distinción del plan destacado se apoya tanto en el contraste cromático (fondo oscuro vs. claro) como en la jerarquía espacial (tarjeta central elevada), garantizando que la diferenciación no dependa únicamente del color.
+
+- <strong> Features: </strong> 
 <p align = "center">
 <img src="assets/img/landing/landingpage-4.png" alt="dermatologos-system" width="500"/>
 
+1. Descripción visual: La sección presenta el encabezado "Everything your skin needs, in one place" con subtítulo "Your skin deserves a complete ecosystem" en Montserrat Regular Body. Una cuadrícula de 3×2 tarjetas presenta las seis funcionalidades principales: Multi-layer AI analysis, Progress dashboard, Personalized AM/PM routine, Product geolocation, Dermatology access y Smart reminders. Cada tarjeta contiene un ícono emoji, título en H3 (Montserrat Semibold 18 px), descripción en Body y una etiqueta de categoría con fondo rosado suave.
+
+2. Design System aplicado:
+
+- Tipografía: H2 (48 px Semibold) para el título de sección; H3 (18 px Semibold) para el nombre de cada feature; Body (16 px Regular, line-height 150%) para las descripciones; Label/Tag (Montserrat Medium 14 px) para las etiquetas de categoría.
+- Colores: Fondo de sección en tono beige más cálido (variante de #CEBEBE) para diferenciarla del resto; tarjetas en blanco puro para generar separación figura-fondo; etiquetas en tono rosado suave (#A26769 con baja opacidad).
+- Espaciado: Grid de 3 columnas con gap de 24 px entre tarjetas (múltiplo del sistema modular); padding interno de 24–32 px por tarjeta.
+- Iconografía: Set de emojis con semántica funcional inmediata, en coherencia con el principio de iconografía minimalista de Bloomie que comunica acciones y funciones de forma directa.
+
+3. Heurísticas de Nielsen aplicadas:
+
+- H6 – Reconocimiento antes que recuerdo: Los íconos visuales junto a cada feature permiten identificarla en una fracción de segundo, sin necesidad de leer el texto completo.
+- H4 – Consistencia y estándares: Todas las tarjetas siguen la misma estructura interna (ícono, título, descripción, etiqueta), generando predictibilidad y reduciendo la carga cognitiva al explorar la sección.
+- H10 – Ayuda y documentación: Las etiquetas de categoría (Machine Learning, Continuous tracking, Hyper-personalization, Medical network, etc.) contextualizan la tecnología para usuarios no técnicos, sin requerir documentación adicional.
+
+4. Arquitectura de informaciòn: Esta sección corresponde al nodo Features del sistema de navegación. Las features están ordenadas progresivamente: de mayor a menor profundidad tecnológica (AI analysis, dashboard, routine, geolocation, dermatology, reminders), respetando el modelo mental del usuario que evalúa el producto de adentro hacia afuera, desde su núcleo diferenciador hasta sus funcionalidades de soporte.
 
 ## 4.4. Web Applications UX/UI Design
 
@@ -3917,7 +3989,9 @@ US25: Como dermatólogo, quiero registrar mis credenciales profesionales para ac
  <p align = "center">
 <img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
 
-El usuario accede a su perfil, donde se le muestran opciones de configuración de usuario. Se le muestra dentro un apartado extra de los datos personales primarios, como el "skin profile", "settings" y "favorites". Si selecciona el skin profile el usuario podrá modificar los datos registrados de su piel previamente regisrtrados. Luego, confirma el guardado con el botón de confirmación y se actualiza para el sistema. 
+- web wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe25_web.png" alt="wireframe" width="550"/>
 
 21) <strong> Wireframe 22: </strong> Configurar perfil profesional
 
@@ -4257,11 +4331,12 @@ actualizando la vista.
 <br><strong>User Story asociada: </br></strong>
 US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
 
-![wireflow 11 web](assets/img/wireflow/wireflow-11-web.png)
+<p align = "center">
+<img src="assets/img/wireflow/wireflow-11-app.png" alt="wireflow app" width="550"/>
 
-![wireflow 11 mobile](assets/img/wireflow/wireflow-11-mobile.png)
+<p align = "center">
+<img src="assets/img/wireflow/wireflow-11-web.png" alt="wireflow app" width="550"/>
 
-El usuario accede al dashboard y visualiza todas las funcionalidades principales de la propuesta. Se dirige luego al apartado "skin progress" para luego visualizar las métricas o estadísticas de su progreso de la skin a través de datos como su puntaje actual, los día de racha consecutivos realizando la rutina, los días completados en total y el porcentaje de aciertos. Luego, el usuario podrá decidir si continuar viendo las métricas o desea volver presioando cualquier botón de abajo, siendo de preferencia el home. 
 
 
 13) <strong> Wireflow 12: </strong> consultar asistente virtual de skincare.
@@ -4271,9 +4346,9 @@ Como joven adulto, quiero consultar productos en línea y recibir orientación s
 <br><strong>User Story asociada: </br></strong>
 US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
-![wireflow 13 mobile](assets/img/wireflow/wireflow-13-mobile.png)
+<p align = "center">
+<img src="assets/img/wireflow/wireflow-13-app.png" alt="wireflow app" width="550"/>
 
-El usuario ingresa desde el dashboard al aparto que dice "consult", allí se le desplegará una nueva interfaz donde se añade funcionalidad de escritura y con ello, la integración de una herramienta de Inteligencia Artifical. Allí, podrá preguntar temas sencillos sobre el cuidado de la piel las 24 horas del día. Luego, el usuario decide si continuar con la conversación o pasar nuevamente al dashboard.  
 
 14) <strong> Wireflow 13: </strong> Selección de dermatólogos para pacientes
 - User goal: 
@@ -4283,9 +4358,11 @@ Como joven adulto, quiero agendar una consulta con un dermatólogo mediante una 
 <br><strong>User Story asociada: </br></strong>
 US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
 
-![wireflow 14 mobile](assets/img/wireflow/wireflow-14-mobile.png)
+<p align = "center">
+<img src="assets/img/landing/wireflow-14-app.png" alt="wireflow app" width="550"/>
 
-El usuario, ingresa desde el dashboard al apartado "consult a dermatologist". Se le desplegará una listado con todos los dermatólogos disponibles. El usuario luego podrá seleccionar el dermatólogo de su preferencia aplicando filtros como precio por consulta. Finalmente, se registra en el listado de consultas pendientes. Allí el usuario podrá volver agendar otra cita o volver al dashboard.
+**Descripción del flujo:**
+
 
 15) <strong>Wireflow 14:</strong> Pagar y confirmar cita
 - User goal: 
@@ -4294,9 +4371,9 @@ El usuario, ingresa desde el dashboard al apartado "consult a dermatologist". Se
 <br><strong>User Story asociada: </br></strong>
 US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
 
-![wireflow 15 mobile](assets/img/wireflow/wireflow-15-mobile.png)
+<p align = "center">
+<img src="assets/img/landing/wireflow-15-app.png" alt="wireflow app" width="550"/>
 
-El usuario accede desde el listado de dermatólogos presionando "book appointment" para poder visualizar a detalle los horarios disponibles de los dermatólogos. En el caso que el usuario continue con el proceso de elección de horario, se le desplegará el apartado de "payment method" donde tendrá que registrar sus datos acorde al método de pago que el usuario desee insertar. Luego, el sistema valida si esta información es válida para poder procesarla y registrar la consulta.
 
 16) <strong> Wireflow 15: </strong> Cancelar cita dermatológica 
 - User goal:
@@ -4307,9 +4384,8 @@ Como joven adulto, quiero cancelar una cita ya programada.
 
 US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
 
-![wireflow 16 mobile](assets/img/wireflow/wireflow-16-mobile.png)
-
-El usuario acccede desde el apartado "scheduled appointment" para luego visualizar todas las consultas con dermatólogos ya previamente programadas. Como el usuario desea cancelar una o más citas, presiona "cancel appointment". Luego, verá un apartado donde pregunta los motivos por los cuales el usuario decidió cancelarla. Hecho ello, el sistema verificará si el usuario canceló la cita dentro del plazo de 24 antes que inicie la consulta. De ser que se haya vencido ese plazo, el usuario no recibirá un reembolso. 
+<p align = "center">
+<img src="assets/img/landing/wireflow-16-app.png" alt="wireflow app" width="550"/>
 
 17) <strong> Wireflow 16: </strong> selección y pago de una suscripción
 - User goal: 
@@ -4320,9 +4396,8 @@ Como joven adulto, quiero pagar una suscripción a través del completado de dat
 
 US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
 
-![wireflow 17 mobile](assets/img/wireflow/wireflow-17-mobile.png)
-
-El usuario accede desde su perfil al apartado "choose your plan". Luego, visualizará todos los planes disponibles que ofrece nuestra propuesta. De ser que el usuario se decida por un plan, una vez lo seleecione lo llevará al apartado "payment method", donde tendrá que registrar los datos de su forma de pago. Luego, el sistema validará si los datos ingresados son correctos para procesar el pago y se actualice el plan del usuario. 
+<p align = "center">
+<img src="assets/img/landing/wireflow-17-app.png" alt="wireflow app" width="550"/>
 
 18) <strong> Wireflow 17: </strong> Gestionar suscripción realizada 
 - User goal: 
@@ -4332,9 +4407,9 @@ Como jóven adulto, quiero gestionar mi suscripción según mis necesidades.
 <br> <strong> User Story asociada: </strong> </br>
 US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
 
-![wireflow 18 mobile](assets/img/wireflow/wireflow-18-mobile.png)
+<p align = "center">
+<img src="assets/img/landing/wireflow-18-app.png" alt="wireflow app" width="550"/>
 
-El usuario accede desde su pefil a la sección "My Plan", donde se le muestra datos con respecto a su plan, como su estado o la posibilidad de mejora. De ser que el usuario desee cambiar su plan, ingresa al apartado "update" donde se le solicitará sus datos con respecto al método de pago. Luego, el sistema validará si la información ingresada es válida para luego poder procesar el pago y actualizar el cambio suscripción que realizó el usuario. 
 
 19) <strong> Wireflow 18: </strong> Editar información personal 
 - User goal:
@@ -4345,9 +4420,9 @@ Como jóven adulto, quiero editar mi información personal.
 
 US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
 
-![wireflow 19 mobile](assets/img/wireflow/wireflow-19-mobile.png)
+<p align = "center">
+<img src="assets/img/landing/wireflow-19-app.png" alt="wireflow app" width="550"/>
  
-El usuario accede a su perfil, donde se le muestran opciones para modificar su información personal, como nombre o correo. De ser que el usuario desee cambiar sus datos ya previamente registrados, una vez los cambie el sistema validará de forma responsive si los datos ingresados son válidos. De ser que lo sean, se actualiza automáticamente y se notifica al usuario. 
 
 20) <strong> Wireflow 20: </strong> Actualizar características de piel
 - User goal: 
@@ -4357,9 +4432,9 @@ Como jóven adulto, quiero actualizar los datos con respecto a mi piel.
 <br> <strong> User Story asociada: </strong> </br>
 US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
 
-![wireflow 20 mobile](assets/img/wireflow/wireflow-20-mobile.png)
+<p align = "center"> 
 
-El usuario accede a su perfil, donde se le muestran opciones de configuración de usuario. Se le muestra dentro un apartado extra de los datos personales primarios, como el "skin profile", "settings" y "favorites". Si selecciona el skin profile el usuario podrá modificar los datos registrados de su piel previamente regisrtrados. Luego, confirma el guardado con el botón de confirmación y se actualiza para el sistema. 
+<img src="assets/img/landing/wireflow-20-app.png" alt="wireflow app" width="550"/>
 
 21) <strong>Wireflow 21:</strong> Registro de dermatólogo
     
