@@ -3733,114 +3733,189 @@ general y su lista personalizada de forma rápida y sencilla.
   únicamente los productos guardados, sin elementos distractores.
 
 
-11) <strong>Wireflow 11:</strong> Visualizar métricas de progreso
-- User goal: 
-<br> Como joven adulto, quiero visualizar un registro del progreso de mi rutina de skincare.
+11) **Wireframe 11:** Métricas del progreso
 
-<br><strong>User Story asociada: </br></strong>
+**User Story relacionada:**
 US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
 
-![wireflow 11 web](assets/img/wireflow/wireflow-11-web.png)
+![wireframe 11](assets/img/wireframes/wireframe-11-app.png)
 
-![wireflow 11 mobile](assets/img/wireflow/wireflow-11-mobile.png)
+**Principios y elementos de diseño:**
+La pantalla de inicio presenta un saludo personalizado ("Hello, Sofia") acompañado de una tarjeta de llamada a la acción para iniciar el análisis de piel. El contenido se organiza en tarjetas modulares que agrupan funcionalidades clave: cita con dermatólogo, productos en tendencia, progreso de piel y rutina de cuidado. La jerarquía visual se establece mediante el tamaño y peso de los elementos, guiando la atención del usuario de arriba hacia abajo de forma natural. Por otro lado, se tiene en cuenta tarjetas compactas  que destacan indicadores clave, como tasa de adherencia. 
 
-El usuario accede al dashboard y visualiza todas las funcionalidades principales de la propuesta. Se dirige luego al apartado "skin progress" para luego visualizar las métricas o estadísticas de su progreso de la skin a través de datos como su puntaje actual, los día de racha consecutivos realizando la rutina, los días completados en total y el porcentaje de aciertos. Luego, el usuario podrá decidir si continuar viendo las métricas o desea volver presioando cualquier botón de abajo, siendo de preferencia el home. 
+**Diseño inclusivo:**
+Cada tarjeta incluye etiquetas de texto descriptivas que complementan los elementos visuales, garantizando la comprensión del contenido sin depender únicamente de íconos. La barra de navegación inferior cuenta con íconos acompañados de etiquetas textuales (Home, Consult, My Routine, Profile), reduciendo la ambigüedad para usuarios con menor familiaridad digital. Luego, existen valores númericos acompañados de etiquetas que facilita la lectura. 
+**Arquitectura de información:**
+La pantalla actúa como hub central de la aplicación. El contenido se prioriza según frecuencia de uso: la rutina activa y la próxima cita aparecen en primer plano, mientras que las secciones secundarias como tiendas cercanas se ubican al final. La navegación global en la parte inferior permite acceder a las secciones principales desde cualquier punto de la app. Luego, el contenido en el siguiente donde se muestra la información sigue una progresión lógica: primero el desempeño, luego, el puntaje global con su tendencia, para finalmente se encuentra la actividad semanal. Ahora,las heurísticas de Nielsen aplicadas: 
 
+- *Visibilidad del estado del sistema*: la tarjeta de cita muestra fecha, hora y nombre del médico, manteniendo al usuario informado sobre sus compromisos activos.
+- Reconocimiento antes que recuerdo: las tarjetas con títulos visibles permiten al usuario identificar las secciones disponibles sin necesidad de memorizar rutas de navegación.
+- *Flexibilidad y eficiencia de uso*: el botón "Get started" en la tarjeta principal ofrece un acceso directo al flujo de análisis, acelerando la interacción para usuarios recurrentes.
+- *Estética y diseño minimalista*: el layout limpio con tarjetas bien delimitadas evita la sobrecarga de información, presentando solo lo esencial en cada bloque.
 
-13) <strong> Wireflow 13: </strong> consultar asistente virtual de skincare.
-- User goal: 
-Como joven adulto, quiero consultar productos en línea y recibir orientación sobre la compra.
+12) **Wireframe 13:** Consulta al asistente virtual
 
-<br><strong>User Story asociada: </br></strong>
+**User Story relacionada:**
 US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
-![wireflow 13 mobile](assets/img/wireflow/wireflow-13-mobile.png)
+![wireframe 13](assets/img/wireframes/wireframe-13-app.png)
 
-El usuario ingresa desde el dashboard al aparto que dice "consult", allí se le desplegará una nueva interfaz donde se añade funcionalidad de escritura y con ello, la integración de una herramienta de Inteligencia Artifical. Allí, podrá preguntar temas sencillos sobre el cuidado de la piel las 24 horas del día. Luego, el usuario decide si continuar con la conversación o pasar nuevamente al dashboard.  
 
-14) <strong> Wireflow 14: </strong> Selección de dermatólogos para pacientes
-- User goal: 
+**Principios y elementos de diseño:**
+La interfaz del asistente adopta el patrón de chat conversacional, diferenciando visualmente los mensajes del usuario (burbujas claras, alineadas a la derecha) de las respuestas del asistente (burbujas grises, alineadas a la izquierda). En la parte superior se presentan preguntas frecuentes como chips horizontales deslizables, ofreciendo puntos de entrada rápidos a consultas comunes. El flujo muestra dos estados del chat: uno inicial donde el asistente solicita información sobre el tipo de piel, y uno avanzado donde, ante una consulta fuera de su alcance, redirige al usuario con un dermatólogo.
+**Diseño inclusivo:**
+El campo de entrada ("Escriba aquí...") está claramente etiquetado y ubicado en la parte inferior de la pantalla, zona de fácil alcance en dispositivos móviles. Las preguntas frecuentes predefinidas reducen la carga cognitiva del usuario al ofrecer opciones concretas sin requerir que redacte sus dudas desde cero. El lenguaje del asistente es simple, directo y empático en ambos estados del flujo.
+**Arquitectura de información:**
+El contenido se estructura en tres niveles: accesos rápidos mediante preguntas frecuentes en la parte superior, historial de conversación en el área central con scroll, y campo de entrada fijo en la parte inferior. Esta disposición sigue el modelo estándar de interfaces de chat, minimizando la curva de aprendizaje. La redirección al dermatólogo cuando el asistente no puede resolver una consulta actúa como nodo de escape hacia otra sección del sistema.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: las burbujas de respuesta aparecen progresivamente, mostrando el avance de la conversación y el estado actual del diálogo.
+- *Prevención de errores*: las preguntas frecuentes preformuladas orientan al usuario hacia consultas que el asistente puede responder correctamente, reduciendo interacciones fallidas.
+- *Ayuda a los usuarios a reconocer y corregir errores*: cuando el asistente no puede responder ("Sorry I can not help you with that"), ofrece una alternativa concreta recomendando agendar una consulta con un dermatólogo.
+- *Ayuda y documentación*: las preguntas frecuentes funcionan como guía integrada, orientando al usuario sobre qué tipo de consultas puede realizar sin necesidad de salir de la pantalla.
 
-Como joven adulto, quiero agendar una consulta con un dermatólogo mediante una interfaz.
+13) **Wireframe 14:** Selección de dermatólogos para pacientes
 
-<br><strong>User Story asociada: </br></strong>
+**User Story relacionada:**
 US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
 
-![wireflow 14 mobile](assets/img/wireflow/wireflow-14-mobile.png)
+![wireframe 14](assets/img/wireframes/wireframe-14-app.png)
 
-El usuario, ingresa desde el dashboard al apartado "consult a dermatologist". Se le desplegará una listado con todos los dermatólogos disponibles. El usuario luego podrá seleccionar el dermatólogo de su preferencia aplicando filtros como precio por consulta. Finalmente, se registra en el listado de consultas pendientes. Allí el usuario podrá volver agendar otra cita o volver al dashboard.
+**Principios y elementos de diseño:**
+Este grupo de wireframes conforma el flujo completo de contratación de una consulta dermatológica, compuesto por cuatro etapas secuenciales. La pantalla de selección presenta a los dermatólogos en tarjetas verticales con información relevante (especialidad, precio, rating y próxima disponibilidad), facilitando la comparación rápida entre profesionales. La pantalla de agendamiento muestra el perfil detallado del médico con estadísticas clave (pacientes, años de experiencia, rating) junto a un calendario semanal y bloques de horario seleccionables. El flujo de pago se desarrolla en tres estados progresivos: selección del método de pago (tarjeta o billetera digital), ingreso de datos del medio elegido, y confirmación de pago exitoso mediante un banner de "Success Payment".
+**Diseño inclusivo:**
+Cada tarjeta de dermatólogo incluye su especialidad descrita en texto, permitiendo que el usuario tome decisiones informadas sin depender únicamente de nombres o imágenes. Los campos del formulario de pago cuentan con placeholders descriptivos ("Sofia Mendez", "0000 0000 0000 0000", "dd/mm/yyyy") que guían el formato de ingreso esperado. Un mensaje de seguridad ("Your payment info is encrypted and secure") acompañado de un ícono de candado refuerza la confianza del usuario durante el proceso de pago.
+Arquitectura de información:
+El flujo sigue una progresión lineal y guiada: listado → perfil y agendamiento → método de pago → datos de pago → confirmación. Esta estructura evita que el usuario tome decisiones en paralelo, reduciendo errores y garantizando que cada paso se complete antes de avanzar al siguiente. La flecha de retroceso presente en todas las pantallas permite navegar hacia atrás sin perder el contexto acumulado.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el banner "Success Payment" confirma visualmente que la transacción fue completada, cerrando el flujo con un estado claro y reconocible.
+- *Coincidencia entre el sistema y el mundo real*: los bloques de horario (08:00–9:00, 10:00–11:00) y el calendario semanal replican el formato que los usuarios ya conocen de agendas y calendarios físicos.
+- *Control y libertad del usuario*: la flecha de retroceso en cada pantalla permite al usuario corregir decisiones previas (cambiar de médico, de horario o de método de pago) sin reiniciar el flujo completo.
+- *Reconocimiento antes que recuerdo*: los métodos de pago se presentan como opciones visibles con radio buttons, evitando que el usuario recuerde qué opciones están disponibles.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario orientan sobre el formato correcto de ingreso, previniendo errores antes de que ocurran.
 
-15) <strong>Wireflow 15:</strong> Pagar y confirmar cita
-- User goal: 
-<br> Como joven adulto, quiero pagar una consulta dermatológica.
+14) **Wireframe 15:** Pago de consulta dermatológica
 
-<br><strong>User Story asociada: </br></strong>
+**User Story relacionada:**
 US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
 
-![wireflow 15 mobile](assets/img/wireflow/wireflow-15-mobile.png)
+![wireframe 15](assets/img/wireframes/wireframe-15-app.png)
 
-El usuario accede desde el listado de dermatólogos presionando "book appointment" para poder visualizar a detalle los horarios disponibles de los dermatólogos. En el caso que el usuario continue con el proceso de elección de horario, se le desplegará el apartado de "payment method" donde tendrá que registrar sus datos acorde al método de pago que el usuario desee insertar. Luego, el sistema valida si esta información es válida para poder procesarla y registrar la consulta.
+**Principios y elementos de diseño:**
+Este grupo conforma el flujo completo de contratación de una consulta dermatológica en cuatro etapas secuenciales. La pantalla de selección presenta a los dermatólogos en tarjetas verticales con información relevante (especialidad, precio, rating y próxima disponibilidad), facilitando la comparación rápida entre profesionales. La pantalla de agendamiento muestra el perfil detallado del médico con estadísticas clave (pacientes, años de experiencia, rating) junto a un calendario semanal y bloques de horario seleccionables. El flujo de pago avanza en tres estados progresivos: selección del método de pago, ingreso de datos del medio elegido, y confirmación mediante un banner de "Success Payment".
+**Diseño inclusivo:**
+Cada tarjeta de dermatólogo describe su especialidad en texto plano, permitiendo decisiones informadas sin depender de imágenes. Los campos del formulario de pago incluyen placeholders descriptivos que guían el formato de ingreso esperado. Un mensaje de seguridad ("Your payment info is encrypted and secure") acompañado de un ícono de candado refuerza la confianza del usuario durante la transacción.
+Arquitectura de información:
+El flujo sigue una progresión lineal y guiada: listado → perfil y agendamiento → método de pago → datos de pago → confirmación. Esta estructura garantiza que cada paso se complete antes de avanzar al siguiente, reduciendo errores de decisión. La flecha de retroceso presente en todas las pantallas permite navegar hacia atrás sin perder el contexto acumulado.
+**Heurísticas de Nielsen aplicadas:**
 
-16) <strong> Wireflow 16: </strong> Cancelar cita dermatológica 
-- User goal:
+- *Visibilidad del estado del sistema*: el banner "Success Payment" confirma visualmente que la transacción fue completada, cerrando el flujo con un estado claro y reconocible.
+- *Coincidencia entre el sistema y el mundo real*: los bloques de horario y el calendario semanal replican el formato que los usuarios ya conocen de agendas físicas o digitales.
+- *Control y libertad del usuario*: la flecha de retroceso en cada pantalla permite corregir decisiones previas (cambiar médico, horario o método de pago) sin reiniciar el flujo.
+- *Reconocimiento antes que recuerdo*: los métodos de pago se presentan como opciones visibles con radio buttons, evitando que el usuario deba recordar qué alternativas están disponibles.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario orientan sobre el formato correcto de ingreso, previniendo errores antes de que ocurran.
 
-Como joven adulto, quiero cancelar una cita ya programada.
+
+15) **Wireframe 16:** Cancelar cita dermatológica
+
+**User Story relacionada:**
+US16 - Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+
+![wireframe 16](assets/img/wireframes/wireframe-16-app.png)
+
+16) **Wireframe 17:** Selección y pago de una suscripción
+
+**User Story relacionada:**
+US17 - Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
+
+![wireframe 17](assets/img/wireframes/wireframe-17-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo cubre el flujo de suscripción a la plataforma, iniciando con una pantalla de comparación de planes donde se destacan las características incluidas en cada uno. El plan "Advanced" aparece visualmente resaltado con una etiqueta "Most Popular" y su precio mensual en tipografía prominente ($19/month), orientando la decisión del usuario hacia la opción recomendada. El flujo de pago posterior es estructuralmente idéntico al de la consulta dermatológica (selección de método → ingreso de datos → confirmación), garantizando coherencia visual entre los dos flujos transaccionales de la app.
+**Diseño inclusivo:**
+Las características de cada plan se presentan en listas con íconos de verificación, permitiendo comparar beneficios de forma clara y sin ambigüedad. El indicador "All plans include a 7-day free trial" se ubica en la parte superior como información destacada, asegurando que el usuario conozca este beneficio antes de tomar cualquier decisión. Los campos del formulario de pago mantienen los mismos placeholders y mensajes de seguridad del flujo anterior, reduciendo la curva de aprendizaje.
+**Arquitectura de información:**
+El flujo se organiza en dos grandes bloques: decisión de plan y ejecución del pago. La pantalla de selección agrupa los planes verticalmente, priorizando el plan recomendado mediante jerarquía visual. Una vez seleccionado el plan, el usuario ingresa al mismo flujo de pago reutilizado de otros contextos de la app, lo que reduce la necesidad de aprender nuevas interacciones.
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el banner "Success Payment" al final del flujo confirma que la suscripción fue activada correctamente, cerrando el proceso con un estado explícito.
+- *Consistencia y estándares*: el flujo de pago reutiliza exactamente la misma estructura de pantallas que el pago de consulta, lo que genera coherencia y familiaridad dentro de la aplicación.
+- *Reconocimiento antes que recuerdo*: la lista de beneficios por plan con íconos de verificación permite al usuario comparar opciones directamente en pantalla, sin necesidad de recordar las características de cada plan.
+- *Estética y diseño minimalista*: el resaltado visual del plan "Advanced" dirige la atención sin sobrecargar la pantalla, presentando la información esencial de forma jerarquizada y ordenada.
+- *Ayuda a los usuarios a reconocer y corregir errores*: los placeholders en los campos del formulario de pago guían el ingreso correcto de datos, previniendo errores antes de ejecutar la transacción.
+
+17) **Wireframe 18:** Gestionar suscripción realizada
+
+**User Story relacionada:**
+US18 - Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
+
+![wireframe 18](assets/img/wireframes/wireframe-18-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo cubre el flujo de administración de una suscripción ya activa. La pantalla principal "My Plan" presenta de forma destacada el plan contratado (Plan Advanced, $19/month) con su estado "Active" y la fecha del próximo cobro, seguido de la información del método de pago registrado y las opciones de cambio de plan o cancelación. Cuando el usuario decide actualizar su método de pago, se desencadena el mismo flujo transaccional reutilizado en otros contextos de la app: selección del método → ingreso de datos → confirmación con "Success Payment", garantizando consistencia visual en toda la experiencia.
+**Diseño inclusivo:**
+La información crítica de facturación (fecha de próximo cobro, últimos dígitos de la tarjeta y vencimiento) se presenta en texto plano y legible, sin depender de colores o íconos para transmitir su significado. El botón "Cancel subscription" se ubica al final de la pantalla con menor jerarquía visual que las demás acciones, reduciendo el riesgo de cancelaciones accidentales sin eliminar la opción.
+**Arquitectura de información:**
+La pantalla "My Plan" agrupa toda la información de suscripción en un único punto de gestión: estado del plan, método de pago y opciones de cambio o cancelación. Esta concentración evita que el usuario deba navegar entre múltiples secciones para administrar su cuenta. El flujo de actualización de pago se ramifica desde esta pantalla y retorna a ella una vez completada la transacción.
+
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: la etiqueta "Active" y la fecha de próximo cobro mantienen al usuario informado sobre el estado actual de su suscripción en todo momento.
+- *Control y libertad del usuario*: las opciones "Upgrade or downgrade your plan" y "Cancel subscription" ofrecen al usuario control total sobre su suscripción desde una sola pantalla.
+- *Consistencia y estándares*: el flujo de actualización de método de pago reutiliza exactamente la misma estructura de pantallas que los demás flujos transaccionales de la app.
+- *Ayuda a los usuarios a reconocer y corregir errores*: el resumen del método de pago activo (número parcial y fecha de vencimiento) permite al usuario verificar sus datos antes de iniciar cualquier actualización.
+
+18) **Wireframe 19:** Editar información personal
+
+**User Story relacionada:**
+US19 - Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
+
+![wireframe 19](assets/img/wireframes/wireframe-19-app.png)
+
+**Principios y elementos de diseño:**
+Este grupo abarca la sección de perfil personal y sus ajustes de configuración. La pantalla "Profile" centraliza la información del usuario (nombre, email y foto) junto con accesos directos a subsecciones: Skin Profile, Settings y Favourites. La pantalla de "Settings" presenta tres controles de preferencia (Notifications, Dark Mode y Language) mediante toggles y un selector de idioma con dos opciones (English / Spanish), mostrando tres estados del flujo: configuración inicial activa, configuración modificada y confirmación de guardado ("Changes saved!").
+**Diseño inclusivo:**
+La opción de idioma (English / Spanish) directamente en los ajustes reconoce la diversidad lingüística de los usuarios y permite adaptar la experiencia sin acceder a configuraciones externas del dispositivo. Los toggles de Notifications y Dark Mode son controles estándar de alta familiaridad en entornos móviles, reduciendo la curva de aprendizaje. El subtítulo descriptivo bajo cada sección del perfil ("Type of skin and habits", "Language and preferences", "Products saved") orienta al usuario sobre el contenido antes de ingresar.
+**Arquitectura de información:**
+El perfil funciona como hub de configuración personal, organizando las preferencias en tres categorías claramente diferenciadas. La sección Settings agrupa exclusivamente los ajustes del sistema, separándolos del perfil de piel y los favoritos, lo que facilita la navegación por contexto. El flujo de guardado se resuelve en la misma pantalla mediante el cambio del botón "Save Changes" a "Changes saved!", evitando redireccionamientos innecesarios.
+
+**Heurísticas de Nielsen aplicadas:**
+- *Visibilidad del estado del sistema*: el botón que cambia a "Changes saved!" confirma inmediatamente que los ajustes fueron guardados, sin necesidad de navegar a otra pantalla.
+- *Consistencia y estándares*: el uso de toggles para activar/desactivar opciones sigue los patrones de interacción estándar de interfaces móviles, generando familiaridad inmediata.
+ Reconocimiento antes que recuerdo: los subtítulos descriptivos bajo cada sección del perfil permiten al usuario identificar el contenido de cada subsección sin necesidad de ingresar para descubrirlo.
+- *Flexibilidad y eficiencia de uso*: la disponibilidad del selector de idioma directamente en Settings permite a usuarios hispanohablantes adaptar la app a su idioma de forma rápida y autónoma.
+
+
+19) **Wireframe 20:** Actualizar características de piel
+
+**User Story relacionada:**
+US20 - Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
+
+![wireframe 20](assets/img/wireframes/wireframe-20-app.png)
+
+**Principios y elementos de diseño:**
+Este conjunto de wireframes representa el flujo de perfil y configuración de la aplicación móvil Bloomie. La pantalla “Profile” concentra la información personal del usuario, incluyendo fotografía, nombre y correo electrónico, además de accesos rápidos a las secciones “Skin Profile”, “Settings” y “Favourites”. La propuesta utiliza una jerarquía visual clara mediante títulos destacados, subtítulos descriptivos y separación por bloques de contenido. En la sección “Settings”, los controles de preferencias se presentan mediante toggles y selectores simples, priorizando la simplicidad visual y la facilidad de interacción. Asimismo, el botón de acción principal (“Save Changes”) mantiene una posición fija y visible para reforzar la claridad de las acciones disponibles.
+
+**Diseño inclusivo:**
+La interfaz incorpora principios de accesibilidad y diseño inclusivo mediante controles familiares y fáciles de reconocer, como interruptores tipo toggle y botones de selección de idioma. La posibilidad de cambiar entre English y Spanish permite adaptar la experiencia a distintos perfiles lingüísticos sin depender de configuraciones externas del dispositivo. El uso de etiquetas descriptivas y subtítulos debajo de cada sección facilita la comprensión del contenido para usuarios con distintos niveles de experiencia tecnológica. Además, la estructura visual limpia y minimalista reduce la carga cognitiva y mejora la legibilidad en pantallas móviles.
+
+**Arquitectura de información:**
+La organización de la información sigue una estructura jerárquica y modular. La pantalla “Profile” funciona como punto central de acceso a configuraciones personales y preferencias del usuario. Cada subsección cumple una función específica: “Skin Profile” reúne información dermatológica y hábitos, “Settings” concentra preferencias generales de uso y “Favourites” almacena productos guardados. Dentro de “Settings”, las opciones se agrupan según su propósito funcional (notificaciones, apariencia y lenguaje), permitiendo una navegación intuitiva y consistente. El flujo de guardado se resuelve en la misma vista mediante retroalimentación inmediata del botón (“Changes saved!”), evitando interrupciones innecesarias en la experiencia.
+
+**Heurísticas de Nielsen aplicadas:**
+
+- *Visibilidad del estado del sistema*: el cambio del botón de “Save Changes” a “Changes saved!” informa de manera inmediata que la acción fue completada correctamente.
+- Consistencia y estándares: los toggles y selectores utilizados siguen patrones comunes en aplicaciones móviles modernas, favoreciendo la familiaridad del usuario.
+- *Reconocimiento antes que recuerdo*: las descripciones breves debajo de cada categoría ayudan al usuario a identificar rápidamente el contenido de cada sección sin necesidad de exploración adicional.
+- *Control y libertad del usuario*: los usuarios pueden activar o desactivar preferencias libremente antes de confirmar los cambios realizados.
+- *Flexibilidad y eficiencia de uso*: el acceso directo a configuraciones importantes, como idioma o modo oscuro, permite personalizar rápidamente la experiencia de uso.
+
+20) <strong> Wireframe 21: </strong> Registro de dermatólogo
 
 <br> <strong> User Story asociada: </br> </strong>
 
-US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
 
-![wireflow 16 mobile](assets/img/wireflow/wireflow-16-mobile.png)
-
-El usuario acccede desde el apartado "scheduled appointment" para luego visualizar todas las consultas con dermatólogos ya previamente programadas. Como el usuario desea cancelar una o más citas, presiona "cancel appointment". Luego, verá un apartado donde pregunta los motivos por los cuales el usuario decidió cancelarla. Hecho ello, el sistema verificará si el usuario canceló la cita dentro del plazo de 24 antes que inicie la consulta. De ser que se haya vencido ese plazo, el usuario no recibirá un reembolso. 
-
-17) <strong> Wireflow 17: </strong> selección y pago de una suscripción
-- User goal: 
-
-Como joven adulto, quiero pagar una suscripción a través del completado de datos.
-
-<br> <strong> User story asociada: </br> </strong>
-
-US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
-
-![wireflow 17 mobile](assets/img/wireflow/wireflow-17-mobile.png)
-
-El usuario accede desde su perfil al apartado "choose your plan". Luego, visualizará todos los planes disponibles que ofrece nuestra propuesta. De ser que el usuario se decida por un plan, una vez lo seleecione lo llevará al apartado "payment method", donde tendrá que registrar los datos de su forma de pago. Luego, el sistema validará si los datos ingresados son correctos para procesar el pago y se actualice el plan del usuario. 
-
-18) <strong> Wireflow 18: </strong> Gestionar suscripción realizada 
-- User goal: 
-
-Como jóven adulto, quiero gestionar mi suscripción según mis necesidades.
-
-<br> <strong> User Story asociada: </strong> </br>
-US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
-
-![wireflow 18 mobile](assets/img/wireflow/wireflow-18-mobile.png)
-
-El usuario accede desde su pefil a la sección "My Plan", donde se le muestra datos con respecto a su plan, como su estado o la posibilidad de mejora. De ser que el usuario desee cambiar su plan, ingresa al apartado "update" donde se le solicitará sus datos con respecto al método de pago. Luego, el sistema validará si la información ingresada es válida para luego poder procesar el pago y actualizar el cambio suscripción que realizó el usuario. 
-
-19) <strong> Wireflow 19: </strong> Editar información personal 
-- User goal:
-
-Como jóven adulto, quiero editar mi información personal.
-
-<br> <strong> User Story asociada: </strong> </br>
-
-US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
-
-![wireflow 19 mobile](assets/img/wireflow/wireflow-19-mobile.png)
- 
-El usuario accede a su perfil, donde se le muestran opciones para modificar su información personal, como nombre o correo. De ser que el usuario desee cambiar sus datos ya previamente registrados, una vez los cambie el sistema validará de forma responsive si los datos ingresados son válidos. De ser que lo sean, se actualiza automáticamente y se notifica al usuario. 
-
-20) <strong> Wireflow 20: </strong> Actualizar características de piel
-- User goal: 
-
-Como jóven adulto, quiero actualizar los datos con respecto a mi piel. 
-
-<br> <strong> User Story asociada: </strong> </br>
-US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
-
-![wireflow 19 mobile](assets/img/wireflow/wireflow-20-mobile.png)
+- mobile wireframe:
+ <p align = "center">
+<img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
 
 El usuario accede a su perfil, donde se le muestran opciones de configuración de usuario. Se le muestra dentro un apartado extra de los datos personales primarios, como el "skin profile", "settings" y "favorites". Si selecciona el skin profile el usuario podrá modificar los datos registrados de su piel previamente regisrtrados. Luego, confirma el guardado con el botón de confirmación y se actualiza para el sistema. 
 
@@ -4300,28 +4375,40 @@ US25 - Como dermatólogo, quiero registrar mis credenciales profesionales para a
 <p align = "center">
 <img src="assets/img/wireflow/wireflow1_web.png" alt="wireflow app" width="550"/>
 
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la pantalla de inicio de Bloomie y selecciona la opción 'Register here as a specialist'. 
+2. El sistema redirige al formulario de 'Specialist Sign Up', donde se muestra la etiqueta 'Registering as DERMATOLOGIST'. 
+3. El dermatólogo completa el formulario ingresando: nombre (First Name), apellido (Last Name), correo electrónico (Email), especialidad (Specialty), contraseña (Password) y confirmación de contraseña (Confirm Password). 
+4. Si la información es válida: el sistema crea la cuenta con rol DERMATOLOGIST y redirige al dermatólogo a su pantalla principal.
 
-21)  <strong>Wireflow 22:</strong> Configurar perfil profesional
+
+22)  <strong>Wireflow 22:</strong> Configurar perfil profesional
     
 - User goal: 
 <br> Como dermatólogo, quiero configurar mi perfil profesional.
 
 <br><strong>User Story asociada: </br></strong>
-US25 - Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+US26 - Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
 
 <p align = "center">
-<img src="assets/img/wireflow/wireflow26.png" alt="wireflow app" width="550"/>
+<img src="assets/img/wireflow/Wireflow26.png" alt="wireflow app" width="550"/>
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow26_web.png" alt="wireflow app" width="550"/>
 
-22)  <strong>Wireflow 23:</strong> Definir disponibilidad de atención
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la sección 'Profile' desde la barra de navegación inferior (móvil) o desde el menú lateral (web). 
+2. l sistema muestra la pantalla de perfil con los campos: nombre, email, especialidad (Specialty), años de experiencia (Years of Experience) y tarifa de consulta (Consultation Fee). 
+3. El dermatólogo modifica los campos deseados, por ejemplo, actualiza la especialidad a 'Pediatrician Dermatology', los años de experiencia a '11' y la tarifa a '$200'. 
+4. Si los datos son válidos: el sistema guarda el perfil y muestra el botón con el mensaje ' Changes saved' (móvil) o 'Saved' (web), confirmando la actualización.
+
+23)  <strong>Wireflow 23:</strong> Definir disponibilidad de atención
     
 - User goal: 
 <br> Como dermatólogo, quiero definir mis horarios de disponibilidad.
 
 <br><strong>User Story asociada: </br></strong>
-US26 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+US27 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow27.png" alt="wireflow app" width="550"/>
@@ -4329,7 +4416,16 @@ US26 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que
 <p align = "center">
 <img src="assets/img/wireflow/wireflow27_web.png" alt="wireflow app" width="550"/>
 
-23) <strong>Wireflow 23:</strong> Visualizar agenda de consultas
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla de perfil (Profile), el dermatólogo selecciona la opción 'Availability – Set your working hours'. 
+2. El sistema muestra la pantalla de configuración de disponibilidad con tres secciones: Días de trabajo (Working Days), Horario de atención (Working Hours) y Duración de cita (Appointment Duration). 
+3. El dermatólogo selecciona los días activos presionando sobre cada día de la semana (Mo, Tu, We, Th, Fr, Sa, Su). Los días seleccionados se resaltan en oscuro. 
+4. El dermatólogo define la hora de inicio y fin de atención en los campos 'Start time' y 'End time'. 
+5. El dermatólogo selecciona la duración de cita deseada entre las opciones: 15 min, 30 min, 45 min o 60 min. 
+6. El dermatólogo presiona el botón 'Save availability'. 
+7. El sistema guarda la configuración y muestra el mensaje 'Availability saved!' confirmando el registro exitoso. 
+
+24) <strong>Wireflow 24:</strong> Visualizar agenda de consultas
     
 - User goal: 
 <br> Como dermatólogo, quiero visualizar mis consultas programadas
@@ -4343,7 +4439,13 @@ US28 - Como dermatólogo, quiero visualizar mis consultas programadas para gesti
 <p align = "center">
 <img src="assets/img/wireflow/wireflow28_web.png" alt="wireflow app" width="550"/>
 
-24) <strong>Wireflow 24:</strong> Realizar consulta virtual en tiempo real
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la pantalla principal (Home / Agenda), donde se muestra un resumen del día: nombre, número de consultas del día, cantidad completadas y pendientes. 
+2. El dermatólogo presiona el botón 'View agenda'. 
+3. El sistema redirige a la pantalla 'My Agenda', que muestra un selector de fechas horizontal en la parte superior. 
+4. Se lista el detalle de las consultas del día seleccionado con la siguiente información de cada una: avatar e iniciales del paciente, nombre del paciente, tipo de consulta (Follow-up, New patient, Acne treatment, etc.), hora de inicio y duración. 
+
+25) <strong>Wireflow 25:</strong> Realizar consulta virtual en tiempo real
     
 - User goal: 
 <br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual.
@@ -4357,7 +4459,17 @@ US29 - Como dermatólogo, quiero interactuar en tiempo real con el paciente dura
 <p align = "center">
 <img src="assets/img/wireflow/wireflow29_web.png" alt="wireflow app" width="550"/>
 
-25)  <strong>Wireflow 25:</strong> Registrar notas y recomendaciones clínicas
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla 'My Agenda', el dermatólogo localiza la cita activa y presiona el botón 'Join'. 
+2. El sistema habilita la sesión de videollamada. La pantalla muestra el estado 'Consultation Active' en la barra superior, junto con la hora y el nombre del médico. 
+3. La sesión muestra el video del paciente y la miniatura del médico, así como controles de: micrófono, cámara, adjuntar archivo, notas clínicas y finalizar llamada. 
+4. El dermatólogo interactúa con el paciente en tiempo real durante la consulta. 
+5. Al finalizar, el dermatólogo presiona el botón de colgar/finalizar. 
+6. El sistema muestra un diálogo de confirmación: '¿End Consultation?' con las opciones 'End Session & Save' y 'Continue Session'. 
+7. Si el dermatólogo confirma con 'End Session & Save': el sistema registra el cierre, actualiza el estado de la consulta a COMPLETED y muestra la pantalla 'Session Ended' con el resumen de grabación antes de redirigir al historial. 
+8. Si selecciona 'Continue Session': la llamada continúa activa. 
+
+26)  <strong>Wireflow 26:</strong> Registrar notas y recomendaciones clínicas
     
 - User goal: 
 <br> Como dermatólogo, quiero registrar notas clínicas y recomendaciones.
@@ -4371,7 +4483,17 @@ US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones dur
 <p align = "center">
 <img src="assets/img/wireflow/wireflow30_web.png" alt="wireflow app" width="550"/>
 
-26) <strong>Wireflow 26:</strong> Guardar fotografías clínicas del paciente
+-<strong>Descripción del flujo:</strong>
+1. Durante una consulta virtual activa, el dermatólogo presiona el ícono de 'notas clínicas' en la barra de controles de la videollamada. 
+2. El sistema despliega el panel 'Doctor's Notes' con un editor de texto y el indicador 'Auto-saving' activo. 
+3. El panel muestra precompletados los datos del paciente (nombre, fecha, hora y nombre del médico). 
+4. El dermatólogo ingresa las notas clínicas estructuradas: tipo de piel, nivel de hidratación, control de aceite, textura, diagnóstico y tratamiento recomendado. 
+5. El sistema guarda automáticamente las notas (Auto-saving) mientras el médico escribe. 
+6. El dermatólogo presiona 'Attach & Send Prescription' para adjuntar el PDF de prescripción, que queda guardado para ambas partes. 
+7. El dermatólogo finaliza la sesión. El sistema redirige a la pantalla 'Consultation summary', que muestra el diagnóstico, las recomendaciones de productos y una sección para subir imágenes clínicas. 
+
+
+27) <strong>Wireflow 27:</strong> Guardar fotografías clínicas del paciente
     
 - User goal: 
 <br> Como dermatólogo, quiero visualizar las fotografías que el paciente envia.
@@ -4385,7 +4507,17 @@ US31 - Como dermatólogo, quiero visualizar las fotografías que el paciente env
 <p align = "center">
 <img src="assets/img/wireflow/wireflow33.png" alt="wireflow app" width="550"/>
 
-27)  <strong>Wireflow 27:</strong> Consultar historial de consultas atendidas
+-<strong>Descripción del flujo:</strong>
+1. Durante la consulta virtual activa con un paciente, el dermatólogo accede al panel de chat ('Chat') dentro de la interfaz de la sesión. 
+2. El sistema muestra el historial de mensajes entre el médico y el paciente. El médico solicita al paciente que envíe fotografías de la zona afectada. 
+3. El paciente envía las fotografías a través del chat. Estas aparecen como imágenes en el hilo de mensajes. 
+4. Debajo de cada fotografía aparece el botón 'Save as clinical photo'. 
+5. El dermatólogo presiona 'Save as clinical photo' en las imagenes relevantes. 
+6. El sistema almacena la fotografía como imagen clínica y muestra el mensaje 'Saved to clinical record' junto a la imagen guardada. 
+7. Las fotografías quedan asociadas a esa consulta y disponibles para consultas futuras. 
+
+
+28)  <strong>Wireflow 28:</strong> Consultar historial de consultas atendidas
     
 - User goal: 
 <br> Como dermatólogo, quiero consultar el historial de mis consultas.
@@ -4398,6 +4530,14 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow31_web.png" alt="wireflow app" width="550"/>
+
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla principal (Home), el dermatólogo presiona la sección 'History' o accede desde la barra de navegación inferior. 
+2. El sistema muestra la pantalla 'Past Consultations' con la lista de consultas previas. Cada tarjeta incluye: fecha y hora, nombre del paciente, tipo de consulta (Follow-up, New patient, Acne treatment, etc.) y si tiene fotografías clínicas adjuntas. 
+3. El dermatólogo puede usar el buscador superior para filtrar por paciente, tipo de consulta o fecha. 
+4. El dermatólogo selecciona una consulta y presiona 'View details'. 
+5. El sistema redirige a la pantalla 'Consultation Summary', que muestra: fecha, hora y nombre del paciente, fotografías clínicas (si las hay), diagnóstico, notas clínicas y recomendaciones registradas. 
+
 
 ### 4.4.3. Web Applications Mock-ups
 20) <strong> Mock-up 20: </strong> Registro de dermatólogo
