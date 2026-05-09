@@ -4378,28 +4378,40 @@ US25 - Como dermatólogo, quiero registrar mis credenciales profesionales para a
 <p align = "center">
 <img src="assets/img/wireflow/wireflow1_web.png" alt="wireflow app" width="550"/>
 
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la pantalla de inicio de Bloomie y selecciona la opción 'Register here as a specialist'. 
+2. El sistema redirige al formulario de 'Specialist Sign Up', donde se muestra la etiqueta 'Registering as DERMATOLOGIST'. 
+3. El dermatólogo completa el formulario ingresando: nombre (First Name), apellido (Last Name), correo electrónico (Email), especialidad (Specialty), contraseña (Password) y confirmación de contraseña (Confirm Password). 
+4. Si la información es válida: el sistema crea la cuenta con rol DERMATOLOGIST y redirige al dermatólogo a su pantalla principal.
 
-21)  <strong>Wireflow 22:</strong> Configurar perfil profesional
+
+22)  <strong>Wireflow 22:</strong> Configurar perfil profesional
     
 - User goal: 
 <br> Como dermatólogo, quiero configurar mi perfil profesional.
 
 <br><strong>User Story asociada: </br></strong>
-US25 - Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
+US26 - Como dermatólogo, quiero configurar mi perfil profesional con mi especialidad y tarifa de consulta para que los pacientes puedan encontrarme y saber qué esperar.
 
 <p align = "center">
-<img src="assets/img/wireflow/wireflow26.png" alt="wireflow app" width="550"/>
+<img src="assets/img/wireflow/Wireflow26.png" alt="wireflow app" width="550"/>
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow26_web.png" alt="wireflow app" width="550"/>
 
-22)  <strong>Wireflow 23:</strong> Definir disponibilidad de atención
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la sección 'Profile' desde la barra de navegación inferior (móvil) o desde el menú lateral (web). 
+2. l sistema muestra la pantalla de perfil con los campos: nombre, email, especialidad (Specialty), años de experiencia (Years of Experience) y tarifa de consulta (Consultation Fee). 
+3. El dermatólogo modifica los campos deseados, por ejemplo, actualiza la especialidad a 'Pediatrician Dermatology', los años de experiencia a '11' y la tarifa a '$200'. 
+4. Si los datos son válidos: el sistema guarda el perfil y muestra el botón con el mensaje ' Changes saved' (móvil) o 'Saved' (web), confirmando la actualización.
+
+23)  <strong>Wireflow 23:</strong> Definir disponibilidad de atención
     
 - User goal: 
 <br> Como dermatólogo, quiero definir mis horarios de disponibilidad.
 
 <br><strong>User Story asociada: </br></strong>
-US26 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+US27 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow27.png" alt="wireflow app" width="550"/>
@@ -4407,7 +4419,16 @@ US26 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que
 <p align = "center">
 <img src="assets/img/wireflow/wireflow27_web.png" alt="wireflow app" width="550"/>
 
-23) <strong>Wireflow 23:</strong> Visualizar agenda de consultas
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla de perfil (Profile), el dermatólogo selecciona la opción 'Availability – Set your working hours'. 
+2. El sistema muestra la pantalla de configuración de disponibilidad con tres secciones: Días de trabajo (Working Days), Horario de atención (Working Hours) y Duración de cita (Appointment Duration). 
+3. El dermatólogo selecciona los días activos presionando sobre cada día de la semana (Mo, Tu, We, Th, Fr, Sa, Su). Los días seleccionados se resaltan en oscuro. 
+4. El dermatólogo define la hora de inicio y fin de atención en los campos 'Start time' y 'End time'. 
+5. El dermatólogo selecciona la duración de cita deseada entre las opciones: 15 min, 30 min, 45 min o 60 min. 
+6. El dermatólogo presiona el botón 'Save availability'. 
+7. El sistema guarda la configuración y muestra el mensaje 'Availability saved!' confirmando el registro exitoso. 
+
+24) <strong>Wireflow 24:</strong> Visualizar agenda de consultas
     
 - User goal: 
 <br> Como dermatólogo, quiero visualizar mis consultas programadas
@@ -4421,7 +4442,13 @@ US28 - Como dermatólogo, quiero visualizar mis consultas programadas para gesti
 <p align = "center">
 <img src="assets/img/wireflow/wireflow28_web.png" alt="wireflow app" width="550"/>
 
-24) <strong>Wireflow 24:</strong> Realizar consulta virtual en tiempo real
+-<strong>Descripción del flujo:</strong>
+1. El dermatólogo accede a la pantalla principal (Home / Agenda), donde se muestra un resumen del día: nombre, número de consultas del día, cantidad completadas y pendientes. 
+2. El dermatólogo presiona el botón 'View agenda'. 
+3. El sistema redirige a la pantalla 'My Agenda', que muestra un selector de fechas horizontal en la parte superior. 
+4. Se lista el detalle de las consultas del día seleccionado con la siguiente información de cada una: avatar e iniciales del paciente, nombre del paciente, tipo de consulta (Follow-up, New patient, Acne treatment, etc.), hora de inicio y duración. 
+
+25) <strong>Wireflow 25:</strong> Realizar consulta virtual en tiempo real
     
 - User goal: 
 <br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual.
@@ -4435,7 +4462,17 @@ US29 - Como dermatólogo, quiero interactuar en tiempo real con el paciente dura
 <p align = "center">
 <img src="assets/img/wireflow/wireflow29_web.png" alt="wireflow app" width="550"/>
 
-25)  <strong>Wireflow 25:</strong> Registrar notas y recomendaciones clínicas
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla 'My Agenda', el dermatólogo localiza la cita activa y presiona el botón 'Join'. 
+2. El sistema habilita la sesión de videollamada. La pantalla muestra el estado 'Consultation Active' en la barra superior, junto con la hora y el nombre del médico. 
+3. La sesión muestra el video del paciente y la miniatura del médico, así como controles de: micrófono, cámara, adjuntar archivo, notas clínicas y finalizar llamada. 
+4. El dermatólogo interactúa con el paciente en tiempo real durante la consulta. 
+5. Al finalizar, el dermatólogo presiona el botón de colgar/finalizar. 
+6. El sistema muestra un diálogo de confirmación: '¿End Consultation?' con las opciones 'End Session & Save' y 'Continue Session'. 
+7. Si el dermatólogo confirma con 'End Session & Save': el sistema registra el cierre, actualiza el estado de la consulta a COMPLETED y muestra la pantalla 'Session Ended' con el resumen de grabación antes de redirigir al historial. 
+8. Si selecciona 'Continue Session': la llamada continúa activa. 
+
+26)  <strong>Wireflow 26:</strong> Registrar notas y recomendaciones clínicas
     
 - User goal: 
 <br> Como dermatólogo, quiero registrar notas clínicas y recomendaciones.
@@ -4449,7 +4486,17 @@ US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones dur
 <p align = "center">
 <img src="assets/img/wireflow/wireflow30_web.png" alt="wireflow app" width="550"/>
 
-26) <strong>Wireflow 26:</strong> Guardar fotografías clínicas del paciente
+-<strong>Descripción del flujo:</strong>
+1. Durante una consulta virtual activa, el dermatólogo presiona el ícono de 'notas clínicas' en la barra de controles de la videollamada. 
+2. El sistema despliega el panel 'Doctor's Notes' con un editor de texto y el indicador 'Auto-saving' activo. 
+3. El panel muestra precompletados los datos del paciente (nombre, fecha, hora y nombre del médico). 
+4. El dermatólogo ingresa las notas clínicas estructuradas: tipo de piel, nivel de hidratación, control de aceite, textura, diagnóstico y tratamiento recomendado. 
+5. El sistema guarda automáticamente las notas (Auto-saving) mientras el médico escribe. 
+6. El dermatólogo presiona 'Attach & Send Prescription' para adjuntar el PDF de prescripción, que queda guardado para ambas partes. 
+7. El dermatólogo finaliza la sesión. El sistema redirige a la pantalla 'Consultation summary', que muestra el diagnóstico, las recomendaciones de productos y una sección para subir imágenes clínicas. 
+
+
+27) <strong>Wireflow 27:</strong> Guardar fotografías clínicas del paciente
     
 - User goal: 
 <br> Como dermatólogo, quiero visualizar las fotografías que el paciente envia.
@@ -4463,7 +4510,17 @@ US31 - Como dermatólogo, quiero visualizar las fotografías que el paciente env
 <p align = "center">
 <img src="assets/img/wireflow/wireflow33.png" alt="wireflow app" width="550"/>
 
-27)  <strong>Wireflow 27:</strong> Consultar historial de consultas atendidas
+-<strong>Descripción del flujo:</strong>
+1. Durante la consulta virtual activa con un paciente, el dermatólogo accede al panel de chat ('Chat') dentro de la interfaz de la sesión. 
+2. El sistema muestra el historial de mensajes entre el médico y el paciente. El médico solicita al paciente que envíe fotografías de la zona afectada. 
+3. El paciente envía las fotografías a través del chat. Estas aparecen como imágenes en el hilo de mensajes. 
+4. Debajo de cada fotografía aparece el botón 'Save as clinical photo'. 
+5. El dermatólogo presiona 'Save as clinical photo' en las imagenes relevantes. 
+6. El sistema almacena la fotografía como imagen clínica y muestra el mensaje 'Saved to clinical record' junto a la imagen guardada. 
+7. Las fotografías quedan asociadas a esa consulta y disponibles para consultas futuras. 
+
+
+28)  <strong>Wireflow 28:</strong> Consultar historial de consultas atendidas
     
 - User goal: 
 <br> Como dermatólogo, quiero consultar el historial de mis consultas.
@@ -4476,6 +4533,14 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 
 <p align = "center">
 <img src="assets/img/wireflow/wireflow31_web.png" alt="wireflow app" width="550"/>
+
+-<strong>Descripción del flujo:</strong>
+1. Desde la pantalla principal (Home), el dermatólogo presiona la sección 'History' o accede desde la barra de navegación inferior. 
+2. El sistema muestra la pantalla 'Past Consultations' con la lista de consultas previas. Cada tarjeta incluye: fecha y hora, nombre del paciente, tipo de consulta (Follow-up, New patient, Acne treatment, etc.) y si tiene fotografías clínicas adjuntas. 
+3. El dermatólogo puede usar el buscador superior para filtrar por paciente, tipo de consulta o fecha. 
+4. El dermatólogo selecciona una consulta y presiona 'View details'. 
+5. El sistema redirige a la pantalla 'Consultation Summary', que muestra: fecha, hora y nombre del paciente, fotografías clínicas (si las hay), diagnóstico, notas clínicas y recomendaciones registradas. 
+
 
 ### 4.4.3. Web Applications Mock-ups
 20) <strong> Mock-up 20: </strong> Registro de dermatólogo
