@@ -3733,111 +3733,116 @@ general y su lista personalizada de forma rápida y sencilla.
   únicamente los productos guardados, sin elementos distractores.
 
 
+11) <strong>Wireflow 11:</strong> Visualizar métricas de progreso
+- User goal: 
+<br> Como joven adulto, quiero visualizar un registro del progreso de mi rutina de skincare.
+
+<br><strong>User Story asociada: </br></strong>
+US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+
+![wireflow 11 web](assets/img/wireflow/wireflow-11-web.png)
+
+![wireflow 11 mobile](assets/img/wireflow/wireflow-11-mobile.png)
+
+El usuario accede al dashboard y visualiza todas las funcionalidades principales de la propuesta. Se dirige luego al apartado "skin progress" para luego visualizar las métricas o estadísticas de su progreso de la skin a través de datos como su puntaje actual, los día de racha consecutivos realizando la rutina, los días completados en total y el porcentaje de aciertos. Luego, el usuario podrá decidir si continuar viendo las métricas o desea volver presioando cualquier botón de abajo, siendo de preferencia el home. 
 
 
+13) <strong> Wireflow 13: </strong> consultar asistente virtual de skincare.
+- User goal: 
+Como joven adulto, quiero consultar productos en línea y recibir orientación sobre la compra.
 
+<br><strong>User Story asociada: </br></strong>
+US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
+![wireflow 13 mobile](assets/img/wireflow/wireflow-13-mobile.png)
 
+El usuario ingresa desde el dashboard al aparto que dice "consult", allí se le desplegará una nueva interfaz donde se añade funcionalidad de escritura y con ello, la integración de una herramienta de Inteligencia Artifical. Allí, podrá preguntar temas sencillos sobre el cuidado de la piel las 24 horas del día. Luego, el usuario decide si continuar con la conversación o pasar nuevamente al dashboard.  
 
+14) <strong> Wireflow 14: </strong> Selección de dermatólogos para pacientes
+- User goal: 
 
+Como joven adulto, quiero agendar una consulta con un dermatólogo mediante una interfaz.
 
+<br><strong>User Story asociada: </br></strong>
+US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
 
-11) <strong> Wireframe 11: </strong> Métricas del progeso 
+![wireflow 14 mobile](assets/img/wireflow/wireflow-14-mobile.png)
 
-<br> <strong> User Story relacionada: </strong > </br>
+El usuario, ingresa desde el dashboard al apartado "consult a dermatologist". Se le desplegará una listado con todos los dermatólogos disponibles. El usuario luego podrá seleccionar el dermatólogo de su preferencia aplicando filtros como precio por consulta. Finalmente, se registra en el listado de consultas pendientes. Allí el usuario podrá volver agendar otra cita o volver al dashboard.
 
-US11: Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+15) <strong>Wireflow 15:</strong> Pagar y confirmar cita
+- User goal: 
+<br> Como joven adulto, quiero pagar una consulta dermatológica.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-11-app.png" alt="wireflow app" width="550"/>
+<br><strong>User Story asociada: </br></strong>
+US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
 
+![wireflow 15 mobile](assets/img/wireflow/wireflow-15-mobile.png)
 
-12) <strong> Wireframe 13: </strong> consulta al asistente virtual
-<br> <strong> User Story relacionada: </strong > </br> 
+El usuario accede desde el listado de dermatólogos presionando "book appointment" para poder visualizar a detalle los horarios disponibles de los dermatólogos. En el caso que el usuario continue con el proceso de elección de horario, se le desplegará el apartado de "payment method" donde tendrá que registrar sus datos acorde al método de pago que el usuario desee insertar. Luego, el sistema valida si esta información es válida para poder procesarla y registrar la consulta.
 
-US13: Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
+16) <strong> Wireflow 16: </strong> Cancelar cita dermatológica 
+- User goal:
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-13-app.png" alt="wireflow app" width="550"/>
-
-13) <strong > Wireframe 14: </strong> Selección de dermatólogos para pacientes
-
-<br> <strong> User Story relacionada: </strong > </br>
-
-US14: Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-14-app.png" alt="wireflow app" width="550"/>
-
-14) <strong> Wireframe 15: </strong> pago de consulta dermatológica
-
-<br> <strong> User Story asociada: </br> </strong>
-
- US15: Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
-
- <p align = "center">
-<img src="assets/img/landing/wireframe-15-app.png" alt="wireflow app" width="550"/>
-  
-
-15) <strong> Wireframe 16: </strong> Cancelar cita dermatológica
+Como joven adulto, quiero cancelar una cita ya programada.
 
 <br> <strong> User Story asociada: </br> </strong>
 
 US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-16-app.png" alt="wireflow app" width="550"/>
+![wireflow 16 mobile](assets/img/wireflow/wireflow-16-mobile.png)
 
+El usuario acccede desde el apartado "scheduled appointment" para luego visualizar todas las consultas con dermatólogos ya previamente programadas. Como el usuario desea cancelar una o más citas, presiona "cancel appointment". Luego, verá un apartado donde pregunta los motivos por los cuales el usuario decidió cancelarla. Hecho ello, el sistema verificará si el usuario canceló la cita dentro del plazo de 24 antes que inicie la consulta. De ser que se haya vencido ese plazo, el usuario no recibirá un reembolso. 
 
-16) <strong> Wireframe 17: </strong> selección y pago de una suscripción
+17) <strong> Wireflow 17: </strong> selección y pago de una suscripción
+- User goal: 
 
-<br> <strong> User Story asociada: </br> </strong>
+Como joven adulto, quiero pagar una suscripción a través del completado de datos.
+
+<br> <strong> User story asociada: </br> </strong>
 
 US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-17-app.png" alt="wireflow app" width="550"/>
+![wireflow 17 mobile](assets/img/wireflow/wireflow-17-mobile.png)
 
-17) <strong> Wireframe 18: </strong> Gestionar suscripción realizada
+El usuario accede desde su perfil al apartado "choose your plan". Luego, visualizará todos los planes disponibles que ofrece nuestra propuesta. De ser que el usuario se decida por un plan, una vez lo seleecione lo llevará al apartado "payment method", donde tendrá que registrar los datos de su forma de pago. Luego, el sistema validará si los datos ingresados son correctos para procesar el pago y se actualice el plan del usuario. 
 
-<br> <strong> User Story asociada: </br> </strong>
+18) <strong> Wireflow 18: </strong> Gestionar suscripción realizada 
+- User goal: 
 
+Como jóven adulto, quiero gestionar mi suscripción según mis necesidades.
+
+<br> <strong> User Story asociada: </strong> </br>
 US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-18-app.png" alt="wireflow app" width="550"/>
+![wireflow 18 mobile](assets/img/wireflow/wireflow-18-mobile.png)
 
-18) <strong> Wireframe 19: </strong> Editar información personal
+El usuario accede desde su pefil a la sección "My Plan", donde se le muestra datos con respecto a su plan, como su estado o la posibilidad de mejora. De ser que el usuario desee cambiar su plan, ingresa al apartado "update" donde se le solicitará sus datos con respecto al método de pago. Luego, el sistema validará si la información ingresada es válida para luego poder procesar el pago y actualizar el cambio suscripción que realizó el usuario. 
 
-<br> <strong> User Story asociada: </br> </strong>
+19) <strong> Wireflow 19: </strong> Editar información personal 
+- User goal:
+
+Como jóven adulto, quiero editar mi información personal.
+
+<br> <strong> User Story asociada: </strong> </br>
 
 US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-19-app.png" alt="wireflow app" width="550"/>
+![wireflow 19 mobile](assets/img/wireflow/wireflow-19-mobile.png)
+ 
+El usuario accede a su perfil, donde se le muestran opciones para modificar su información personal, como nombre o correo. De ser que el usuario desee cambiar sus datos ya previamente registrados, una vez los cambie el sistema validará de forma responsive si los datos ingresados son válidos. De ser que lo sean, se actualiza automáticamente y se notifica al usuario. 
 
-19) <strong> Wireframe 20: </strong> Actualizar características de piel
+20) <strong> Wireflow 20: </strong> Actualizar características de piel
+- User goal: 
 
-<br> <strong> User Story asociada: </br> </strong>
+Como jóven adulto, quiero actualizar los datos con respecto a mi piel. 
 
+<br> <strong> User Story asociada: </strong> </br>
 US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
 
- <p align = "center">
-<img src="assets/img/landing/wireframe-20-app.png" alt="wireflow app" width="550"/>
+![wireflow 19 mobile](assets/img/wireflow/wireflow-20-mobile.png)
 
-20) <strong> Wireframe 20: </strong> Registro de dermatólogo
-
-<br> <strong> User Story asociada: </br> </strong>
-
-US25: Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
-
-- mobile wireframe:
- <p align = "center">
-<img src="assets/img/wireframes/wireframe25.png" alt="wireframe" width="550"/>
-
-- web wireframe:
- <p align = "center">
-<img src="assets/img/wireframes/wireframe25_web.png" alt="wireframe" width="550"/>
+El usuario accede a su perfil, donde se le muestran opciones de configuración de usuario. Se le muestra dentro un apartado extra de los datos personales primarios, como el "skin profile", "settings" y "favorites". Si selecciona el skin profile el usuario podrá modificar los datos registrados de su piel previamente regisrtrados. Luego, confirma el guardado con el botón de confirmación y se actualiza para el sistema. 
 
 21) <strong> Wireframe 22: </strong> Configurar perfil profesional
 
