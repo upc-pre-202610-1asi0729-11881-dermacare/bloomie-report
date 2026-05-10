@@ -6003,32 +6003,34 @@ El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su t
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-Durante el Sprint se desarrolló la estructura de la landing page de Bloomy orientada a dermatólogos, incluyendo secciones clave como propuesta de valor, descripción del producto, funcionalidades principales, modelo de suscripción y servicios modulares (white-label). Asimismo, se aplicó un sistema visual consistente alineado con la identidad de la marca, priorizando la claridad de la información y la conversión del usuario mediante llamados a la acción estratégicos.
+Durante el Sprint 1 se desarrollaron los fundamentos del proyecto Bloomie abarcando la documentación inicial de los capítulos I al IV, incluyendo el Lean UX Process, análisis de requisitos, needfinding, especificación de historias de usuario, product backlog, diseño UX/UI, arquitectura del software y diagramas de base de datos. Adicionalmente, se implementó y desplegó la Landing Page con todas sus secciones informativas. A continuación se presentan los commits más representativos de este sprint organizados por repositorio y rama.
 
-| Repository | Branch                         | Commit Message                                          | Commit Message Body                                                                                     |
-| ---------- | ------------------------------ | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| BloomyApp  | feature/landing-dermatologists | feat: add landing hero section for dermatologists       | Includes main value proposition, CTA and visual identity aligned with dermatology users                 |
-| BloomyApp  | feature/landing-dermatologists | feat: implement "About the Product" section             | Describes Bloomy’s purpose, benefits and problem-solution fit for dermatologists                        |
-| BloomyApp  | feature/landing-dermatologists | feat: add features section for dermatology workflow     | Highlights core functionalities such as patient tracking, skincare analysis and digital recommendations |
-| BloomyApp  | feature/landing-dermatologists | feat: implement pricing section with subscription model | Defines monthly subscription tiers and value differentiation between plans                              |
-| BloomyApp  | feature/landing-dermatologists | feat: add modular services (white-label system) section | Presents customizable modules and                                                                       |
-
-
-
-
-
-Durante el Sprint se desarrolló la estructura de la landing page de Bloomy orientada a dermatólogos, incluyendo secciones clave como propuesta de valor, descripción del producto, funcionalidades principales, modelo de suscripción y servicios modulares (white-label). Asimismo, se aplicó un sistema visual consistente alineado con la identidad de la marca, priorizando la claridad de la información y la conversión del usuario mediante llamados a la acción estratégicos.
-
-| Repository | Branch                         | Commit Message                                          | Commit Message Body                                                                                     |
-| ---------- | ------------------------------ | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| BloomyApp  | feature/landing-dermatologists | feat: add landing hero section for dermatologists       | Includes main value proposition, CTA and visual identity aligned with dermatology users                 |
-| BloomyApp  | feature/landing-dermatologists | feat: implement "About the Product" section             | Describes Bloomy’s purpose, benefits and problem-solution fit for dermatologists                        |
-| BloomyApp  | feature/landing-dermatologists | feat: add features section for dermatology workflow     | Highlights core functionalities such as patient tracking, skincare analysis and digital recommendations |
-| BloomyApp  | feature/landing-dermatologists | feat: implement pricing section with subscription model | Defines monthly subscription tiers and value differentiation between plans                              |
-| BloomyApp  | feature/landing-dermatologists | feat: add modular services (white-label system) section | Presents customizable modules and                                                                       |
-
-
-
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | main | b2f1c9a | chore: initial project setup | Initialize repository structure with README and base folder organization | 11/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-1 | 3e8d21f | docs: add startup profile and team members | Add startup description, value proposition and team member profiles | 12/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-1 | 7c4a05b | docs: add lean ux process | Add Lean UX Problem Statements, Assumptions, Hypothesis Statements and Canvas | 13/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-2 | 9f3b78e | docs: add competitive analysis and strategies | Add competitor analysis table and differentiation strategies for Bloomie | 13/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-2 | d51a2c4 | docs: add interview design and records | Add interview guidelines and register of interviews for both user segments | 14/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-2 | 4b9e36d | docs: add needfinding artifacts | Add User Personas, User Task Matrix, User Journey Mapping and Empathy Mapping | 15/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-2 | 1a7f54c | docs: add big picture event storming and ubiquitous language | Add Big Picture Event Storming diagram and domain glossary for Bloomie | 15/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-3 | 8d2e91b | docs: add impact mapping and user stories | Add Impact Mapping diagram and full User Stories table with acceptance criteria | 16/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-3 | 6c5f03a | docs: add product backlog | Add prioritized Product Backlog table with story points for all user and technical stories | 17/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-4-ux-design | 2e8b47f | docs: add style guidelines and information architecture | Add general and web style guidelines, organization, labeling, SEO and navigation systems | 17/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-4-ux-design | 5f1d83c | docs: add landing page wireframes and mockups | Add wireframes and high-fidelity mockups for all landing page sections | 18/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-4-ux-design | 0a3c69e | docs: add web application wireframes and wireflows | Add wireframes, wireflow diagrams and user flow diagrams for the web application | 19/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-4-architecture | 7b6e14d | docs: add domain-driven software architecture | Add Design-Level Event Storming and C4 Model diagrams: context, container and component levels | 20/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-4-architecture | 3d9a52f | docs: add class diagrams and database design | Add object-oriented class diagrams and entity-relationship database diagram | 21/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-5 | c4f7b1e | docs: add software configuration management | Add development environment config, source code management, style guide and deployment configuration | 22/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-report | feature/chapter-5 | e82d30a | docs: add sprint planning and sprint backlog 1 | Add Sprint Planning 1 table, Aspect Leaders and Sprint Backlog 1 with all work items | 23/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/project-structure | 9a312d0 | feat: initial project structure for landing page | Initialize base project structure with folders, global styles and routing configuration | 19/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/index-landing | b135200 | feat(index): implement landing homepage with i18n support | Implement main landing homepage structure with internationalization support | 20/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/features-section | 7f7bc54 | feat(features): add features layout | Implement features section with cards for AI analysis, routines, progress tracking and dermatologist consultations | 21/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/about-section | d953d8d | feat(about): add about section | Implement about section describing Bloomie's mission and skincare approach | 21/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/about-section | 04501dc | feat(about): add members photo | Add team members photos to the about section | 22/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/how-it-works-section | 666fbc0 | feat(how-it-works): add how it works section | Implement how-it-works section with illustrated steps: registration, facial scan and personalized routine | 22/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/pricing-section | ee81438 | feat(pricing): add pricing section | Implement pricing section with plan comparison table and CTA buttons per plan | 23/04/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feature/results-section | 1438a50 | feat(results): add results section | Implement results section showcasing skin improvement outcomes and user testimonials | 23/04/2026 |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 En esta sección se detallan los procesos realizados para el despliegue de la solución durante el Sprint 1.La prioridad principal del sprint fue poner en producción la versión inicial de la Landing Page, lo que permite modelar de forma más adecuada cómo nuestros segmentos objetivos esperan que se visualice de forma profesional.
