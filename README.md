@@ -5413,9 +5413,157 @@ US32: Como dermatólogo, quiero consultar el historial de mis consultas atendida
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Mock-up: Facial scanning with camera
+1) **User Flow 1:** Registro de cuenta
 
-![foto](assets/img/facial.png)
+- User goal:
+  Como joven adulto, quiero registrarme con mis datos personales para
+  crear una cuenta y acceder a Bloomie.
+
+**User Story asociada:**
+US01 - Como joven adulto, quiero registrarme con mis datos personales para
+crear una cuenta y acceder a Bloomie.
+
+**Mobile**
+![user flow 1 mobile](assets/img/userflows/userflow-01-mobile.png)
+
+**Desktop**
+
+![user flow 1 desktop](assets/img/userflows/userflow-01-web.png)
+
+
+**Descripción del flujo:**
+
+**Happy path:**
+El usuario accede a la pantalla de bienvenida y selecciona la opción
+Sign Up. Completa el formulario con email, contraseña, nombre y apellido.
+Si los datos son válidos, el sistema crea la cuenta y redirige al
+cuestionario de Lifestyle Questions donde el usuario completa su perfil
+de piel.
+
+**Unhappy path:**
+Si el usuario ingresa datos incompletos o incorrectos, el sistema muestra
+el mensaje "Enter the missing fields" resaltando en rojo los campos
+pendientes. El usuario puede corregir la información e intentar
+nuevamente sin perder los datos ya ingresados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5) **User Flow 5:** Generar rutina personalizada
+
+- User goal:
+  Como joven adulto, quiero recibir una rutina personalizada con productos
+  basados en mi diagnóstico de piel para seguir un tratamiento adecuado.
+
+**User Story asociada:**
+US05 - Como joven adulto, quiero recibir una rutina personalizada con
+productos basados en mi diagnóstico de piel para seguir un tratamiento
+adecuado.
+
+**Mobile**
+![user flow 5 mobile](assets/img/userflows/userflow_05-mobile.png)
+
+
+**Desktop**
+![user flow 5 desktop](assets/img/userflows/userflow_05-web.png)
+
+
+**Descripción del flujo:**
+
+**Happy path:**
+El sistema procesa el escaneo facial correctamente y genera una rutina
+personalizada. El usuario visualiza el reporte con los scores de
+hidratación, barrera y textura, junto con el análisis preliminar y las
+recomendaciones de enfoque. A continuación, accede a su rutina diaria
+con los productos asignados por horario y puede marcarla como completada.
+
+**Unhappy path:**
+Si el sistema no puede generar la rutina correctamente, muestra la
+pantalla "Analysis Failed" indicando las posibles causas del error.
+El usuario puede optar por reintentar el proceso, contactar con soporte
+o regresar a la pantalla anterior.
+
+
+8) **User Flow 8:** Explorar catálogo de productos
+
+- User goal:
+  Como joven adulto, quiero explorar el catálogo de productos y aplicar
+  filtros para encontrar opciones relevantes a mis necesidades.
+
+**User Story asociada:**
+US08 - Como joven adulto, quiero explorar el catálogo de productos y
+aplicar filtros para encontrar opciones relevantes a mis necesidades.
+
+**Mobile**
+![user flow 8 mobile](assets/img/userflows/userflow-08-mobile.png)
+
+**Desktop**
+![user flow 8 desktop](assets/img/userflows/userflow-08-web.png)
+
+**Descripción del flujo:**
+
+**Happy path:**
+El usuario accede al catálogo de productos y el sistema carga la lista
+disponible. El usuario aplica filtros por categoría y el sistema muestra
+los productos que cumplen el criterio. El usuario selecciona un producto
+y visualiza su detalle con el score de compatibilidad, descripción y
+beneficios clave, pudiendo agregarlo a su rutina o guardarlo.
+
+**Unhappy path:**
+Si no existen productos que cumplan el filtro aplicado, el sistema
+muestra el mensaje "Search Failed" informando al usuario que el producto
+no está disponible en ese momento. El usuario puede limpiar los filtros
+y explorar el catálogo completo nuevamente.
+
+
+
+10) **User Flow 10:** Guardar producto como favorito
+
+- User goal:
+  Como joven adulto, quiero guardar productos en mis favoritos para
+  acceder a ellos fácilmente después.
+
+**User Story asociada:**
+US10 - Como joven adulto, quiero guardar productos en mis favoritos
+para acceder a ellos fácilmente después.
+
+**Mobile**
+![user flow 10 mobile](assets/img/userflows/userflow-10-mobile.png)
+
+**Desktop**
+![user flow 10 desktop](assets/img/userflows/userflow-10-web.png)
+
+**Descripción del flujo:**
+
+**Happy path:**
+El usuario navega por el catálogo de productos y selecciona el ícono
+de corazón en un producto para guardarlo como favorito. El sistema
+agrega el producto a la lista de favoritos y actualiza el contador
+en la pestaña "Favourites". El usuario puede acceder a su lista de
+favoritos en cualquier momento desde la pestaña correspondiente.
+
+**Unhappy path:**
+Si el usuario decide eliminar un producto de sus favoritos, selecciona
+nuevamente el ícono de corazón. El sistema remueve el producto de la
+lista de favoritos y actualiza el contador en la pestaña "Favourites"
+mostrando únicamente los productos restantes.
+
+
+
+
+
 
 
 ## 4.5. Web Applications Prototyping
