@@ -5557,80 +5557,142 @@ Esta configuración permite mantener una alineación entre diseño, desarrollo, 
 
 ### 5.1.2. Source Code Management
 
-En esta sección se describen las estrategias, herramientas y convenciones utilizadas por el equipo para la gestión del código de Bloomie, asegurando trazabilidad, control de versiones y colaboración efectiva durante el desarrollo del producto digital.
+El equipo utiliza GitHub como plataforma principal de control de versiones y colaboración. 
+A continuación se indican los repositorios correspondientes a cada producto del proyecto:
 
-**Repositorios del Proyecto** <br>
-El equipo utiliza GitHub como plataforma principal para el control de versiones, manteniendo repositorios independientes para cada componente de la solución:
+- **Informe:** https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-report.git
+- **Landing Page:** https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-website
+- **Frontend Web Application:** (por definir al iniciar desarrollo en Sprint 2)
+- **Web Services:** (por definir al iniciar desarrollo en Sprint 2)
 
-- Report:
-  https://github.com/Bloomie-app/Bloomie-Report
-- Landing Page:
-  https://github.com/Bloomie-app/Bloomie-Landing-Page
-- Frontend Web Application:
-  https://github.com/Bloomie-app/Bloomie-Frontend
-- Backend Web Services (RESTful API):
-  https://github.com/Bloomie-app/Bloomie-Backend
+#### Implementación de GitFlow
 
-Estos repositorios permiten gestionar de manera modular los distintos productos del sistema, facilitando el trabajo paralelo y la integración continua.
+El equipo implementa el modelo de ramificación GitFlow propuesto por Vincent Driessen 
+como workflow de control de versiones. Este modelo establece una estructura clara de 
+ramas que permite gestionar el desarrollo de features, releases y correcciones de forma 
+ordenada y trazable.
 
-**Estrategia de Control de Versiones (GitFlow)**
+**Ramas principales**
 
-El equipo adopta una estrategia basada en los principios de GitFlow, adaptada a la organización del proyecto académico. Esta estrategia permite mantener estabilidad en la rama principal y facilitar el desarrollo incremental de funcionalidades.
+- `main`: rama de producción. Contiene únicamente versiones estables y desplegadas del 
+producto. Todo merge a esta rama representa una nueva versión publicada.
+- `develop`: rama de integración continua. Concentra el trabajo completado de cada 
+feature branch antes de ser promovido a producción. Es la rama base para el desarrollo 
+del equipo.
 
-Se utilizan las siguientes ramas:
+**Feature branches**
 
-- **main:** <br>
-  Contiene la versión estable y desplegable del producto.
-- **develop:** <br>
-  Rama de integración donde se consolidan los avances de desarrollo antes de ser promovidos a producción.
-- **feature branches:** <br>
-  Se utilizan para el desarrollo de funcionalidades o entregables específicos. En este proyecto, las ramas feature están organizadas por capítulos del informe:
-    - feature/chapter-01
-    - feature/chapter-02
-    - feature/chapter-03
-    - feature/chapter-04
-    - feature/chapter-05
+Cada historia de usuario, tarea técnica o sección del informe requiere su propia rama 
+de feature, creada a partir de `develop` y reintegrada a `develop` mediante Pull Request 
+una vez completada y revisada.
 
-Cada rama feature se desarrolla de forma independiente y posteriormente se integra en la rama develop.
+Convención de nomenclatura:
 
-**Convenciones de Nombres de Ramas**
+### feature/<descripción-en-kebab-case>
+Ejemplos aplicados durante el Sprint 1 en el repositorio del informe:
 
-Se establece las siguientes convenciones:
+- `feature/startup-profile`
+- `feature/solution-profile`
+- `feature/lean-ux-process`
+- `feature/competitive-analysis`
+- `feature/interview-design`
+- `feature/interview-records`
+- `feature/user-personas`
+- `feature/user-task-matrix`
+- `feature/user-journey-mapping`
+- `feature/empathy-mapping`
+- `feature/big-picture-event-storming`
+- `feature/ubiquitous-language`
+- `feature/impact-mapping`
+- `feature/user-stories`
+- `feature/product-backlog`
+- `feature/style-guidelines`
+- `feature/information-architecture`
+- `feature/landing-page-wireframes`
+- `feature/landing-page-mockups`
+- `feature/web-applications-wireframes`
+- `feature/web-applications-wireflows`
+- `feature/web-applications-mockups`
+- `feature/web-applications-userflows`
+- `feature/domain-driven-architecture`
+- `feature/c4-diagrams`
+- `feature/class-diagrams`
+- `feature/database-design`
+- `feature/software-configuration-management`
+- `feature/source-code-management`
+- `feature/source-code-style-guide`
+- `feature/software-deployment-configuration`
+- `feature/sprint-planning-1`
+- `feature/sprint-backlog-1`
+- `feature/development-evidence-1`
+- `feature/execution-evidence-1`
+- `feature/services-documentation-1`
+- `feature/software-deployment-evidence-1`
+- `feature/team-collaboration-insights-1`
 
-- **feature/*:** para desarrollo de funcionalidades o secciones específicas <br>
-  Ejemplo: feature/chapter-03
-- **release/*:** para preparación de versiones estables <br>
-  Ejemplo: release/v1.0.0
-- **hotfix/*:** para correcciones urgentes en producción <br>
-  Ejemplo: hotfix/fix-login-error
+Ejemplos aplicados durante el Sprint 1 en el repositorio de la Landing Page:
 
-Estas convenciones permiten identificar rápidamente el propósito de cada rama y mantener una estructura organizada del repositorio.
+- `feature/project-structure`
+- `feature/index-landing`
+- `feature/features-section`
+- `feature/about-section`
+- `feature/how-it-works-section`
+- `feature/pricing-section`
+- `feature/results-section`
 
-**Conventional Commits**
+**Release branches**
 
-Para los mensajes de commit, el equipo adopta el estándar Conventional Commits, lo cual permite mantener consistencia y facilitar la comprensión del historial de cambios.
+Las ramas de release se crean a partir de `develop` cuando el conjunto de features planificado para una versión está completo y listo para ser estabilizado antes del despliegue a producción. Se aplica Semantic Versioning con el esquema MAJOR.MINOR.PATCH.
 
-Se utilizan los siguientes prefijos:
+Convención de nomenclatura:
 
-- **feat:** nueva funcionalidad
-- **fix:** corrección de errores
-- **docs:** cambios en documentación
-- **style:** cambios de formato (no funcionales)
-- **refactor:** mejoras internas sin cambio de funcionalidad
-- **test:** adición o modificación de pruebas
+Ejemplos:
+- `release/v1.0.0` — primera versión estable de la Landing Page (Sprint 1)
+- `release/v1.1.0` — incorporación de nuevas funcionalidades del Frontend (Sprint 2)
+- `release/v2.0.0` — versión con Web Services desplegados
 
-**Semantic Versioning**
+**Hotfix branches**
 
-El equipo aplica Semantic Versioning 2.0.0 para el versionado de releases, utilizando el formato:
+Las ramas de hotfix se crean directamente desde `main` para corregir errores críticos detectados en producción. Una vez corregidos, se integran tanto en `main` como en `develop` para mantener la coherencia entre ramas.
 
-_MAJOR.MINOR.PATCH_ <br>
+Convención de nomenclatura:
 
-- **MAJOR:** cambios incompatibles con versiones anteriores
-- **MINOR:** nuevas funcionalidades compatibles
-- **PATCH:** correcciones de errores
+Ejemplo:
+- `hotfix/v1.0.1` — corrección de error en navegación del navbar en producción
 
-Ejemplo: <br>
-  v1.0.0 : primera versión estable del producto
+#### Conventional Commits
+
+El equipo aplica la especificación Conventional Commits para estandarizar los mensajes de commit, facilitando la trazabilidad del historial y la generación automática de changelogs. La estructura adoptada es la siguiente:
+
+Los tipos utilizados por el equipo son:
+
+| Tipo | Uso |
+|---|---|
+| `feat` | Implementación de una nueva funcionalidad o sección |
+| `fix` | Corrección de un error en el código o documentación |
+| `docs` | Cambios exclusivos en documentación del informe |
+| `chore` | Tareas de configuración, setup o mantenimiento |
+| `refactor` | Reestructuración de código sin cambio de funcionalidad |
+| `style` | Cambios de estilos visuales o formato sin lógica |
+| `test` | Adición o modificación de pruebas |
+
+Ejemplos aplicados durante el Sprint 1:
+
+- `chore: initial project setup`
+- `feat: initial project structure for landing page`
+- `feat(index): implement landing homepage with i18n support`
+- `feat(features): add features layout`
+- `feat(about): add about section`
+- `feat(how-it-works): add how it works section`
+- `feat(pricing): add pricing section`
+- `feat(results): add results section`
+- `docs(startup-profile): add startup description and team members`
+- `docs(lean-ux): add problem statements, assumptions and canvas`
+- `docs(user-stories): add user stories with acceptance criteria`
+- `docs(product-backlog): add prioritized backlog with story points`
+- `docs(c4-diagrams): add context, container and component diagrams`
+- `docs(sprint-backlog-1): add sprint backlog with all work items`
+- `docs(services-documentation-1): add services documentation for sprint 1`
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
