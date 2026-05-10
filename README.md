@@ -5778,18 +5778,227 @@ El Sprint 1 tuvo como objetivo implementar y desplegar la Landing Page de Bloomi
 
 URL del board: https://trello.com/b/PA2Tjn3g/sprint-1-bloomie
 
-| User Story ID | Título | Task ID | Descripción de tarea | Estimación | Responsable | Estado |
-|---|---|---|---|---|---|---|
-| US34 | Comprender la propuesta de valor | T-01 | Diseñar e implementar sección Hero con headline, subheadline y CTA | 4h | Gallardo, Carla | Done |
-| US34 | Comprender la propuesta de valor | T-02 | Implementar sección de beneficios con íconos y textos descriptivos | 3h | Mechan, Luciana | Done |
-| US35 | Comprender el funcionamiento del servicio | T-03 | Implementar sección "Cómo funciona" con pasos ilustrados (registro, escaneo, rutina) | 4h | Contreras, Arturo | Done |
-| US35 | Comprender el funcionamiento del servicio | T-04 | Agregar animaciones o transiciones de desplazamiento en la sección | 2h | Ramirez, Nickolas | Done |
-| US36 | Explorar funcionalidades del producto | T-05 | Implementar sección de features con cards: análisis IA, rutinas, seguimiento, dermatólogos | 4h | Asmat, Martin | Done |
-| US36 | Explorar funcionalidades del producto | T-06 | Aplicar estilos responsivos a las cards de funcionalidades | 2h | Contreras, Arturo | Done |
-| US38 | Navegar entre secciones del sitio | T-07 | Implementar navbar fijo con scroll suave a cada sección y logo de Bloomie | 3h | Mechan, Luciana | Done |
-| US38 | Navegar entre secciones del sitio | T-08 | Implementar footer con links, redes sociales y copyright | 2h | Gallardo, Carla | Done |
-| US37 | Comparar planes de suscripción | T-09 | Diseñar e implementar sección de pricing con tabla comparativa de planes | 4h | Ramirez, Nickolas | Done |
-| US37 | Comparar planes de suscripción | T-10 | Agregar botón CTA por plan con enlace a registro/suscripción | 2h | Asmat, Martin | Done |
+#### 5.2.1.3. Sprint Backlog 1
+
+El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su totalidad: desde la documentación inicial (Lean UX, entrevistas, needfinding, especificación de requisitos y diseño UX/UI), pasando por la arquitectura del software (C4 Model, Event Storming, diagramas de base de datos), hasta la implementación y despliegue de la Landing Page. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
+
+**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-1-bloomie
+
+![Sprint Backlog 1 Board](assets/img/sprint1-board.png)
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <tr>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+  </tr>
+
+  <!-- US22 -->
+  <tr>
+    <td rowspan="2">US22</td>
+    <td rowspan="2">Comprender la propuesta de valor</td>
+    <td>T-01</td>
+    <td>Implementar sección Hero</td>
+    <td>Diseñar e implementar la sección Hero con headline, subheadline y CTA principal de la landing page.</td>
+    <td>4</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-02</td>
+    <td>Implementar sección de beneficios</td>
+    <td>Implementar la sección de beneficios con íconos y textos descriptivos alineados a la propuesta de valor de Bloomie.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US24 -->
+  <tr>
+    <td rowspan="2">US24</td>
+    <td rowspan="2">Navegar entre secciones del sitio</td>
+    <td>T-03</td>
+    <td>Implementar navbar con scroll suave</td>
+    <td>Implementar navbar fijo con scroll suave hacia cada sección y logo de Bloomie.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-04</td>
+    <td>Implementar footer</td>
+    <td>Implementar footer con links de navegación, redes sociales y copyright.</td>
+    <td>2</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US23 -->
+  <tr>
+    <td rowspan="2">US23</td>
+    <td rowspan="2">Explorar planes y precios</td>
+    <td>T-05</td>
+    <td>Implementar sección de pricing</td>
+    <td>Diseñar e implementar la sección de pricing con tabla comparativa de los planes disponibles.</td>
+    <td>4</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-06</td>
+    <td>Agregar CTA por plan</td>
+    <td>Agregar botón CTA por cada plan con enlace hacia el registro o suscripción.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks generales sin US — Landing Page -->
+  <tr>
+    <td rowspan="4">-</td>
+    <td rowspan="4">Implementación general de la Landing Page</td>
+    <td>T-07</td>
+    <td>Implementar sección "Cómo funciona"</td>
+    <td>Implementar sección con pasos ilustrados del flujo de uso: registro, escaneo facial y generación de rutina personalizada.</td>
+    <td>4</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-08</td>
+    <td>Agregar animaciones de desplazamiento</td>
+    <td>Agregar animaciones y transiciones de desplazamiento a la sección "Cómo funciona" para mejorar la experiencia visual.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-09</td>
+    <td>Implementar sección de funcionalidades</td>
+    <td>Implementar sección de features con cards: análisis IA, rutinas personalizadas, seguimiento de progreso y consultas dermatológicas.</td>
+    <td>4</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-10</td>
+    <td>Aplicar estilos responsivos</td>
+    <td>Aplicar estilos responsivos a toda la landing page para garantizar correcta visualización en distintos tamaños de pantalla.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks generales sin US — Arquitectura -->
+  <tr>
+    <td rowspan="5">-</td>
+    <td rowspan="5">Arquitectura y diseño del sistema</td>
+    <td>T-11</td>
+    <td>Elaborar Context Diagram C4</td>
+    <td>Diseñar el diagrama de contexto del sistema bajo el modelo C4, identificando actores externos y sistemas relacionados.</td>
+    <td>3</td>
+    <td>Contreras. Artuto</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-12</td>
+    <td>Elaborar Container Diagram C4</td>
+    <td>Diseñar el diagrama de contenedores del sistema bajo el modelo C4, especificando los principales componentes de despliegue.</td>
+    <td>4</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-13</td>
+    <td>Elaborar Component Diagrams C4</td>
+    <td>Diseñar los diagramas de componentes por bounded context bajo el modelo C4.</td>
+    <td>4</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-14</td>
+    <td>Elaborar Design-Level Event Storming</td>
+    <td>Elaborar el Event Storming a nivel de diseño identificando bounded contexts, aggregates, commands y domain events.</td>
+    <td>5</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-15</td>
+    <td>Elaborar diagrama Entidad-Relación</td>
+    <td>Diseñar el diagrama entidad-relación de la base de datos identificando entidades, atributos y relaciones del dominio.</td>
+    <td>4</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks generales sin US — Diseño UX/UI -->
+  <tr>
+    <td rowspan="3">-</td>
+    <td rowspan="3">Diseño UX/UI</td>
+    <td>T-16</td>
+    <td>Elaborar wireframes de la Landing Page</td>
+    <td>Diseñar los wireframes de todas las secciones de la landing page en Figma.</td>
+    <td>3</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-17</td>
+    <td>Elaborar mockups de la Landing Page</td>
+    <td>Elaborar los mockups de alta fidelidad de la landing page aplicando el sistema visual de Bloomie.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-18</td>
+    <td>Elaborar wireframes y mockups de la Web App</td>
+    <td>Diseñar wireframes, wireflow diagrams, mockups y user flow diagrams de la aplicación web en Figma.</td>
+    <td>5</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks generales sin US — Configuración y despliegue -->
+  <tr>
+    <td rowspan="3">-</td>
+    <td rowspan="3">Configuración y despliegue</td>
+    <td>T-19</td>
+    <td>Configurar repositorio y GitFlow</td>
+    <td>Definir la estructura del repositorio en GitHub y configurar el flujo de ramas GitFlow para el equipo.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-20</td>
+    <td>Definir guía de estilos de código</td>
+    <td>Documentar las convenciones y guía de estilos de código adoptadas por el equipo para el proyecto.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-21</td>
+    <td>Desplegar Landing Page en Vercel</td>
+    <td>Configurar el servicio de hosting en Vercel e integrar el repositorio para el despliegue automático de la landing page.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+</table>
 
 
 #### 5.2.1.4. Development Evidence for Sprint Review
