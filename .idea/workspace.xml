@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="694321cd-70e6-4b67-b2c9-fcfdbb4d2c6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "feature/update-user-flows",
+    "git-widget-placeholder": "feature/web-applications-mockups1-10-fix",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "C:/Users/AZUS/Desktop/OpenSource1/Bloomie-Report",
     "node.js.detected.package.eslint": "true",
