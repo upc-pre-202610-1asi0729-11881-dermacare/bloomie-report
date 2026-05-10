@@ -6087,13 +6087,45 @@ Activación del Servicio: Se importó el formato nativo de html de modo que el v
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 1, el equipo mantuvo un flujo de trabajo altamente colaborativo y organizado, aplicando estrictamente la estrategia de control de versiones GitFlow. Para asegurar la calidad y revisión por pares, todo el desarrollo de la arquitectura, investigación de UX/UI y codificación de la Landing Page se trabajó en ramas independientes (feature branches). La integración del trabajo se realizó exclusivamente mediante Pull Requests hacia la rama develop, lo que fomentó la comunicación y revisión conjunta antes de consolidar los avances.
+Durante el Sprint 1 el equipo mantuvo un flujo de trabajo colaborativo y organizado 
+aplicando la estrategia de control de versiones GitFlow. Todo el desarrollo tanto de la 
+documentación del informe como de la Landing Page se trabajó en ramas independientes 
+(feature branches), integrando los cambios exclusivamente mediante Pull Requests hacia 
+la rama principal. Esto garantizó la revisión por pares y la trazabilidad de cada 
+contribución individual.
 
-A continuación, se presentan los analíticos extraídos de GitHub (Insights) que evidencian la participación equitativa y constante de todos los miembros del equipo (Aspect Leaders y Collaborators) tanto en el repositorio principal de documentación como en el de la Landing Page.
 
-##### Resumen de actividad del Sprint
+A continuación se presentan los analíticos de colaboración extraídos de GitHub Insights 
+para ambos repositorios durante el período del Sprint 1.
 
-<img src="assets/img/resumen.png" alt="resumen" width="400"/
+**Resumen de actividad — Repositorio bloomie-report**
+
+![GitHub Insights bloomie-report](assets/img/github-commits.png)
+
+**Top Committers — Repositorio bloomie-report**
+
+En el repositorio de documentación los integrantes registraron las siguientes 
+contribuciones: Arturouu con 45 commits, Carlsss28 con 36 commits, luuu6 con 31 commits, 
+Bynickram02 con 31 commits y Alemarr2 con 23 commits, evidenciando una participación 
+activa y relativamente equitativa de todos los miembros del equipo.
+
+![Top Committers bloomie-report](assets/img/github-details-1.png)
+
+**Pull Requests mergeados — Repositorio bloomie-report**
+
+Se gestionaron los Pull Requests mergeados durante el Sprint, cubriendo la documentación 
+de todos los capítulos del informe, incluyendo correcciones de wireflows, actualización 
+de mockups, evidencias de desarrollo y backlog del Sprint 1.
+
+![Pull Requests bloomie-report](assets/img/github-pull-request.png)
+
+**Resumen de actividad — Repositorio bloomie-website (Landing Page)**
+
+Los 5 integrantes del equipo participaron en la implementación de la Landing Page, 
+cada uno responsable de una o más secciones mediante feature branches independientes. 
+
+
+![GitHub Insights bloomie-website](assets/img/github-commit-landing.png)
 
 ### 5.2.2. Sprint 2
 
