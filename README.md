@@ -6439,8 +6439,50 @@ proyectados para el sistema Bloomie:
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Conocimiento sobre vercel y como integrarlo: Se tuvo que indagar cómo utilizar vercel de forma adecuada para poder así agilizar procesos de front end.
-Activación del Servicio: Se importó el formato nativo de html de modo que el vercel lo traduzca y por tanto, lo pueda desplegar.
+Durante el Sprint 1 el equipo realizó el despliegue de la Landing Page de Bloomie como 
+principal producto entregable de esta iteración. Dado que en este Sprint no se desarrollaron 
+Web Applications ni Web Services, el proceso de deployment se enfocó exclusivamente en 
+publicar el sitio estático informativo de forma accesible para cualquier usuario desde un 
+navegador web.
+
+Para el despliegue se utilizó Vercel como plataforma de hosting, aprovechando su integración 
+nativa con GitHub para automatizar el proceso de despliegue continuo. La configuración 
+establecida permite que cada merge realizado a la rama `main` del repositorio 
+`bloomie-website` dispare automáticamente un nuevo build y publicación en producción, 
+sin intervención manual del equipo.
+
+El proceso de deployment se llevó a cabo siguiendo los pasos detallados a continuación:
+
+**1. Vinculación del repositorio con Vercel**
+
+Se vinculó el repositorio `upc-pre-202610-1asi0729-11881-Dermacare/bloomie-website` con 
+un proyecto en Vercel, configurando la rama `main` como fuente de despliegue de producción 
+y estableciendo el pipeline de integración continua entre ambas plataformas.
+
+**2. Configuración del despliegue automático (CI/CD)**
+
+Vercel ejecuta automáticamente el proceso de build y publicación cada vez que se integra 
+un cambio a la rama `main` mediante Pull Request. Durante el Sprint 1 se realizaron 6, el cual activó el despliegue 
+final de la versión completa de la Landing Page.
+
+**3. Verificación del despliegue en producción**
+
+Se verificó que el proyecto se encontrara en estado **Ready** en el panel de Vercel, 
+confirmando el despliegue exitoso de la Landing Page con el dominio asignado 
+`bloomie-landing-page.vercel.app` y el commit `e8e00df` como última versión publicada.
+
+![Vercel Production Deployment](assets/img/vercel-deployment.png)
+
+**4. Verificación de la Landing Page en producción**
+
+Se comprobó que todas las secciones de la Landing Page de Bloomie se visualizaran 
+correctamente en el navegador, incluyendo el diseño responsivo y los estilos aplicados.
+
+![Landing Page en producción](assets/img/landing-home.png)
+
+La Landing Page de Bloomie se encuentra actualmente operativa en la siguiente URL:
+
+**https://bloomie-landing-page.vercel.app**
 
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
