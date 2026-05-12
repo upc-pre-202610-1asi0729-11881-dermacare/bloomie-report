@@ -6564,6 +6564,549 @@ context asignado y colaboró en los demás según necesidad.
 | Ramirez Ruiz, Nickolas | Bynickram02 | L | C | C | C | C | C |
 
 #### 5.2.2.3. Sprint Backlog 2
+
+El Sprint 2 tuvo como objetivo implementar la primera versión funcional del Frontend Web 
+Application de Bloomie con las funcionalidades core del producto, simulando la integración 
+con servicios backend mediante MockAPI desplegada en Azure. Adicionalmente se completaron 
+las correcciones del diseño UX/UI en Figma, se integró una pasarela de pagos con Stripe 
+en el flujo de suscripción de la Landing Page, y se documentaron todas las secciones 
+correspondientes al Sprint 2 del informe. A continuación se presenta el board de 
+seguimiento utilizado durante el sprint, junto con la tabla de control de estado.
+
+**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-2-bloomie
+
+![Sprint Backlog 2 Board](assets/img/sprint2-board.png)
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <tr>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+  </tr>
+
+  <!-- US03 - Skin Scan simulado -->
+  <tr>
+    <td rowspan="2">US03</td>
+    <td rowspan="2">Escaneo facial</td>
+    <td>T-01</td>
+    <td>Implementar vista de escaneo facial</td>
+    <td>Implementar la vista de escaneo facial con simulación de captura y flujo de análisis usando datos mockeados.</td>
+    <td>4</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-02</td>
+    <td>Implementar vista de resultado de escaneo</td>
+    <td>Implementar la vista de resultado del escaneo mostrando scores de hidratación, textura, sensibilidad y brillo con datos de MockAPI.</td>
+    <td>3</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US04 -->
+  <tr>
+    <td rowspan="2">US04</td>
+    <td rowspan="2">Diagnóstico preliminar automático</td>
+    <td>T-03</td>
+    <td>Implementar vista de diagnóstico</td>
+    <td>Implementar la vista del reporte de diagnóstico preliminar con el resumen del estado de la piel y recomendaciones generales.</td>
+    <td>4</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-04</td>
+    <td>Integrar endpoint de diagnóstico con MockAPI</td>
+    <td>Configurar la integración del componente de diagnóstico con el endpoint /facial_scans de MockAPI para obtener datos simulados.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US12 -->
+  <tr>
+    <td rowspan="2">US12</td>
+    <td rowspan="2">Consultar historial de escaneos faciales</td>
+    <td>T-05</td>
+    <td>Implementar vista de historial de escaneos</td>
+    <td>Implementar la sección de escaneos pasados dentro de Skin Scan mostrando lista ordenada por fecha con scores por escaneo.</td>
+    <td>3</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-06</td>
+    <td>Integrar historial con MockAPI</td>
+    <td>Configurar la integración del historial de escaneos con el endpoint /facial_scans de MockAPI filtrando por usuario.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US05 -->
+  <tr>
+    <td rowspan="2">US05</td>
+    <td rowspan="2">Generar rutina personalizada</td>
+    <td>T-07</td>
+    <td>Implementar vista de rutina personalizada</td>
+    <td>Implementar la vista de rutina personalizada mostrando los pasos de mañana y noche con productos asignados por paso.</td>
+    <td>4</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-08</td>
+    <td>Integrar rutina con MockAPI</td>
+    <td>Configurar la integración de la vista de rutina con los endpoints /routines y /routine_items de MockAPI.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US06 -->
+  <tr>
+    <td rowspan="2">US06</td>
+    <td rowspan="2">Reemplazar producto de la rutina</td>
+    <td>T-09</td>
+    <td>Implementar flujo de reemplazo de producto</td>
+    <td>Implementar el modal de reemplazo de producto mostrando hasta cuatro alternativas compatibles ordenadas por score de compatibilidad.</td>
+    <td>3</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-10</td>
+    <td>Integrar reemplazo con MockAPI</td>
+    <td>Configurar la integración del flujo de reemplazo con el endpoint /product_compatibilities de MockAPI.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US07 -->
+  <tr>
+    <td rowspan="2">US07</td>
+    <td rowspan="2">Registrar cumplimiento de rutina diaria</td>
+    <td>T-11</td>
+    <td>Implementar control de cumplimiento diario</td>
+    <td>Implementar el componente de marcado de rutina diaria permitiendo al usuario indicar si completó o no su rutina del día.</td>
+    <td>3</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-12</td>
+    <td>Integrar tracking con MockAPI</td>
+    <td>Configurar la integración del registro de cumplimiento con el endpoint /daily_trackings de MockAPI.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US08 -->
+  <tr>
+    <td rowspan="2">US08</td>
+    <td rowspan="2">Explorar catálogo de productos</td>
+    <td>T-13</td>
+    <td>Implementar vista de catálogo de productos</td>
+    <td>Implementar la vista del catálogo de productos con listado, categorías y filtros aplicables por tipo de producto.</td>
+    <td>4</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-14</td>
+    <td>Integrar catálogo con MockAPI</td>
+    <td>Configurar la integración del catálogo con el endpoint /products de MockAPI incluyendo filtrado por categoría.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US09 -->
+  <tr>
+    <td rowspan="2">US09</td>
+    <td rowspan="2">Ver detalle y compatibilidad de producto</td>
+    <td>T-15</td>
+    <td>Implementar vista de detalle de producto</td>
+    <td>Implementar la vista de detalle de producto mostrando score de compatibilidad, explicación y beneficios del producto.</td>
+    <td>3</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-16</td>
+    <td>Integrar detalle con MockAPI</td>
+    <td>Configurar la integración del detalle de producto con los endpoints /products y /product_compatibilities de MockAPI.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US10 -->
+  <tr>
+    <td rowspan="2">US10</td>
+    <td rowspan="2">Guardar producto como favorito</td>
+    <td>T-17</td>
+    <td>Implementar funcionalidad de favoritos</td>
+    <td>Implementar el componente de guardado y eliminación de productos favoritos con actualización visual inmediata.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-18</td>
+    <td>Integrar favoritos con MockAPI</td>
+    <td>Configurar la integración de favoritos con el endpoint /favorite_products de MockAPI.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US11 -->
+  <tr>
+    <td rowspan="2">US11</td>
+    <td rowspan="2">Visualizar métricas de progreso</td>
+    <td>T-19</td>
+    <td>Implementar vista de métricas de progreso</td>
+    <td>Implementar la sección de progreso mostrando racha de días, tasa de adherencia, días completados en la semana y gráfico de skin health score.</td>
+    <td>4</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-20</td>
+    <td>Integrar métricas con MockAPI</td>
+    <td>Configurar la integración de las métricas de progreso con los endpoints /daily_trackings y /facial_scans de MockAPI.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US13 -->
+  <tr>
+    <td rowspan="2">US13</td>
+    <td rowspan="2">Consultar asistente virtual de skincare</td>
+    <td>T-21</td>
+    <td>Implementar vista del asistente virtual</td>
+    <td>Implementar la interfaz de chat del asistente virtual de skincare con envío de consultas y visualización de respuestas.</td>
+    <td>4</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-22</td>
+    <td>Integrar asistente con MockAPI</td>
+    <td>Configurar la integración del chat del asistente con el endpoint /support_queries de MockAPI para simular respuestas.</td>
+    <td>2</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US14 -->
+  <tr>
+    <td rowspan="2">US14</td>
+    <td rowspan="2">Listar y seleccionar dermatólogo</td>
+    <td>T-23</td>
+    <td>Implementar vista de lista de dermatólogos</td>
+    <td>Implementar la vista de listado de dermatólogos mostrando nombre, especialidad, años de experiencia, rating y costo por consulta.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-24</td>
+    <td>Integrar lista de dermatólogos con MockAPI</td>
+    <td>Configurar la integración del listado con el endpoint /dermatologist_profiles de MockAPI.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US15 -->
+  <tr>
+    <td rowspan="2">US15</td>
+    <td rowspan="2">Pagar y confirmar cita dermatológica</td>
+    <td>T-25</td>
+    <td>Implementar flujo de agendamiento y pago</td>
+    <td>Implementar el flujo de selección de horario, confirmación y pago de cita dermatológica con integración simulada.</td>
+    <td>4</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-26</td>
+    <td>Integrar agendamiento con MockAPI</td>
+    <td>Configurar la integración del flujo de citas con los endpoints /appointments y /payments de MockAPI.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US16 -->
+  <tr>
+    <td rowspan="2">US16</td>
+    <td rowspan="2">Cancelar cita dermatológica</td>
+    <td>T-27</td>
+    <td>Implementar flujo de cancelación de cita</td>
+    <td>Implementar el flujo de cancelación de cita con selección de motivo y confirmación, distinguiendo si aplica reembolso.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-28</td>
+    <td>Integrar cancelación con MockAPI</td>
+    <td>Configurar la integración de la cancelación con el endpoint /appointments de MockAPI actualizando el estado de la cita.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US18 -->
+  <tr>
+    <td rowspan="2">US18</td>
+    <td rowspan="2">Gestionar suscripción activa</td>
+    <td>T-29</td>
+    <td>Implementar vista de gestión de suscripción</td>
+    <td>Implementar la vista de suscripción activa con opciones de cambio de plan y cancelación de renovación automática.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-30</td>
+    <td>Integrar suscripción con MockAPI</td>
+    <td>Configurar la integración de la gestión de suscripción con los endpoints /subscriptions y /plans de MockAPI.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US19 -->
+  <tr>
+    <td rowspan="2">US19</td>
+    <td rowspan="2">Editar perfil e información personal</td>
+    <td>T-31</td>
+    <td>Implementar vista de edición de perfil</td>
+    <td>Implementar la vista de edición de perfil permitiendo modificar nombre, apellido y email con validaciones en tiempo real.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-32</td>
+    <td>Integrar edición de perfil con MockAPI</td>
+    <td>Configurar la integración de la edición de perfil con el endpoint /users de MockAPI.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US20 -->
+  <tr>
+    <td rowspan="2">US20</td>
+    <td rowspan="2">Actualizar características de piel</td>
+    <td>T-33</td>
+    <td>Implementar vista de actualización de perfil de piel</td>
+    <td>Implementar la vista de actualización de tipo de piel y nivel de sensibilidad dentro del perfil del usuario.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-34</td>
+    <td>Integrar perfil de piel con MockAPI</td>
+    <td>Configurar la integración de la actualización de características de piel con el endpoint /skin_profiles de MockAPI.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- US21 -->
+  <tr>
+    <td rowspan="2">US21</td>
+    <td rowspan="2">Cambiar contraseña</td>
+    <td>T-35</td>
+    <td>Implementar vista de cambio de contraseña</td>
+    <td>Implementar el formulario de cambio de contraseña con validaciones de seguridad y confirmación de nueva contraseña.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-36</td>
+    <td>Integrar cambio de contraseña con MockAPI</td>
+    <td>Configurar la integración del cambio de contraseña con el endpoint /users de MockAPI.</td>
+    <td>1</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Stripe + Landing -->
+  <tr>
+    <td rowspan="3">-</td>
+    <td rowspan="3">Integración de pasarela de pagos en Landing Page</td>
+    <td>T-37</td>
+    <td>Integrar Stripe en flujo de suscripción</td>
+    <td>Configurar la integración de Stripe como pasarela de pagos en el flujo de selección de plan de la Landing Page, redirigiendo al usuario tras el pago exitoso.</td>
+    <td>4</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-38</td>
+    <td>Configurar sandbox de pagos</td>
+    <td>Configurar el entorno sandbox de Stripe para simular transacciones de pago durante el desarrollo sin afectar datos reales.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-39</td>
+    <td>Implementar redirección post-pago</td>
+    <td>Implementar la redirección automática a la Web Application tras completar el pago del plan en la Landing Page.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — MockAPI + Azure -->
+  <tr>
+    <td rowspan="3">-</td>
+    <td rowspan="3">Configuración de Mock API y despliegue en Azure</td>
+    <td>T-40</td>
+    <td>Configurar MockAPI con endpoints del sistema</td>
+    <td>Configurar el proyecto MockAPI con todos los endpoints del sistema Bloomie y poblar con datos de muestra representativos para cada recurso.</td>
+    <td>4</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-41</td>
+    <td>Desplegar Web Application en Azure Static Web Apps</td>
+    <td>Configurar el recurso Azure Static Web Apps, vincular el repositorio del frontend y verificar el despliegue automático desde la rama main.</td>
+    <td>3</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-42</td>
+    <td>Validar integración frontend con MockAPI desplegada</td>
+    <td>Verificar que el frontend desplegado en Azure consuma correctamente los endpoints de MockAPI y que los datos se muestren correctamente en todas las vistas.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Correcciones Figma -->
+  <tr>
+    <td rowspan="3">-</td>
+    <td rowspan="3">Correcciones y complementos de diseño UX/UI en Figma</td>
+    <td>T-43</td>
+    <td>Corregir y completar User Flow Diagrams</td>
+    <td>Corregir los User Flow Diagrams existentes y completar los flujos faltantes para todas las funcionalidades del sistema en Figma.</td>
+    <td>3</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-44</td>
+    <td>Corregir y completar Wireflow Diagrams</td>
+    <td>Corregir los Wireflow Diagrams de la Web Application y agregar los wireflows faltantes para los bounded contexts no cubiertos.</td>
+    <td>3</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-45</td>
+    <td>Actualizar mockups de Web Application</td>
+    <td>Actualizar los mockups de alta fidelidad de la Web Application en Figma incorporando las correcciones de diseño visual identificadas.</td>
+    <td>3</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Documentación Sprint 2 -->
+  <tr>
+    <td rowspan="8">-</td>
+    <td rowspan="8">Documentación del Sprint 2 en el informe</td>
+    <td>T-46</td>
+    <td>Documentar Sprint Planning 2</td>
+    <td>Redactar la sección 5.2.2.1 con la tabla de Sprint Planning 2 incluyendo goal, velocity y resúmenes del sprint anterior.</td>
+    <td>1</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-47</td>
+    <td>Documentar Aspect Leaders and Collaborators</td>
+    <td>Redactar la sección 5.2.2.2 con la matriz LACX del Sprint 2 distribuyendo líderes y colaboradores por bounded context.</td>
+    <td>1</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-48</td>
+    <td>Documentar Sprint Backlog 2</td>
+    <td>Redactar la sección 5.2.2.3 con la tabla completa de work items del Sprint 2 con estimaciones, responsables y estados.</td>
+    <td>2</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-49</td>
+    <td>Documentar Development Evidence for Sprint Review</td>
+    <td>Redactar la sección 5.2.2.4 con la tabla de commits representativos de ambos repositorios durante el Sprint 2.</td>
+    <td>2</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-50</td>
+    <td>Documentar Execution Evidence for Sprint Review</td>
+    <td>Redactar la sección 5.2.2.5 con el resumen de lo alcanzado y screenshots de las principales vistas implementadas.</td>
+    <td>2</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-51</td>
+    <td>Documentar Services Documentation Evidence</td>
+    <td>Redactar la sección 5.2.2.6 con la documentación de los endpoints de MockAPI utilizados durante el Sprint 2.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-52</td>
+    <td>Documentar Software Deployment Evidence</td>
+    <td>Redactar la sección 5.2.2.7 con el proceso de despliegue del frontend en Azure Static Web Apps con capturas del proceso.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-53</td>
+    <td>Documentar Team Collaboration Insights</td>
+    <td>Redactar la sección 5.2.2.8 con los analíticos de GitHub Insights de ambos repositorios durante el Sprint 2.</td>
+    <td>1</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+</table>
+
 #### 5.2.2.4. Development Evidence for Sprint Review
 #### 5.2.2.5. Execution Evidence for Sprint Review
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
