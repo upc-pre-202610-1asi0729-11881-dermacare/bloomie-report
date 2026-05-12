@@ -2913,57 +2913,145 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     <td>3</td>
   </tr>
 
-  <tr>
+<tr>
     <td><strong>35</strong></td>
     <td>TS01</td>
-    <td>Procesar pago de consulta dermatológica</td>
-    <td>Como developer, quiero registrar y verificar el pago de una consulta dermatológica mediante una API de pagos para confirmar la cita del usuario.</td>
-    <td>5</td>
+    <td>Gestionar usuarios del sistema</td>
+    <td>Como developer, quiero consumir los endpoints de usuarios para registrar y gestionar las cuentas de los usuarios de Bloomie.</td>
+    <td>3</td>
   </tr>
 
   <tr>
     <td><strong>36</strong></td>
     <td>TS02</td>
-    <td>Procesar pago de compra de plan dermatológico</td>
-    <td>Como developer, quiero registrar y verificar el pago de un plan dermatológico mediante una API de pagos para activar el plan adquirido por el usuario.</td>
-    <td>5</td>
+    <td>Gestionar sesiones de autenticación</td>
+    <td>Como developer, quiero consumir el endpoint de sesiones para autenticar usuarios y gestionar el acceso a la aplicación.</td>
+    <td>3</td>
   </tr>
 
   <tr>
     <td><strong>37</strong></td>
     <td>TS03</td>
-    <td>Consultar estado de una transacción de pago</td>
-    <td>Como developer, quiero consultar el estado de una transacción de pago mediante una API de pagos para verificar si una consulta debe confirmarse o un plan debe activarse.</td>
+    <td>Gestionar perfil de piel del usuario</td>
+    <td>Como developer, quiero consumir los endpoints de skin profiles para registrar y actualizar las características dermatológicas del usuario.</td>
     <td>3</td>
   </tr>
 
   <tr>
     <td><strong>38</strong></td>
     <td>TS04</td>
-    <td>Obtener análisis y respuesta del asistente de IA</td>
-    <td>Como developer, quiero enviar una consulta del usuario a una API de inteligencia artificial para obtener orientación sobre productos, ingredientes, rutinas o estado de la piel.</td>
+    <td>Gestionar escaneos faciales</td>
+    <td>Como developer, quiero consumir los endpoints de facial scans para registrar escaneos y recuperar el historial de análisis del usuario.</td>
     <td>5</td>
   </tr>
 
   <tr>
     <td><strong>39</strong></td>
     <td>TS05</td>
-    <td>Obtener recomendación de productos dermatológicos</td>
-    <td>Como developer, quiero enviar el tipo de piel, necesidades y preferencias del usuario a una API de inteligencia artificial para obtener recomendaciones de productos dermatológicos adecuados.</td>
+    <td>Gestionar rutinas personalizadas</td>
+    <td>Como developer, quiero consumir los endpoints de rutinas y routine items para gestionar las rutinas de cuidado de piel del usuario.</td>
     <td>5</td>
   </tr>
 
   <tr>
     <td><strong>40</strong></td>
     <td>TS06</td>
-    <td>Generar rutina personalizada de cuidado de piel</td>
-    <td>Como developer, quiero enviar información del perfil dermatológico del usuario a una API de inteligencia artificial para generar una rutina personalizada de cuidado de piel.</td>
+    <td>Gestionar seguimiento diario de rutina</td>
+    <td>Como developer, quiero consumir los endpoints de daily trackings para registrar y consultar el cumplimiento diario de rutina del usuario.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>41</strong></td>
+    <td>TS07</td>
+    <td>Gestionar catálogo de productos</td>
+    <td>Como developer, quiero consumir los endpoints de productos y compatibilidades para mostrar el catálogo de skincare con información personalizada al usuario.</td>
     <td>5</td>
+  </tr>
+
+  <tr>
+    <td><strong>42</strong></td>
+    <td>TS08</td>
+    <td>Gestionar productos favoritos</td>
+    <td>Como developer, quiero consumir los endpoints de favorite products para guardar y eliminar productos favoritos del usuario.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>43</strong></td>
+    <td>TS09</td>
+    <td>Gestionar perfiles de dermatólogos</td>
+    <td>Como developer, quiero consumir los endpoints de dermatologist profiles para registrar y consultar los perfiles profesionales de los dermatólogos.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>44</strong></td>
+    <td>TS10</td>
+    <td>Gestionar disponibilidad de dermatólogos</td>
+    <td>Como developer, quiero consumir los endpoints de dermatologist availabilities para registrar y consultar los horarios de atención de los dermatólogos.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>45</strong></td>
+    <td>TS11</td>
+    <td>Gestionar citas dermatológicas</td>
+    <td>Como developer, quiero consumir los endpoints de appointments para registrar, consultar y cancelar citas dermatológicas.</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td><strong>46</strong></td>
+    <td>TS12</td>
+    <td>Gestionar consultas virtuales</td>
+    <td>Como developer, quiero consumir los endpoints de consultations para iniciar, gestionar y cerrar consultas virtuales entre pacientes y dermatólogos.</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td><strong>47</strong></td>
+    <td>TS13</td>
+    <td>Gestionar pagos</td>
+    <td>Como developer, quiero consumir los endpoints de payments para registrar y consultar el estado de los pagos realizados en la plataforma.</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td><strong>48</strong></td>
+    <td>TS14</td>
+    <td>Gestionar planes de suscripción</td>
+    <td>Como developer, quiero consumir los endpoints de plans para consultar los planes de suscripción disponibles en la plataforma.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>49</strong></td>
+    <td>TS15</td>
+    <td>Gestionar suscripciones de usuarios</td>
+    <td>Como developer, quiero consumir los endpoints de subscriptions para registrar y gestionar las suscripciones activas de los usuarios.</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td><strong>50</strong></td>
+    <td>TS16</td>
+    <td>Gestionar consultas al asistente virtual</td>
+    <td>Como developer, quiero consumir los endpoints de support queries para enviar y recuperar consultas realizadas al asistente virtual de skincare.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td><strong>51</strong></td>
+    <td>TS17</td>
+    <td>Gestionar mensajes de chat en consulta virtual</td>
+    <td>Como developer, quiero consumir los endpoints de chat messages para enviar y recuperar los mensajes intercambiados durante una consulta virtual.</td>
+    <td>3</td>
   </tr>
 
 </table>
 
-**Enlace del product backlog en trello:** [*Ir a trello aquí*](https://trello.com/b/Y2tqaAyd/product-backlog)
+**Enlace del product backlog en trello:** https://trello.com/b/Y2tqaAyd/product-backlog
 
 # Capítulo IV: Product Design
 
