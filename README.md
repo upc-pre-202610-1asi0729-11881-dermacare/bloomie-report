@@ -6530,6 +6530,25 @@ cada uno responsable de una o más secciones mediante feature branches independi
 ### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
+
+El Sprint 2 tuvo como punto de partida los resultados alcanzados en el Sprint 1, donde se desplegó la Landing Page de Bloomie y se completó la mayor parte de la documentación base del proyecto. En esta segunda iteración el equipo se enfocó en desarrollar la primera versión funcional del Frontend Web Application, implementando las funcionalidades core del producto y simulando la integración con servicios backend mediante una Mock API. La aplicación fue desplegada en Azure Static Web Apps como entorno de producción para el frontend.
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | |
+| **Date** | 2026-04-27 |
+| **Time** | 9:00 p.m. – 11:00 p.m. |
+| **Location** | Reunión presencial - Sede Monterrico |
+| **Prepared By** | Ramirez Ruiz, Nickolas |
+| **Attendees (to planning meeting)** | Asmat Alminco, Martin Alejandro / Contreras Torres, Arturo Valentino / Gallardo Morales, Carla Alejandra / Mechan Montenegro, Luciana Carolina / Mechan Montenegro, Luciana |
+| **Sprint 1 Review Summary** | Durante el Sprint 1 se completaron los artefactos Lean UX (Problem Statements, Assumptions, Hypothesis Statements y Canvas), el análisis de requisitos con entrevistas y needfinding, la especificación completa de User Stories y Product Backlog, el diseño UX/UI en Figma incluyendo wireframes, mockups y wireflow diagrams para Landing Page y Web Application, la arquitectura del software con diagramas C4 y Event Storming, y el despliegue exitoso de la Landing Page en Vercel. Sin embargo, no se completó el prototipo interactivo de la Web Application ni la sección de Sprint Backlog 1, quedando ambos pendientes como deuda técnica para ser subsanada al inicio del Sprint 2. El equipo reconoció la necesidad de mejorar la planificación interna para evitar entregas incompletas. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó como aciertos la aplicación de GitFlow con feature branches por inciso, la distribución de responsabilidades mediante el esquema de Aspect Leaders y Collaborators, y la comunicación constante a través de Discord. Como oportunidades de mejora se identificó que no se estableció una organización interna clara con fechas límite por tarea, lo que generó acumulación de trabajo hacia el cierre del sprint y la omisión de entregables como el prototipo y el Sprint Backlog 1. Para el Sprint 2 el equipo se comprometió a definir fechas internas por cada work item, realizar seguimiento activo del board en Trello y mantener los Pull Requests con descripciones detalladas para facilitar la revisión por pares. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | Our focus is on delivering a functional first version of the Bloomie web application with its core skincare features. We believe it delivers a tangible and interactive experience to young adults seeking personalized skincare solutions, allowing them to navigate the skin analysis flow, personalized routines and product catalog. This will be confirmed when users can access and interact with the main sections of the web application, including skin scan, routine management, product catalog and progress tracking, with data responses simulated through a deployed Mock API, and the application is publicly accessible via Azure Static Web Apps. |
+| **Sprint 2 Velocity** | 34 |
+| **Sum of Story Points** | 34 |
+
 #### 5.2.2.2. Aspect Leaders and Collaborators
 #### 5.2.2.3. Sprint Backlog 2
 #### 5.2.2.4. Development Evidence for Sprint Review
