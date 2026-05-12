@@ -5562,12 +5562,16 @@ mostrando únicamente los productos restantes.
 
 ---
 
+
 ## 4.5. Web Applications Prototyping
 
 ###### Desktop & Mobile Web Browser | Simulación de Interacción y Navegación
 
 
 ###### Introducción: Criterios de Decisión de Interacción
+
+
+El diseño de prototipos de Bloomie responde a tres principios rectores que articulan tanto las decisiones de interacción como la arquitectura de información subyacente.
 
 El diseño de prototipos de Bloomie responde a tres principios rectores que articulan tanto las decisiones de interacción como la arquitectura de información subyacente.
 
@@ -5673,8 +5677,10 @@ La pantalla Profile centraliza en una sola vista las acciones de identidad (nomb
 
 **Video de demostración:**
 ![Ver video en Microsoft Stream — Profile Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fprofile%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E093fbe67%2D18cf%2D4509%2D90a2%2D54ce22b246cb)
+![Ver video en Microsoft Stream — Profile Flow] (https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fprofile%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E093fbe67%2D18cf%2D4509%2D90a2%2D54ce22b246cb)
 
 *Imagen de Evidencia*:
+   
 
 
 
@@ -5695,6 +5701,8 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 
 [Ver prototipo mobile](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
+**Mobile**
+![mobile](assets/img/mockups/mockup-mobile.png)
 
 
 **Desktop Prototype**
@@ -5704,6 +5712,8 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 
 
 
+**Desktop**
+![desktop](assets/img/mockups/mockup-desktop.png)
 
 
 ## 4.6. Domain-Driven Software Architecture
