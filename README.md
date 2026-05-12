@@ -6396,7 +6396,7 @@ Durante el Sprint 1 se logró implementar y desplegar exitosamente la Landing Pa
 
 A continuación se presenta el video de demostración que ilustra la navegación completa por la Landing Page desplegada durante este Sprint.
 
-**Enlace al video de demostración:** [upc-pre-202610-1asi0729-11881-dermacare-tp1-sprint1]()
+**Enlace al video de demostración:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQBQT13T6iLFQZj0eRzbWMHQAfI0B947RUtETp-7NLrwDfI?e=gcNgFh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
