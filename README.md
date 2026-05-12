@@ -2137,209 +2137,480 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
     <td>E11(Gestión de atención dermatológica)</td>
   </tr>
   
-<tr>
+  <tr>
   <td><strong>TS01</strong></td>
-  <td>Procesar pago de consulta dermatológica</td>
+  <td>Gestionar usuarios del sistema</td>
   <td>
-    Como developer, quiero registrar y verificar el pago de una consulta dermatológica mediante una API de pagos para confirmar la cita del usuario.
+    Como developer, quiero consumir los endpoints de usuarios para registrar y gestionar las cuentas de los usuarios de Bloomie.
   </td>
   <td>
-    <strong>Escenario 1: Creación exitosa de orden de pago</strong><br>
-      Dado que el usuario ha seleccionado una cita válida
-      Cuando el developer envía una solicitud POST a /api/pagos/consultas con el identificador de la cita y el monto
-      Entonces la API devuelve una respuesta exitosa con el identificador de la transacción
-      Y el estado inicial del pago queda como pendiente.
+    <strong>Escenario 1: Registro de usuario exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /users con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el objeto del usuario creado
     <p></p>
-    <strong>Escenario 2: Confirmación exitosa del pago</strong><br>
-      Dado que existe una transacción de pago pendiente
-      Cuando el developer consulta o recibe la confirmación del proveedor de pagos
-      Entonces la API actualiza el estado de la transacción a pagado
-      Y la cita queda confirmada.
+    <strong>Escenario 2: Datos inválidos en el registro</strong><br>
+    Dado que el developer envía una solicitud POST a /users con campos requeridos faltantes o mal formateados
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
     <p></p>
-    <strong>Escenario 3: Pago rechazado</strong><br>
-      Dado que el usuario intenta completar el pago
-      Cuando el proveedor de pagos rechaza la operación
-      Entonces la API devuelve un estado de pago fallido
-      Y la cita no se confirma.
+    <strong>Escenario 3: Obtener usuario por ID exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /users/{id} con un ID existente
+    Cuando el servidor busca el recurso
+    Entonces retorna 200 OK con el objeto del usuario correspondiente
     <p></p>
-    <strong>Escenario 4: Datos inválidos de pago</strong><br>
-      Dado que la solicitud contiene una cita inexistente o un monto inválido
-      Cuando el developer envía la solicitud
-      Entonces la API responde con error 400 Bad Request
-      Y muestra el detalle de validación.
+    <strong>Escenario 4: Usuario no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /users/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
 <tr>
   <td><strong>TS02</strong></td>
-  <td>Procesar pago de compra de plan dermatológico</td>
+  <td>Gestionar sesiones de autenticación</td>
   <td>
-    Como developer, quiero registrar y verificar el pago de un plan dermatológico mediante una API de pagos para activar el plan adquirido por el usuario.
+    Como developer, quiero consumir el endpoint de sesiones para autenticar usuarios y gestionar el acceso a la aplicación.
   </td>
   <td>
-    <strong>Escenario 1: Creación exitosa de orden de pago del plan</strong><br>
-      Dado que el usuario ha seleccionado un plan dermatológico disponible
-      Cuando el developer envía una solicitud POST a /api/pagos/planes con el identificador del plan, usuario y monto
-      Entonces la API devuelve una respuesta exitosa con el identificador de la transacción
-      Y el estado inicial del pago queda como pendiente.
+    <strong>Escenario 1: Inicio de sesión exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /sessions con credenciales válidas
+    Cuando el servidor autentica las credenciales
+    Entonces retorna 200 OK con el token de sesión y los datos del usuario autenticado
     <p></p>
-    <strong>Escenario 2: Activación exitosa del plan</strong><br>
-      Dado que existe una transacción de pago pendiente asociada a un plan
-      Cuando el developer consulta o recibe la confirmación del proveedor de pagos
-      Entonces la API actualiza el estado de la transacción a pagado
-      Y el plan queda activo para el usuario.
+    <strong>Escenario 2: Credenciales incorrectas</strong><br>
+    Dado que el developer envía una solicitud POST a /sessions con credenciales inválidas
+    Cuando el servidor valida las credenciales
+    Entonces retorna 401 Unauthorized
     <p></p>
-    <strong>Escenario 3: Pago rechazado del plan</strong><br>
-      Dado que el usuario intenta completar el pago de un plan
-      Cuando el proveedor de pagos rechaza la operación
-      Entonces la API devuelve un estado de pago fallido
-      Y el plan no se activa.
-    <p></p>
-    <strong>Escenario 4: Plan o monto inválido</strong><br>
-      Dado que la solicitud contiene un plan inexistente o un monto inválido
-      Cuando el developer envía la solicitud
-      Entonces la API responde con error 400 Bad Request
-      Y muestra el detalle de validación.
+    <strong>Escenario 3: Campos requeridos faltantes</strong><br>
+    Dado que el developer envía una solicitud POST a /sessions sin los campos requeridos
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
 <tr>
   <td><strong>TS03</strong></td>
-  <td>Consultar estado de una transacción de pago</td>
+  <td>Gestionar perfil de piel del usuario</td>
   <td>
-    Como developer, quiero consultar el estado de una transacción de pago mediante una API de pagos para verificar si una consulta debe confirmarse o un plan debe activarse.
+    Como developer, quiero consumir los endpoints de skin profiles para registrar y actualizar las características dermatológicas del usuario.
   </td>
   <td>
-    <strong>Escenario 1: Consulta exitosa de transacción</strong><br>
-      Dado que existe una transacción de pago registrada
-      Cuando el developer envía una solicitud GET a /api/pagos/{transactionId}
-      Entonces la API devuelve una respuesta 200 OK
-      Y muestra el estado actual de la transacción.
+    <strong>Escenario 1: Registro de perfil de piel exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /skin_profiles con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el perfil de piel creado
     <p></p>
-    <strong>Escenario 2: Transacción pagada</strong><br>
-      Dado que la transacción fue completada correctamente
-      Cuando el developer consulta el estado del pago
-      Entonces la API devuelve el estado pagado
-      Y muestra si corresponde a una consulta dermatológica o a un plan.
+    <strong>Escenario 2: Actualización de perfil exitosa</strong><br>
+    Dado que el developer envía una solicitud PUT a /skin_profiles/{id} con los datos actualizados
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con el perfil de piel actualizado
     <p></p>
-    <strong>Escenario 3: Transacción pendiente</strong><br>
-      Dado que el usuario aún no completó el pago
-      Cuando el developer consulta el estado de la transacción
-      Entonces la API devuelve el estado pendiente
-      Y mantiene la consulta o el plan sin confirmar.
+    <strong>Escenario 3: Perfil no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /skin_profiles/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
     <p></p>
-    <strong>Escenario 4: Transacción no encontrada</strong><br>
-      Dado que el developer envía un identificador de transacción inexistente
-      Cuando realiza la solicitud de consulta
-      Entonces la API responde con error 404 Not Found
-      Y muestra un mensaje indicando que la transacción no fue encontrada.
+    <strong>Escenario 4: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /skin_profiles con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
 <tr>
   <td><strong>TS04</strong></td>
-  <td>Obtener análisis y respuesta del asistente de IA</td>
+  <td>Gestionar escaneos faciales</td>
   <td>
-    Como developer, quiero enviar una consulta del usuario a una API de inteligencia artificial para obtener orientación sobre productos, ingredientes, rutinas o estado de la piel.
+    Como developer, quiero consumir los endpoints de facial scans para registrar escaneos y recuperar el historial de análisis del usuario.
   </td>
   <td>
-    <strong>Escenario 1: Consulta respondida correctamente</strong><br>
-      Dado que el usuario ingresa una pregunta válida
-      Cuando el developer envía una solicitud POST a /api/ai/consultas con el texto de la consulta
-      Entonces la API devuelve una respuesta 200 OK
-      Y retorna una respuesta generada por la IA.
+    <strong>Escenario 1: Registro de escaneo exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /facial_scans con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el objeto del escaneo registrado
     <p></p>
-    <strong>Escenario 2: Consulta con contexto del usuario</strong><br>
-      Dado que el usuario tiene información registrada sobre su tipo de piel o rutina
-      Cuando el developer envía la consulta junto con ese contexto
-      Entonces la API devuelve una respuesta más personalizada.
+    <strong>Escenario 2: Obtener historial de escaneos exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /facial_scans con un ID de usuario válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de escaneos del usuario
     <p></p>
-    <strong>Escenario 3: Consulta vacía o inválida</strong><br>
-      Dado que el developer envía una solicitud sin texto de consulta
-      Cuando la API valida la entrada
-      Entonces responde con 400 Bad Request
-      Y explica que la consulta es obligatoria.
-    <p></p>
-    <strong>Escenario 4: La IA no puede responder</strong><br>
-      Dado que la pregunta no puede resolverse con suficiente confianza
-      Cuando la API procesa la consulta
-      Entonces devuelve una respuesta indicando la limitación
-      Y sugiere consultar a un dermatólogo.
+    <strong>Escenario 3: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /facial_scans con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
 <tr>
   <td><strong>TS05</strong></td>
-  <td>Obtener recomendación de productos dermatológicos</td>
+  <td>Gestionar rutinas personalizadas</td>
   <td>
-    Como developer, quiero enviar el tipo de piel, necesidades y preferencias del usuario a una API de inteligencia artificial para obtener recomendaciones de productos dermatológicos adecuados.
+    Como developer, quiero consumir los endpoints de rutinas y routine items para gestionar las rutinas de cuidado de piel del usuario.
   </td>
   <td>
-    <strong>Escenario 1: Recomendación exitosa de productos</strong><br>
-      Dado que el usuario indica su tipo de piel y necesidad principal
-      Cuando el developer envía una solicitud POST a /api/ai/recomendaciones/productos con los datos del usuario
-      Entonces la API devuelve una respuesta 200 OK
-      Y retorna una lista de productos recomendados.
+    <strong>Escenario 1: Obtener rutina del usuario exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /routines con un ID de usuario válido
+    Cuando el servidor busca la rutina activa
+    Entonces retorna 200 OK con la rutina y sus pasos
     <p></p>
-    <strong>Escenario 2: Recomendación personalizada según tipo de piel</strong><br>
-      Dado que el usuario tiene registrado su tipo de piel
-      Cuando la API genera la recomendación
-      Entonces prioriza productos adecuados para ese tipo de piel
-      Y explica brevemente por qué son recomendados.
+    <strong>Escenario 2: Obtener items de rutina exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /routine_items con un ID de rutina válido
+    Cuando el servidor busca los productos asignados
+    Entonces retorna 200 OK con la lista de productos por paso
     <p></p>
-    <strong>Escenario 3: Datos insuficientes del usuario</strong><br>
-      Dado que el developer no envía información suficiente sobre el tipo de piel o necesidad del usuario
-      Cuando la API procesa la solicitud
-      Entonces responde con 400 Bad Request
-      Y solicita completar los datos necesarios para generar la recomendación.
+    <strong>Escenario 3: Actualizar item de rutina exitoso</strong><br>
+    Dado que el developer envía una solicitud PUT a /routine_items/{id} con el producto de reemplazo
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con el item de rutina actualizado
     <p></p>
-    <strong>Escenario 4: No hay productos adecuados disponibles</strong><br>
-      Dado que no existen productos relacionados con la necesidad indicada
-      Cuando la API busca recomendaciones
-      Entonces devuelve una respuesta indicando que no se encontraron productos adecuados
-      Y sugiere consultar con un dermatólogo.
+    <strong>Escenario 4: Rutina no encontrada</strong><br>
+    Dado que el developer envía una solicitud GET a /routines/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
 <tr>
   <td><strong>TS06</strong></td>
-  <td>Generar rutina personalizada de cuidado de piel</td>
+  <td>Gestionar seguimiento diario de rutina</td>
   <td>
-    Como developer, quiero enviar información del perfil dermatológico del usuario a una API de inteligencia artificial para generar una rutina personalizada de cuidado de piel.
+    Como developer, quiero consumir los endpoints de daily trackings para registrar y consultar el cumplimiento diario de rutina del usuario.
   </td>
   <td>
-    <strong>Escenario 1: Rutina generada correctamente</strong><br>
-      Dado que el usuario proporciona su tipo de piel y objetivo dermatológico
-      Cuando el developer envía una solicitud POST a /api/ai/rutinas con la información del usuario
-      Entonces la API devuelve una respuesta 200 OK
-      Y retorna una rutina organizada en pasos de mañana y noche.
+    <strong>Escenario 1: Registro de cumplimiento exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /daily_trackings con los datos requeridos válidos
+    Cuando el servidor procesa el registro
+    Entonces retorna 201 Created con el objeto de tracking registrado
     <p></p>
-    <strong>Escenario 2: Rutina con productos recomendados</strong><br>
-      Dado que existen productos compatibles con el perfil del usuario
-      Cuando la API genera la rutina personalizada
-      Entonces incluye productos sugeridos dentro de cada paso
-      Y explica la función de cada producto en la rutina.
+    <strong>Escenario 2: Obtener historial de tracking exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /daily_trackings con un ID de usuario válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de registros de cumplimiento del usuario
     <p></p>
-    <strong>Escenario 3: Información incompleta del perfil</strong><br>
-      Dado que el developer no envía información suficiente sobre el perfil dermatológico del usuario
-      Cuando la API procesa la solicitud
-      Entonces devuelve una rutina general
-      Y solicita completar el perfil para una recomendación más precisa.
-    <p></p>
-    <strong>Escenario 4: Caso que requiere atención dermatológica</strong><br>
-      Dado que el usuario describe síntomas severos o persistentes
-      Cuando la API genera la respuesta
-      Entonces evita dar un diagnóstico definitivo
-      Y recomienda acudir a un dermatólogo.
+    <strong>Escenario 3: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /daily_trackings con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
   </td>
-  <td>E11(Servicios REST)</td>
+  <td>E12 (Servicios REST)</td>
 </tr>
 
+<tr>
+  <td><strong>TS07</strong></td>
+  <td>Gestionar catálogo de productos</td>
+  <td>
+    Como developer, quiero consumir los endpoints de productos y compatibilidades para mostrar el catálogo de skincare con información personalizada al usuario.
+  </td>
+  <td>
+    <strong>Escenario 1: Obtener catálogo de productos exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /products
+    Cuando el servidor carga el catálogo
+    Entonces retorna 200 OK con la lista de productos disponibles
+    <p></p>
+    <strong>Escenario 2: Obtener detalle de producto exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /products/{id} con un ID existente
+    Cuando el servidor busca el recurso
+    Entonces retorna 200 OK con el detalle del producto
+    <p></p>
+    <strong>Escenario 3: Obtener compatibilidad de producto exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /product_compatibilities con IDs válidos de producto y usuario
+    Cuando el servidor calcula la compatibilidad
+    Entonces retorna 200 OK con el score y la explicación de compatibilidad
+    <p></p>
+    <strong>Escenario 4: Producto no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /products/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS08</strong></td>
+  <td>Gestionar productos favoritos</td>
+  <td>
+    Como developer, quiero consumir los endpoints de favorite products para guardar y eliminar productos favoritos del usuario.
+  </td>
+  <td>
+    <strong>Escenario 1: Agregar producto a favoritos exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /favorite_products con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el registro de favorito creado
+    <p></p>
+    <strong>Escenario 2: Obtener favoritos del usuario exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /favorite_products con un ID de usuario válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de productos favoritos del usuario
+    <p></p>
+    <strong>Escenario 3: Eliminar favorito exitoso</strong><br>
+    Dado que el developer envía una solicitud DELETE a /favorite_products/{id} con un ID existente
+    Cuando el servidor elimina el registro
+    Entonces retorna 204 No Content confirmando la eliminación
+    <p></p>
+    <strong>Escenario 4: Favorito no encontrado</strong><br>
+    Dado que el developer envía una solicitud DELETE a /favorite_products/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS09</strong></td>
+  <td>Gestionar perfiles de dermatólogos</td>
+  <td>
+    Como developer, quiero consumir los endpoints de dermatologist profiles para registrar y consultar los perfiles profesionales de los dermatólogos.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de perfil profesional exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /dermatologist_profiles con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el perfil profesional creado
+    <p></p>
+    <strong>Escenario 2: Obtener lista de dermatólogos exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /dermatologist_profiles
+    Cuando el servidor carga los registros
+    Entonces retorna 200 OK con la lista de dermatólogos disponibles
+    <p></p>
+    <strong>Escenario 3: Actualizar perfil exitoso</strong><br>
+    Dado que el developer envía una solicitud PUT a /dermatologist_profiles/{id} con los datos actualizados
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con el perfil profesional actualizado
+    <p></p>
+    <strong>Escenario 4: Perfil no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /dermatologist_profiles/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS10</strong></td>
+  <td>Gestionar disponibilidad de dermatólogos</td>
+  <td>
+    Como developer, quiero consumir los endpoints de dermatologist availabilities para registrar y consultar los horarios de atención de los dermatólogos.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de disponibilidad exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /dermatologist_availabilities con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con la disponibilidad registrada
+    <p></p>
+    <strong>Escenario 2: Obtener disponibilidad de dermatólogo exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /dermatologist_availabilities con un ID de dermatólogo válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de horarios disponibles
+    <p></p>
+    <strong>Escenario 3: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /dermatologist_availabilities con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS11</strong></td>
+  <td>Gestionar citas dermatológicas</td>
+  <td>
+    Como developer, quiero consumir los endpoints de appointments para registrar, consultar y cancelar citas dermatológicas.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de cita exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /appointments con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con la cita registrada y su estado inicial
+    <p></p>
+    <strong>Escenario 2: Obtener citas del usuario exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /appointments con un ID de usuario válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de citas del usuario
+    <p></p>
+    <strong>Escenario 3: Cancelar cita exitoso</strong><br>
+    Dado que el developer envía una solicitud PUT a /appointments/{id} actualizando el estado a cancelado
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con la cita actualizada
+    <p></p>
+    <strong>Escenario 4: Cita no encontrada</strong><br>
+    Dado que el developer envía una solicitud GET a /appointments/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS12</strong></td>
+  <td>Gestionar consultas virtuales</td>
+  <td>
+    Como developer, quiero consumir los endpoints de consultations para iniciar, gestionar y cerrar consultas virtuales entre pacientes y dermatólogos.
+  </td>
+  <td>
+    <strong>Escenario 1: Inicio de consulta exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /consultations con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con la consulta iniciada y su estado activo
+    <p></p>
+    <strong>Escenario 2: Obtener consulta por ID exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /consultations/{id} con un ID existente
+    Cuando el servidor busca el recurso
+    Entonces retorna 200 OK con el detalle de la consulta
+    <p></p>
+    <strong>Escenario 3: Cerrar consulta exitoso</strong><br>
+    Dado que el developer envía una solicitud PUT a /consultations/{id} actualizando el estado a completado
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con la consulta en estado COMPLETED
+    <p></p>
+    <strong>Escenario 4: Consulta no encontrada</strong><br>
+    Dado que el developer envía una solicitud GET a /consultations/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS13</strong></td>
+  <td>Gestionar pagos</td>
+  <td>
+    Como developer, quiero consumir los endpoints de payments para registrar y consultar el estado de los pagos realizados en la plataforma.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de pago exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /payments con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el objeto de pago y su estado inicial
+    <p></p>
+    <strong>Escenario 2: Obtener pago por ID exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /payments/{id} con un ID existente
+    Cuando el servidor busca el recurso
+    Entonces retorna 200 OK con el detalle y estado actual del pago
+    <p></p>
+    <strong>Escenario 3: Pago no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /payments/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+    <p></p>
+    <strong>Escenario 4: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /payments con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS14</strong></td>
+  <td>Gestionar planes de suscripción</td>
+  <td>
+    Como developer, quiero consumir los endpoints de plans para consultar los planes de suscripción disponibles en la plataforma.
+  </td>
+  <td>
+    <strong>Escenario 1: Obtener lista de planes exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /plans
+    Cuando el servidor carga los registros
+    Entonces retorna 200 OK con la lista de planes disponibles y sus características
+    <p></p>
+    <strong>Escenario 2: Obtener plan por ID exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /plans/{id} con un ID existente
+    Cuando el servidor busca el recurso
+    Entonces retorna 200 OK con el detalle del plan
+    <p></p>
+    <strong>Escenario 3: Plan no encontrado</strong><br>
+    Dado que el developer envía una solicitud GET a /plans/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS15</strong></td>
+  <td>Gestionar suscripciones de usuarios</td>
+  <td>
+    Como developer, quiero consumir los endpoints de subscriptions para registrar y gestionar las suscripciones activas de los usuarios.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de suscripción exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /subscriptions con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con la suscripción activa creada
+    <p></p>
+    <strong>Escenario 2: Obtener suscripción del usuario exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /subscriptions con un ID de usuario válido
+    Cuando el servidor busca el registro
+    Entonces retorna 200 OK con la suscripción activa del usuario
+    <p></p>
+    <strong>Escenario 3: Cancelar suscripción exitoso</strong><br>
+    Dado que el developer envía una solicitud PUT a /subscriptions/{id} actualizando el estado a cancelado
+    Cuando el servidor procesa la actualización
+    Entonces retorna 200 OK con la suscripción actualizada
+    <p></p>
+    <strong>Escenario 4: Suscripción no encontrada</strong><br>
+    Dado que el developer envía una solicitud GET a /subscriptions/{id} con un ID inexistente
+    Cuando el servidor busca el recurso
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS16</strong></td>
+  <td>Gestionar consultas al asistente virtual</td>
+  <td>
+    Como developer, quiero consumir los endpoints de support queries para enviar y recuperar consultas realizadas al asistente virtual de skincare.
+  </td>
+  <td>
+    <strong>Escenario 1: Registro de consulta exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /support_queries con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con la consulta registrada y la respuesta generada
+    <p></p>
+    <strong>Escenario 2: Obtener historial de consultas exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /support_queries con un ID de usuario válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con el historial de consultas del usuario
+    <p></p>
+    <strong>Escenario 3: Datos inválidos</strong><br>
+    Dado que el developer envía una solicitud POST a /support_queries con campos requeridos faltantes
+    Cuando el servidor valida la solicitud
+    Entonces retorna 400 Bad Request con el detalle de validación
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
+
+<tr>
+  <td><strong>TS17</strong></td>
+  <td>Gestionar mensajes de chat en consulta virtual</td>
+  <td>
+    Como developer, quiero consumir los endpoints de chat messages para enviar y recuperar los mensajes intercambiados durante una consulta virtual.
+  </td>
+  <td>
+    <strong>Escenario 1: Envío de mensaje exitoso</strong><br>
+    Dado que el developer envía una solicitud POST a /chat_messages con los datos requeridos válidos
+    Cuando el servidor procesa la solicitud
+    Entonces retorna 201 Created con el mensaje registrado y asociado a la consulta
+    <p></p>
+    <strong>Escenario 2: Obtener mensajes de una consulta exitoso</strong><br>
+    Dado que el developer envía una solicitud GET a /chat_messages con un ID de consulta válido
+    Cuando el servidor busca los registros
+    Entonces retorna 200 OK con la lista de mensajes de esa consulta ordenados cronológicamente
+    <p></p>
+    <strong>Escenario 3: Consulta no encontrada</strong><br>
+    Dado que el developer envía una solicitud GET a /chat_messages con un ID de consulta inexistente
+    Cuando el servidor busca los registros
+    Entonces retorna 404 Not Found
+  </td>
+  <td>E12 (Servicios REST)</td>
+</tr>
 </table>
 
 ## 3.2. Impact Mapping
