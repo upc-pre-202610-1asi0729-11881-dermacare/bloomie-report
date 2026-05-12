@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694321cd-70e6-4b67-b2c9-fcfdbb4d2c6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="694321cd-70e6-4b67-b2c9-fcfdbb4d2c6b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +21,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-report.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Bloomie-app/Bloomie-Report.git&quot;,
     &quot;accountId&quot;: &quot;2ab9b13b-82bb-46d2-a130-f6ccf8b812bb&quot;
   }
 }</component>
@@ -45,7 +43,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "feature/web-applications-prototyping",
+    "git-widget-placeholder": "feature/web-applications-mockups1-10-fix",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "C:/Users/AZUS/Desktop/OpenSource1/Bloomie-Report",
     "node.js.detected.package.eslint": "true",
@@ -72,8 +70,6 @@
       <updated>1778109732786</updated>
       <workItem from="1778109733791" duration="22518000" />
       <workItem from="1778264180213" duration="3798000" />
-      <workItem from="1778446344139" duration="4321000" />
-      <workItem from="1778567951523" duration="1026000" />
     </task>
     <servers />
   </component>
