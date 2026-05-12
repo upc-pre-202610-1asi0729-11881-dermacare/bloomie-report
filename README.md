@@ -5560,13 +5560,135 @@ nuevamente el ícono de corazón. El sistema remueve el producto de la
 lista de favoritos y actualiza el contador en la pestaña "Favourites"
 mostrando únicamente los productos restantes.
 
-
-
-
-
-
+---
 
 ## 4.5. Web Applications Prototyping
+
+###### Desktop & Mobile Web Browser | Simulación de Interacción y Navegación
+
+
+###### Introducción: Criterios de Decisión de Interacción
+
+El diseño de prototipos de Bloomie responde a tres principios rectores que articulan tanto las decisiones de interacción como la arquitectura de información subyacente.
+
+**1. Navegación persistente y contextual**
+El sistema de navegación lateral fijo (sidebar) en desktop refleja una arquitectura de información de tipo hub-and-spoke: el Dashboard actúa como nodo central desde el cual se ramifican los flujos principales — AI Assistant, Appointments, My Routine, Skin Scan, Trending y Profile. Esta decisión responde a que las funcionalidades core de Bloomie son paralelas entre sí (no jerarquizadas secuencialmente), por lo que el usuario debe poder saltar entre ellas sin perder contexto. En mobile, este patrón se traduce a una bottom navigation bar que mantiene accesibles los mismos nodos sin ocupar espacio de contenido.
+
+**2. Interacciones orientadas al progreso personal**
+Dado que Bloomie es una aplicación de seguimiento de salud de piel, las interacciones privilegian la visualización de evolución (gráficos, scores, rachas) y la confirmación explícita de acciones críticas (pagos, reemplazos de productos, cancelaciones de citas). Los flujos de mayor impacto sobre el perfil o la suscripción del usuario incluyen siempre un paso de confirmación para reducir errores irreversibles.
+
+**3. Coherencia entre arquitectura de información y tipos de interacción**
+El User Flow Diagram establece que desde el nodo "Entrar al perfil" se despliegan subsecciones: configuración de información personal, cambio de foto, Skin Profile, Settings, Security y Favorites. Esta ramificación se traduce en el prototipo como un sistema de cards navegables dentro de la pantalla Profile, cada una actuando como entrada a un sub-flujo específico. Los formularios de edición in-line (sin redireccionamiento a nuevas páginas) reducen la fricción para cambios frecuentes como nombre o email, mientras que acciones menos frecuentes (cancelar suscripción, cambiar contraseña) requieren navegación a vistas dedicadas, reforzando el peso semántico de dichas acciones.
+
+---
+
+## Funcionalidades Prototipadas
+
+Se documentan a continuación las cinco funcionalidades core capturadas en los prototipos, con su correspondencia directa a las Historias de Usuario definidas en el backlog del producto.
+
+---
+
+### 1. Skin Scan — Escaneo y Diagnóstico Facial
+
+**Historias de Usuario relacionadas:** US03 (Escaneo facial), US04 (Diagnóstico preliminar automático), US12 (Consultar historial de escaneos faciales) — Epic E2: Análisis de piel.
+
+**Descripción del flujo:**
+El usuario accede a la sección Skin Scan desde el sidebar de navegación. El sistema presenta la interfaz de captura facial con guía visual de encuadre. Una vez completada la captura (US03, Escenario 1), el sistema procesa la imagen mediante IA y genera un diagnóstico con scores de hidratación, textura, sensibilidad y brillo (US04, Escenario 1). El reporte se presenta en una vista de resultados con indicadores visuales por categoría y un score general de salud de piel. Desde esta misma sección, el usuario puede acceder al historial de escaneos pasados ordenados por fecha (US12, Escenario 1), permitiendo visualizar su evolución. En caso de fallo en la captura o en el procesamiento, el sistema muestra el estado de error correspondiente y habilita el reintento sin pérdida del flujo (US03, Escenario 2; US04, Escenario 2).
+
+**Decisiones de interacción:**
+La captura se ejecuta con feedback visual progresivo (animación de escaneo) para comunicar que el sistema está procesando, reduciendo la incertidumbre del usuario durante el tiempo de análisis por IA. Los scores del diagnóstico se presentan con indicadores gráficos tipo gauge, coherentes con la lógica de "progreso medible" que estructura toda la experiencia de Bloomie.
+
+**Video de demostración:**
+![Ver video en Microsoft Stream — Skin Scan Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fskin%2Dscan%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3a7235e7%2De093%2D41f6%2Db4c7%2Dd277aa7fd6ec) 
+*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+
+---
+
+### 2. My Routine — Gestión de Rutina Personalizada
+
+**Historias de Usuario relacionadas:** US05 (Generar rutina personalizada), US06 (Reemplazar producto de la rutina), US07 (Registrar cumplimiento de rutina diaria) — Epic E3: Gestión de rutina personalizada.
+
+**Descripción del flujo:**
+Desde el sidebar, el usuario accede a My Routine, donde el sistema presenta la rutina generada automáticamente a partir del diagnóstico de piel (US05, Escenario 1), organizada en pasos de mañana y noche con productos asignados y horario. El usuario puede seleccionar cualquier producto de la rutina para ver la opción de reemplazo; el sistema despliega hasta cuatro alternativas compatibles ordenadas por score de compatibilidad (US06, Escenario 1), y al confirmar el cambio actualiza la rutina inmediatamente (US06, Escenario 2). Al final del día, el usuario marca si completó o no la rutina mediante un control de confirmación simple, que el sistema registra para el seguimiento de adherencia (US07, Escenarios 1 y 2).
+
+**Decisiones de interacción:**
+El reemplazo de productos utiliza un patrón de bottom sheet en mobile y panel lateral en desktop, manteniendo visible la rutina de fondo para dar contexto al reemplazo. El marcado de cumplimiento diario se diseña como una acción de un solo toque (toggle), minimizando la fricción para un hábito que debe repetirse cada día.
+
+**Video de demostración:**
+![My Routine Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Froutine%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E75e48c0b%2Dec57%2D4430%2Dac47%2D5a681fef4d7c) 
+*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+
+---
+
+### 3. Appointments — Atención Dermatológica
+
+**Historias de Usuario relacionadas:** US14 (Listar y seleccionar dermatólogo), US15 (Pagar y confirmar cita), US16 (Cancelar cita dermatológica), US34 (Participar en consulta virtual) — Epic E7: Atención dermatológica.
+
+**Descripción del flujo:**
+El usuario accede a Appointments desde el sidebar. El sistema carga la lista de dermatólogos disponibles con nombre, especialidad, años de experiencia, rating y costo por consulta (US14, Escenario 1). Al seleccionar un especialista, el usuario elige horario disponible y procede al flujo de pago, que al completarse exitosamente confirma la cita con estado CONFIRMED (US15, Escenario 1). Las citas confirmadas aparecen en la agenda del usuario con opción de cancelación; el sistema informa si aplica o no reembolso según el tiempo restante para la consulta (US16, Escenarios 1 y 2). En el horario de la cita, el usuario accede a la consulta virtual, puede comunicarse en tiempo real con el dermatólogo y enviar fotografías de su piel para evaluación (US34, Escenarios 1 y 2).
+
+**Decisiones de interacción:**
+El flujo de pago sigue un patrón de stepper lineal (selección de especialista → selección de horario → pago → confirmación) para que el usuario tenga siempre claridad sobre en qué paso se encuentra y cuánto falta. La consulta virtual se accede desde la misma tarjeta de cita confirmada, reduciendo los pasos necesarios para unirse a la sesión.
+
+**Video de demostración:**
+![Ver video en Microsoft Stream — Appointments Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fconsult%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E78ac1bcb%2D5692%2D41aa%2D8322%2D9a1333946a97)
+ *(Screenshot representativo del flujo incluido en la entrega adjunta)*
+
+---
+
+### 4. AI Assistant — Soporte Inteligente de Skincare
+
+**Historias de Usuario relacionadas:** US13 (Consultar asistente virtual de skincare) — Epic E6: Soporte inteligente.
+
+**Descripción del flujo:**
+El usuario accede al AI Assistant desde el sidebar. La interfaz presenta un chat conversacional donde el usuario puede enviar consultas sobre productos, rutinas o ingredientes. El sistema procesa cada mensaje utilizando el perfil de piel y el último escaneo del usuario para generar respuestas personalizadas (US13, Escenario 1). Cuando la consulta excede el alcance del asistente o describe síntomas que requieren atención profesional, el sistema responde informando la limitación y sugeriendo agendar una consulta dermatológica (US13, Escenario 2), con un acceso directo a la sección de Appointments.
+
+**Decisiones de interacción:**
+El chat mantiene historial visible de la conversación dentro de la sesión. Los mensajes del asistente que contienen recomendaciones de productos incluyen cards embebidas con el nombre y score de compatibilidad del producto sugerido, permitiendo al usuario navegar directamente al catálogo sin salir del chat. Esta integración responde a la arquitectura de información que conecta el nodo "Consultar IA" con el de "Skin Care" y "rutina personalizada" según el User Flow.
+
+**Video de demostración:**
+![Ver video en Microsoft Stream — AI Assistant Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fchatbot%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E13218f6c%2Da252%2D4691%2D8a4b%2Ddc7d4a27cdbf)
+*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+
+---
+
+### 5. Profile — Gestión de Perfil del Usuario
+
+**Historias de Usuario relacionadas:** US19 (Editar perfil e información personal), US20 (Actualizar características de piel), US21 (Cambiar contraseña), US17 (Seleccionar y pagar plan de suscripción), US18 (Gestionar suscripción activa) — Epics E9 y E8.
+
+**Descripción del flujo:**
+El usuario accede a Profile desde el último ítem del sidebar. La pantalla presenta una estructura de tres zonas:
+
+- **Zona izquierda (tarjeta de identidad):** Muestra avatar, nombre y email del usuario. Incluye las acciones de cambio de foto de perfil y cierre de sesión, así como una tarjeta de plan actual (Advanced · $19/mes · Active) con fecha de renovación y acceso directo a la gestión del plan.
+
+- **Zona derecha superior (Personal Information):** Formulario in-line con campos de nombre y email editables directamente. El botón "Save changes" confirma los cambios y el sistema valida el formato antes de guardar (US19, Escenarios 1 y 2).
+
+- **Zona derecha inferior (Account Sections):** Tres cards navegables que actúan como puntos de entrada a sub-flujos específicos:
+  - **Skin Profile:** acceso a la actualización de tipo de piel y nivel de sensibilidad, con recálculo automático de recomendaciones al guardar (US20, Escenario 1).
+  - **Settings:** preferencias de idioma y configuración general de la aplicación.
+  - **My Plan:** vista de gestión de suscripción activa, con opciones de cambio de plan o cancelación. Al cancelar, el sistema mantiene el acceso hasta el fin del período vigente (US18, Escenarios 1 y 2). La badge "Active" sobre la card comunica el estado actual de la suscripción sin necesidad de ingresar a la vista de detalle.
+
+**Decisiones de interacción y arquitectura de información:**
+La pantalla Profile centraliza en una sola vista las acciones de identidad (nombre, foto, email), estado de cuenta (plan actual) y accesos a configuraciones más profundas (Skin Profile, Settings, Security, Favorites), siguiendo directamente la ramificación definida en el User Flow Diagram desde el nodo "Entrar al perfil". Esta decisión evita una navegación profunda innecesaria para las acciones más frecuentes (editar nombre/email), reservando la navegación a nuevas vistas para configuraciones menos habituales. La edición de información personal in-line (sin redirección) reduce la fricción para updates cotidianos, mientras que la gestión del plan — una acción de mayor peso e impacto — requiere ingresar a una vista dedicada, reforzando su relevancia semántica.
+
+**Video de demostración:**
+![Ver video en Microsoft Stream — Profile Flow] (https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fprofile%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E093fbe67%2D18cf%2D4509%2D90a2%2D54ce22b246cb)
+
+*Imagen de Evidencia*:
+
+
+
+##### Consideraciones de Diseño Responsivo
+
+Los prototipos presentados corresponden a la versión Desktop Web Browser. La versión Mobile Web Browser adapta los mismos flujos con los siguientes ajustes estructurales:
+
+- El sidebar de navegación lateral se reemplaza por una bottom navigation bar con íconos de las secciones principales.
+- Las layouts de dos columnas (como la pantalla Profile) se apilan verticalmente en orden de prioridad de contenido.
+- Los paneles de reemplazo de productos y confirmaciones de pago se presentan como bottom sheets que se elevan sobre el contenido, manteniendo el contexto visual.
+- Los formularios de edición in-line en mobile mantienen el mismo comportamiento que en desktop, con teclado nativo del dispositivo activándose al tocar cada campo.
+
+Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipos de interacción entre ambas plataformas, asegurando que los flujos documentados en el User Flow Diagram sean igualmente trazables en la experiencia mobile.
+
 
 ## 4.6. Domain-Driven Software Architecture
 
