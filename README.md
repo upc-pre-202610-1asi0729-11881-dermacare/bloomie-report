@@ -6530,7 +6530,6 @@ cada uno responsable de una o más secciones mediante feature branches independi
 ### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
-
 El Sprint 2 tuvo como punto de partida los resultados alcanzados en el Sprint 1, donde se desplegó la Landing Page de Bloomie y se completó la mayor parte de la documentación base del proyecto. En esta segunda iteración el equipo se enfocó en desarrollar la primera versión funcional del Frontend Web Application, implementando las funcionalidades core del producto y simulando la integración con servicios backend mediante una Mock API. La aplicación fue desplegada en Azure Static Web Apps como entorno de producción para el frontend.
 
 | Campo | Detalle |
@@ -6548,7 +6547,6 @@ El Sprint 2 tuvo como punto de partida los resultados alcanzados en el Sprint 1,
 | **Sprint 2 Goal** | Our focus is on delivering a functional first version of the Bloomie web application with its core skincare features. We believe it delivers a tangible and interactive experience to young adults seeking personalized skincare solutions, allowing them to navigate the skin analysis flow, personalized routines and product catalog. This will be confirmed when users can access and interact with the main sections of the web application, including skin scan, routine management, product catalog and progress tracking, with data responses simulated through a deployed Mock API, and the application is publicly accessible via Azure Static Web Apps. |
 | **Sprint 2 Velocity** | 34 |
 | **Sum of Story Points** | 34 |
-
 #### 5.2.2.2. Aspect Leaders and Collaborators
 #### 5.2.2.3. Sprint Backlog 2
 #### 5.2.2.4. Development Evidence for Sprint Review
