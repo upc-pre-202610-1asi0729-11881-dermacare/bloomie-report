@@ -7467,6 +7467,32 @@ seguimiento utilizado durante el sprint, junto con la tabla de control de estado
 </table>
 
 #### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo implementó la primera versión funcional del Frontend Web 
+Application de Bloomie, estructurado por bounded contexts bajo una arquitectura 
+orientada al dominio. Se configuró la integración con MockAPI desplegada en Azure, se 
+implementó soporte de internacionalización (i18n), se desplegó la aplicación en Azure 
+Static Web Apps y se integró Stripe como pasarela de pagos en el flujo de suscripción 
+de la Landing Page. A continuación se presentan los commits más representativos del 
+sprint organizados por repositorio.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/add-server-and-environments | 99a45c9 | feat(server): add json-server mock database and routes | - | 05/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/add-server-and-environments | 576e74c | feat(environments): update api base url in production | - | 05/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/add-shared-bounded-context | dc35e6f | feat(shared): add shared context | - | 06/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/add-i18n-translations | dba022c | feat(i18n): add i18n | - | 07/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | fix/azure-static-web-apps-work | 72e6bd7 | fix(ci): update checkout action to v4 and fix output location path | - | 09/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | chore/configure-spa-rewrite-rule | 4b7ee8f | chore: configure rewrite rule for SPA | - | 09/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/dermatology-care-bounded | 1d3d557 | docs(dermatology-bounded): add dermatology bounded context | - | 09/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/routine-management | ff6c253 | feat(routine-management): add entities in the domain layer | - | 11/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/routine-management | ac17a89 | feat(routine-management): add apis and endpoints in the infrastructure layer | - | 11/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/routine-management | 9008e46 | feat(routine-management): add views in the presentation layer | - | 11/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/product-discovery | d335ae6 | docs(product-discovery): add product discovery context | - | 11/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/product-discovery | 7277064 | feat(product-discovery): add product-discovery infrastructure layer | - | 12/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-app | feat/intelligent-support | fa16e5f | feature-intelligent support | - | 12/05/2026 |
+| upc-pre-202610-1asi0729-11881-dermacare/bloomie-website | feat/pricing-links | 6945278 | feat(pricing-links): add pricing links | - | 12/05/2026 |
+
 #### 5.2.2.5. Execution Evidence for Sprint Review
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
