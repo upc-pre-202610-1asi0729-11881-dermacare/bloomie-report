@@ -7695,9 +7695,47 @@ y la implementación de todos los bounded contexts del sistema.
 **Resumen de actividad — Repositorio bloomie-app (Frontend Web Application)**
 
 [Agregar screenshot de GitHub Insights del repositorio bloomie-app]
-# Conclusiones
 ## Conclusiones y recomendaciones
-## Video About-the-Team
+
+### Conclusiones
+
+**En relación a los Problem Statements**
+
+El proyecto Bloomie surge como respuesta a una problemática real y verificada: los jóvenes adultos de 21 a 30 años enfrentan una sobrecarga de información contradictoria sobre skincare, carecen de herramientas personalizadas para el cuidado de su piel y tienen acceso limitado a orientación dermatológica asequible. A lo largo de los dos sprints ejecutados, el equipo logró construir una solución concreta que aborda directamente estas dificultades mediante análisis de piel con IA, rutinas personalizadas, catálogo de productos con score de compatibilidad y acceso a consultas dermatológicas virtuales. La implementación del Frontend Web Application integrado con una Mock API confirma que la arquitectura definida es técnicamente viable para resolver el problema planteado.
+
+**En relación a los Lean UX Assumptions**
+
+Los assumptions definidos en la etapa inicial del proyecto mostraron ser coherentes con las decisiones de diseño y desarrollo tomadas a lo largo de los sprints. La hipótesis de que los usuarios necesitan identificar correctamente su tipo de piel para tomar mejores decisiones se reflejó directamente en la priorización de las funcionalidades de escaneo facial y diagnóstico como features core del Sprint 2. El assumption de que la interfaz debe ser intuitiva, con colores suaves y jerarquía visual clara, fue validado en el diseño del sistema visual implementado en la Web Application, el cual presenta una estructura de navegación limpia y consistente con la identidad de marca de Bloomie. El assumption de negocio sobre el modelo de suscripción escalonado fue implementado desde la Landing Page con la integración de Stripe, permitiendo al visitante seleccionar un plan y completar el pago antes de acceder a la aplicación.
+
+**En relación a los Lean UX Hypothesis Statements**
+
+Las hipótesis establecidas orientaron la definición del alcance funcional del producto. La hipótesis de que ofrecer recomendaciones personalizadas permitirá a los usuarios elegir productos más adecuados motivó la implementación del módulo de catálogo con score de compatibilidad y del sistema de rutinas personalizadas basadas en el diagnóstico de piel. La hipótesis de que visualizar el progreso incrementará la constancia del usuario se tradujo en la implementación del módulo de métricas con racha de días, tasa de adherencia y gráfico de evolución del skin health score. La hipótesis relacionada con la integración de dermatólogos como factor de confianza se materializó en el bounded context de Dermatology Care, que incluye el listado de especialistas, el agendamiento de citas y la consulta virtual con chat en tiempo real. Si bien las métricas de éxito definidas en las hipótesis (retención mensual, tasa de suscripción, uso de funcionalidades premium) aún no pueden ser medidas en esta etapa al no contar con usuarios reales, la arquitectura implementada sienta las bases necesarias para su futura medición.
+
+**En relación al proceso de desarrollo**
+
+El equipo demostró capacidad para estructurar un proyecto de software complejo bajo metodología Scrum con dos sprints ejecutados. En el Sprint 1 se establecieron todos los fundamentos del proyecto: documentación, diseño UX/UI, arquitectura C4, Event Storming y despliegue de la Landing Page. En el Sprint 2 se implementó la primera versión funcional del frontend estructurada por bounded contexts bajo Domain-Driven Design, lo que garantiza escalabilidad y mantenibilidad para los sprints futuros. La identificación de deuda técnica del Sprint 1 (prototipo y Sprint Backlog incompletos) y su resolución al inicio del Sprint 2 evidencia una mejora en la gestión interna del equipo.
+
+---
+
+### Recomendaciones
+
+**Roadmap de próximos sprints**
+
+Para el Sprint 3 se recomienda priorizar los bounded contexts de IAM (autenticación real con JWT), Skin Profiles y Routines, ya que son los más críticos para el flujo core del usuario. Adicionalmente, se recomienda documentar todos los endpoints con OpenAPI/Swagger desde el inicio del desarrollo backend para mantener coherencia con las Technical Stories especificadas.
+
+Para el Sprint 4 se recomienda integrar los bounded contexts de Product Discovery y Dermatology Care al backend, incorporar las pasarelas de pago reales (Stripe para suscripciones y pagos de consultas), e iniciar las pruebas de integración entre el frontend desplegado en Azure y la API desplegada en Azure App Service.
+
+**Sobre la arquitectura**
+
+Se recomienda mantener la estructura de bounded contexts definida en el DDD como guía para la organización del backend, asegurando que cada contexto tenga su propio módulo, servicios y repositorios independientes. Esto facilitará la asignación de responsabilidades por integrante y reducirá los conflictos de integración.
+
+**Sobre la experiencia de usuario**
+
+Se recomienda incorporar las entrevistas de validación con usuarios reales en el Sprint 3 para contrastar los assumptions definidos en el Lean UX Canvas con el comportamiento real de los segmentos objetivo. Los módulos de rutina, catálogo y escaneo facial son los más prioritarios para validar, dado que representan el core de la propuesta de valor de Bloomie.
+
+**Sobre el equipo**
+
+Se recomienda mantener el esquema de Aspect Leaders por bounded context establecido en el Sprint 2, ya que demostró ser efectivo para distribuir responsabilidades de forma clara. Para los siguientes sprints se sugiere implementar daily standups breves y definir fechas límite internas por work item desde el inicio de cada sprint para evitar la acumulación de trabajo identificada como oportunidad de mejora en la retrospectiva del Sprint 1.
 
 # Bibliografía
 
