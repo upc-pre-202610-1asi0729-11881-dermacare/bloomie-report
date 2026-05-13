@@ -7529,6 +7529,69 @@ La Web Application de Bloomie se encuentra actualmente operativa en la siguiente
 **https://delightful-dune-0988c2a0f7.azurestaticapps.net**
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo configuró y desplegó una Mock API en Azure App Service 
+utilizando JSON Server como solución temporal para simular los Web Services del sistema 
+Bloomie. Se definieron y documentaron 19 endpoints que el Frontend Web Application 
+consume para todas las funcionalidades core implementadas en este sprint. Dado que en 
+esta etapa aún no se cuenta con una RESTful API desarrollada internamente, los endpoints 
+apuntan a la Mock API desplegada en 
+`https://bloomie-mock-api.azurewebsites.net/api/v1`. La documentación formal con 
+OpenAPI se elaborará a partir del Sprint 3 cuando se inicie el desarrollo del backend.
+A continuación se detalla la especificación de cada endpoint con sus acciones, 
+parámetros y ejemplos de response basados en los datos de muestra configurados.
+
+| Endpoint | Método HTTP | Sintaxis de llamada | Parámetros | Ejemplo de Response | Descripción |
+|---|---|---|---|---|---|
+| /users | GET | GET /users | — | `[{ "id": 1, "email": "sofia@gmail.com", "name": "Sofía", "last_name": "Mendoza", "role": "YOUNG_ADULT", "status": "ACTIVE" }]` | Retorna la lista de todos los usuarios registrados |
+| /users | POST | POST /users | Body: name, last_name, email, password_hash, role | `{ "id": 7, "email": "nuevo@email.com", "name": "Nuevo", "role": "YOUNG_ADULT", "status": "ACTIVE" }` | Crea un nuevo usuario en el sistema |
+| /users/{id} | GET | GET /users/{id} | Path: id | `{ "id": 1, "email": "sofia@gmail.com", "name": "Sofía", "last_name": "Mendoza", "role": "YOUNG_ADULT" }` | Retorna el usuario correspondiente al ID indicado |
+| /users/{id} | PUT | PUT /users/{id} | Path: id — Body: name, last_name, email | `{ "id": 1, "name": "Sofía actualizada", "email": "sofia@gmail.com" }` | Actualiza la información personal del usuario |
+| /sessions | POST | POST /sessions | Body: user_id, token, expires_at | `{ "id": 1, "user_id": 1, "token": "mock-token-abc123", "active": true }` | Registra una sesión de autenticación y retorna el token |
+| /skin_profiles | GET | GET /skin_profiles?user_id={id} | Query: user_id | `[{ "id": 1, "user_id": 1, "skin_type": "OILY", "sensitivity": "MEDIUM", "status": "COMPLETED" }]` | Retorna el perfil de piel asociado al usuario |
+| /skin_profiles | POST | POST /skin_profiles | Body: user_id, skin_type, sensitivity | `{ "id": 2, "user_id": 1, "skin_type": "OILY", "sensitivity": "MEDIUM", "status": "COMPLETED" }` | Registra el perfil dermatológico del usuario |
+| /skin_profiles/{id} | PUT | PUT /skin_profiles/{id} | Path: id — Body: skin_type, sensitivity | `{ "id": 1, "skin_type": "COMBINATION", "sensitivity": "LOW" }` | Actualiza las características de piel del usuario |
+| /facial_scans | GET | GET /facial_scans?user_id={id} | Query: user_id | `[{ "id": 1, "overall_score": 72, "hydration_score": 65, "texture_score": 70, "brightness_score": 80, "diagnosis": "Skin shows mild oiliness and some uneven texture.", "scanned_at": "2026-05-01T10:00:00Z" }]` | Retorna el historial de escaneos faciales del usuario |
+| /facial_scans | POST | POST /facial_scans | Body: user_id, skin_profile_id, image_url, diagnosis, scores | `{ "id": 3, "overall_score": 80, "status": "COMPLETED", "scanned_at": "2026-05-13T10:00:00Z" }` | Registra un nuevo escaneo facial |
+| /routines | GET | GET /routines?user_id={id} | Query: user_id | `[{ "id": 1, "user_id": 1, "skin_profile_id": 1, "facial_scan_id": 1, "status": "ACTIVE", "created_at": "2026-05-01T11:00:00Z" }]` | Retorna la rutina personalizada activa del usuario |
+| /routine_items | GET | GET /routine_items?routine_id={id} | Query: routine_id | `[{ "id": 1, "routine_id": 1, "product_id": 1, "step": "CLEANSE", "scheduled_time": "07:00", "order": 1 }, { "id": 2, "product_id": 3, "step": "SERUM", "scheduled_time": "07:15" }]` | Retorna los productos asignados a cada paso de la rutina |
+| /routine_items/{id} | PUT | PUT /routine_items/{id} | Path: id — Body: product_id | `{ "id": 2, "routine_id": 1, "product_id": 4, "step": "SERUM", "scheduled_time": "07:15" }` | Reemplaza el producto asignado a un paso de la rutina |
+| /daily_trackings | GET | GET /daily_trackings?user_id={id} | Query: user_id | `[{ "id": 1, "user_id": 1, "date": "2026-05-01T00:00:00Z", "status": "COMPLETED" }, { "id": 3, "date": "2026-05-03T00:00:00Z", "status": "NOT_COMPLETED" }]` | Retorna el historial de cumplimiento diario de rutina del usuario |
+| /daily_trackings | POST | POST /daily_trackings | Body: routine_id, user_id, date, status | `{ "id": 6, "user_id": 1, "date": "2026-05-13T00:00:00Z", "status": "COMPLETED" }` | Registra el cumplimiento de la rutina del día |
+| /products | GET | GET /products | — | `[{ "id": 1, "name": "Gentle Foaming Cleanser", "brand": "CeraVe", "category": "CLEANSER", "is_ai_recommended": true }, { "id": 3, "name": "Niacinamide 10% + Zinc 1%", "brand": "The Ordinary", "category": "SERUM" }]` | Retorna el catálogo completo de productos de skincare |
+| /products | GET | GET /products?category={valor} | Query: category | `[{ "id": 1, "name": "Gentle Foaming Cleanser", "brand": "CeraVe", "category": "CLEANSER" }, { "id": 2, "name": "Purifying Gel Cleanser", "brand": "La Roche-Posay", "category": "CLEANSER" }]` | Retorna los productos filtrados por categoría |
+| /products/{id} | GET | GET /products/{id} | Path: id | `{ "id": 3, "name": "Niacinamide 10% + Zinc 1%", "brand": "The Ordinary", "category": "SERUM", "benefits": ["Reduces blemishes", "Controls sebum", "Minimizes pores"] }` | Retorna el detalle completo de un producto |
+| /product_compatibilities | GET | GET /product_compatibilities?product_id={id}&skin_profile_id={id} | Query: product_id, skin_profile_id | `{ "id": 3, "product_id": 3, "compatibility_score": 95, "explanation": "Excellent match for controlling oiliness and minimizing pores." }` | Retorna el score de compatibilidad del producto con el perfil del usuario |
+| /favorite_products | GET | GET /favorite_products?user_id={id} | Query: user_id | `[{ "id": 1, "user_id": 1, "product_id": 3, "saved_at": "2026-05-02T09:00:00Z" }, { "id": 2, "product_id": 6, "saved_at": "2026-05-03T14:00:00Z" }]` | Retorna los productos guardados como favoritos del usuario |
+| /favorite_products | POST | POST /favorite_products | Body: user_id, product_id | `{ "id": 3, "user_id": 1, "product_id": 5, "saved_at": "2026-05-13T10:00:00Z" }` | Agrega un producto a la lista de favoritos del usuario |
+| /favorite_products/{id} | DELETE | DELETE /favorite_products/{id} | Path: id | `{}` (204 No Content) | Elimina un producto de la lista de favoritos |
+| /dermatologist_profiles | GET | GET /dermatologist_profiles | — | `[{ "id": 1, "specialty": "Specialist in acne-prone skin", "consultation_fee": 25, "rating": 4.9, "years_experience": 8, "patient_count": 1200, "available": true }]` | Retorna la lista de dermatólogos disponibles |
+| /dermatologist_profiles/{id} | GET | GET /dermatologist_profiles/{id} | Path: id | `{ "id": 1, "user_id": 2, "specialty": "Specialist in acne-prone skin", "consultation_fee": 25, "currency": "USD", "rating": 4.9, "years_experience": 8 }` | Retorna el perfil completo de un dermatólogo |
+| /dermatologist_availabilities | GET | GET /dermatologist_availabilities?dermatologist_id={id} | Query: dermatologist_id | `[{ "id": 1, "day_of_week": "MONDAY", "start_time": "09:00", "end_time": "13:00", "slot_duration": 30 }, { "id": 2, "day_of_week": "WEDNESDAY", "start_time": "14:00", "end_time": "18:00" }]` | Retorna los horarios de disponibilidad del dermatólogo |
+| /appointments | GET | GET /appointments?patient_id={id} | Query: patient_id | `[{ "id": 2, "dermatologist_id": 3, "scheduled_at": "2026-06-05T14:00:00Z", "status": "CONFIRMED" }, { "id": 3, "dermatologist_id": 1, "status": "SCHEDULED" }]` | Retorna las citas del usuario |
+| /appointments | POST | POST /appointments | Body: patient_id, dermatologist_id, payment_id, scheduled_at | `{ "id": 6, "patient_id": 1, "dermatologist_id": 2, "status": "SCHEDULED" }` | Registra una nueva cita dermatológica |
+| /appointments/{id} | PUT | PUT /appointments/{id} | Path: id — Body: status, cancellation_reason | `{ "id": 3, "status": "CANCELLED", "cancellation_reason": "Schedule conflict" }` | Actualiza el estado de una cita (confirmar o cancelar) |
+| /consultations | GET | GET /consultations?appointment_id={id} | Query: appointment_id | `{ "id": 1, "appointment_id": 4, "notes": "Patient shows mild acne on T-zone.", "recommendations": "Continue with current cleanser.", "status": "COMPLETED" }` | Retorna la consulta virtual asociada a una cita |
+| /consultations | POST | POST /consultations | Body: appointment_id, patient_id, dermatologist_id | `{ "id": 6, "appointment_id": 3, "status": "PENDING", "started_at": "2026-06-15T09:00:00Z" }` | Inicia una nueva consulta virtual |
+| /consultations/{id} | PUT | PUT /consultations/{id} | Path: id — Body: status, notes, recommendations | `{ "id": 5, "status": "COMPLETED", "notes": "Eczema well controlled.", "finished_at": "2026-06-05T14:30:00Z" }` | Cierra la consulta y registra notas clínicas |
+| /payments | GET | GET /payments?user_id={id} | Query: user_id | `[{ "id": 2, "amount": 35, "currency": "USD", "method": "YAPE", "status": "COMPLETED", "reference_type": "APPOINTMENT" }]` | Retorna los pagos realizados por el usuario |
+| /payments | POST | POST /payments | Body: user_id, reference_id, reference_type, amount, method | `{ "id": 7, "amount": 25, "currency": "USD", "status": "COMPLETED", "created_at": "2026-05-13T10:00:00Z" }` | Registra un nuevo pago de consulta o suscripción |
+| /plans | GET | GET /plans | — | `[{ "id": 1, "name": "Starter", "price": 0 }, { "id": 2, "name": "Advanced", "price": 9.99 }, { "id": 3, "name": "Elite", "price": 24.99 }]` | Retorna los planes de suscripción disponibles |
+| /plans/{id} | GET | GET /plans/{id} | Path: id | `{ "id": 2, "name": "Advanced", "price": 9.99, "features": ["3 facial scans/month", "Personalized routine", "AI assistant", "Product compatibility scores"] }` | Retorna el detalle de un plan específico |
+| /subscriptions | GET | GET /subscriptions?user_id={id} | Query: user_id | `{ "id": 1, "user_id": 1, "plan_id": 2, "status": "ACTIVE", "start_date": "2026-05-01T00:00:00Z", "next_billing_date": "2026-06-01T00:00:00Z", "auto_renew": true }` | Retorna la suscripción activa del usuario |
+| /subscriptions | POST | POST /subscriptions | Body: user_id, plan_id, payment_id | `{ "id": 2, "user_id": 1, "plan_id": 3, "status": "ACTIVE" }` | Registra una nueva suscripción del usuario |
+| /subscriptions/{id} | PUT | PUT /subscriptions/{id} | Path: id — Body: status, plan_id, auto_renew | `{ "id": 1, "status": "CANCELLED", "auto_renew": false }` | Actualiza el estado o plan de la suscripción activa |
+| /support_queries | GET | GET /support_queries?user_id={id} | Query: user_id | `[{ "id": 1, "user_id": 1, "suggested_action": "CHANGE_PRODUCT", "status": "RESOLVED", "created_at": "2026-05-03T12:00:00Z" }]` | Retorna el historial de consultas al asistente virtual del usuario |
+| /support_queries | POST | POST /support_queries | Body: user_id, skin_profile_id, last_facial_scan_id | `{ "id": 2, "user_id": 1, "status": "PENDING", "created_at": "2026-05-13T10:00:00Z" }` | Registra una nueva consulta al asistente virtual |
+| /chat_messages | GET | GET /chat_messages?support_query_id={id} | Query: support_query_id | `[{ "id": 1, "text": "My skin feels very oily even after cleansing, what should I do?", "type": "USER", "sent_at": "2026-05-03T12:00:00Z" }, { "id": 2, "text": "Based on your oily skin profile...", "type": "AI", "sent_at": "2026-05-03T12:00:05Z" }]` | Retorna los mensajes del chat de una consulta virtual |
+| /chat_messages | POST | POST /chat_messages | Body: support_query_id, text, type | `{ "id": 3, "support_query_id": 1, "text": "Thank you!", "type": "USER", "sent_at": "2026-05-13T10:00:00Z" }` | Envía un nuevo mensaje en el chat de la consulta |
+
+![Mock API desplegada en Azure](assets/img/mockapi-azure.png)
+
+*Interacción con la Mock API desplegada en Azure App Service mostrando los recursos 
+configurados con JSON Server y las respuestas retornadas con datos de muestra reales 
+del sistema Bloomie.*
+
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
