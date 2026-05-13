@@ -5832,21 +5832,7 @@ pendientes. El usuario puede corregir la información e intentar
 nuevamente sin perder los datos ya ingresados.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5) **User Flow 5:** Generar rutina personalizada
+2) **User Flow 2:** Generar rutina personalizada
 
 - User goal:
   Como joven adulto, quiero recibir una rutina personalizada con productos
@@ -5881,7 +5867,7 @@ El usuario puede optar por reintentar el proceso, contactar con soporte
 o regresar a la pantalla anterior.
 
 
-8) **User Flow 8:** Explorar catálogo de productos
+3) **User Flow 3:** Explorar catálogo de productos
 
 - User goal:
   Como joven adulto, quiero explorar el catálogo de productos y aplicar
@@ -5914,7 +5900,7 @@ y explorar el catálogo completo nuevamente.
 
 
 
-10) **User Flow 10:** Guardar producto como favorito
+4) **User Flow 4:** Guardar producto como favorito
 
 - User goal:
   Como joven adulto, quiero guardar productos en mis favoritos para
@@ -5944,6 +5930,79 @@ Si el usuario decide eliminar un producto de sus favoritos, selecciona
 nuevamente el ícono de corazón. El sistema remueve el producto de la
 lista de favoritos y actualiza el contador en la pestaña "Favourites"
 mostrando únicamente los productos restantes.
+
+5) <strong>User Flow 5:</strong> Registro de dermatólogo
+    
+•⁠  ⁠User goal: 
+<br> Como dermatólogo, quiero registrar mis credenciales profesionales.
+
+<br><strong>User Story asociada: </br></strong>
+US25 - Como dermatólogo, quiero registrar mis credenciales profesionales para acceder a las funcionalidades especializadas de Bloomie.
+
+•⁠  ⁠mobile
+<p align = "center">
+<img src="assets/img/userflow/userflow25.png" alt="user flow" width="550"/>
+
+•⁠  ⁠Desktop
+<p align = "center">
+<img src="assets/img/userflow/userflow25_web.png" alt="user flow" width="550"/>
+
+-<strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El dermatólogo accede a la pantalla de Specialist Sign Up desde la landing page de Bloomie, completa correctamente los campos de nombre, apellido, email institucional, especialidad, contraseña y confirmación de contraseña, luego presiona Register. El sistema valida la información, crea la cuenta con rol DERMATOLOGIST y redirige al profesional a su agenda médica (My Agenda), habilitando el acceso completo a las funcionalidades especializadas de la plataforma.
+
+**Unhappy path:**
+Si el dermatólogo intenta presionar Register dejando campos obligatorios vacíos o con información incorrecta (como un email sin formato válido o una contraseña que no cumple el mínimo de 8 caracteres), el sistema rechaza el registro, resalta cada campo con error mediante un borde rojo y muestra un mensaje descriptivo debajo del campo afectado (ej. "Email is required", "Password is required", "Please select your specialty"), impidiendo la creación de la cuenta hasta que se corrija la información.
+
+
+6)  <strong>User Flow 6:</strong> Registrar notas y recomendaciones clínicas
+    
+•⁠  ⁠User goal: 
+<br> Como dermatólogo, quiero registrar notas clínicas y recomendaciones.
+
+<br><strong>User Story asociada: </br></strong>
+US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+
+•⁠  ⁠mobile
+<p align = "center">
+<img src="assets/img/userflow/userflow.png" alt="user flow" width="550"/>
+
+•⁠  ⁠Desktop
+<p align = "center">
+<img src="assets/img/userflow/userflow30_web.png" alt="user flow" width="550"/>
+
+-<strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El dermatólogo tiene una consulta activa con el paciente y redacta las notas clínicas en el panel Doctor's Notes, incluyendo datos como tipo de piel, nivel de hidratación, diagnóstico y tratamiento recomendado. Al finalizar, presiona Attach & Send Prescription, lo que envía la prescripción a ambas partes, y luego End Session. El sistema guarda toda la información, la asocia a la consulta correspondiente y genera un resumen que incluye diagnóstico, recomendaciones de productos e imágenes clínicas, visible tanto en la vista mobile como en la web.
+
+**Unhappy path:**
+Si el dermatólogo finaliza la consulta sin haber ingresado notas clínicas ni recomendaciones y presiona End Session, el sistema muestra un modal de confirmación ("End Consultation?") advirtiendo que la sesión será grabada y las notas guardadas para ambas partes. Si el dermatólogo confirma con End Session & Save, la consulta se cierra y el resumen generado queda con los campos de Diagnóstico y Recomendaciones del Doctor vacíos, sin información clínica asociada al caso.
+
+7)  <strong>User Flow 7:</strong> Consultar historial de consultas atendidas
+    
+•⁠  ⁠User goal: 
+<br> Como dermatólogo, quiero consultar el historial de mis consultas.
+
+<br><strong>User Story asociada: </br></strong>
+US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+•⁠  ⁠mobile
+<p align = "center">
+<img src="assets/img/userflow/userflow32.png" alt="user flow" width="550"/>
+
+•⁠  ⁠Desktop
+<p align = "center">
+<img src="assets/img/userflow/userflow32_web.png" alt="user flow" width="550"/>
+
+-<strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El dermatólogo accede a la sección Past Consultations desde su dashboard (mobile o web). El sistema detecta que existen consultas registradas y muestra el listado completo con fecha, hora, nombre del paciente, tipo de consulta y un indicador de fotos clínicas adjuntas cuando corresponde. Al presionar View Details en cualquier consulta, el sistema despliega el resumen completo con diagnóstico, notas clínicas, recomendaciones registradas y productos sugeridos asociados a ese caso.
+
+**Unhappy path:**
+Si el dermatólogo accede a la sección Past Consultations pero aún no ha atendido ninguna consulta en la plataforma, el sistema muestra el estado vacío con el mensaje "No past consultations available" acompañado de un ícono de alerta, informando claramente al profesional que no existe historial disponible por el momento, sin generar errores ni elementos rotos en la interfaz.
 
 ---
 
