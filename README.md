@@ -4378,6 +4378,25 @@ US25: Como dermatólogo, quiero registrar mis credenciales profesionales para ac
  <p align = "center">
 <img src="assets/img/wireframes/wireframe25_web.png" alt="wireframe" width="550"/>
 
+**Principios y elementos de diseño:**
+Este conjunto de wireframes cubre el flujo inicial de acceso para el segmento de dermatólogos certificados. La pantalla de bienvenida presenta el logotipo y el tagline "Your skincare journey starts here" en jerarquía H1, acompañados de dos botones de acción diferenciados: Login y Sign up, más un enlace secundario para especialistas "Register here as a specialist". El formulario Specialist Sign Up organiza los campos (First Name, Last Name, Email, Specialty, Password, Confirm Password) en una estructura secuencial vertical con etiquetas descriptivas sobre cada campo. El campo de contraseña incluye ícono de visibilidad y mensaje de validación en tiempo real. La pantalla final My Agenda presenta un selector de fecha horizontal (carrusel de días) y una lista de citas del día con nombre del paciente, tipo de consulta, horario, duración y botón de acción contextual (Join), estableciendo una estructura modular clara para la gestión de la agenda.
+<br>
+
+**Diseño inclusivo:**
+Los campos del formulario incluyen placeholder text descriptivo (doctor@clinic.com) que guía al usuario sin requerir instrucciones adicionales. Los botones de Login y Sign up mantienen el tamaño mínimo de 44×44 px. La separación de flujos (paciente vs. especialista) mediante etiquetas contextuales ("Registering as DERMATOLOGIST") evita confusiones entre segmentos. En My Agenda, los avatares de iniciales con fondo diferenciado permiten identificar pacientes con rapidez incluso ante similitudes de nombre.
+<br>
+
+**Arquitectura de información:**
+El flujo sigue una organización secuencial estricta: pantalla de acceso → selección de rol → formulario de registro → confirmación. Esta progresión lineal reduce la toma de decisiones simultáneas. My Agenda utiliza organización cronológica con priorización del día actual, alineada con el sistema de navegación jerárquica definido en el Information Architecture del proyecto.
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Visibilidad del estado del sistema: el indicador "Registering as DERMATOLOGIST" confirma al especialista el rol bajo el que está registrándose antes de completar el formulario.
+- Prevención de errores: el mensaje "Your password must contain at least 8 characters" aparece debajo del campo, orientando antes de que ocurra el error.
+- Consistencia y estándares: los campos de formulario y el botón de envío siguen convenciones ampliamente reconocidas en aplicaciones de registro móvil.
+- Reconocimiento antes que recuerdo: los botones de acción "Join" en My Agenda aparecen directamente en la tarjeta del paciente correspondiente, sin requerir navegación adicional.
+
+
 21) <strong> Wireframe 22: </strong> Configurar perfil profesional
 
 <br> <strong> User Story asociada: </br> </strong>
@@ -4391,6 +4410,24 @@ US26: Como dermatólogo, quiero configurar mi perfil profesional con mi especial
 - web wireframe:
  <p align = "center">
 <img src="assets/img/wireframes/wireframe26_web.png" alt="wireframe" width="550"/>
+
+**Principios y elementos de diseño:**
+La pantalla Profile del especialista concentra la gestión de información profesional en una única vista scrollable. El encabezado "Professional information and preferences" actúa como subtítulo sección (H3, Montserrat Semibold 18 px). Los campos editables (nombre completo, email, especialidad, años de experiencia y tarifa de consulta) se organizan en un formulario estructurado, con los dos últimos campos dispuestos en una cuadrícula de dos columnas para optimizar el espacio vertical en móvil. El botón principal Save changes ocupa el ancho completo, priorizando la acción central de la pantalla. Debajo se presentan dos accesos secundarios mediante filas de navegación: Availability y Settings, cada uno con ícono, título y descripción breve. La secuencia muestra tres estados del mismo formulario: vacío → editado → guardado, con el botón cambiando a "✓ Changes saved" como confirmación visual inmediata. En desktop, la vista añade un panel lateral con foto de perfil, especialidad destacada, tarifa de consulta y acceso a las secciones Availability y Settings como tarjetas con ícono.
+<br>
+
+**Diseño inclusivo:** El campo de tarifa incluye el indicador "(Consultation Fee ($))", eliminando ambigüedades sobre la unidad esperada. El botón de confirmación "✓ Changes saved" combina ícono de check más texto, sin depender exclusivamente del color verde para comunicar el éxito de la acción. El tamaño de los campos supera el mínimo de 44 px de alto, y las filas de Availability y Settings incluyen descripción secundaria para usuarios con menor familiaridad tecnológica.
+<br>
+
+**Arquitectura de información:**
+La pantalla sigue una jerarquía de contenido en tres niveles: información de identidad (nombre, email) → información profesional (especialidad, experiencia, tarifa) → accesos a subsecciones (Availability, Settings). Esta organización responde al modelo mental del especialista, quien primero valida sus datos personales y luego gestiona su configuración operativa.
+<br>
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Visibilidad del estado del sistema: el cambio del botón "Save changes" a "✓ Changes saved" informa inmediatamente que la acción fue completada.
+- Control y libertad del usuario: el usuario puede editar libremente todos los campos antes de confirmar, sin compromisos intermedios.
+- Consistencia y estándares: la estructura de campos, etiquetas y botón de guardado sigue convenciones establecidas en aplicaciones de gestión de perfil profesional.
+- Reconocimiento antes que recuerdo: los íconos de calendario (Availability) y engranaje (Settings) facilitan la identificación inmediata de cada sección.
  
 22)  <strong> Wireframe 22: </strong> Definir disponibilidad de atención
 
@@ -4406,6 +4443,23 @@ US27: Como dermatólogo, quiero definir mis horarios de disponibilidad para que 
  <p align = "center">
 <img src="assets/img/wireframes/wireframe27_web.png" alt="wireframe" width="550"/>
 
+**Principios y elementos de diseño:**
+La pantalla Availability permite al especialista configurar su disponibilidad para recibir citas. Se organiza en tres bloques funcionales claramente delimitados: Working Days (selector de días mediante botones circulares con abreviatura Mo/Tu/We/Th/Fr/Sa/Su), Working Hours (campos de hora de inicio y fin: Start time / End time) y Appointment Duration (selector de opciones predefinidas: 15 min, 30 min, 45 min, 60 min). El resumen de días activos aparece como texto auxiliar ("Active: Monday, Wednesday, Friday") debajo del selector, reforzando la comprensión del estado actual. El botón Save availability ocupa el ancho completo en la parte inferior. La secuencia muestra tres estados: configuración inicial → ajuste de parámetros → guardado confirmado ("✓ Availability saved!"). En desktop, la misma lógica se adapta a un layout de panel central dentro del Specialist Portal.
+<br>
+
+**Diseño inclusivo:**
+Los botones de día usan abreviaturas de dos letras universalmente reconocidas, acompañadas del resumen textual de días activos para usuarios que prefieran confirmación verbal. Las opciones de duración se presentan como botones de selección única claramente diferenciados (el seleccionado con fondo oscuro), sin requerir entrada manual. El botón de guardado cambia a verde con ícono de check al confirmar, usando tanto color como icono para el feedback.
+<br>
+
+**Arquitectura de información:**
+La organización sigue una secuencia lógica de configuración: primero los días → luego las horas → finalmente la duración por sesión. Esta progresión respeta el orden natural con el que un profesional planifica su agenda y reduce la carga cognitiva al descomponer la configuración en decisiones atómicas y ordenadas.
+Heurísticas de Nielsen aplicadas:
+
+**Visibilidad del estado del sistema:** el texto "Active: Monday, Wednesday, Friday" muestra el estado resultante de la selección en tiempo real, sin esperar al guardado.
+Flexibilidad y eficiencia de uso: las opciones predefinidas de duración (15/30/45/60 min) permiten configurar con un solo toque, sin teclado.
+Prevención de errores: el resumen textual de días activos evita que el especialista guarde una configuración sin advertir que omitió un día.
+Visibilidad del estado del sistema: el botón "✓ Availability saved!" confirma el guardado de forma inequívoca.
+
 23)  <strong> Wireframe 23: </strong> Visualizar agenda de consultas
 
 <br> <strong> User Story asociada: </br> </strong>
@@ -4419,6 +4473,24 @@ US28: Como dermatólogo, quiero visualizar mis consultas programadas para gestio
 - web wireframe:
  <p align = "center">
 <img src="assets/img/wireframes/wireframe28_web.png" alt="wireframe" width="550"/>
+
+**Principios y elementos de diseño:**
+La pantalla de Dashboard presenta un saludo personalizado ("Good morning, Dr. Laura Morales") con resumen del día en curso (5 consultations today · 2 done · 3 upcoming) y un botón "View agenda" de acción rápida. Debajo se distribuyen dos tarjetas de información: Today's Schedule (lista de pacientes del día con horario) y Patients today (contador numérico con estado), además de una tarjeta de acceso a History. La pantalla My Agenda utiliza un selector de fecha horizontal con la fecha activa destacada visualmente (fondo oscuro), seguido del resumen del día y una lista vertical de tarjetas de paciente con avatar de iniciales, nombre, tipo de consulta, horario, duración y botón contextual "Join" para consultas próximas. En desktop, el dashboard amplía los datos con métricas semanales, accesos rápidos (Quick Actions), agenda del día con barra de progreso, bloque de disponibilidad activa y estado de perfil.
+
+**Diseño inclusivo:**
+El saludo personalizado con nombre del especialista refuerza la identidad y contexto sin requerir orientación adicional. Los estados de las citas se comunican mediante íconos de check (completadas) y botones "Join" (pendientes), diferenciando visualmente el estado sin depender únicamente del color. Las tarjetas de paciente incluyen toda la información esencial (nombre, tipo, horario, duración) en una sola línea de lectura.
+<br>
+
+**Arquitectura de información:**
+El dashboard sigue una organización por audiencia y por urgencia temporal: primero el resumen de hoy, luego el detalle de la agenda, y finalmente el acceso al historial. En desktop se amplía con organización matricial (métricas + agenda + bloques secundarios), permitiendo al especialista obtener una visión completa del día sin cambiar de pantalla.
+<br>
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Visibilidad del estado del sistema: el indicador "2 done · 3 upcoming" comunica el progreso de la jornada en tiempo real desde la pantalla principal.
+- Reconocimiento antes que recuerdo: los botones "Join" aparecen directamente en la tarjeta del paciente correspondiente, sin necesidad de recordar qué acción ejecutar.
+- Consistencia y estándares: el selector de fecha horizontal con día activo destacado es un patrón reconocido en aplicaciones de calendario y agenda.
+- Flexibilidad y eficiencia de uso: el botón "View agenda" en el dashboard permite al especialista acceder directamente a la vista detallada desde el primer nivel.
 
 24)  <strong> Wireframe 24: </strong> Realizar consulta virtual en tiempo real
 
@@ -4434,6 +4506,24 @@ US29: Como dermatólogo, quiero interactuar en tiempo real con el paciente duran
  <p align = "center">
 <img src="assets/img/wireframes/wireframe29_web.png" alt="wireframe" width="550"/>
 
+**Principios y elementos de diseño:**
+Este flujo cubre la experiencia de videollamada del especialista. La pantalla de consulta activa presenta una barra de estado superior fija ("Consultation Active · 10:30 AM · Bloomie · Dr. Laura Morales") que ancla el contexto durante toda la sesión. El área principal muestra el video del paciente a pantalla completa con una miniatura del doctor (You) y una barra de herramientas inferior con íconos de micrófono, cámara, adjuntos, notas y colgar. Al presionar finalizar, aparece un modal de confirmación ("End Consultation?") con descripción del comportamiento del sistema ("The session will be recorded and notes will be saved for both Dr. Morales and Sofia. A summary will be generated.") y dos opciones: "End Session & Save" y "Continue Session". La pantalla de Session Ended confirma el cierre y redirige al resumen. La pantalla Select a consultation del historial presenta tarjetas de consultas pasadas con fecha, hora, nombre del médico y estado (Completed / Canceled), con botón "View details" o "Rebook" según corresponda.
+<br>
+
+**Diseño inclusivo:**
+La barra de estado superior fija garantiza que el especialista siempre sepa que está en una sesión activa, independientemente del contenido visible. El modal de confirmación explica con lenguaje claro las consecuencias de la acción antes de ejecutarla. Los estados de consulta pasada (Completed / Canceled) se diferencian mediante texto y color de indicador, usando múltiples canales para la comunicación de estado.
+<br>
+
+**Arquitectura de información:**
+El flujo sigue la secuencia natural de una teleconsulta: inicio de sesión → ejecución → decisión de cierre → confirmación → resumen. Cada pantalla resuelve un único objetivo, minimizando la carga de decisiones simultáneas. El historial usa organización cronológica inversa (más reciente primero), alineada con el modelo mental del especialista que busca consultas recientes.
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Visibilidad del estado del sistema: la barra "Consultation Active" con hora en curso mantiene al especialista orientado en todo momento.
+- Prevención de errores: el modal de confirmación antes de cerrar la sesión evita cierres accidentales con pérdida de datos.
+- Control y libertad del usuario: la opción "Continue Session" dentro del modal permite revertir la decisión de cierre sin consecuencias.
+- Ayuda y documentación: el mensaje explicativo dentro del modal informa qué sucederá con la grabación y las notas antes de confirmar.
+
 25)  <strong> Wireframe 25: </strong> Registrar notas y recomendaciones clínicas
 
 <br> <strong> User Story asociada: </br> </strong>
@@ -4447,6 +4537,23 @@ US30: Como dermatólogo, quiero registrar notas clínicas y recomendaciones dura
 - web wireframe:
  <p align = "center">
 <img src="assets/img/wireframes/wireframe30_web.png" alt="wireframe" width="550"/>
+
+**Principios y elementos de diseño:**
+La pantalla de Doctor's Notes se presenta como un panel superpuesto sobre la videollamada activa, con barra de herramientas de edición (Bold, Italic, listas) y una plantilla precompletada con la información del paciente, fecha y médico. El contenido se organiza en secciones etiquetadas: Clinical Notes, Diagnosis y Recommended Treatment, guiando la documentación clínica de forma estructurada. El indicador "Auto-saving" en la esquina superior derecha confirma el guardado continuo. Al completar las notas, el especialista puede "Attach & Send Prescription" (PDF guardado para ambas partes) y "Share Notes with Patient", con botón "End Session" al pie. El estado siguiente muestra "Prescription Sent" con confirmación de guardado. La pantalla Consultation Summary presenta el resumen post-sesión con zona de carga de imágenes clínicas, diagnóstico, recomendaciones del médico por producto y horario de aplicación, y botón de retorno.
+<br>
+
+**Diseño inclusivo:**
+La plantilla precompletada en Doctor's Notes reduce el trabajo manual del especialista y previene omisiones en la documentación clínica. Las acciones de cierre (Attach & Send Prescription / Share Notes / End Session) están ordenadas por prioridad decreciente, con la más importante en primer lugar. El Consultation Summary usa tipografía Body Regular (16 px, line-height 150%) para garantizar legibilidad en móvil.
+Arquitectura de información:
+El panel de notas superpone funcionalidad de documentación sobre la consulta activa sin interrumpir la videollamada, manteniendo ambas tareas accesibles en simultáneo. El Consultation Summary sigue una organización secuencial: imágenes → diagnóstico → recomendaciones → retorno, replicando el flujo lógico de un reporte clínico. 
+<br>
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Visibilidad del estado del sistema: el indicador "Auto-saving" informa que las notas se están guardando continuamente, sin requerir acción manual.
+- Consistencia y estándares: la barra de edición de texto (B, I, listas) sigue las convenciones de editores de texto conocidos por los usuarios.
+- Prevención de errores: la confirmación "Prescription Sent · Saved for patient & doctor" elimina la incertidumbre sobre si el envío fue exitoso.
+- Reconocimiento antes que recuerdo: la plantilla precompletada con datos del paciente evita que el especialista deba recordar o reingresar información ya disponible.
 
 26)  <strong> Wireframe 26: </strong> Registrar fotografías clínicas
 
@@ -4462,6 +4569,24 @@ US31: Como dermatólogo, quiero registrar fotografías clínicas del paciente du
  <p align = "center">
 <img src="assets/img/wireframes/wireframe33_web.png" alt="wireframe" width="550"/>
 
+**Principios y elementos de diseño:**
+Este flujo presenta la modalidad de consulta con paciente mediante chat en tiempo real dentro de la videollamada. La barra superior de estado mantiene su estructura fija ("Consultation Active · 10:30 AM · Bloomie · Patient: Ana García"). El área principal muestra el video del paciente con miniatura del doctor. El panel de Chat se despliega lateralmente con pestañas Chat / Notes, mostrando el contador de fotos recibidas ("2 photos"). Los mensajes se diferencian visualmente por remitente: el médico a la derecha (fondo oscuro), el paciente a la izquierda (fondo neutro), más timestamp. El botón "Save as clinical photo" aparece debajo de cada imagen enviada por el paciente, y al guardarse muestra "Saved to clinical record ✓". La barra de entrada de texto y botón de envío se mantienen fijos al pie del panel.
+<br>
+
+**Diseño inclusivo:**
+La diferenciación de mensajes por posición (derecha/izquierda) y fondo cumple con el estándar de aplicaciones de mensajería conocidas por los usuarios, sin requerir aprendizaje adicional. El botón "Save as clinical photo" contextualiza la acción directamente sobre la imagen recibida, sin requerir que el especialista recuerde guardar manualmente. La confirmación "Saved to clinical record ✓" usa ícono + texto para comunicar el éxito sin depender exclusivamente del color.
+<br>
+
+**Arquitectura de información:**
+El panel de Chat convive con la videollamada activa mediante una organización matricial: video principal + panel lateral de comunicación. Las pestañas Chat / Notes permiten alternar entre funcionalidades complementarias sin abandonar la consulta. El contador de fotos en la pestaña Chat informa la cantidad de material clínico recibido sin necesidad de desplazarse.
+Heurísticas de Nielsen aplicadas:
+<br>
+
+**Visibilidad del estado del sistema:** el badge "2 photos" en la pestaña Chat informa cuántas imágenes han sido enviadas en la sesión actual.
+Consistencia y estándares: el formato de burbuja de chat (posición por remitente, timestamp) sigue las convenciones de aplicaciones de mensajería ampliamente conocidas.
+Reconocimiento antes que recuerdo: el botón "Save as clinical photo" aparece directamente debajo de cada imagen recibida, sin requerir que el médico recuerde cómo guardarla.
+Visibilidad del estado del sistema: la confirmación "Saved to clinical record ✓" cierra el ciclo de la acción con retroalimentación inmediata.
+
 27)   <strong> Wireframe 27: </strong> Consultar historial de consultas atendidas
   
 <br> <strong> User Story asociada: </br> </strong>
@@ -4475,6 +4600,25 @@ US32: Como dermatólogo, quiero consultar el historial de mis consultas atendida
 - web wireframe:
  <p align = "center">
 <img src="assets/img/wireframes/wireframe32_web.png" alt="wireframe" width="550"/>
+
+**Principios y elementos de diseño:**
+Este wireframe reutiliza el dashboard del especialista y añade el flujo completo de Past Consultations y Consultation Summary. En Past Consultations, cada tarjeta presenta fecha, hora, nombre del paciente, tipo de consulta y estado (con punto de color), además de indicador de fotos clínicas adjuntas y botón "View details". La barra de búsqueda superior ("Search by patient, type or date...") permite filtrado inmediato. El Consultation Summary presenta foto del paciente en zona de carga, metadata de la sesión (fecha, tipo), diagnóstico, notas clínicas y recomendaciones por producto con instrucciones de uso detalladas, más botón "Return". En desktop se añade una columna lateral de Recommended Products con imágenes de los productos mencionados.
+<br>
+
+**Diseño inclusivo:**
+Los indicadores de estado de consulta (punto verde = Completed, punto rojo = Canceled) se complementan con la etiqueta textual "Status: Completed / Canceled", garantizando accesibilidad para usuarios con daltonismo. La función de búsqueda en Past Consultations reduce la necesidad de desplazamiento para ubicar registros específicos. El botón "Rebook" aparece únicamente en las consultas canceladas, contextualizando la acción disponible según el estado.
+<br>
+
+**Arquitectura de información:**
+Past Consultations usa organización cronológica inversa como convención estándar para historiales clínicos. El Consultation Summary ordena la información siguiendo el flujo de un reporte dermatológico real: metadata → imágenes → diagnóstico → notas → recomendaciones, facilitando la lectura a profesionales familiarizados con este formato.
+<br>
+
+**Heurísticas de Nielsen aplicadas:**
+
+- Reconocimiento antes que recuerdo: el indicador "Clinical photos attached" en cada tarjeta permite identificar qué consultas incluyen material visual sin abrir el detalle.
+- Flexibilidad y eficiencia de uso: la barra de búsqueda permite localizar una consulta específica sin recorrer el historial completo.
+- Consistencia y estándares: el formato de cada tarjeta de historial (fecha · paciente · tipo · estado · acción) sigue el patrón de listas de historial clínico digital.
+- Control y libertad del usuario: el botón "Return" al pie del Consultation Summary permite volver al historial sin perder la posición en la lista.
 
 
 ### 4.4.2. Web Applications Wireflow Diagrams
@@ -4868,7 +5012,7 @@ US26 - Como dermatólogo, quiero configurar mi perfil profesional con mi especia
 
 -<strong>Descripción del flujo:</strong>
 1. El dermatólogo accede a la sección 'Profile' desde la barra de navegación inferior (móvil) o desde el menú lateral (web). 
-2. l sistema muestra la pantalla de perfil con los campos: nombre, email, especialidad (Specialty), años de experiencia (Years of Experience) y tarifa de consulta (Consultation Fee). 
+2. El sistema muestra la pantalla de perfil con los campos: nombre, email, especialidad (Specialty), años de experiencia (Years of Experience) y tarifa de consulta (Consultation Fee). 
 3. El dermatólogo modifica los campos deseados, por ejemplo, actualiza la especialidad a 'Pediatrician Dermatology', los años de experiencia a '11' y la tarifa a '$200'. 
 4. Si los datos son válidos: el sistema guarda el perfil y muestra el botón con el mensaje ' Changes saved' (móvil) o 'Saved' (web), confirmando la actualización.
 
