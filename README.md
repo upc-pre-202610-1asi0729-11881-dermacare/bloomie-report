@@ -5061,7 +5061,7 @@ US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evoluci
 
 ![wireflow 11 web](assets/img/wireflow/wireflow-11-web.png)
 
-![wireflow 11 mobile](assets/img/wireflow/wireflow-11-mobile.png)
+![wireflow 11 mobile](assets/img/wireflow/wireflow-11-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede al dashboard 
@@ -5075,7 +5075,7 @@ US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evoluci
 <br><strong>User Story asociada: </br></strong>
 US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
 
-![wireflow 13 mobile](assets/img/wireflow/wireflow-13-mobile.png)
+![wireflow 13 mobile](assets/img/wireflow/wireflow-13-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario ingresa desde el dashboard al aparto que dice "consult",
@@ -5088,7 +5088,7 @@ US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingr
 <br><strong>User Story asociada: </br></strong>
 US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
 
-![wireflow 14 mobile](assets/img/wireflow/wireflow-14-mobile.png)
+![wireflow 14 mobile](assets/img/wireflow/wireflow-14-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario, ingresa desde el dashboard al apartado "consult a dermatologist". 
@@ -5102,7 +5102,7 @@ US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibl
 <br><strong>User Story asociada: </br></strong>
 US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica para confirmar mi cita.
 
-![wireflow 15 mobile](assets/img/wireflow/wireflow-15-mobile.png)
+![wireflow 15 mobile](assets/img/wireflow/wireflow-15-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede desde el listado de dermatólogos presionando "book appointment" 
@@ -5115,7 +5115,7 @@ US15 - Como joven adulto, quiero realizar el pago de una consulta dermatológica
 
 US16: Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
 
-![wireflow 16 mobile](assets/img/wireflow/wireflow-16-mobile.png)
+![wireflow 16 mobile](assets/img/wireflow/wireflow-16-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario acccede desde el apartado "scheduled appointment" 
@@ -5129,7 +5129,7 @@ US16: Como joven adulto, quiero cancelar una cita programada para gestionar camb
 
 US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
 
-![wireflow 17 mobile](assets/img/wireflow/wireflow-17-mobile.png)
+![wireflow 17 mobile](assets/img/wireflow/wireflow-17-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede desde su perfil al apartado "choose your plan". 
@@ -5142,7 +5142,7 @@ US17: Como joven adulto, quiero seleccionar un plan de suscripción y completar 
 
 US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
 
-![wireflow 18 mobile](assets/img/wireflow/wireflow-18-mobile.png)
+![wireflow 18 mobile](assets/img/wireflow/wireflow-18-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede desde su pefil a la sección "My Plan"
@@ -5154,7 +5154,7 @@ US18: Como joven adulto, quiero gestionar mi suscripción activa para cambiar de
 
 US19: Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
 
-![wireflow 19 mobile](assets/img/wireflow/wireflow-19-mobile.png)
+![wireflow 19 mobile](assets/img/wireflow/wireflow-19-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede a su perfil
@@ -5166,7 +5166,7 @@ US19: Como joven adulto, quiero editar mi información personal para mantener mi
 
 US20: Como joven adulto, quiero actualizar mis características de piel para recibir recomendaciones más precisas.
 
-![wireflow 20 mobile](assets/img/wireflow/wireflow-20-mobile.png)
+![wireflow 20 mobile](assets/img/wireflow/wireflow-20-app.png)
 
 -<strong> descripción del flujo</strong>
 1. El usuario accede a su perfil 
