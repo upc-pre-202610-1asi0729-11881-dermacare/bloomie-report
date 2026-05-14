@@ -6627,7 +6627,30 @@ Subscription Context <br>
 
 ### 4.8.1. Database Diagrams
 
-<img src="assets/img/db-diagram.jpg" alt="DB Diagram" width="1000"/> <br>
+### Identity and Access Management
+<img src="assets/img/iam-bd.png" alt="DB Diagram" width="1000"/> <br>
+
+### Dermatology Care
+<img src="assets/img/dermatology-care.png" alt="DB Diagram" width="1000"/> <br>
+
+### Intelligent Support
+<img src="assets/img/intelligent-support.png" alt="DB Diagram" width="1000"/> <br>
+
+### Payments
+<img src="assets/img/payments.png" alt="DB Diagram" width="1000"/> <br>
+
+### Product Discovery
+<img src="assets/img/product-discovery.png" alt="DB Diagram" width="1000"/> <br>
+
+### Routine Management
+<img src="assets/img/routine-management.png" alt="DB Diagram" width="1000"/> <br>
+
+### Skin Analysis
+<img src="assets/img/skin-analysis.png" alt="DB Diagram" width="1000"/> <br>
+
+### Suscription
+<img src="assets/img/suscription.png" alt="DB Diagram" width="1000"/> <br>
+
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
