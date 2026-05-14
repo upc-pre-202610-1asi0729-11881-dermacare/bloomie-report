@@ -3299,7 +3299,9 @@ en esta guía.
 
 1. **Pantalla 1:** Home
 <br>
+
 **Componentes ilustrados:**
+
 - Navbar con logo "Bloomie" en Montserrat Semibold, alineado a la izquierda; links de navegación en Montserrat Regular 14 px (Label), color #333333. Badge de idioma ("EN") con borde circular y punto de color #A26769.
 - Headline principal en Montserrat Semibold 62 px (H1), color #333333. Palabra en cursiva (questionnaire) en Montserrat Italic Semibold, color #A26769.
 - Párrafo descriptivo en Montserrat Regular 16 px (Body), color #333333, line-height 150%.
@@ -3346,13 +3348,14 @@ Tarjetas de métricas (4 unidades, grid 2×2): fondo blanco, borde sutil 1px sol
 - Fondo general: #FDFFF8.
 
 <p align = "center">
-<img src="assets/img/landing/landingpage 2.png" alt="mensaje-barra" width="500"/>
+<img src="assets/img/landing/LandingPage 1.png" alt="mensaje-barra" width="500"/>
 <p align = "center">
 
 - **Pantalla 4:** Features
 <br>
 
 **Componentes ilustrados:**
+
 - Eyebrow label "FEATURES" en Montserrat Semibold 12 px uppercase, color #A26769.
 Headline "Everything your skin needs, in one place" en Montserrat Semibold 48 px (H2), #333333; in one place en Montserrat Italic Semibold, color #A26769.
 - Subtexto "Your skin deserves a complete ecosystem" en Montserrat Regular 16 px (Body), #333333.
@@ -3365,7 +3368,7 @@ Headline "Everything your skin needs, in one place" en Montserrat Semibold 48 px
 
 
 <p align = "center">
-<img src="assets/img/landing/LandingPage-4.png" alt="mensaje-barra" width="500"/>
+<img src="assets/img/landing/landingpage-4.png" alt="mensaje-barra" width="500"/>
 
 - **Pantalla 5:** Pricing
 <br>
@@ -3384,7 +3387,7 @@ Botón CTA en cada tarjeta: Montserrat Semibold 16 px (Button), tamaño mínimo 
 - Fondo general: #FDFFF8.
 
 <p align = "center">
-<img src="assets/img/landing/LandingPage-5.png" alt="mensaje-barra" width="500"/>
+<img src="assets/img/landing/landingPage-5.png" alt="mensaje-barra" width="500"/>
 
 - **Pantalla 6:** About us
 <br>
