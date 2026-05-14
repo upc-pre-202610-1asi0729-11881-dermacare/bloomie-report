@@ -6191,8 +6191,8 @@ El usuario accede a la sección Skin Scan desde el sidebar de navegación. El si
 La captura se ejecuta con feedback visual progresivo (animación de escaneo) para comunicar que el sistema está procesando, reduciendo la incertidumbre del usuario durante el tiempo de análisis por IA. Los scores del diagnóstico se presentan con indicadores gráficos tipo gauge, coherentes con la lógica de "progreso medible" que estructura toda la experiencia de Bloomie.
 
 **Video de demostración:**
-![Ver video en Microsoft Stream — Skin Scan Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fskin%2Dscan%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3a7235e7%2De093%2D41f6%2Db4c7%2Dd277aa7fd6ec) 
-*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+[Ver video en Microsoft Stream — Skin Scan Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw)
+![imagen-skin-vid](assets/img/prototyping/skin-vid-img.png)
 
 ---
 
@@ -6207,8 +6207,8 @@ Desde el sidebar, el usuario accede a My Routine, donde el sistema presenta la r
 El reemplazo de productos utiliza un patrón de bottom sheet en mobile y panel lateral en desktop, manteniendo visible la rutina de fondo para dar contexto al reemplazo. El marcado de cumplimiento diario se diseña como una acción de un solo toque (toggle), minimizando la fricción para un hábito que debe repetirse cada día.
 
 **Video de demostración:**
-![My Routine Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Froutine%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E75e48c0b%2Dec57%2D4430%2Dac47%2D5a681fef4d7c) 
-*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+[Ver video en Microsoft Stream — My Routine Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e) 
+![imagen-routine-vid](assets/img/prototyping/routine-vid-img.png)
 
 ---
 
@@ -6223,8 +6223,8 @@ El usuario accede a Appointments desde el sidebar. El sistema carga la lista de 
 El flujo de pago sigue un patrón de stepper lineal (selección de especialista → selección de horario → pago → confirmación) para que el usuario tenga siempre claridad sobre en qué paso se encuentra y cuánto falta. La consulta virtual se accede desde la misma tarjeta de cita confirmada, reduciendo los pasos necesarios para unirse a la sesión.
 
 **Video de demostración:**
-![Ver video en Microsoft Stream — Appointments Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fconsult%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E78ac1bcb%2D5692%2D41aa%2D8322%2D9a1333946a97)
- *(Screenshot representativo del flujo incluido en la entrega adjunta)*
+[Ver video en Microsoft Stream — Appointments Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s) 
+![imagen-appointments-vid](assets/img/prototyping/consultation-vid-img.png)
 
 ---
 
@@ -6239,8 +6239,8 @@ El usuario accede al AI Assistant desde el sidebar. La interfaz presenta un chat
 El chat mantiene historial visible de la conversación dentro de la sesión. Los mensajes del asistente que contienen recomendaciones de productos incluyen cards embebidas con el nombre y score de compatibilidad del producto sugerido, permitiendo al usuario navegar directamente al catálogo sin salir del chat. Esta integración responde a la arquitectura de información que conecta el nodo "Consultar IA" con el de "Skin Care" y "rutina personalizada" según el User Flow.
 
 **Video de demostración:**
-![Ver video en Microsoft Stream — AI Assistant Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fchatbot%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E13218f6c%2Da252%2D4691%2D8a4b%2Ddc7d4a27cdbf)
-*(Screenshot representativo del flujo incluido en la entrega adjunta)*
+[Ver video en Microsoft Stream — AI Assistant Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY)
+![imagen-AI-vid](assets/img/prototyping/AI-vid-img.png)
 
 ---
 
@@ -6264,14 +6264,9 @@ El usuario accede a Profile desde el último ítem del sidebar. La pantalla pres
 La pantalla Profile centraliza en una sola vista las acciones de identidad (nombre, foto, email), estado de cuenta (plan actual) y accesos a configuraciones más profundas (Skin Profile, Settings, Security, Favorites), siguiendo directamente la ramificación definida en el User Flow Diagram desde el nodo "Entrar al perfil". Esta decisión evita una navegación profunda innecesaria para las acciones más frecuentes (editar nombre/email), reservando la navegación a nuevas vistas para configuraciones menos habituales. La edición de información personal in-line (sin redirección) reduce la fricción para updates cotidianos, mientras que la gestión del plan — una acción de mayor peso e impacto — requiere ingresar a una vista dedicada, reforzando su relevancia semántica.
 
 **Video de demostración:**
-![Ver video en Microsoft Stream — Profile Flow](https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fprofile%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E093fbe67%2D18cf%2D4509%2D90a2%2D54ce22b246cb)
-![Ver video en Microsoft Stream — Profile Flow] (https://upcedupe-my.sharepoint.com/personal/u202416272_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202416272%5Fupc%5Fedu%5Fpe%2FDocuments%2Fprofile%2Dweb%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E093fbe67%2D18cf%2D4509%2D90a2%2D54ce22b246cb)
-
-*Imagen de Evidencia*:
+[Ver video en Microsoft Stream — Profile Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x)
+![imagen-profile-vid](assets/img/prototyping/profile-vid-img.png)
    
-
-
-
 ##### Consideraciones de Diseño Responsivo
 
 Los prototipos presentados corresponden a la versión Desktop Web Browser. La versión Mobile Web Browser adapta los mismos flujos con los siguientes ajustes estructurales:
