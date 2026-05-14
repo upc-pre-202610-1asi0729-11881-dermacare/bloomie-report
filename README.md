@@ -3297,6 +3297,118 @@ en esta guía.
 
 ### 4.1.2. Web Style Guidelines
 
+1. **Pantalla 1:** Home
+<br>
+**Componentes ilustrados:**
+- Navbar con logo "Bloomie" en Montserrat Semibold, alineado a la izquierda; links de navegación en Montserrat Regular 14 px (Label), color #333333. Badge de idioma ("EN") con borde circular y punto de color #A26769.
+- Headline principal en Montserrat Semibold 62 px (H1), color #333333. Palabra en cursiva (questionnaire) en Montserrat Italic Semibold, color #A26769.
+- Párrafo descriptivo en Montserrat Regular 16 px (Body), color #333333, line-height 150%.
+Badge superior ("CLINICAL AI SKIN ANALYSIS") con borde redondeado, fondo blanco, punto de acento #A26769, texto en Montserrat Medium 14 px (Label).
+- Botón primario "Analyze your skin for free": fondo #333333, texto blanco, Montserrat Semibold 16 px (Button), tamaño mínimo 44×44 px, border-radius 999 px (pill).
+- Botón secundario "How it works →": fondo transparente, borde sutil #333333, texto #333333, misma tipografía y tamaño que el primario.
+- Separación entre los CTAs y el párrafo: mínimo 16 px.
+- Imagen derecha: fotografía de rostro con recuadro de escaneo (bordes corner en #A26769) y etiquetas flotantes blancas con puntos de color que muestran métricas (Hydration 82%, Mild acne, Texture: Even). Card inferior oscura con "Score of Skin: 87/100" y anillo de progreso en #A26769.
+- Indicadores estadísticos en la parte inferior: valor en Montserrat Semibold 48 px (H2), descripción en Montserrat Regular 12 px (Small), color #333333.
+- Fondo general: #FDFFF8.
+<p align = "center">
+<img src="assets/img/landing/LandingPage 3.png" alt="mensaje-barra" width="500"/>
+
+- **Pantalla 2:** How it works
+<br>
+
+**Componentes ilustrados:**
+
+- Eyebrow label "HOW IT WORKS" en Montserrat Semibold 12 px uppercase, color #A26769.
+- Headline "From selfie to routine in under 60 seconds" en Montserrat Semibold 62 px (H1), #333333; 60 seconds en Montserrat Italic Semibold, color #A26769.
+- Subtexto "No appointments. No waiting. No generic diagnoses." en Montserrat Regular 16 px (Body), #333333.
+- Círculos numerados (paso 1–6): fondo blanco, borde circular, diámetro aprox. 72 px. Número en Montserrat Semibold 28 px, color #A26769. Conectados entre sí por línea horizontal delgada (1px, color gris claro).
+- Icono emoji debajo de cada círculo: tamaño mínimo 30×30 px.
+- Título del paso en Montserrat Semibold 18 px (H3), #333333.
+- Descripción del paso en Montserrat Regular 16 px (Body), #333333, line-height 150%.
+- Badge de cada paso (ej. "30 seconds", "Real-time selfie"): fondo #CEBEBE con baja opacidad o tono rosado suave, texto en Montserrat Medium 14 px (Label), #333333, border-radius 999 px.
+- Separación entre filas de pasos: 32–48 px. Separación entre cada paso dentro de la fila: 24 px.
+- Fondo general: #FDFFF8.
+
+<p align = "center">
+<img src="assets/img/landing/landing-how-it-works.png" alt="mensaje-barra" width="500"/>
+<p align = "center">
+
+- **Pantalla 3:** Results
+<br>
+
+**Componentes ilustrados:**
+- Eyebrow label "RESULTS" en Montserrat Semibold 12 px uppercase, color #A26769, espaciado de letras ampliado.
+- Headline "Real data. Skins that flourished." en Montserrat Semibold 62 px (H1), #333333; flourished en Montserrat Italic Semibold, color #A26769.
+- Subtexto "No marketing. No Photoshop." en Montserrat Regular 16 px (Body), color #333333.
+Tarjetas de métricas (4 unidades, grid 2×2): fondo blanco, borde sutil 1px solid gris claro, padding interno 24–32 px, border-radius 12 px. Ícono emoji en 28 px. Valor numérico en Montserrat Semibold 48 px (H2), #333333. Descripción en Montserrat Regular 16 px (Body).
+- Separación entre tarjetas: 16–24 px (sistema modular de 4 px).
+- Tarjetas de testimonios (3 unidades, columna derecha): fondo blanco, borde sutil. Estrellas en color dorado. Cita en Montserrat Regular Italic 16 px, #333333. Avatar circular con iniciales en Montserrat Semibold 14 px, fondo #CEBEBE. Nombre en Montserrat Semibold 14 px (Label), #333333. Subtexto (plan y ciudad) en Montserrat Regular 12 px (Small), color gris medio.
+- Fondo general: #FDFFF8.
+
+<p align = "center">
+<img src="assets/img/landing/landingpage 2.png" alt="mensaje-barra" width="500"/>
+<p align = "center">
+
+- **Pantalla 4:** Features
+<br>
+
+**Componentes ilustrados:**
+- Eyebrow label "FEATURES" en Montserrat Semibold 12 px uppercase, color #A26769.
+Headline "Everything your skin needs, in one place" en Montserrat Semibold 48 px (H2), #333333; in one place en Montserrat Italic Semibold, color #A26769.
+- Subtexto "Your skin deserves a complete ecosystem" en Montserrat Regular 16 px (Body), #333333.
+- Fondo de la sección: tono beige cálido (variante de #CEBEBE en baja saturación) para diferenciarla del resto de la página.
+- Grid de tarjetas: 3 columnas, gap de 24 px, border-radius 16 px, fondo blanco puro, padding interno 24–32 px, sombra sutil.
+- Ícono emoji por tarjeta: 28–32 px, mínimo 30×30 px según guías.
+- Título de cada feature en Montserrat Semibold 18 px (H3), #333333.
+- Descripción en Montserrat Regular 16 px (Body), #333333, line-height 150%.
+- Badge de categoría (ej. "Machine Learning", "Continuous tracking"): fondo #A26769 al 12–15% de opacidad, texto #A26769, Montserrat Medium 14 px (Label), border-radius 999 px.
+
+
+<p align = "center">
+<img src="assets/img/landing/LandingPage-4.png" alt="mensaje-barra" width="500"/>
+
+- **Pantalla 5:** Pricing
+<br>
+
+**Componentes ilustrados:**
+
+- Eyebrow label "PRICING" en Montserrat Semibold 12 px uppercase, color #A26769.
+Headline "Invest in your skin, not in uncertainty" en Montserrat Semibold 62 px (H1), #333333; uncertainty en Montserrat Italic Semibold, color #A26769.
+- Subtexto en Montserrat Regular 16 px (Body), #333333.
+- Toggle Monthly / Annual: pill switch con track gris claro y thumb blanco; estado activo en #333333. Badge "Save 30%" en verde (#4CAF50 o similar), Montserrat Medium 14 px (Label), border-radius 999 px.
+- Tarjeta Starter (izquierda): fondo blanco, borde sutil. Label "STARTER" en Montserrat Semibold 12 px uppercase. Precio en Montserrat Semibold 48 px (H2), #333333. Subtexto de facturación en Montserrat Regular 12 px (Small). Separador horizontal 1 px. Lista de features con ícono de check en #A26769, texto Body Regular 16 px.
+- Tarjeta Advanced (centro, destacada): fondo #333333, texto blanco. Badge "MOST POPULAR" en fondo #A26769, texto blanco, Montserrat Semibold 12 px (Label), centrado en la parte superior de la tarjeta. Precio y lista de features en blanco. Check icons en #A26769. Elevación visual (shadow más pronunciada o mayor z-index).
+- Tarjeta Elite (derecha): misma estructura que Starter, fondo blanco.
+Botón CTA en cada tarjeta: Montserrat Semibold 16 px (Button), tamaño mínimo 44×44 px, border-radius 999 px. Variante oscura (#333333 fondo) en la tarjeta destacada; variante con borde en las tarjetas laterales.
+- Padding interno por tarjeta: 32 px. Separación entre tarjetas: 24 px.
+- Fondo general: #FDFFF8.
+
+<p align = "center">
+<img src="assets/img/landing/LandingPage-5.png" alt="mensaje-barra" width="500"/>
+
+- **Pantalla 6:** About us
+<br>
+
+**Componentes ilustrados:**
+
+- Eyebrow label "EQUIPO · NOSOTROS" en Montserrat Semibold 12 px uppercase, color #A26769, separados por un punto medio (·).
+Headline "About us" en Montserrat Semibold 62 px (H1), #333333; us en Montserrat Italic Semibold, color #A26769.
+- Subtítulo "El equipo detrás de Bloomie" en Montserrat Semibold 18 px (H3), #333333.
+- Párrafo descriptivo en Montserrat Regular 16 px (Body), #333333, line-height 150%, centrado, ancho máximo aprox. 600 px para mantener legibilidad.
+- Grid de tarjetas de equipo (5 integrantes, fila horizontal): fondo blanco, borde sutil, border-radius 16 px, padding 16 px.
+- Foto del integrante: imagen cuadrada con border-radius 12 px, ancho aprox. 180 px.
+- Nombre en Montserrat Semibold 18 px (H3), #333333, centrado.
+- Rol ("Co-Fundador/a") en Montserrat Regular 14 px (Label), #333333, centrado.
+- Badge de especialidad (ej. "AI & Product", "UX Design", "Skincare"): fondo #CEBEBE con baja opacidad, texto #333333, Montserrat Medium 14 px (Label), border-radius 999 px, centrado.
+- Separación entre tarjetas: 16–24 px.
+- Fondo general: #FDFFF8.
+
+<p align = "center">
+<img src="assets/img/landing/landing-about-us.png" alt="mensaje-barra" width="500"/>
+
+
+
+
 ## 4.2. Information Architecture
 
 ### 4.2.1. Organization Systems
