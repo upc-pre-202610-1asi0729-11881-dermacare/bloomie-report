@@ -3430,10 +3430,10 @@ El encabezado principal incluye el apartado de traducción de idiomas con el i18
 
 navigation bar:
 
-- **Inglès :**
-<p align = "center">
+- **Inglés :**
+
 <img src="assets/img/navegation_web_bar_en.png" alt="navigation-bar" width="500"/>
-<p align = "center">
+
 
 - **Español:**
 
