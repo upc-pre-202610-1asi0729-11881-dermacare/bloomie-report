@@ -3387,7 +3387,7 @@ Botón CTA en cada tarjeta: Montserrat Semibold 16 px (Button), tamaño mínimo 
 - Fondo general: #FDFFF8.
 
 <p align = "center">
-<img src="assets/img/landing/landingPage-5.png" alt="mensaje-barra" width="500"/>
+<img src="assets/img/landing/landingpage-5.png" alt="mensaje-barra" width="500"/>
 
 - **Pantalla 6:** About us
 <br>
