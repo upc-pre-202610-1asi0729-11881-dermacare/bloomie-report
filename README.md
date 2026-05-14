@@ -3077,7 +3077,8 @@ Finalmente, se incluyen tanto User Stories funcionales orientadas al usuario fin
 
 </table>
 
-**Enlace del product backlog en trello:** https://trello.com/b/Y2tqaAyd/product-backlog
+**Enlace del product backlog en trello:** https://trello.com/b/NP9njuOO/bloomie
+
 
 # Capítulo IV: Product Design
 
@@ -6391,7 +6392,7 @@ El usuario accede a la sección Skin Scan desde el sidebar de navegación. El si
 La captura se ejecuta con feedback visual progresivo (animación de escaneo) para comunicar que el sistema está procesando, reduciendo la incertidumbre del usuario durante el tiempo de análisis por IA. Los scores del diagnóstico se presentan con indicadores gráficos tipo gauge, coherentes con la lógica de "progreso medible" que estructura toda la experiencia de Bloomie.
 
 **Video de demostración:**
-[Ver video en Microsoft Stream — Skin Scan Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw)
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw)
 ![imagen-skin-vid](assets/img/prototyping/skin-vid-img.png)
 
 ---
@@ -6407,7 +6408,7 @@ Desde el sidebar, el usuario accede a My Routine, donde el sistema presenta la r
 El reemplazo de productos utiliza un patrón de bottom sheet en mobile y panel lateral en desktop, manteniendo visible la rutina de fondo para dar contexto al reemplazo. El marcado de cumplimiento diario se diseña como una acción de un solo toque (toggle), minimizando la fricción para un hábito que debe repetirse cada día.
 
 **Video de demostración:**
-[Ver video en Microsoft Stream — My Routine Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e) 
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e) 
 ![imagen-routine-vid](assets/img/prototyping/routine-vid-img.png)
 
 ---
@@ -6423,7 +6424,7 @@ El usuario accede a Appointments desde el sidebar. El sistema carga la lista de 
 El flujo de pago sigue un patrón de stepper lineal (selección de especialista → selección de horario → pago → confirmación) para que el usuario tenga siempre claridad sobre en qué paso se encuentra y cuánto falta. La consulta virtual se accede desde la misma tarjeta de cita confirmada, reduciendo los pasos necesarios para unirse a la sesión.
 
 **Video de demostración:**
-[Ver video en Microsoft Stream — Appointments Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s) 
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s) 
 ![imagen-appointments-vid](assets/img/prototyping/consultation-vid-img.png)
 
 ---
@@ -6439,7 +6440,7 @@ El usuario accede al AI Assistant desde el sidebar. La interfaz presenta un chat
 El chat mantiene historial visible de la conversación dentro de la sesión. Los mensajes del asistente que contienen recomendaciones de productos incluyen cards embebidas con el nombre y score de compatibilidad del producto sugerido, permitiendo al usuario navegar directamente al catálogo sin salir del chat. Esta integración responde a la arquitectura de información que conecta el nodo "Consultar IA" con el de "Skin Care" y "rutina personalizada" según el User Flow.
 
 **Video de demostración:**
-[Ver video en Microsoft Stream — AI Assistant Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY)
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY)
 ![imagen-AI-vid](assets/img/prototyping/AI-vid-img.png)
 
 ---
@@ -6464,7 +6465,7 @@ El usuario accede a Profile desde el último ítem del sidebar. La pantalla pres
 La pantalla Profile centraliza en una sola vista las acciones de identidad (nombre, foto, email), estado de cuenta (plan actual) y accesos a configuraciones más profundas (Skin Profile, Settings, Security, Favorites), siguiendo directamente la ramificación definida en el User Flow Diagram desde el nodo "Entrar al perfil". Esta decisión evita una navegación profunda innecesaria para las acciones más frecuentes (editar nombre/email), reservando la navegación a nuevas vistas para configuraciones menos habituales. La edición de información personal in-line (sin redirección) reduce la fricción para updates cotidianos, mientras que la gestión del plan — una acción de mayor peso e impacto — requiere ingresar a una vista dedicada, reforzando su relevancia semántica.
 
 **Video de demostración:**
-[Ver video en Microsoft Stream — Profile Flow](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x)
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x)
 ![imagen-profile-vid](assets/img/prototyping/profile-vid-img.png)
    
 ##### Consideraciones de Diseño Responsivo
@@ -6482,7 +6483,7 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 **Mobile Prototype**
 
 
-[Ver prototipo mobile](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Mobile**
 ![mobile](assets/img/mockups/mockup-mobile.png)
@@ -6491,7 +6492,7 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 **Desktop Prototype**
 
 
-[Ver prototipo desktop](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 
@@ -6657,7 +6658,7 @@ A continuación se indican los repositorios correspondientes a cada producto del
 
 - **Informe:** https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-report.git
 - **Landing Page:** https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-website
-- **Frontend Web Application:** (por definir al iniciar desarrollo en Sprint 2)
+- **Frontend Web Application:** https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-webapp.git
 - **Web Services:** (por definir al iniciar desarrollo en Sprint 2)
 
 #### Implementación de GitFlow
@@ -6931,9 +6932,9 @@ En esta sección el equipo elaboró la Leadership-and-Collaboration Matrix (LACX
 
 El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su totalidad: desde la documentación inicial (Lean UX, entrevistas, needfinding, especificación de requisitos y diseño UX/UI), pasando por la arquitectura del software (C4 Model, Event Storming, diagramas de base de datos), hasta la implementación y despliegue de la Landing Page. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-1-bloomie
+**URL del board:** https://trello.com/b/NP9njuOO/bloomie
 
-![Sprint Backlog 1 Board](assets/img/sprint1-board.png)
+![Sprint Backlog 1 Board](assets/img/sprint-backlog1.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -7372,9 +7373,10 @@ en el flujo de suscripción de la Landing Page, y se documentaron todas las secc
 correspondientes al Sprint 2 del informe. A continuación se presenta el board de 
 seguimiento utilizado durante el sprint, junto con la tabla de control de estado.
 
-**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-2-bloomie
+**URL del board:** https://trello.com/b/NP9njuOO/bloomie
 
-![Sprint Backlog 2 Board](assets/img/sprint2-board.png)
+
+![Sprint Backlog 2 Board](assets/img/sprint-backlog2.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
