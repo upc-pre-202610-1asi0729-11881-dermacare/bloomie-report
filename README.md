@@ -8104,7 +8104,7 @@ por el Frontend Web Application desplegado durante este Sprint.
 
 **Enlace al video de demostración:** 
 
-La Web Application de Bloomie se encuentra actualmente operativa en la siguiente URL: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Link de la página web: https://zealous-grass-0de82540f.7.azurestaticapps.net
 
@@ -8221,7 +8221,7 @@ Los productos desplegados durante el Sprint 2 se encuentran operativos en las
 siguientes URLs:
 
 - **Landing Page:** https://bloomie-landing-page.vercel.app
-- **Frontend Web Application:** https://delightful-dune-0988c2a0f7.azurestaticapps.net
+- **Frontend Web Application:** https://zealous-grass-0de82540f.7.azurestaticapps.net/
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -8336,3 +8336,21 @@ Se recomienda mantener el esquema de Aspect Leaders por bounded context establec
 
 - Statista. (2023). Frecuencia de utilización de las redes sociales en Perú en 2023. https://es.statista.com/estadisticas/1412986/uso-de-redes-sociales-por-frecuencia-en-peru/
 # Anexos
+
+## Anexo A
+
+URL del repositorio (Report):  https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-report.git
+
+URL del repositorio (Backend): https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-platform.git
+
+URL del repositorio (Frontend): https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-webapp.git
+
+URL del repositorio (Landing Page): https://github.com/upc-pre-202610-1asi0729-11881-Dermacare/bloomie-website.git
+
+URL de Landing Page: https://bloomie-landing-page.vercel.app/
+
+URL de WebApp: https://zealous-grass-0de82540f.7.azurestaticapps.net/
+
+URL de MockAPI: https://bloomie-mock-api.azurewebsites.net/api/v1
+
+Video exposición TB1: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr
