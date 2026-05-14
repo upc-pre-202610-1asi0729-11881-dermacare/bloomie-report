@@ -278,65 +278,102 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Acciones realizadas</th>
     <th>Conclusiones</th>
   </tr>
-
   <tr>
-    <td><b>Comunica oralmente con efectividad a diferentes rangos de audiencia.</b></td>
+    <td><b>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</b></td>
     <td>
-      <b>Asmat Alminco, Martin Alejandro</b> <br>
-      <u>AV1</u> <br>
-      Participó en la explicación de User Stories, configuración del entorno de desarrollo, evidencias de desarrollo para Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron comunicar la validación del problema, la definición funcional del producto y los avances técnicos iniciales del proyecto.
-      <br> <br>
-      <b>Contreras Torres, Arturo Valentino</b> <br>
-      <u>AV1</u> <br>
-      Participó en la exposición de Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Su participación permitió comunicar aspectos del dominio del problema, arquitectura, diseño de software y estructura de datos del sistema.
-      <br> <br>
-      <b>Gallardo Morales, Carla Alejandra</b> <br>
-      <u>AV1</u> <br>
-      Sustentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Estas actividades permitieron explicar de forma clara las necesidades del usuario, las hipótesis del producto, la planificación funcional y los elementos de posicionamiento web.
-      <br> <br>
       <b>Mechan Montenegro, Luciana Carolina</b> <br>
       <u>AV1</u> <br>
       Participó en la sustentación del Lean UX Canvas, segmentos objetivo, análisis de competidores, análisis competitivo, lenguaje ubicuo, Landing Page Wireframe, Software Architecture Component, Systems Diagrams y Class Diagrams. Durante estas actividades, comunicó ideas relacionadas con la propuesta de valor, el mercado, el diseño visual y la arquitectura del sistema, adecuando su explicación a una audiencia técnica y no técnica.
-      <br> <br>
-      <b>Ramirez Ruiz, Nickolas</b> <br>
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el despliegue del Mock API en Azure, elaboración del diagrama de base de datos y diagrama de clases, implementación de un bounded context para el frontend, desarrollo de la pasarela de pagos para la landing page y desarrollo del Sprint Planning del capítulo 5. Sus aportes permitieron fortalecer la organización técnica del sistema, la integración de componentes y la planificación colaborativa del sprint.
+      <br><br>
+      <b>Asmat Alminco, Martin Alejandro</b> <br>
+      <u>AV1</u> <br>
+      Participó en la explicación de User Stories, configuración del entorno de desarrollo, evidencias de desarrollo para Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron comunicar la validación del problema, la definición funcional del producto y los avances técnicos iniciales del proyecto.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el desarrollo de dos bounded contexts para el frontend, corrección de hipótesis del AV1, elaboración de mockups y wireframes, desarrollo de wireflows y userflows con sus respectivas descripciones, además de la creación de videos de prototyping y explicación funcional. Sus actividades contribuyeron a mejorar la experiencia del usuario, la organización funcional y la validación visual del sistema.
+      <br><br>
+      <b>Gallardo Morales, Carla Alejandra</b> <br>
+      <u>AV1</u> <br>
+      Sustentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Estas actividades permitieron explicar de forma clara las necesidades del usuario, las hipótesis del producto, la planificación funcional y los elementos de posicionamiento web.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el desarrollo de la herramienta para la exposición, elaboración de mockups y wireframes con explicación de la arquitectura, desarrollo de userflows y wireflows con sus descripciones, organización del Trello para el Sprint 2, implementación de un bounded context para el frontend y correcciones de diseño del AV1. Sus aportes fortalecieron la coordinación del sprint, la comunicación visual y la integración funcional del frontend.
+      <br><br>
+      <b>Contreras Torres, Arturo Valentino</b> <br>
+      <u>AV1</u> <br>
+      Participó en la exposición de Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Su participación permitió comunicar aspectos del dominio del problema, arquitectura, diseño de software y estructura de datos del sistema.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en las correcciones del diagrama C4, desarrollo de diagramas frontend de la aplicación, despliegue de la segunda versión actualizada de la landing page, despliegue del Static Web App en Azure e implementación de un bounded context para el funcionamiento del frontend. Sus actividades permitieron fortalecer la arquitectura del sistema y mejorar la integración y despliegue de la aplicación web.
+      <br><br>
+      <b>Ramirez, Nickolas</b> <br>
       <u>AV1</u> <br>
       Sustentó Startup Profile, descripción de la startup, User Journey Mapping, Empathy Mapping, Landing Page Mock-up, General Style Guidelines, Web Style Guidelines, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1 y estrategias frente a competidores. Sus aportes permitieron comunicar la identidad del proyecto, la experiencia del usuario, la línea visual del producto y la organización del primer sprint.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en la revisión de Team Collaboration Insights, Aspect Leaders and Collaborators y Sprint Backlog, actualización de userflows, mockups, wireframes y wireflows, grabación del Web Application Prototyping e implementación del frontend IAM. Sus aportes contribuyeron a mejorar la coordinación del equipo, la validación visual del sistema y la integración de funcionalidades del frontend.
     </td>
     <td>
-    <u>AV1</u> <br>
-    Como equipo, durante el AV1 se fortaleció la comunicación oral mediante la sustentación de avances relacionados con investigación de usuarios, análisis competitivo, definición del producto, diseño visual, arquitectura, requerimientos y planificación inicial. La presentación permitió mejorar la claridad del mensaje, el uso de recursos visuales y la capacidad para justificar decisiones tomadas durante el desarrollo del proyecto.
+      <u>AV1</u> <br>
+      Como equipo, durante el AV1 se fortaleció el trabajo colaborativo mediante la distribución de responsabilidades relacionadas con investigación, análisis, diseño y modelado del sistema. Cada integrante aportó desde diferentes áreas del proyecto, permitiendo integrar perspectivas funcionales, técnicas y de experiencia de usuario para alcanzar los objetivos planteados de manera conjunta.
+      <br><br>
+      <u>TB1</u> <br>
+      Como equipo, durante el TB1 se fortaleció el liderazgo compartido mediante la colaboración en actividades relacionadas con despliegue en la nube, modelado del sistema, diseño UX/UI, planificación del sprint, desarrollo frontend e integración de bounded contexts. La distribución organizada de responsabilidades permitió mejorar la coordinación técnica y funcional del proyecto, facilitando el cumplimiento de los objetivos establecidos para el sprint.
     </td>
   </tr>
 
   <tr>
-    <td><b>Comunica por escrito con efectividad a diferentes rangos de audiencia.</b></td>
+    <td><b>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</b></td>
     <td>
-    <b>Asmat Alminco, Martin Alejandro</b> <br>
-      <u>AV1</u> <br>
-      Elaboró la documentación de User Stories, Software Development Environment Configuration, Development Evidence for Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron registrar de forma escrita las funcionalidades, la configuración técnica, las evidencias de desarrollo y la validación inicial del producto.
-      <br> <br>
-      <b>Contreras Torres, Arturo Valentino</b> <br>
-      <u>AV1</u> <br>
-      Redactó y organizó Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Estas actividades aportaron a la documentación técnica del dominio, la arquitectura, el modelado del sistema y la base de datos.
-      <br> <br>
-      <b>Gallardo Morales, Carla Alejandra</b> <br>
-      <u>AV1</u> <br>
-      Documentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Su trabajo permitió estructurar por escrito el problema, las hipótesis, los requerimientos, el backlog y los elementos de posicionamiento web.
-      <br> <br>
       <b>Mechan Montenegro, Luciana Carolina</b> <br>
       <u>AV1</u> <br>
-      Redactó y documentó el Lean UX Canvas, segmentos objetivo, competidores, análisis competitivo, lenguaje ubicuo, Landing Page Wireframe, Software Architecture Component, Systems Diagrams y Class Diagrams. Estas secciones contribuyeron a organizar información sobre el mercado, el dominio del producto, el diseño de interfaz y la arquitectura del sistema.
-      <br> <br>
-      <b>Ramirez Ruiz, Nickolas</b> <br>
+      Participó en la sustentación del Lean UX Canvas, segmentos objetivo, análisis competitivo, lenguaje ubicuo y diagramas del sistema, permitiendo organizar y comunicar de manera estructurada los requerimientos y componentes técnicos del proyecto.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el despliegue del Mock API en Azure, desarrollo de diagramas de base de datos y clases, implementación de bounded contexts, desarrollo de la pasarela de pagos y Sprint Planning. Estas actividades permitieron fortalecer la organización técnica, la planificación del sprint y la integración de componentes funcionales del sistema.
+      <br><br>
+      <b>Asmat Alminco, Martin Alejandro</b> <br>
       <u>AV1</u> <br>
-      Elaboró Startup Profile, descripción de la startup, User Journey Mapping, Empathy Mapping, Landing Page Mock-up, General Style Guidelines, Web Style Guidelines, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1 y estrategias frente a competidores. Su documentación permitió presentar la identidad de la startup, la experiencia del usuario, la propuesta visual y la planificación del sprint inicial.
+      Participó en la recopilación y análisis de entrevistas, Lean UX Assumptions y User Stories. Estas actividades permitieron identificar necesidades de los usuarios y organizar tareas orientadas al cumplimiento de los objetivos iniciales del proyecto.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el desarrollo de bounded contexts, corrección de hipótesis del AV1, elaboración de mockups, wireframes, userflows y wireflows, además de videos de prototyping. Sus actividades contribuyeron a mejorar la experiencia del usuario, la validación funcional y la coordinación de tareas relacionadas con diseño y frontend.
+      <br><br>
+      <b>Gallardo Morales, Carla Alejandra</b> <br>
+      <u>AV1</u> <br>
+      Participó en Lean UX Problem Statements, Lean UX Hypothesis Statements, Impact Mapping, Product Backlog y User Stories. Sus actividades permitieron estructurar y priorizar requerimientos, facilitando la planificación y coordinación de actividades del equipo.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en el desarrollo de herramientas para la exposición, mockups, wireframes, userflows, wireflows, organización del Trello para el Sprint 2, implementación de bounded contexts y correcciones de diseño del AV1. Sus aportes permitieron mantener coordinación en las actividades del sprint y mejorar la comunicación visual y organizativa del proyecto.
+      <br><br>
+      <b>Contreras Torres, Arturo Valentino</b> <br>
+      <u>AV1</u> <br>
+      Participó en User Personas, Event Storming, diagramas de arquitectura y Database Design. Su participación permitió estructurar el análisis funcional y técnico del proyecto, favoreciendo la planificación y coordinación de actividades del equipo.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en las correcciones del diagrama C4, diagramas frontend, despliegue de la landing page y Static Web App en Azure, además de la implementación de bounded contexts. Estas actividades permitieron fortalecer la planificación técnica, el despliegue del sistema y la integración funcional de la aplicación web.
+      <br><br>
+      <b>Ramirez, Nickolas</b> <br>
+      <u>AV1</u> <br>
+      Participó en Startup Profile, User Journey Mapping, Empathy Mapping y lineamientos visuales del sistema. Sus actividades permitieron mantener coherencia entre la experiencia del usuario, el diseño visual y la organización de actividades del proyecto.
+      <br><br>
+      <u>TB1</u> <br>
+      Participó en la revisión de Team Collaboration Insights, Aspect Leaders and Collaborators y Sprint Backlog, actualización de userflows, mockups y wireflows, grabación del prototyping e implementación del frontend IAM. Sus actividades permitieron fortalecer la coordinación del equipo, la organización del sprint y la validación funcional del frontend.
     </td>
     <td>
-    <u>AV1</u> <br>
-    Como equipo, durante el AV1 se desarrolló la comunicación escrita mediante la elaboración del informe técnico, integrando análisis de negocio, investigación de usuarios, requerimientos, diseño visual, arquitectura, base de datos y planificación inicial del desarrollo. La documentación permitió sintetizar ideas, mantener coherencia entre secciones y presentar información comprensible para audiencias técnicas y no técnicas. Asimismo, el uso de tablas, diagramas, mockups, backlog y evidencias contribuyó a mejorar la calidad y claridad del informe.
+      <u>AV1</u> <br>
+      Como equipo, durante el AV1 se promovió un entorno colaborativo mediante la distribución organizada de actividades y la comunicación constante entre los integrantes. La planificación de tareas según las habilidades de cada miembro permitió cumplir los objetivos establecidos, mantener coherencia entre los entregables y fomentar una participación inclusiva durante el desarrollo del proyecto.
+      <br><br>
+      <u>TB1</u> <br>
+      Como equipo, durante el TB1 se promovió un entorno colaborativo mediante la distribución organizada de tareas relacionadas con despliegue, modelado, frontend, UX/UI y planificación del sprint. La comunicación constante entre los integrantes permitió cumplir los objetivos establecidos, mejorar la integración de componentes del sistema y fortalecer la calidad técnica y visual de los entregables desarrollados.
     </td>
   </tr>
 </table>
+```
+
 ---
 
 # Capítulo I: Introducción
@@ -6304,7 +6341,7 @@ El usuario accede a la sección Skin Scan desde el sidebar de navegación. El si
 La captura se ejecuta con feedback visual progresivo (animación de escaneo) para comunicar que el sistema está procesando, reduciendo la incertidumbre del usuario durante el tiempo de análisis por IA. Los scores del diagnóstico se presentan con indicadores gráficos tipo gauge, coherentes con la lógica de "progreso medible" que estructura toda la experiencia de Bloomie.
 
 **Video de demostración:**
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw)
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQDL5q3WuBSBSpdR5RH0F_ZLARY10_Pg3nhb-sWCsD6H3T8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5lwxVw)
 ![imagen-skin-vid](assets/img/prototyping/skin-vid-img.png)
 
 ---
@@ -6320,7 +6357,7 @@ Desde el sidebar, el usuario accede a My Routine, donde el sistema presenta la r
 El reemplazo de productos utiliza un patrón de bottom sheet en mobile y panel lateral en desktop, manteniendo visible la rutina de fondo para dar contexto al reemplazo. El marcado de cumplimiento diario se diseña como una acción de un solo toque (toggle), minimizando la fricción para un hábito que debe repetirse cada día.
 
 **Video de demostración:**
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e) 
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB3rfdJxqJWRrl77HJfIU9jAdfV091_L-q3Uu3JtO-O9tE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=8uwf8e) 
 ![imagen-routine-vid](assets/img/prototyping/routine-vid-img.png)
 
 ---
@@ -6336,7 +6373,7 @@ El usuario accede a Appointments desde el sidebar. El sistema carga la lista de 
 El flujo de pago sigue un patrón de stepper lineal (selección de especialista → selección de horario → pago → confirmación) para que el usuario tenga siempre claridad sobre en qué paso se encuentra y cuánto falta. La consulta virtual se accede desde la misma tarjeta de cita confirmada, reduciendo los pasos necesarios para unirse a la sesión.
 
 **Video de demostración:**
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s) 
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQCh-_kXQr8XRLgjbRAcrwveAU_PD8kpLzy12xDXt_dREm0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7P0b8s) 
 ![imagen-appointments-vid](assets/img/prototyping/consultation-vid-img.png)
 
 ---
@@ -6352,7 +6389,7 @@ El usuario accede al AI Assistant desde el sidebar. La interfaz presenta un chat
 El chat mantiene historial visible de la conversación dentro de la sesión. Los mensajes del asistente que contienen recomendaciones de productos incluyen cards embebidas con el nombre y score de compatibilidad del producto sugerido, permitiendo al usuario navegar directamente al catálogo sin salir del chat. Esta integración responde a la arquitectura de información que conecta el nodo "Consultar IA" con el de "Skin Care" y "rutina personalizada" según el User Flow.
 
 **Video de demostración:**
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY)
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAt2PVdj8gPR65J5afmO2p1AfynA7MVnOxv7GaB4MU7H9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LZyToY)
 ![imagen-AI-vid](assets/img/prototyping/AI-vid-img.png)
 
 ---
@@ -6377,7 +6414,7 @@ El usuario accede a Profile desde el último ítem del sidebar. La pantalla pres
 La pantalla Profile centraliza en una sola vista las acciones de identidad (nombre, foto, email), estado de cuenta (plan actual) y accesos a configuraciones más profundas (Skin Profile, Settings, Security, Favorites), siguiendo directamente la ramificación definida en el User Flow Diagram desde el nodo "Entrar al perfil". Esta decisión evita una navegación profunda innecesaria para las acciones más frecuentes (editar nombre/email), reservando la navegación a nuevas vistas para configuraciones menos habituales. La edición de información personal in-line (sin redirección) reduce la fricción para updates cotidianos, mientras que la gestión del plan — una acción de mayor peso e impacto — requiere ingresar a una vista dedicada, reforzando su relevancia semántica.
 
 **Video de demostración:**
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x)
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQAzPhKCTFaWQqbaO1hR91IiAbpzFiv8RWWchSUaAiI63p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=obm15x)
 ![imagen-profile-vid](assets/img/prototyping/profile-vid-img.png)
    
 ##### Consideraciones de Diseño Responsivo
@@ -6395,7 +6432,7 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 **Mobile Prototype**
 
 
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB_wB2Hcp6BRIXdxQM5mfYPAaQR1ZZG22PLTIo7gjjNTWc?e=xDrezv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Mobile**
 ![mobile](assets/img/mockups/mockup-mobile.png)
@@ -6404,7 +6441,7 @@ Estas adaptaciones mantienen la coherencia del sistema de navegación y los tipo
 **Desktop Prototype**
 
 
-[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQB5qURSkR1TRJfjwgOLTzgTAUqixGOeF5SdkkLUN0IkhYw?e=s5HXJJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 
@@ -7239,7 +7276,7 @@ Durante el Sprint 1 se logró implementar y desplegar exitosamente la Landing Pa
 
 A continuación se presenta el video de demostración que ilustra la navegación completa por la Landing Page desplegada durante este Sprint.
 
-**Enlace al video de demostración:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQBQT13T6iLFQZj0eRzbWMHQAfI0B947RUtETp-7NLrwDfI?e=gcNgFh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+**Enlace al video de demostración:** [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQBQT13T6iLFQZj0eRzbWMHQAfI0B947RUtETp-7NLrwDfI?e=gcNgFh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
@@ -8009,7 +8046,7 @@ por el Frontend Web Application desplegado durante este Sprint.
 
 **Enlace al video de demostración:** 
 
-https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+[Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 Link de la página web: https://zealous-grass-0de82540f.7.azurestaticapps.net
 
@@ -8258,4 +8295,4 @@ URL de WebApp: https://zealous-grass-0de82540f.7.azurestaticapps.net/
 
 URL de MockAPI: https://bloomie-mock-api.azurewebsites.net/api/v1
 
-Video exposición TB1: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr
+Video exposición TB1: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr)
