@@ -8014,9 +8014,9 @@ por el Frontend Web Application desplegado durante este Sprint.
 
 **Enlace al video de demostración:** 
 
-La Web Application de Bloomie se encuentra actualmente operativa en la siguiente URL:
+La Web Application de Bloomie se encuentra actualmente operativa en la siguiente URL: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
-**https://delightful-dune-0988c2a0f7.azurestaticapps.net**
+Link de la página web: https://zealous-grass-0de82540f.7.azurestaticapps.net
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -8117,7 +8117,6 @@ configurado por Arturouu mediante el commit `635cc76` el 9 de mayo de 2026, y ej
 automáticamente el despliegue cada vez que se integra un cambio a la rama `develop`. 
 El workflow completó su primera ejecución exitosa en 1 minuto 48 segundos.
 
-![Azure Static Web Apps CI/CD Workflow](assets/img/azure-workflow.png)
 
 **Frontend Web Application desplegada en producción**
 
@@ -8183,8 +8182,8 @@ y la implementación de todos los bounded contexts del sistema.
 ![Pull Requests bloomie-app](assets/img/pull-request-frontend.png)
 
 **Resumen de actividad — Repositorio bloomie-app (Frontend Web Application)**
+![evidence-frotend](assets/img/evidence-frontend.png)
 
-[Agregar screenshot de GitHub Insights del repositorio bloomie-app]
 ## Conclusiones y recomendaciones
 
 ### Conclusiones
