@@ -8214,6 +8214,29 @@ y la implementación de todos los bounded contexts del sistema.
 **Resumen de actividad — Repositorio bloomie-app (Frontend Web Application)**
 ![evidence-frotend](assets/img/evidence-frontend.png)
 
+### 5.2.3. Sprint 3
+
+#### 5.2.3.1. Sprint Planning 3
+
+El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2, donde se desplegó la primera versión funcional del Frontend Web Application integrada con una Mock API. En esta tercera iteración el equipo se enfocó en desarrollar la primera versión de los Web Services del sistema, implementando una RESTful API que reemplaza progresivamente la Mock API, permitiendo a los usuarios interactuar con datos persistentes y reales. Adicionalmente se desplegó una nueva versión de la Landing Page y de la Web Application, y se realizaron las entrevistas de validación con usuarios de los segmentos objetivo.
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 3 |
+| **Sprint Planning Background** | |
+| **Date** | 2026-05-13 |
+| **Time** | 9:00 p.m. – 11:00 p.m. |
+| **Location** | Reunión presencial sede UPC Monterrico |
+| **Prepared By** | Mechan Montenegro, Luciana |
+| **Attendees (to planning meeting)** | Asmat Alminco, Martin Alejandro / Contreras Torres, Arturo Valentino / Gallardo Morales, Carla Alejandra / Mechan Montenegro, Luciana Carolina / Ramirez Ruiz, Nickolas |
+| **Sprint 2 Review Summary** | Durante el Sprint 2 se completó el despliegue de la primera versión funcional del Frontend Web Application en Azure Static Web Apps, estructurada por bounded contexts bajo Domain-Driven Design e integrada con una Mock API desplegada en Azure App Service. Se implementaron las funcionalidades core del producto: escaneo facial, rutina personalizada con seguimiento diario, catálogo de productos, asistente virtual y gestión de citas dermatológicas con consulta virtual. Adicionalmente se integró Stripe como pasarela de pagos en el flujo de suscripción de la Landing Page y se completaron las correcciones de diseño UX/UI en Figma. El equipo cumplió con el alcance planificado y subsanó la deuda técnica heredada del Sprint 1. |
+| **Sprint 2 Retrospective Summary** | El equipo identificó como aciertos la organización del trabajo por bounded contexts mediante el esquema de Aspect Leaders y la definición de fechas internas por work item. Como oportunidades de mejora, a partir de la revisión del Sprint 2 se detectaron observaciones puntuales: algunas ramas no siguieron de forma consistente la convención de nomenclatura de GitFlow establecida por el equipo, y faltó definir con mayor claridad y detalle los diagramas de diseño del Frontend, los cuales requirieron correcciones posteriores. El equipo reconoció también la necesidad de iniciar antes el desarrollo de los Web Services para disponer de mayor tiempo de pruebas de integración. Para el Sprint 3 el equipo se comprometió a respetar estrictamente las convenciones de nomenclatura de ramas, revisar y completar correctamente los diagramas antes de darlos por finalizados, y priorizar el desarrollo del backend desde el inicio del sprint documentando los endpoints en paralelo a su implementación. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 3 Goal** | Our focus is on delivering a working first version of the Bloomie web services so that the application operates with real and persistent data instead of simulated responses. We believe it delivers a more reliable and trustworthy skincare experience to young adults, ensuring their skin profiles, routines, scans and consultations are consistently stored and available across sessions. This will be confirmed when users can register, manage their skincare routines, browse products and book dermatological consultations with their information correctly persisted, and when their experience remains consistent every time they return to the application. |
+| **Sprint 3 Velocity** | 40 |
+| **Sum of Story Points** | 40 |
+
+
 ## Conclusiones y recomendaciones
 
 ### Conclusiones
