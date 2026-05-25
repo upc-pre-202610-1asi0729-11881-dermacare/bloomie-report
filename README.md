@@ -279,7 +279,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><b>Comunica oralmente con efectividad a diferentes rangos de audiencia.</b></td>
+    <td><b>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</b></td>
     <td>
       <b>Mechan Montenegro, Luciana Carolina</b> <br>
       <u>AV1</u> <br>
@@ -8235,6 +8235,257 @@ El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2,
 | **Sprint 3 Goal** | Our focus is on delivering a working first version of the Bloomie web services so that the application operates with real and persistent data instead of simulated responses. We believe it delivers a more reliable and trustworthy skincare experience to young adults, ensuring their skin profiles, routines, scans and consultations are consistently stored and available across sessions. This will be confirmed when users can register, manage their skincare routines, browse products and book dermatological consultations with their information correctly persisted, and when their experience remains consistent every time they return to the application. |
 | **Sprint 3 Velocity** | 40 |
 | **Sum of Story Points** | 40 |
+
+#### 5.2.3.3. Sprint Backlog 3
+
+El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de 
+los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y 
+documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core 
+del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y 
+se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo. 
+A continuación se presenta el board de seguimiento utilizado durante el sprint, junto 
+con la tabla de control de estado de las tareas.
+
+**URL del board:** 
+
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <tr>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+  </tr>
+
+  <!-- TS01 -->
+  <tr>
+    <td>TS01</td>
+    <td>Gestionar usuarios del sistema</td>
+    <td>T-01</td>
+    <td>Implementar bounded context de usuarios</td>
+    <td>Implementar el bounded context de usuarios incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>8</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS02 -->
+  <tr>
+    <td>TS02</td>
+    <td>Gestionar sesiones de autenticación</td>
+    <td>T-02</td>
+    <td>Implementar bounded context de autenticación</td>
+    <td>Implementar el bounded context de autenticación incluyendo generación de tokens, validación de credenciales, endpoints REST y documentación con Swagger.</td>
+    <td>8</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS03 -->
+  <tr>
+    <td>TS03</td>
+    <td>Gestionar perfil de piel del usuario</td>
+    <td>T-03</td>
+    <td>Implementar bounded context de skin profiles</td>
+    <td>Implementar el bounded context de skin profiles incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>6</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS04 -->
+  <tr>
+    <td>TS04</td>
+    <td>Gestionar escaneos faciales</td>
+    <td>T-04</td>
+    <td>Implementar bounded context de facial scans</td>
+    <td>Implementar el bounded context de facial scans incluyendo entidad con scores de análisis, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>8</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS05 + TS06 -->
+  <tr>
+    <td>TS05 / TS06</td>
+    <td>Gestionar rutinas y seguimiento diario</td>
+    <td>T-05</td>
+    <td>Implementar bounded context de routine management</td>
+    <td>Implementar el bounded context de routine management incluyendo entidades Routine, RoutineItem y DailyTracking, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>10</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS07 + TS08 -->
+  <tr>
+    <td>TS07 / TS08</td>
+    <td>Gestionar catálogo de productos y favoritos</td>
+    <td>T-06</td>
+    <td>Implementar bounded context de product discovery</td>
+    <td>Implementar el bounded context de product discovery incluyendo entidades Product, ProductCompatibility y FavoriteProduct, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>10</td>
+    <td>Asmat, Martin</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS09 + TS10 + TS11 + TS12 -->
+  <tr>
+    <td>TS09 / TS10 / TS11 / TS12</td>
+    <td>Gestionar atención dermatológica</td>
+    <td>T-07</td>
+    <td>Implementar bounded context de dermatology care</td>
+    <td>Implementar el bounded context de dermatology care incluyendo entidades DermatologistProfile, DermatologistAvailability, Appointment y Consultation, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>12</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS13 + TS14 + TS15 -->
+  <tr>
+    <td>TS13 / TS14 / TS15</td>
+    <td>Gestionar pagos y suscripciones</td>
+    <td>T-08</td>
+    <td>Implementar bounded context de subscriptions y pagos</td>
+    <td>Implementar el bounded context de pagos y suscripciones incluyendo entidades Payment, Plan y Subscription, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>10</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- TS16 + TS17 -->
+  <tr>
+    <td>TS16 / TS17</td>
+    <td>Gestionar asistente virtual y chat</td>
+    <td>T-09</td>
+    <td>Implementar bounded context de intelligent support</td>
+    <td>Implementar el bounded context de intelligent support incluyendo entidades SupportQuery y ChatMessage, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
+    <td>8</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Configuración base -->
+  <tr>
+    <td rowspan="4">-</td>
+    <td rowspan="4">Configuración base del backend</td>
+    <td>T-10</td>
+    <td>Configurar proyecto Spring Boot</td>
+    <td>Inicializar el proyecto Spring Boot con las dependencias necesarias: Spring Web, Spring Data JPA, Spring Security, Lombok y configuración de perfiles de entorno.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-11</td>
+    <td>Configurar base de datos y migraciones</td>
+    <td>Configurar la conexión a la base de datos relacional en Azure, definir el esquema inicial y configurar las migraciones del sistema.</td>
+    <td>4</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-12</td>
+    <td>Configurar documentación con Swagger UI</td>
+    <td>Configurar OpenAPI 3.0 con Swagger UI en el proyecto Spring Boot, definiendo la información general de la API y habilitando el acceso al portal de documentación.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-13</td>
+    <td>Desplegar Web Services en Azure App Service</td>
+    <td>Configurar el recurso Azure App Service, vincular el repositorio del backend y configurar el pipeline CI/CD con GitHub Actions para el despliegue automático.</td>
+    <td>4</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Correcciones frontend y landing -->
+  <tr>
+    <td rowspan="2">-</td>
+    <td rowspan="2">Correcciones y complementos del Frontend</td>
+    <td>T-14</td>
+    <td>Implementar sección de perfil de usuario</td>
+    <td>Implementar las vistas de gestión de perfil incluyendo edición de información personal, actualización de características de piel y cambio de contraseña.</td>
+    <td>4</td>
+    <td>Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-15</td>
+    <td>Actualizar integración del frontend con Web Services</td>
+    <td>Actualizar las URLs base del frontend para consumir los endpoints del Web Service desplegado en Azure, reemplazando la Mock API en los bounded contexts implementados.</td>
+    <td>3</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Landing Page -->
+  <tr>
+    <td>-</td>
+    <td>Actualización Landing Page</td>
+    <td>T-16</td>
+    <td>Actualizar Landing Page con mejoras y correcciones</td>
+    <td>Aplicar mejoras visuales y de contenido a la Landing Page incluyendo correcciones de i18n y actualización del enlace de redirección post-pago hacia el Web Application desplegado.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- Tasks sin US — Entrevistas de validación -->
+  <tr>
+    <td rowspan="5">-</td>
+    <td rowspan="5">Entrevistas de validación</td>
+    <td>T-17</td>
+    <td>Diseñar guía de entrevistas de validación</td>
+    <td>Elaborar el guión de preguntas y el flujo de navegación guiada para las entrevistas de validación con usuarios de ambos segmentos objetivo.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-18</td>
+    <td>Realizar entrevista de validación (Luciana)</td>
+    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
+    <td>2</td>
+    <td>Mechan, Luciana</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-19</td>
+    <td>Realizar entrevista de validación (Arturo)</td>
+    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
+    <td>2</td>
+    <td>Contreras, Arturo</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-20</td>
+    <td>Realizar entrevista de validación (Carla)</td>
+    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
+    <td>2</td>
+    <td>Gallardo, Carla</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>T-21</td>
+    <td>Realizar entrevistas de validación (Martin y Nickolas)</td>
+    <td>Conducir entrevistas de validación con usuarios de los segmentos asignados, registrar hallazgos y documentar los videos de las sesiones.</td>
+    <td>2</td>
+    <td>Asmat, Martin / Ramirez, Nickolas</td>
+    <td>Done</td>
+  </tr>
+
+</table>
 
 
 ## Conclusiones y recomendaciones
