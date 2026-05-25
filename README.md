@@ -279,7 +279,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><b>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</b></td>
+    <td><b>Comunica oralmente con efectividad a diferentes rangos de audiencia.</b></td>
     <td>
       <b>Mechan Montenegro, Luciana Carolina</b> <br>
       <u>AV1</u> <br>
