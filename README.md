@@ -35,7 +35,7 @@ u202415551 - Ramirez Ruiz, Nickolas
 </p>
 
 
-*Abril, 2026*
+*Junio, 2026*
 
 </div>
 
@@ -8248,7 +8248,6 @@ con la tabla de control de estado de las tareas.
 
 **URL del board:** 
 
-
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
     <th colspan="2">User Story</th>
@@ -8272,7 +8271,7 @@ con la tabla de control de estado de las tareas.
     <td>T-01</td>
     <td>Implementar bounded context de usuarios</td>
     <td>Implementar el bounded context de usuarios incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>8</td>
+    <td>5</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
@@ -8284,7 +8283,7 @@ con la tabla de control de estado de las tareas.
     <td>T-02</td>
     <td>Implementar bounded context de autenticación</td>
     <td>Implementar el bounded context de autenticación incluyendo generación de tokens, validación de credenciales, endpoints REST y documentación con Swagger.</td>
-    <td>8</td>
+    <td>5</td>
     <td>Ramirez, Nickolas</td>
     <td>Done</td>
   </tr>
@@ -8296,7 +8295,7 @@ con la tabla de control de estado de las tareas.
     <td>T-03</td>
     <td>Implementar bounded context de skin profiles</td>
     <td>Implementar el bounded context de skin profiles incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>6</td>
+    <td>4</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
@@ -8308,7 +8307,7 @@ con la tabla de control de estado de las tareas.
     <td>T-04</td>
     <td>Implementar bounded context de facial scans</td>
     <td>Implementar el bounded context de facial scans incluyendo entidad con scores de análisis, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>8</td>
+    <td>5</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
@@ -8320,7 +8319,7 @@ con la tabla de control de estado de las tareas.
     <td>T-05</td>
     <td>Implementar bounded context de routine management</td>
     <td>Implementar el bounded context de routine management incluyendo entidades Routine, RoutineItem y DailyTracking, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>10</td>
+    <td>5</td>
     <td>Contreras, Arturo</td>
     <td>Done</td>
   </tr>
@@ -8332,7 +8331,7 @@ con la tabla de control de estado de las tareas.
     <td>T-06</td>
     <td>Implementar bounded context de product discovery</td>
     <td>Implementar el bounded context de product discovery incluyendo entidades Product, ProductCompatibility y FavoriteProduct, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>10</td>
+    <td>5</td>
     <td>Asmat, Martin</td>
     <td>Done</td>
   </tr>
@@ -8344,7 +8343,7 @@ con la tabla de control de estado de las tareas.
     <td>T-07</td>
     <td>Implementar bounded context de dermatology care</td>
     <td>Implementar el bounded context de dermatology care incluyendo entidades DermatologistProfile, DermatologistAvailability, Appointment y Consultation, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>12</td>
+    <td>5</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
@@ -8356,7 +8355,7 @@ con la tabla de control de estado de las tareas.
     <td>T-08</td>
     <td>Implementar bounded context de subscriptions y pagos</td>
     <td>Implementar el bounded context de pagos y suscripciones incluyendo entidades Payment, Plan y Subscription, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>10</td>
+    <td>5</td>
     <td>Ramirez, Nickolas</td>
     <td>Done</td>
   </tr>
@@ -8368,7 +8367,7 @@ con la tabla de control de estado de las tareas.
     <td>T-09</td>
     <td>Implementar bounded context de intelligent support</td>
     <td>Implementar el bounded context de intelligent support incluyendo entidades SupportQuery y ChatMessage, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>8</td>
+    <td>5</td>
     <td>Gallardo, Carla</td>
     <td>Done</td>
   </tr>
@@ -8486,7 +8485,6 @@ con la tabla de control de estado de las tareas.
   </tr>
 
 </table>
-
 
 ## Conclusiones y recomendaciones
 
