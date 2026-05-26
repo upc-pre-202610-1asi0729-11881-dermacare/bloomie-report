@@ -8235,18 +8235,28 @@ El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2,
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo.
+El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de 
+los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y 
+documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core 
+del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y 
+se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo. 
+A continuación se presenta el board de seguimiento utilizado durante el sprint, junto 
+con la tabla de control de estado de las tareas.
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
-    <th>User Story Id</th>
-    <th>Título</th>
-    <th>Task Id</th>
-    <th>Título</th>
-    <th>Descripción</th>
-    <th>Estimación (Hours)</th>
-    <th>Responsable</th>
-    <th>Estado</th>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status</th>
   </tr>
 
   <tr>
@@ -8349,8 +8359,8 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
   </tr>
 
   <tr>
-    <td>-</td>
-    <td>Configuración base del backend</td>
+    <td rowspan="4">-</td>
+    <td rowspan="4">Configuración base del backend</td>
     <td>T-10</td>
     <td>Configurar proyecto Spring Boot</td>
     <td>Inicializar el proyecto Spring Boot con las dependencias necesarias: Spring Web, Spring Data JPA, Spring Security, Lombok y configuración de perfiles de entorno.</td>
@@ -8358,10 +8368,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Configuración base del backend</td>
     <td>T-11</td>
     <td>Configurar base de datos y migraciones</td>
     <td>Configurar la conexión a la base de datos relacional en Azure, definir el esquema inicial y configurar las migraciones del sistema.</td>
@@ -8369,10 +8376,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Contreras, Arturo</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Configuración base del backend</td>
     <td>T-12</td>
     <td>Configurar documentación con Swagger UI</td>
     <td>Configurar OpenAPI 3.0 con Swagger UI en el proyecto Spring Boot, definiendo la información general de la API y habilitando el acceso al portal de documentación.</td>
@@ -8380,10 +8384,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Configuración base del backend</td>
     <td>T-13</td>
     <td>Desplegar Web Services en Azure App Service</td>
     <td>Configurar el recurso Azure App Service, vincular el repositorio del backend y configurar el pipeline CI/CD con GitHub Actions para el despliegue automático.</td>
@@ -8393,8 +8394,8 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
   </tr>
 
   <tr>
-    <td>-</td>
-    <td>Correcciones del Frontend</td>
+    <td rowspan="2">-</td>
+    <td rowspan="2">Correcciones y complementos del Frontend</td>
     <td>T-14</td>
     <td>Implementar sección de perfil de usuario</td>
     <td>Implementar las vistas de gestión de perfil incluyendo edición de información personal, actualización de características de piel y cambio de contraseña.</td>
@@ -8402,13 +8403,10 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Ramirez, Nickolas</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Correcciones del Frontend</td>
     <td>T-15</td>
     <td>Actualizar integración del frontend con Web Services</td>
-    <td>Actualizar las URLs base del frontend para consumir los endpoints del Web Service desplegado en Azure, reemplazando la Mock API.</td>
+    <td>Actualizar las URLs base del frontend para consumir los endpoints del Web Service desplegado en Azure, reemplazando la Mock API en los bounded contexts implementados.</td>
     <td>3</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
@@ -8419,15 +8417,15 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Actualización Landing Page</td>
     <td>T-16</td>
     <td>Actualizar Landing Page con mejoras y correcciones</td>
-    <td>Aplicar mejoras visuales y de contenido a la Landing Page incluyendo correcciones de i18n y actualización del enlace de redirección post-pago.</td>
+    <td>Aplicar mejoras visuales y de contenido a la Landing Page incluyendo correcciones de i18n y actualización del enlace de redirección post-pago hacia el Web Application desplegado.</td>
     <td>2</td>
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
 
   <tr>
-    <td>-</td>
-    <td>Entrevistas de validación</td>
+    <td rowspan="5">-</td>
+    <td rowspan="5">Entrevistas de validación</td>
     <td>T-17</td>
     <td>Diseñar guía de entrevistas de validación</td>
     <td>Elaborar el guión de preguntas y el flujo de navegación guiada para las entrevistas de validación con usuarios de ambos segmentos objetivo.</td>
@@ -8435,10 +8433,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Entrevistas de validación</td>
     <td>T-18</td>
     <td>Realizar entrevista de validación (Luciana)</td>
     <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
@@ -8446,10 +8441,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Mechan, Luciana</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Entrevistas de validación</td>
     <td>T-19</td>
     <td>Realizar entrevista de validación (Arturo)</td>
     <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
@@ -8457,10 +8449,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Contreras, Arturo</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Entrevistas de validación</td>
     <td>T-20</td>
     <td>Realizar entrevista de validación (Carla)</td>
     <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
@@ -8468,10 +8457,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Gallardo, Carla</td>
     <td>Done</td>
   </tr>
-
   <tr>
-    <td>-</td>
-    <td>Entrevistas de validación</td>
     <td>T-21</td>
     <td>Realizar entrevistas de validación (Martin y Nickolas)</td>
     <td>Conducir entrevistas de validación con usuarios de los segmentos asignados, registrar hallazgos y documentar los videos de las sesiones.</td>
@@ -8479,6 +8465,7 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
     <td>Asmat, Martin / Ramirez, Nickolas</td>
     <td>Done</td>
   </tr>
+
 </table>
 
 
