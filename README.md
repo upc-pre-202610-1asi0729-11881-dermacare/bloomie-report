@@ -8432,7 +8432,7 @@ con la tabla de control de estado de las tareas.
 
   <tr>
     <td>-</td>
-    <td">Entrevistas de validación</td>
+    <td>Entrevistas de validación</td>
     <td>T-17</td>
     <td>Diseñar guía de entrevistas de validación</td>
     <td>Elaborar el guión de preguntas y el flujo de navegación guiada para las entrevistas de validación con usuarios de ambos segmentos objetivo.</td>
