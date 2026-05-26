@@ -7832,7 +7832,6 @@ seguimiento utilizado durante el sprint, junto con la tabla de control de estado
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Stripe + Landing -->
   <tr>
     <td rowspan="3">-</td>
     <td rowspan="3">Integración de pasarela de pagos en Landing Page</td>
@@ -7888,7 +7887,6 @@ seguimiento utilizado durante el sprint, junto con la tabla de control de estado
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Correcciones Figma -->
   <tr>
     <td rowspan="3">-</td>
     <td rowspan="3">Correcciones y complementos de diseño UX/UI en Figma</td>
@@ -7916,7 +7914,6 @@ seguimiento utilizado durante el sprint, junto con la tabla de control de estado
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Documentación Sprint 2 -->
   <tr>
     <td rowspan="8">-</td>
     <td rowspan="8">Documentación del Sprint 2 en el informe</td>
@@ -8369,8 +8366,8 @@ con la tabla de control de estado de las tareas.
   </tr>
 
   <tr>
-    <td rowspan="4">-</td>
-    <td rowspan="4">Configuración base del backend</td>
+    <td>-</td>
+    <td>Configuración base del backend</td>
     <td>T-10</td>
     <td>Configurar proyecto Spring Boot</td>
     <td>Inicializar el proyecto Spring Boot con las dependencias necesarias: Spring Web, Spring Data JPA, Spring Security, Lombok y configuración de perfiles de entorno.</td>
@@ -8404,8 +8401,8 @@ con la tabla de control de estado de las tareas.
   </tr>
 
   <tr>
-    <td rowspan="2">-</td>
-    <td rowspan="2">Correcciones y complementos del Frontend</td>
+    <td>-</td>
+    <td>Correcciones y complementos del Frontend</td>
     <td>T-14</td>
     <td>Implementar sección de perfil de usuario</td>
     <td>Implementar las vistas de gestión de perfil incluyendo edición de información personal, actualización de características de piel y cambio de contraseña.</td>
@@ -8422,7 +8419,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-
   <tr>
     <td>-</td>
     <td>Actualización Landing Page</td>
@@ -8435,8 +8431,8 @@ con la tabla de control de estado de las tareas.
   </tr>
 
   <tr>
-    <td rowspan="5">-</td>
-    <td rowspan="5">Entrevistas de validación</td>
+    <td>-</td>
+    <td">Entrevistas de validación</td>
     <td>T-17</td>
     <td>Diseñar guía de entrevistas de validación</td>
     <td>Elaborar el guión de preguntas y el flujo de navegación guiada para las entrevistas de validación con usuarios de ambos segmentos objetivo.</td>
@@ -8476,7 +8472,6 @@ con la tabla de control de estado de las tareas.
     <td>Asmat, Martin / Ramirez, Nickolas</td>
     <td>Done</td>
   </tr>
-
 </table>
 
 ## Conclusiones y recomendaciones
