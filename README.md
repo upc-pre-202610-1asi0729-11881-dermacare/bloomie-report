@@ -35,7 +35,7 @@ u202415551 - Ramirez Ruiz, Nickolas
 </p>
 
 
-*Abril, 2026*
+*Junio, 2026*
 
 </div>
 
