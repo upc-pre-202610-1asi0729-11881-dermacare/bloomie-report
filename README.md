@@ -8312,7 +8312,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- TS05 + TS06 -->
+
   <tr>
     <td>TS05 / TS06</td>
     <td>Gestionar rutinas y seguimiento diario</td>
@@ -8324,7 +8324,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- TS07 + TS08 -->
   <tr>
     <td>TS07 / TS08</td>
     <td>Gestionar catálogo de productos y favoritos</td>
@@ -8336,7 +8335,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- TS09 + TS10 + TS11 + TS12 -->
   <tr>
     <td>TS09 / TS10 / TS11 / TS12</td>
     <td>Gestionar atención dermatológica</td>
@@ -8348,7 +8346,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- TS13 + TS14 + TS15 -->
   <tr>
     <td>TS13 / TS14 / TS15</td>
     <td>Gestionar pagos y suscripciones</td>
@@ -8360,7 +8357,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- TS16 + TS17 -->
   <tr>
     <td>TS16 / TS17</td>
     <td>Gestionar asistente virtual y chat</td>
@@ -8372,7 +8368,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Configuración base -->
   <tr>
     <td rowspan="4">-</td>
     <td rowspan="4">Configuración base del backend</td>
@@ -8408,7 +8403,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Correcciones frontend y landing -->
   <tr>
     <td rowspan="2">-</td>
     <td rowspan="2">Correcciones y complementos del Frontend</td>
@@ -8428,7 +8422,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Landing Page -->
+
   <tr>
     <td>-</td>
     <td>Actualización Landing Page</td>
@@ -8440,7 +8434,6 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
-  <!-- Tasks sin US — Entrevistas de validación -->
   <tr>
     <td rowspan="5">-</td>
     <td rowspan="5">Entrevistas de validación</td>
