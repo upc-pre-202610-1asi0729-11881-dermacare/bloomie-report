@@ -292,100 +292,78 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><b>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</b></td>
+    <td><b>Comunica oralmente con efectividad a diferentes rangos de audiencia.</b></td>
     <td>
-      <b>Mechan Montenegro, Luciana Carolina</b> <br>
-      <u>AV1</u> <br>
-      Participó en la sustentación del Lean UX Canvas, segmentos objetivo, análisis de competidores, análisis competitivo, lenguaje ubicuo, Landing Page Wireframe, Software Architecture Component, Systems Diagrams y Class Diagrams. Durante estas actividades, comunicó ideas relacionadas con la propuesta de valor, el mercado, el diseño visual y la arquitectura del sistema, adecuando su explicación a una audiencia técnica y no técnica.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el despliegue del Mock API en Azure, elaboración del diagrama de base de datos y diagrama de clases, implementación de un bounded context para el frontend, desarrollo de la pasarela de pagos para la landing page y desarrollo del Sprint Planning del capítulo 5. Sus aportes permitieron fortalecer la organización técnica del sistema, la integración de componentes y la planificación colaborativa del sprint.
-      <br><br>
-      <b>Asmat Alminco, Martin Alejandro</b> <br>
-      <u>AV1</u> <br>
-      Participó en la explicación de User Stories, configuración del entorno de desarrollo, evidencias de desarrollo para Sprint Review, Lean UX Assumptions, diseño de entrevistas y estrategias frente a competidores. Sus aportes permitieron comunicar la validación del problema, la definición funcional del producto y los avances técnicos iniciales del proyecto.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el desarrollo de dos bounded contexts para el frontend, corrección de hipótesis del AV1, elaboración de mockups y wireframes, desarrollo de wireflows y userflows con sus respectivas descripciones, además de la creación de videos de prototyping y explicación funcional. Sus actividades contribuyeron a mejorar la experiencia del usuario, la organización funcional y la validación visual del sistema.
-      <br><br>
-      <b>Gallardo Morales, Carla Alejandra</b> <br>
-      <u>AV1</u> <br>
-      Sustentó User Stories, Lean UX Problem Statements, Lean UX Hypothesis Statements, estrategias frente a competidores, diseño de entrevistas, Impact Mapping, Product Backlog y SEO Tags and Meta Tags. Estas actividades permitieron explicar de forma clara las necesidades del usuario, las hipótesis del producto, la planificación funcional y los elementos de posicionamiento web.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el desarrollo de la herramienta para la exposición, elaboración de mockups y wireframes con explicación de la arquitectura, desarrollo de userflows y wireflows con sus descripciones, organización del Trello para el Sprint 2, implementación de un bounded context para el frontend y correcciones de diseño del AV1. Sus aportes fortalecieron la coordinación del sprint, la comunicación visual y la integración funcional del frontend.
-      <br><br>
-      <b>Contreras Torres, Arturo Valentino</b> <br>
-      <u>AV1</u> <br>
-      Participó en la exposición de Software Architecture Context Diagram, Software Architecture Container Diagrams, estrategias frente a competidores, Big Picture Event Storming, Design-Level Event Storming, Systems Diagrams, Class Diagrams, User Personas, User Task Matrix y Database Design. Su participación permitió comunicar aspectos del dominio del problema, arquitectura, diseño de software y estructura de datos del sistema.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en las correcciones del diagrama C4, desarrollo de diagramas frontend de la aplicación, despliegue de la segunda versión actualizada de la landing page, despliegue del Static Web App en Azure e implementación de un bounded context para el funcionamiento del frontend. Sus actividades permitieron fortalecer la arquitectura del sistema y mejorar la integración y despliegue de la aplicación web.
-      <br><br>
-      <b>Ramirez, Nickolas</b> <br>
-      <u>AV1</u> <br>
-      Sustentó Startup Profile, descripción de la startup, User Journey Mapping, Empathy Mapping, Landing Page Mock-up, General Style Guidelines, Web Style Guidelines, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1 y estrategias frente a competidores. Sus aportes permitieron comunicar la identidad del proyecto, la experiencia del usuario, la línea visual del producto y la organización del primer sprint.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en la revisión de Team Collaboration Insights, Aspect Leaders and Collaborators y Sprint Backlog, actualización de userflows, mockups, wireframes y wireflows, grabación del Web Application Prototyping e implementación del frontend IAM. Sus aportes contribuyeron a mejorar la coordinación del equipo, la validación visual del sistema y la integración de funcionalidades del frontend.
+      <b>Mechan Montenegro, Luciana Carolina</b><br>
+      <u>AV1</u><br>
+      Durante la sustentación del AV1, presentó los segmentos objetivo y el Lean UX Canvas empleando un lenguaje accesible para audiencias no técnicas, diferenciando claramente el perfil de cada usuario. Al exponer el Software Architecture Component y los Class Diagrams, adaptó el nivel técnico del discurso a la audiencia evaluadora, utilizando diagramas como apoyo audiovisual para validar que los conceptos de arquitectura fueran comprendidos correctamente. Enfocó cada presentación hacia el objetivo específico del artefacto expuesto, sin dispersarse en contenido ajeno al alcance de cada sección.<br><br>
+      <u>TB1</u><br>
+      Expuso el despliegue del Mock API en Azure y la pasarela de pagos del landing page ante el equipo y evaluadores, empleando demostraciones en vivo como medio audiovisual para validar el funcionamiento real de los componentes. Al presentar el Sprint Planning, dirigió su comunicación hacia la organización del equipo y los objetivos del sprint, escuchando las observaciones del equipo antes de ajustar la planificación.<br><br>
+      <b>Asmat Alminco, Martin Alejandro</b><br>
+      <u>AV1</u><br>
+      Presentó las Lean UX Assumptions y el diseño de entrevistas empleando un lenguaje orientado a validar hipótesis con audiencias mixtas (técnicas y de negocio), diferenciando los supuestos del producto de los hallazgos del usuario. En la exposición del Sprint Review, utilizó tablas y evidencias de commits como medios de soporte visual, enfocando la presentación en demostrar el avance funcional alcanzado dentro del sprint.<br><br>
+      <u>TB1</u><br>
+      Expuso los wireflows y userflows con descripciones verbales detalladas, adaptando el nivel de abstracción según si la audiencia era técnica o de diseño. Presentó los videos de prototyping como medio audiovisual principal para validar con el equipo que los flujos diseñados representaban correctamente la experiencia esperada por el usuario, recogiendo retroalimentación antes de cerrar las iteraciones de diseño.<br><br>
+      <b>Gallardo Morales, Carla Alejandra</b><br>
+      <u>AV1</u><br>
+      Sustentó los Lean UX Problem Statements y las Lean UX Hypothesis Statements empleando un lenguaje centrado en el problema del usuario, comprensible tanto para evaluadores técnicos como para audiencias sin perfil de ingeniería. Al exponer el Impact Mapping y el Product Backlog, orientó su comunicación hacia los objetivos de priorización del producto, utilizando el tablero visual como apoyo para mostrar la relación entre metas de negocio y funcionalidades.<br><br>
+      <u>TB1</u><br>
+      Lideró la exposición de los mockups y wireframes apoyándose en prototipos navegables como medio audiovisual, lo que permitió que audiencias no técnicas comprendieran la propuesta de interfaz sin necesidad de conocimiento previo de diseño. Utilizó el tablero Trello del Sprint 2 como herramienta visual de respaldo durante la presentación del avance del equipo, enfocando la explicación en los objetivos de entrega del sprint.<br><br>
+      <b>Contreras Torres, Arturo Valentino</b><br>
+      <u>AV1</u><br>
+      Presentó los diagramas de arquitectura C4 (Context, Container y Components) empleando los niveles de abstracción adecuados para cada audiencia. Al exponer el Big Picture Event Storming y el Design-Level Event Storming, utilizó los tableros de eventos como medios visuales estructurados, orientando cada explicación hacia el objetivo de delimitar los bounded contexts del sistema.<br><br>
+      <u>TB1</u><br>
+      Presentó las correcciones del diagrama C4 explicando puntualmente los cambios realizados respecto a la versión anterior, lo que evidenció capacidad de escucha objetiva frente a las observaciones del AV1. Al exponer el despliegue del Static Web App en Azure, empleó capturas del entorno de nube como apoyo visual, dirigiendo la presentación hacia el objetivo de demostrar la disponibilidad real del frontend desplegado.<br><br>
+      <b>Ramirez, Nickolas</b><br>
+      <u>AV1</u><br>
+      Presentó el Startup Profile y la descripción de la startup adaptando el discurso a una audiencia general, destacando la propuesta de valor sin recurrir a terminología técnica innecesaria. Al exponer el User Journey Mapping y el Empathy Mapping, empleó los mapas visuales como medios de comunicación que permitieron transmitir la experiencia del usuario de forma empática y comprensible. Orientó la presentación del Sprint Planning 1 y el Sprint Backlog hacia los objetivos de organización del equipo, escuchando observaciones antes de definir los acuerdos de trabajo.<br><br>
+      <u>TB1</u><br>
+      Coordinó la grabación del Web Application Prototyping como medio audiovisual para comunicar el estado funcional de la aplicación a audiencias que no participan directamente en el desarrollo. Revisó y actualizó los userflows, mockups y wireflows antes de la presentación, asegurando que los medios visuales estuvieran alineados con los objetivos del sprint y fueran comprensibles para diferentes rangos de audiencia.
     </td>
     <td>
-      <u>AV1</u> <br>
-      Como equipo, durante el AV1 se fortaleció el trabajo colaborativo mediante la distribución de responsabilidades relacionadas con investigación, análisis, diseño y modelado del sistema. Cada integrante aportó desde diferentes áreas del proyecto, permitiendo integrar perspectivas funcionales, técnicas y de experiencia de usuario para alcanzar los objetivos planteados de manera conjunta.
-      <br><br>
-      <u>TB1</u> <br>
-      Como equipo, durante el TB1 se fortaleció el liderazgo compartido mediante la colaboración en actividades relacionadas con despliegue en la nube, modelado del sistema, diseño UX/UI, planificación del sprint, desarrollo frontend e integración de bounded contexts. La distribución organizada de responsabilidades permitió mejorar la coordinación técnica y funcional del proyecto, facilitando el cumplimiento de los objetivos establecidos para el sprint.
+      <u>AV1</u><br>
+      Como equipo, durante el AV1 cada integrante empleó códigos de comunicación apropiados según la audiencia a la que se dirigía, diferenciando el nivel técnico del discurso entre evaluadores con perfil de ingeniería y audiencias generales. Se utilizaron diagramas, mapas visuales y tableros como medios audiovisuales de soporte, orientando cada presentación hacia los objetivos específicos del artefacto expuesto. Esto permitió transmitir tanto los aspectos técnicos como los funcionales del proyecto de forma clara y estructurada.<br><br>
+      <u>TB1</u><br>
+      Como equipo, durante el TB1 se fortaleció la comunicación oral mediante el uso de demostraciones en vivo, prototipos navegables y videos de prototyping como medios audiovisuales que validaron el funcionamiento real del sistema ante diferentes audiencias. Cada integrante orientó sus presentaciones hacia los objetivos del sprint y recogió observaciones del equipo y evaluadores antes de ajustar los entregables, evidenciando escucha activa y capacidad de conciliación en el proceso de revisión.
     </td>
   </tr>
-
   <tr>
-    <td><b>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</b></td>
+    <td><b>Comunica por escrito con efectividad a diferentes rangos de audiencia.</b></td>
     <td>
-      <b>Mechan Montenegro, Luciana Carolina</b> <br>
-      <u>AV1</u> <br>
-      Participó en la sustentación del Lean UX Canvas, segmentos objetivo, análisis competitivo, lenguaje ubicuo y diagramas del sistema, permitiendo organizar y comunicar de manera estructurada los requerimientos y componentes técnicos del proyecto.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el despliegue del Mock API en Azure, desarrollo de diagramas de base de datos y clases, implementación de bounded contexts, desarrollo de la pasarela de pagos y Sprint Planning. Estas actividades permitieron fortalecer la organización técnica, la planificación del sprint y la integración de componentes funcionales del sistema.
-      <br><br>
-      <b>Asmat Alminco, Martin Alejandro</b> <br>
-      <u>AV1</u> <br>
-      Participó en la recopilación y análisis de entrevistas, Lean UX Assumptions y User Stories. Estas actividades permitieron identificar necesidades de los usuarios y organizar tareas orientadas al cumplimiento de los objetivos iniciales del proyecto.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el desarrollo de bounded contexts, corrección de hipótesis del AV1, elaboración de mockups, wireframes, userflows y wireflows, además de videos de prototyping. Sus actividades contribuyeron a mejorar la experiencia del usuario, la validación funcional y la coordinación de tareas relacionadas con diseño y frontend.
-      <br><br>
-      <b>Gallardo Morales, Carla Alejandra</b> <br>
-      <u>AV1</u> <br>
-      Participó en Lean UX Problem Statements, Lean UX Hypothesis Statements, Impact Mapping, Product Backlog y User Stories. Sus actividades permitieron estructurar y priorizar requerimientos, facilitando la planificación y coordinación de actividades del equipo.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en el desarrollo de herramientas para la exposición, mockups, wireframes, userflows, wireflows, organización del Trello para el Sprint 2, implementación de bounded contexts y correcciones de diseño del AV1. Sus aportes permitieron mantener coordinación en las actividades del sprint y mejorar la comunicación visual y organizativa del proyecto.
-      <br><br>
-      <b>Contreras Torres, Arturo Valentino</b> <br>
-      <u>AV1</u> <br>
-      Participó en User Personas, Event Storming, diagramas de arquitectura y Database Design. Su participación permitió estructurar el análisis funcional y técnico del proyecto, favoreciendo la planificación y coordinación de actividades del equipo.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en las correcciones del diagrama C4, diagramas frontend, despliegue de la landing page y Static Web App en Azure, además de la implementación de bounded contexts. Estas actividades permitieron fortalecer la planificación técnica, el despliegue del sistema y la integración funcional de la aplicación web.
-      <br><br>
-      <b>Ramirez, Nickolas</b> <br>
-      <u>AV1</u> <br>
-      Participó en Startup Profile, User Journey Mapping, Empathy Mapping y lineamientos visuales del sistema. Sus actividades permitieron mantener coherencia entre la experiencia del usuario, el diseño visual y la organización de actividades del proyecto.
-      <br><br>
-      <u>TB1</u> <br>
-      Participó en la revisión de Team Collaboration Insights, Aspect Leaders and Collaborators y Sprint Backlog, actualización de userflows, mockups y wireflows, grabación del prototyping e implementación del frontend IAM. Sus actividades permitieron fortalecer la coordinación del equipo, la organización del sprint y la validación funcional del frontend.
+      <b>Mechan Montenegro, Luciana Carolina</b><br>
+      <u>AV1</u><br>
+      Redactó el Lean UX Canvas y la sección de segmentos objetivo siguiendo los estándares del informe técnico del curso, sintetizando la propuesta de valor y el perfil de usuario en un lenguaje claro y accesible para diferentes lectores. Documentó el Software Architecture Component y los Class Diagrams con notaciones estandarizadas (UML), garantizando que los diagramas y sus descripciones escritas fueran comprensibles tanto para perfiles técnicos como para revisores del proyecto.<br><br>
+      <u>TB1</u><br>
+      Documentó el diagrama de base de datos y el diagrama de clases con sus respectivas descripciones escritas, verificando que las convenciones de nomenclatura y las relaciones entre entidades fueran coherentes con el estándar técnico establecido. Redactó el Sprint Planning del capítulo 5 sintetizando los acuerdos del equipo de forma estructurada, adecuando el lenguaje a lectores que requieren comprender el alcance del sprint sin conocimiento previo del sistema.<br><br>
+      <b>Asmat Alminco, Martin Alejandro</b><br>
+      <u>AV1</u><br>
+      Redactó las Lean UX Assumptions y las User Stories siguiendo el formato estándar del informe, utilizando un lenguaje orientado al usuario que permitiera a lectores no técnicos comprender las hipótesis y los criterios de aceptación del producto. Documentó las evidencias de desarrollo para el Sprint Review con un nivel de detalle técnico adecuado para evaluadores del curso, incluyendo referencias a commits y entornos de despliegue.<br><br>
+      <u>TB1</u><br>
+      Documentó los wireflows y userflows con descripciones escritas detalladas que acompañaban cada diagrama, permitiendo que lectores sin experiencia en diseño UX comprendieran los flujos de interacción del sistema. Redactó las correcciones de las hipótesis del AV1 de forma clara, sintetizando los ajustes realizados respecto a la versión anterior en un lenguaje comprensible para diferentes audiencias del informe.<br><br>
+      <b>Gallardo Morales, Carla Alejandra</b><br>
+      <u>AV1</u><br>
+      Redactó los Lean UX Problem Statements y las Lean UX Hypothesis Statements con un lenguaje centrado en el problema del usuario, verificando antes de la entrega que la redacción fuera coherente con el público objetivo del informe. Documentó el Impact Mapping y el Product Backlog con una estructura que permite a lectores técnicos y de gestión identificar con claridad la priorización de funcionalidades y su relación con las metas del producto.<br><br>
+      <u>TB1</u><br>
+      Redactó las descripciones escritas de los userflows y wireflows, sintetizando de forma precisa la lógica de cada flujo de usuario en un lenguaje comprensible para audiencias de diseño y desarrollo. Documentó el estado del Sprint 2 a través del tablero Trello y su respectivo registro escrito, garantizando que la información reflejara con claridad los objetivos y el progreso del equipo para diferentes lectores del informe.<br><br>
+      <b>Contreras Torres, Arturo Valentino</b><br>
+      <u>AV1</u><br>
+      Documentó los diagramas de arquitectura C4, el Big Picture Event Storming y el Design-Level Event Storming con descripciones escritas que acompañaban cada vista del sistema, utilizando un lenguaje técnico preciso adecuado para evaluadores de ingeniería de software. Redactó las User Personas y el User Task Matrix con un nivel de síntesis que permite a lectores no técnicos comprender el comportamiento y las necesidades de los usuarios del sistema.<br><br>
+      <u>TB1</u><br>
+      Documentó las correcciones del diagrama C4 detallando por escrito los cambios aplicados respecto a la versión del AV1, facilitando la trazabilidad del diseño arquitectónico para diferentes lectores del informe. Redactó la documentación del despliegue del Static Web App en Azure siguiendo los estándares del informe técnico, sintetizando los pasos y evidencias del proceso en un lenguaje comprensible tanto para perfiles técnicos como para revisores externos.<br><br>
+      <b>Ramirez, Nickolas</b><br>
+      <u>AV1</u><br>
+      Redactó el Startup Profile y la descripción de la startup con un lenguaje accesible para audiencias generales, sintetizando la identidad y propuesta de valor del proyecto sin recurrir a terminología técnica innecesaria. Documentó el User Journey Mapping y el Empathy Mapping con descripciones escritas que complementaban los diagramas visuales, permitiendo que lectores con diferentes perfiles comprendieran la experiencia y emociones del usuario a lo largo del flujo del producto.<br><br>
+      <u>TB1</u><br>
+      Actualizó y documentó por escrito los userflows, mockups y wireflows revisados, verificando que las descripciones escritas estuvieran alineadas con los cambios del sprint y fueran comprensibles para lectores de diseño y desarrollo. Redactó los Aspect Leaders and Collaborators y el Sprint Backlog con un lenguaje claro y estructurado, sintetizando las responsabilidades del equipo de forma que cualquier lector del informe pudiera identificar los acuerdos de trabajo establecidos.
     </td>
     <td>
-      <u>AV1</u> <br>
-      Como equipo, durante el AV1 se promovió un entorno colaborativo mediante la distribución organizada de actividades y la comunicación constante entre los integrantes. La planificación de tareas según las habilidades de cada miembro permitió cumplir los objetivos establecidos, mantener coherencia entre los entregables y fomentar una participación inclusiva durante el desarrollo del proyecto.
-      <br><br>
-      <u>TB1</u> <br>
-      Como equipo, durante el TB1 se promovió un entorno colaborativo mediante la distribución organizada de tareas relacionadas con despliegue, modelado, frontend, UX/UI y planificación del sprint. La comunicación constante entre los integrantes permitió cumplir los objetivos establecidos, mejorar la integración de componentes del sistema y fortalecer la calidad técnica y visual de los entregables desarrollados.
+      <u>AV1</u><br>
+      Como equipo, durante el AV1 se elaboraron informes técnicos siguiendo los estándares establecidos por el curso, verificando la calidad de la redacción antes de cada entrega. Cada integrante demostró capacidad de síntesis al documentar los artefactos asignados, utilizando un lenguaje escrito y medios gráficos adecuados al público objetivo: terminología técnica precisa para secciones de arquitectura y diseño, y lenguaje accesible para secciones orientadas a la comprensión del problema y el usuario.<br><br>
+      <u>TB1</u><br>
+      Como equipo, durante el TB1 se consolidó la comunicación escrita mediante la documentación estructurada de los avances del sprint, los diagramas del sistema, los flujos de usuario y las evidencias de despliegue. La redacción de cada sección mantuvo coherencia con los estándares técnicos del informe y fue adaptada al rango de audiencia correspondiente, garantizando que tanto evaluadores técnicos como lectores generales pudieran comprender el progreso y los resultados del proyecto.
     </td>
   </tr>
 </table>
-```
 
 ---
 
