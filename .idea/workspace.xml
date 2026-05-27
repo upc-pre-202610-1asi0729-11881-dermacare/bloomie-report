@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694321cd-70e6-4b67-b2c9-fcfdbb4d2c6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="0cbee535-a3a9-4b1d-838b-c44c5cacf3fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,39 +13,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Bynickram02&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Bloomie-app/Bloomie-Report.git&quot;,
-    &quot;accountId&quot;: &quot;2ab9b13b-82bb-46d2-a130-f6ccf8b812bb&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1,
-  &quot;fromUser&quot;: false
-}</component>
-  <component name="ProjectId" id="3DN5YLQOrkdCZjdrgRsGYC99zD0" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3EFGFSmA4yQrfyrNZpCBw787PG9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/docs-update-content",
     "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/AZUS/Desktop/OpenSource1/Bloomie-Report",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,13 +49,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="694321cd-70e6-4b67-b2c9-fcfdbb4d2c6b" name="Changes" comment="" />
-      <created>1778109732786</created>
+      <changelist id="0cbee535-a3a9-4b1d-838b-c44c5cacf3fa" name="Changes" comment="" />
+      <created>1779766799775</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1778109732786</updated>
-      <workItem from="1778109733791" duration="22518000" />
-      <workItem from="1778264180213" duration="3798000" />
+      <updated>1779766799775</updated>
+      <workItem from="1779766801271" duration="3907000" />
     </task>
     <servers />
   </component>
