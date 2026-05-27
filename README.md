@@ -137,6 +137,10 @@ La evidencia presentada en esta sección se encuentra alineada con el Registro d
 
 <img src="assets/img/Project-Report-Collaboration-Insights/AV1/github-organization-bloomie.png" width="500"/>
 
+
+<img src="assets/img/github-pulse1.png" width="500"/>
+
+
 **Segunda Entrega (TB1)**
 
 Para la segunda entrega el equipo continuó desarrollando el Project Report de manera 
@@ -7422,7 +7426,7 @@ El Sprint 2 tuvo como punto de partida los resultados alcanzados en el Sprint 1,
 | **Sprint 1 Review Summary** | Durante el Sprint 1 se completaron los artefactos Lean UX (Problem Statements, Assumptions, Hypothesis Statements y Canvas), el análisis de requisitos con entrevistas y needfinding, la especificación completa de User Stories y Product Backlog, el diseño UX/UI en Figma incluyendo wireframes, mockups y wireflow diagrams para Landing Page y Web Application, la arquitectura del software con diagramas C4 y Event Storming, y el despliegue exitoso de la Landing Page en Vercel. Sin embargo, no se completó el prototipo interactivo de la Web Application ni la sección de Sprint Backlog 1, quedando ambos pendientes como deuda técnica para ser subsanada al inicio del Sprint 2. El equipo reconoció la necesidad de mejorar la planificación interna para evitar entregas incompletas. |
 | **Sprint 1 Retrospective Summary** | El equipo identificó como aciertos la aplicación de GitFlow con feature branches por inciso, la distribución de responsabilidades mediante el esquema de Aspect Leaders y Collaborators, y la comunicación constante a través de Discord. Como oportunidades de mejora se identificó que no se estableció una organización interna clara con fechas límite por tarea, lo que generó acumulación de trabajo hacia el cierre del sprint y la omisión de entregables como el prototipo y el Sprint Backlog 1. Para el Sprint 2 el equipo se comprometió a definir fechas internas por cada work item, realizar seguimiento activo del board en Trello y mantener los Pull Requests con descripciones detalladas para facilitar la revisión por pares. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 2 Goal** | Our focus is on delivering a functional first version of the Bloomie web application with its core skincare features. We believe it delivers a tangible and interactive skincare experience to young adults seeking personalized solutions, allowing them to analyze their skin, follow personalized routines, explore products and consult dermatologists. This will be confirmed when users can navigate the skin analysis flow, manage their daily routine, browse the product catalog, track their progress and book dermatological consultations. |
+| **Sprint 2 Goal** | Nuestro objetivo es ofrecer una primera versión funcional de la aplicación web Bloomie con sus funciones principales para el cuidado de la piel. Creemos que brinda una experiencia tangible e interactiva a los jóvenes que buscan soluciones personalizadas, permitiéndoles analizar su piel, seguir rutinas personalizadas, explorar productos y consultar con dermatólogos. Esto se confirmará cuando los usuarios puedan navegar por el flujo de análisis de la piel, gestionar su rutina diaria, consultar el catálogo de productos, hacer un seguimiento de su progreso y reservar consultas dermatológicas.|
 | **Sprint 2 Velocity** | 34 |
 | **Sum of Story Points** | 34 |
 
@@ -8233,14 +8237,30 @@ El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2,
 | **Sprint 3 Velocity** | 40 |
 | **Sum of Story Points** | 40 |
 
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+
+En esta sección el equipo incluye la elaboración de un artefacto Leadership-and-Collaboration Matrix (LACX), que indica por cada aspecto dentro del alcance del Sprint, quién es el líder y quién o quiénes son colaboradores en dicho aspecto, con el fin de brindar mayor claridad y efectividad en la comunicación al interior del equipo. Para el Sprint 3 se definieron como aspectos principales los bounded contexts implementados en los Web Services, la configuración base del backend, las actualizaciones del Frontend Web Application y la Landing Page, así como la ejecución de las entrevistas de validación con usuarios de los segmentos objetivo. A continuación se presenta el cuadro correspondiente.
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Authentication Leader (L) / Collaborator (C) | Skin Profile & Facial Scans Leader (L) / Collaborator (C) | Routine Management Leader (L) / Collaborator (C) | Product Discovery Leader (L) / Collaborator (C) | Dermatology Care Leader (L) / Collaborator (C) | Subscriptions & Payments Leader (L) / Collaborator (C) | Intelligent Support Leader (L) / Collaborator (C) | Backend Setup & Deployment Leader (L) / Collaborator (C) | Frontend Updates Leader (L) / Collaborator (C) | Landing Page Update Leader (L) / Collaborator (C) | Validation Interviews Leader (L) / Collaborator (C) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Asmat Alminco, Martin Alejandro | Alemarr2 | C | C | C | L | C | C | C | C | C | C | C |
+| Contreras Torres, Arturo Valentino | Arturouu | C | C | L | C | C | C | C | L | C | C | C |
+| Gallardo Morales, Carla Alejandra | Carlsss28 | C | C | C | C | C | C | L | C | C | C | C |
+| Mechan Montenegro, Luciana Carolina | luuu6 | C | L | C | C | L | C | C | L | L | L | L |
+| Ramirez Ruiz, Nickolas | Bynickram02 | L | C | C | C | C | L | C | C | L | C | C |
+
+
+
 #### 5.2.3.3. Sprint Backlog 3
 
-El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de 
-los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y 
-documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core 
-del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y 
-se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo. 
-A continuación se presenta el board de seguimiento utilizado durante el sprint, junto 
+El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de
+los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y
+documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core
+del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y
+se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo.
+A continuación se presenta el board de seguimiento utilizado durante el sprint, junto
 con la tabla de control de estado de las tareas.
 
 <table border="1" cellspacing="0" cellpadding="8">
@@ -8259,6 +8279,7 @@ con la tabla de control de estado de las tareas.
     <th>Status</th>
   </tr>
 
+  <!-- TS01 -->
   <tr>
     <td>TS01</td>
     <td>Gestionar usuarios del sistema</td>
@@ -8270,6 +8291,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS02 -->
   <tr>
     <td>TS02</td>
     <td>Gestionar sesiones de autenticación</td>
@@ -8281,6 +8303,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS03 -->
   <tr>
     <td>TS03</td>
     <td>Gestionar perfil de piel del usuario</td>
@@ -8292,6 +8315,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS04 -->
   <tr>
     <td>TS04</td>
     <td>Gestionar escaneos faciales</td>
@@ -8303,6 +8327,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS05 + TS06 -->
   <tr>
     <td>TS05 / TS06</td>
     <td>Gestionar rutinas y seguimiento diario</td>
@@ -8314,6 +8339,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS07 + TS08 -->
   <tr>
     <td>TS07 / TS08</td>
     <td>Gestionar catálogo de productos y favoritos</td>
@@ -8325,6 +8351,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS09 + TS10 + TS11 + TS12 -->
   <tr>
     <td>TS09 / TS10 / TS11 / TS12</td>
     <td>Gestionar atención dermatológica</td>
@@ -8336,6 +8363,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS13 + TS14 + TS15 -->
   <tr>
     <td>TS13 / TS14 / TS15</td>
     <td>Gestionar pagos y suscripciones</td>
@@ -8347,6 +8375,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- TS16 + TS17 -->
   <tr>
     <td>TS16 / TS17</td>
     <td>Gestionar asistente virtual y chat</td>
@@ -8358,6 +8387,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- Tasks sin US — Configuración base -->
   <tr>
     <td rowspan="4">-</td>
     <td rowspan="4">Configuración base del backend</td>
@@ -8393,6 +8423,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- Tasks sin US — Correcciones frontend y landing -->
   <tr>
     <td rowspan="2">-</td>
     <td rowspan="2">Correcciones y complementos del Frontend</td>
@@ -8412,6 +8443,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- Tasks sin US — Landing Page -->
   <tr>
     <td>-</td>
     <td>Actualización Landing Page</td>
@@ -8423,6 +8455,7 @@ con la tabla de control de estado de las tareas.
     <td>Done</td>
   </tr>
 
+  <!-- Tasks sin US — Entrevistas de validación -->
   <tr>
     <td rowspan="5">-</td>
     <td rowspan="5">Entrevistas de validación</td>
