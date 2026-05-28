@@ -6226,11 +6226,11 @@ US25 - Como dermatólogo, quiero registrar mis credenciales profesionales para a
 
 •⁠  ⁠mobile
 <p align = "center">
-<img src="assets/img/userflow/userflow25.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow25.png" alt="user flow" width="550"/>
 
 •⁠  ⁠Desktop
 <p align = "center">
-<img src="assets/img/userflow/userflow25_web.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow25_web.png" alt="user flow" width="550"/>
 
 -<strong>Descripción del flujo:</strong>
 
@@ -6251,11 +6251,11 @@ US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones dur
 
 •⁠  ⁠mobile
 <p align = "center">
-<img src="assets/img/userflow/userflow.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow.png" alt="user flow" width="550"/>
 
 •⁠  ⁠Desktop
 <p align = "center">
-<img src="assets/img/userflow/userflow30_web.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow30_web.png" alt="user flow" width="550"/>
 
 -<strong>Descripción del flujo:</strong>
 
@@ -6275,11 +6275,11 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 
 •⁠  ⁠mobile
 <p align = "center">
-<img src="assets/img/userflow/userflow32.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow32.png" alt="user flow" width="550"/>
 
 •⁠  ⁠Desktop
 <p align = "center">
-<img src="assets/img/userflow/userflow32_web.png" alt="user flow" width="550"/>
+<img src="assets/img/userflows/userflow32_web.png" alt="user flow" width="550"/>
 
 -<strong>Descripción del flujo:</strong>
 
@@ -6288,6 +6288,167 @@ El dermatólogo accede a la sección Past Consultations desde su dashboard (mobi
 
 **Unhappy path:**
 Si el dermatólogo accede a la sección Past Consultations pero aún no ha atendido ninguna consulta en la plataforma, el sistema muestra el estado vacío con el mensaje "No past consultations available" acompañado de un ícono de alerta, informando claramente al profesional que no existe historial disponible por el momento, sin generar errores ni elementos rotos en la interfaz.
+
+11) <strong>User Flow 11:</strong> Visualizar métricas de progreso
+
+- User goal:
+<br> Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel.
+
+<br><strong>User Story asociada:</strong></br>
+US11 - Como joven adulto, quiero visualizar métricas de mi constancia y evolución en el cuidado de mi piel para entender mi progreso.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-11-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a la sección Skin Progress desde el home o la barra de navegación. El sistema evalúa si el usuario ha completado al menos una semana completa de uso. Si la respuesta es afirmativa, el sistema procesa los datos registrados y muestra el dashboard de progreso con las métricas disponibles: tasa de adherencia (Adherence Rate), días completados en la semana (Days Completed), puntuación actual (Current Score) y la racha de días consecutivos (Streak). Adicionalmente, se despliega el gráfico de Skin Health Score a lo largo del tiempo (últimos 30 días) y el resumen de actividad semanal (Weekly Activity) con los días marcados como completados.
+
+**Unhappy path:**
+Si el usuario accede a la sección Skin Progress pero no existen registros de cumplimiento ni escaneos previos suficientes, el sistema muestra la pantalla "No data" con un ícono de advertencia y el mensaje "Not enough data yet", indicando que debe completar su rutina diaria de skincare para comenzar a ver métricas. Se ofrece el botón "Start my routine" para redirigir al usuario hacia la acción correspondiente.
+
+---
+
+13) <strong>User Flow 13:</strong> Consultar asistente virtual de skincare
+
+- User goal:
+<br> Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata.
+
+<br><strong>User Story asociada:</strong></br>
+US13 - Como joven adulto, quiero consultar dudas sobre productos, rutinas o ingredientes para recibir orientación inmediata basada en mi perfil de piel.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-13-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a la sección "Ask me anything!" desde la pestaña Consult de la barra de navegación. Visualiza preguntas frecuentes sugeridas (Frequently Asked Questions) y puede seleccionar una o escribir su consulta manualmente. El sistema evalúa si el asistente dispone de información suficiente para responder. Si la respuesta es afirmativa, el asistente genera una respuesta personalizada basada en el perfil de piel del usuario y la muestra en el chat, pudiendo solicitar información adicional como el tipo de piel para afinar la orientación.
+
+**Unhappy path:**
+Si el usuario realiza una consulta que excede el alcance del asistente virtual. Por ejemplo, solicitar solución a una condición específica como acné severo, el sistema detecta que la situación requiere atención profesional. En ese caso, el asistente informa su limitación con el mensaje "Sorry I can not help you with that" y recomienda al usuario agendar una consulta con un dermatólogo disponible en la plataforma.
+
+---
+
+14) <strong>User Flow 14:</strong> Listar y seleccionar dermatólogo
+
+- User goal:
+<br> Como joven adulto, quiero visualizar una lista de dermatólogos disponibles para elegir con quién agendar una consulta.
+
+<br><strong>User Story asociada:</strong></br>
+US14 - Como joven adulto, quiero visualizar una lista de dermatólogos disponibles con su información relevante para elegir con quién agendar una consulta.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-14-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a la sección "Consult a dermatologist" y selecciona la opción "Book a new appointment". El sistema carga la lista de dermatólogos disponibles mostrando para cada uno: nombre, especialidad, precio por sesión, rating y próxima disponibilidad. El usuario puede aplicar filtros por precio ( menos  de 30 dólares, rango de 30 a 35, o sobre 35$) mediante el ícono de filtro. Si los filtros aplicados coinciden con especialistas disponibles, la lista se actualiza mostrando únicamente los resultados que cumplen el criterio, permitiendo al usuario presionar "Book appointment" para continuar con la selección.
+
+**Unhappy path:**
+Si el usuario aplica filtros de precio y no existen dermatólogos que coincidan con los criterios seleccionados, el sistema muestra la pantalla de estado vacío con el ícono de advertencia y el mensaje "No specialists available", acompañado de una descripción que indica que no hay dermatólogos que coincidan con los filtros en ese momento, con la sugerencia de ajustar los criterios o volver más tarde. Se ofrece el botón "Try again later".
+
+---
+
+16) <strong>User Flow 16:</strong> Cancelar cita dermatológica
+
+- User goal:
+<br> Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+
+<br><strong>User Story asociada:</strong></br>
+US16 - Como joven adulto, quiero cancelar una cita programada para gestionar cambios en mi disponibilidad.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-16-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a sus citas programadas (Your scheduled appointments) y selecciona "Cancel appointment" sobre la cita deseada. El sistema muestra la pantalla de confirmación de cancelación con la información de la cita y un listado de razones para seleccionar. El usuario elige una razón y presiona "Continue cancellation". El sistema evalúa si la cancelación se realiza dentro del tiempo permitido. Si es así, procesa la cancelación con reembolso correspondiente y muestra la pantalla de confirmación "Appointment canceled" con el mensaje de éxito, ofreciendo las opciones "Book a new appointment" o "Go home".
+
+**Unhappy path:**
+Si el usuario intenta cancelar la cita fuera del plazo permitido (menos de 24 horas antes de la consulta), el sistema muestra un aviso destacado "Late cancellation - No refund" indicando que, según la política de la plataforma, las cancelaciones realizadas con menos de 24 horas de anticipación no son elegibles para reembolso. El usuario visualiza el detalle de la cita y la razón seleccionada, y puede confirmar la cancelación sin reembolso mediante el botón "Yes, cancel without refund" o conservar la cita con "Keep appointment".
+
+---
+
+17) <strong>User Flow 17:</strong> Seleccionar y pagar plan de suscripción
+
+- User goal:
+<br> Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
+
+<br><strong>User Story asociada:</strong></br>
+US17 - Como joven adulto, quiero seleccionar un plan de suscripción y completar el pago para acceder a Bloomie.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-17-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a la pantalla "Choose your plan" donde visualiza los planes disponibles con sus características y precios. Selecciona el plan de su preferencia (por ejemplo, Plan Advanced a $19/mes) y es redirigido a la pantalla "Payment method", donde elige entre opciones de tarjeta de crédito/débito (Visa, Credit Card, American Express) o billeteras digitales (Apple Pay, Google Pay, Yape). Selecciona su método preferido, ingresa los datos de pago (nombre del titular, número de tarjeta, fecha de expiración y CVV) y presiona "Pay now". El sistema evalúa si el método de pago es válido. Si lo es, muestra el banner "Success Payment" confirmando que la suscripción ha sido activada correctamente.
+
+**Unhappy path:**
+Si el usuario ingresa datos de pago incorrectos o la transacción falla, el sistema muestra el banner de error "Payment failed. Please verify your card details and try again." en la parte superior de la pantalla de método de pago, manteniendo los campos disponibles para que el usuario corrija la información y reintente el proceso sin perder la selección de plan realizada previamente.
+
+---
+
+18) <strong>User Flow 18:</strong> Gestionar suscripción activa
+
+- User goal:
+<br> Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
+
+<br><strong>User Story asociada:</strong></br>
+US18 - Como joven adulto, quiero gestionar mi suscripción activa para cambiar de plan o cancelarla según mis necesidades.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-18-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path (actualizar plan o método de pago):**
+El usuario accede a la sección "My Plan" desde su perfil, donde visualiza su plan activo (Plan Advanced, $19/mes), la fecha del próximo cobro y el método de pago registrado. Si desea actualizar el plan, selecciona "View options" en la sección Change Plan, elige un nuevo plan en la pantalla "Choose your plan" y completa el proceso de pago a través de la pantalla Payment method. Si el pago es exitoso, el sistema muestra el banner "Success Payment" y actualiza la suscripción para el siguiente ciclo de facturación.
+
+**Unhappy path (cancelar suscripción):**
+Si el usuario selecciona "Cancel subscription", el sistema muestra el modal de confirmación "Cancel Subscription?" informando la fecha exacta en que perderá acceso a las funcionalidades del plan (ejemplo: June 1, 2026) y listando las funciones que dejará de tener disponibles. El usuario puede confirmar con "Yes, cancel anyway" o mantener su suscripción con "Keep my subscription". Si confirma la cancelación, el sistema muestra la pantalla con el mensaje "Cancellation Requested", indicando que la suscripción permanecerá activa hasta la fecha de fin del período vigente y que recibirá un correo de confirmación.
+
+---
+
+19) <strong>User Flow 19:</strong> Editar perfil e información personal
+
+- User goal:
+<br> Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
+
+<br><strong>User Story asociada:</strong></br>
+US19 - Como joven adulto, quiero editar mi información personal para mantener mis datos actualizados.
+
+- mobile
+<p align="center">
+<img src="assets/img/userflows/userflow-19-mobile.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El usuario accede a la sección Profile desde la barra de navegación, donde visualiza su foto de perfil, nombre, email y las secciones adicionales (Skin Profile, Settings, Favourites). Edita su nombre o correo electrónico directamente en los campos disponibles. El sistema valida que los datos tengan el formato correcto y, si son válidos, guarda los cambios mostrando el mensaje de confirmación "all changes saved!" en color verde debajo del campo de nombre, sin necesidad de navegar a otra pantalla.
+
+**Unhappy path:**
+Si el usuario ingresa información con formato incorrecto por ejemplo, un correo electrónico sin el símbolo "@" (como "sofiabloomie.app") el sistema resalta el campo con error en color rosado y muestra el mensaje "It appears that the information in the field is incorrect" debajo del campo correspondiente, rechazando el guardado hasta que el usuario corrija el dato ingresado.
+
+
 
 ---
 
