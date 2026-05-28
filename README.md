@@ -8659,6 +8659,45 @@ con la tabla de control de estado de las tareas.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
+## 5.3. Validation Interviews.
+
+### 5.3.1. Diseño de Entrevistas.
+
+#### Segmento 1: Jóvenes adultos de 21 a 30 años interesados en el cuidado de la piel
+
+Para las entrevistas de validación se evaluará la usabilidad, viabilidad y eficiencia de Bloomie. Ello, se conseguirá considerando los avances del proyecto hasta el sprint 2 y 3. Ello varía acorde al avance propuesto por el team developer y el acuerdo con los entrevistados para la entrevista. Se validará el feedback de cada entrevistado en el uso de la aplicación web junto con el landing page. 
+
+##### Objetivos de la Entrevista:
+
+1) Validar la experiencia de usuario (UX) y la interfaz de usuario (UI), evaluando si los usuarios comprenden la arquitectura de navegación y el acceso a las funcionalidades del sistema de manera intuitiva.
+
+2) Evaluar si Bloomie cumple con accesibilidad notoria y diferencial con respecto a otros enfoques de alcance en skin Care y si las funcionalidades base cumplen con lo solicitado de forma satisfactoria.
+
+##### Criterios de Evaluación:
+
+- Evaluar si el usuario puede navegar por la aplicación web con facilidad: familiarización con el dashboard.
+- Medir el tiempo de espera para el usuario de comprender funcionalidades o interfaces de la aplicación y de la Landing Page.
+- Evaluar la navegación del usuario entre las secciones de la Landing Page.
+- Evaluar la comprensión de la propuesta de valor de la Landing Page del usuario 
+- Evaluar si el usuario puede comprender el uso del dashboard y acceder a una funcionalidad dentro de la aplicación.
+- Evaluar si el usuario comprende las funcionalidades core de nuestra solución, como: agendar una cita, acceso a la rutina de skin Care y scan facial. 
+
+*Se considerarán los siguientes User Flows*:
+
+- **Userflow 3**: Escaneo y Diagnóstico facial
+- **Userflow 5**:  Gestión de Rutina Personalizada
+- **Userflow 13**: Soporte de IA en Skin Care
+- **Userflow 14**: Atención Dermatológica 
+- **Userflow 19**: Gestión de Perfil del usuario
+
+Los Userflow propuestos son los principales que forman parte del core de la web Application. 
+
+### 5.3.2. Registro de Entrevistas.
+
+### 5.3.3. Evaluaciones según heurísticas.
+
+### 5.4. Video About-the-Product.
+
 ## Conclusiones y recomendaciones
 
 ### Conclusiones
