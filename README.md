@@ -8692,6 +8692,32 @@ Para las entrevistas de validación se evaluará la usabilidad, viabilidad y efi
 
 Los Userflow propuestos son los principales que forman parte del core de la web Application. 
 
+#### Segmento 2: Dermatólogos certificados
+
+Para las entrevistas de validación se evaluará la usabilidad, viabilidad y eficiencia de Bloomie desde la perspectiva del profesional de salud. Ello se conseguirá considerando los avances del proyecto hasta el sprint 2 y 3, variando acorde al avance propuesto por el team developer y el acuerdo con los entrevistados. Se validará el feedback de cada entrevistado en el uso de la aplicación web junto con el landing page, enfocándose en las funcionalidades diseñadas específicamente para el flujo de trabajo clínico del dermatólogo dentro de la plataforma.
+
+##### Objetivos de la Entrevista:
+
+1) Validar la experiencia de usuario (UX) y la interfaz de usuario (UI) del panel del dermatólogo, evaluando si los profesionales comprenden la arquitectura de navegación y pueden acceder a las funcionalidades clínicas de manera intuitiva y eficiente dentro de su flujo de trabajo.
+2) Evaluar si Bloomie ofrece una propuesta de valor diferencial y convincente para el dermatólogo certificado, y si las funcionalidades base del rol especialista (registro profesional, gestión de consultas, notas clínicas e historial) cubren sus necesidades de práctica clínica digital de forma satisfactoria.
+
+##### Criterios de Evaluación:
+
+- Evaluar si el dermatólogo puede completar el flujo de registro profesional (Specialist Sign Up) con sus credenciales sin ambigüedades ni fricciones, comprendiendo los campos requeridos y el resultado esperado al finalizar el proceso.
+- Medir la facilidad con la que el profesional identifica y accede a su agenda médica (My Agenda) y demás secciones del dashboard tras el registro.
+- Evaluar la comprensión de la propuesta de valor orientada al dermatólogo en la Landing Page, verificando si el especialista percibe claramente los beneficios de unirse a la plataforma.
+- Evaluar la navegación del dermatólogo entre las secciones principales de la aplicación web, en especial entre las vistas de consulta activa, notas clínicas y historial de casos.
+- Evaluar si el dermatólogo puede registrar notas clínicas y recomendaciones durante una consulta simulada, incluyendo el uso del panel Doctor's Notes y el envío de la prescripción.
+- Evaluar si el profesional puede consultar y navegar su historial de consultas atendidas (Past Consultations), comprendiendo la información desplegada por el sistema en cada caso registrado.
+
+*Se considerarán los siguientes User Flows*:
+
+- **Userflow 5**: Registro de dermatólogo
+- **Userflow 6**: Registrar notas y recomendaciones clínicas.
+- **Userflow 7**: Consultar historial de consultas atendidas.
+
+Los User Flows propuestos corresponden a las funcionalidades core del panel del dermatólogo dentro de la web application, cubriendo el ciclo completo del especialista: acceso a la plataforma, gestión de la consulta en tiempo real y revisión de casos previos.
+
 ### 5.3.2. Registro de Entrevistas.
 
 ### 5.3.3. Evaluaciones según heurísticas.
