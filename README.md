@@ -7164,7 +7164,7 @@ El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su t
 
 **URL del board:** https://trello.com/b/NP9njuOO/bloomie
 
-![Sprint Backlog 1 Board](assets/img/sprint-backlog1.png)
+![Sprint Backlog 1 Board](assets/img/sprint-backlog-1-board.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -7606,7 +7606,7 @@ seguimiento utilizado durante el sprint, junto con la tabla de control de estado
 **URL del board:** https://trello.com/b/NP9njuOO/bloomie
 
 
-![Sprint Backlog 2 Board](assets/img/sprint-backlog2.png)
+![Sprint Backlog 2 Board](assets/img/sprint-backlog-2-board.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
