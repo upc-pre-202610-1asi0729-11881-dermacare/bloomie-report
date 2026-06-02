@@ -295,6 +295,11 @@ del trabajo de documentación a lo largo del sprint.
       - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
       - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
       - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
+  - [5.3. Validation Interviews](#53-validation-interviews)
+    - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
+    - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
+    - [5.3.3. Evaluaciones según heurísticas](#533-evaluaciones-según-heurísticas)
+  - [5.4. Video About-the-Product](#54-video-about-the-product)
 - [Conclusiones](#conclusiones)
   - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
   - [Video About-the-Team](#video-about-the-team)
@@ -8793,6 +8798,8 @@ Se recomienda incorporar las entrevistas de validación con usuarios reales en e
 
 Se recomienda mantener el esquema de Aspect Leaders por bounded context establecido en el Sprint 2, ya que demostró ser efectivo para distribuir responsabilidades de forma clara. Para los siguientes sprints se sugiere implementar daily standups breves y definir fechas límite internas por work item desde el inicio de cada sprint para evitar la acumulación de trabajo identificada como oportunidad de mejora en la retrospectiva del Sprint 1.
 
+### Video About-the-Team
+
 # Bibliografía
 
 - Cámara de Comercio de Lima. (2024). Sector cosméticos e higiene personal facturaría más de S/ 9 000 millones en 2024. COPECOH–CCL. https://lacamara.pe/sector-cosmeticos-e-higiene-personal-facturaria-mas-de-s-9-000-millones-en-2024/
@@ -8812,6 +8819,7 @@ Se recomienda mantener el esquema de Aspect Leaders por bounded context establec
 - Ministerio de Trabajo y Promoción del Empleo. (2024). Informe trimestral del mercado laboral: Situación del empleo, primer trimestre 2024. https://cdn.www.gob.pe/uploads/document/file/6653196/5783668-ite-2024-t1.pdf
 
 - Statista. (2023). Frecuencia de utilización de las redes sociales en Perú en 2023. https://es.statista.com/estadisticas/1412986/uso-de-redes-sociales-por-frecuencia-en-peru/
+
 # Anexos
 
 ## Anexo A
