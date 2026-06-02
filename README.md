@@ -105,8 +105,35 @@ u202415551 - Ramirez Ruiz, Nickolas
       Capítulo V: Product Implementation, Validation & Deployment (Sprint 2) <br>
     </td>
   </tr>
-
-
+  <tr>
+    <td><b>Tercera Entrega (AV2)</b></td>
+    <td>01/06/2026</td>
+    <td>
+      Asmat Alminco, Martin Alejandro <br>
+      <br>
+      <p></p>
+      Contreras Torres, Arturo Valentino <br>
+      <br>
+      <p></p>
+      Gallardo Morales, Carla Alejandra <br>
+      <br>
+      <p></p>
+      Mechan Montenegro, Luciana Carolina <br>
+      <br>
+      <p></p>
+      Ramirez Ruiz, Nickolas <br>
+    </td>
+    <td>
+    Corrección del reporte <br>
+    Mejora de artefactos <br>
+    Nueva versión desplegada de Landing Page <br>
+    Nueva versión desplegada de Frontend Web Applications <br>
+    Primera versión desplegada de Web Services <br>
+    Primera versión publicada de Video About-The-Product <br>
+    Primera versión publicada de Video About-The-Team <br>
+    Capítulo V: Product Implementation, Validation & Deployment (Sprint 3 / Validation Interviews) <br>
+    </td>
+  </tr>
 </table>
 
 
