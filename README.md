@@ -6480,7 +6480,26 @@ El usuario accede a la sección Profile desde la barra de navegación, donde vis
 **Unhappy path:**
 Si el usuario ingresa información con formato incorrecto por ejemplo, un correo electrónico sin el símbolo "@" (como "sofiabloomie.app") el sistema resalta el campo con error en color rosado y muestra el mensaje "It appears that the information in the field is incorrect" debajo del campo correspondiente, rechazando el guardado hasta que el usuario corrija el dato ingresado.
 
+20) <strong>User Flow 32:</strong> Consultar historial de consultas atendidas
 
+- User goal:
+<br> Como dermatólogo, quiero consultar el historial de mis consultas atendidas.
+
+<br><strong>User Story asociada:</strong></br>
+US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+
+- web
+<p align="center">
+<img src="assets/img/userflows/userflow-27-web.png" alt="user flow" width="550"/>
+</p>
+
+- <strong>Descripción del flujo:</strong>
+
+**Happy path:**
+El dermatólogo accede a su dashboard y desde el menú lateral selecciona la sección Past Consultations. El sistema detecta que existen consultas registradas y muestra el listado completo con fecha, hora, nombre del paciente, tipo de consulta y un indicador de fotos clínicas adjuntas cuando corresponde. Al presionar "View details" en cualquier consulta, el sistema despliega la pantalla Consultation Summary con el resumen completo del caso: datos de la cita, fotografías clínicas, diagnóstico, notas clínicas, recomendaciones registradas y productos sugeridos asociados a ese paciente. El dermatólogo puede regresar al listado mediante el botón "Return to Consultations".
+
+**Unhappy path:**
+Si el dermatólogo accede a la sección Past Consultations pero aún no ha atendido ninguna consulta en la plataforma, el sistema muestra el estado vacío indicando "0 consultations found" junto al ícono de alerta y el mensaje "No past consultations available", informando claramente al profesional que no existe historial disponible por el momento, sin generar errores ni elementos rotos en la interfaz.
 
 ---
 
@@ -8716,11 +8735,9 @@ Para las entrevistas de validación se evaluará la usabilidad, viabilidad y efi
 
 *Se considerarán los siguientes User Flows*:
 
-- **Userflow 3**: Escaneo y Diagnóstico facial
-- **Userflow 5**:  Gestión de Rutina Personalizada
-- **Userflow 13**: Soporte de IA en Skin Care
-- **Userflow 14**: Atención Dermatológica 
-- **Userflow 19**: Gestión de Perfil del usuario
+- **Userflow 3**: Escaneo y Diagnóstico facial.
+- **Userflow 5**:  Generar rutina personalizada.
+- **Userflow 14**: Listar y consultar un dermatólogo.
 
 Los Userflow propuestos son los principales que forman parte del core de la web Application. 
 
@@ -8744,8 +8761,8 @@ Para las entrevistas de validación se evaluará la usabilidad, viabilidad y efi
 
 *Se considerarán los siguientes User Flows*:
 
-- **Userflow 5**: Registro de dermatólogo
-- **Userflow 6**: Registrar notas y recomendaciones clínicas.
+- **Userflow 20**: Configuración de Disponibilidad de citas.
+- **Userflow 6**: Registrar notas y recomendaciones clínicas en cita.
 - **Userflow 7**: Consultar historial de consultas atendidas.
 
 Los User Flows propuestos corresponden a las funcionalidades core del panel del dermatólogo dentro de la web application, cubriendo el ciclo completo del especialista: acceso a la plataforma, gestión de la consulta en tiempo real y revisión de casos previos.
