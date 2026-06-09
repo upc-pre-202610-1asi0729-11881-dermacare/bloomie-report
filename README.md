@@ -6273,29 +6273,26 @@ El dermatólogo accede a la pantalla de Specialist Sign Up desde la landing page
 Si el dermatólogo intenta presionar Register dejando campos obligatorios vacíos o con información incorrecta (como un email sin formato válido o una contraseña que no cumple el mínimo de 8 caracteres), el sistema rechaza el registro, resalta cada campo con error mediante un borde rojo y muestra un mensaje descriptivo debajo del campo afectado (ej. "Email is required", "Password is required", "Please select your specialty"), impidiendo la creación de la cuenta hasta que se corrija la información.
 
 
-6)  <strong>User Flow 6:</strong> Registrar notas y recomendaciones clínicas
-    
-•⁠  ⁠User goal: 
-<br> Como dermatólogo, quiero registrar notas clínicas y recomendaciones.
+29) <strong>User Flow 29:</strong> Realizar consulta virtual en tiempo real
 
-<br><strong>User Story asociada: </br></strong>
-US30 - Como dermatólogo, quiero registrar notas clínicas y recomendaciones durante la consulta para dejar un registro del caso atendido.
+- User goal:
+<br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
 
-•⁠  ⁠mobile
-<p align = "center">
-<img src="assets/img/userflows/userflow.png" alt="user flow" width="550"/>
+<br><strong>User Story asociada:</strong></br>
+US29 - Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
 
-•⁠  ⁠Desktop
-<p align = "center">
-<img src="assets/img/userflows/userflow30_web.png" alt="user flow" width="550"/>
+- web
+<p align="center">
+<img src="assets/img/userflows/userflow-29-web.png" alt="user flow" width="550"/>
+</p>
 
--<strong>Descripción del flujo:</strong>
+- <strong>Descripción del flujo:</strong>
 
 **Happy path:**
-El dermatólogo tiene una consulta activa con el paciente y redacta las notas clínicas en el panel Doctor's Notes, incluyendo datos como tipo de piel, nivel de hidratación, diagnóstico y tratamiento recomendado. Al finalizar, presiona Attach & Send Prescription, lo que envía la prescripción a ambas partes, y luego End Session. El sistema guarda toda la información, la asocia a la consulta correspondiente y genera un resumen que incluye diagnóstico, recomendaciones de productos e imágenes clínicas, visible tanto en la vista mobile como en la web.
+El dermatólogo accede a su Agenda y visualiza el listado de consultas del día con su estado correspondiente. Al llegar el horario programado de una cita, el botón "Join call" se habilita y el dermatólogo lo presiona para ingresar a la sesión. El sistema habilita la consulta virtual en tiempo real mostrando la pantalla "Consultation Active" con el video de la sesión, el panel lateral de Doctor's Notes para registrar observaciones, y las opciones de "Attach & Send Prescription" y "Share Notes with Patient". Una vez concluida la evaluación, el dermatólogo presiona "End Session", el sistema muestra el modal de confirmación "End Consultation?" informando que la sesión será grabada, las notas guardadas y un resumen generado para ambas partes. Al confirmar con "End Session & Save", el sistema registra el cierre de la consulta y actualiza su estado a Completed, visible posteriormente en la sección Past Consultations del paciente.
 
 **Unhappy path:**
-Si el dermatólogo finaliza la consulta sin haber ingresado notas clínicas ni recomendaciones y presiona End Session, el sistema muestra un modal de confirmación ("End Consultation?") advirtiendo que la sesión será grabada y las notas guardadas para ambas partes. Si el dermatólogo confirma con End Session & Save, la consulta se cierra y el resumen generado queda con los campos de Diagnóstico y Recomendaciones del Doctor vacíos, sin información clínica asociada al caso.
+No se desprende un unhappy path explícito de esta user story ni de las pantallas del flujo. El sistema contempla la opción "Continue Session" en el modal de confirmación, permitiendo al dermatólogo retomar la consulta activa en caso de haber presionado "End Session" por error, evitando cierres accidentales de la sesión.
 
 7)  <strong>User Flow 7:</strong> Consultar historial de consultas atendidas
     
