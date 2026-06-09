@@ -6273,7 +6273,7 @@ El dermatólogo accede a la pantalla de Specialist Sign Up desde la landing page
 Si el dermatólogo intenta presionar Register dejando campos obligatorios vacíos o con información incorrecta (como un email sin formato válido o una contraseña que no cumple el mínimo de 8 caracteres), el sistema rechaza el registro, resalta cada campo con error mediante un borde rojo y muestra un mensaje descriptivo debajo del campo afectado (ej. "Email is required", "Password is required", "Please select your specialty"), impidiendo la creación de la cuenta hasta que se corrija la información.
 
 
-29) <strong>User Flow 29:</strong> Realizar consulta virtual en tiempo real
+29) <strong>User Flow 6:</strong> Realizar consulta virtual en tiempo real
 
 - User goal:
 <br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
@@ -8759,7 +8759,7 @@ Para las entrevistas de validación se evaluará la usabilidad, viabilidad y efi
 *Se considerarán los siguientes User Flows*:
 
 - **Userflow 20**: Configuración de Disponibilidad de citas.
-- **Userflow 6**: Registrar notas y recomendaciones clínicas en cita.
+- **Userflow 6**: Realizar consulta virtual en tiempo real.
 - **Userflow 7**: Consultar historial de consultas atendidas.
 
 Los User Flows propuestos corresponden a las funcionalidades core del panel del dermatólogo dentro de la web application, cubriendo el ciclo completo del especialista: acceso a la plataforma, gestión de la consulta en tiempo real y revisión de casos previos.
