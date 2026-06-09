@@ -6477,7 +6477,7 @@ El usuario accede a la sección Profile desde la barra de navegación, donde vis
 **Unhappy path:**
 Si el usuario ingresa información con formato incorrecto por ejemplo, un correo electrónico sin el símbolo "@" (como "sofiabloomie.app") el sistema resalta el campo con error en color rosado y muestra el mensaje "It appears that the information in the field is incorrect" debajo del campo correspondiente, rechazando el guardado hasta que el usuario corrija el dato ingresado.
 
-20) <strong>User Flow 32:</strong> Consultar historial de consultas atendidas
+20) <strong>User Flow 20:</strong> Consultar historial de consultas atendidas
 
 - User goal:
 <br> Como dermatólogo, quiero consultar el historial de mis consultas atendidas.
