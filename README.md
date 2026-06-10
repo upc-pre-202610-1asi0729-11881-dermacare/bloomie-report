@@ -6273,7 +6273,7 @@ El dermatólogo accede a la pantalla de Specialist Sign Up desde la landing page
 Si el dermatólogo intenta presionar Register dejando campos obligatorios vacíos o con información incorrecta (como un email sin formato válido o una contraseña que no cumple el mínimo de 8 caracteres), el sistema rechaza el registro, resalta cada campo con error mediante un borde rojo y muestra un mensaje descriptivo debajo del campo afectado (ej. "Email is required", "Password is required", "Please select your specialty"), impidiendo la creación de la cuenta hasta que se corrija la información.
 
 
-29) <strong>User Flow 6:</strong> Realizar consulta virtual en tiempo real
+6) <strong>User Flow 6:</strong> Realizar consulta virtual en tiempo real
 
 - User goal:
 <br> Como dermatólogo, quiero interactuar en tiempo real con el paciente durante la consulta virtual para evaluar su condición y brindar recomendaciones.
@@ -6477,13 +6477,13 @@ El usuario accede a la sección Profile desde la barra de navegación, donde vis
 **Unhappy path:**
 Si el usuario ingresa información con formato incorrecto por ejemplo, un correo electrónico sin el símbolo "@" (como "sofiabloomie.app") el sistema resalta el campo con error en color rosado y muestra el mensaje "It appears that the information in the field is incorrect" debajo del campo correspondiente, rechazando el guardado hasta que el usuario corrija el dato ingresado.
 
-20) <strong>User Flow 20:</strong> Consultar historial de consultas atendidas
+20) <strong>User Flow 20:</strong> Definir disponibilidad de atención
 
 - User goal:
-<br> Como dermatólogo, quiero consultar el historial de mis consultas atendidas.
+<br> Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 <br><strong>User Story asociada:</strong></br>
-US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendidas para revisar casos previos y sus registros clínicos.
+US28 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 - web
 <p align="center">
@@ -6492,11 +6492,11 @@ US32 - Como dermatólogo, quiero consultar el historial de mis consultas atendid
 
 - <strong>Descripción del flujo:</strong>
 
-**Happy path:**
-El dermatólogo accede a su dashboard y desde el menú lateral selecciona la sección Past Consultations. El sistema detecta que existen consultas registradas y muestra el listado completo con fecha, hora, nombre del paciente, tipo de consulta y un indicador de fotos clínicas adjuntas cuando corresponde. Al presionar "View details" en cualquier consulta, el sistema despliega la pantalla Consultation Summary con el resumen completo del caso: datos de la cita, fotografías clínicas, diagnóstico, notas clínicas, recomendaciones registradas y productos sugeridos asociados a ese paciente. El dermatólogo puede regresar al listado mediante el botón "Return to Consultations".
+**Happy path (modificar disponibilidad existente):**
+El dermatólogo accede a su perfil desde el menú lateral y selecciona la sección Availability. El sistema detecta que ya existen horarios registrados y muestra la configuración actual con los días laborales seleccionados (Working Days), el rango horario definido (Working Hours: Start time / End time) y la duración de cita configurada (Appointment Duration). El dermatólogo modifica los parámetros que necesita —por ejemplo, cambia los días activos o ajusta la duración de las citas— y presiona "Save availability". El sistema guarda los cambios y confirma la actualización mostrando el banner "Availability saved" en color verde, reflejando los nuevos horarios disponibles para el agendamiento de pacientes.
 
-**Unhappy path:**
-Si el dermatólogo accede a la sección Past Consultations pero aún no ha atendido ninguna consulta en la plataforma, el sistema muestra el estado vacío indicando "0 consultations found" junto al ícono de alerta y el mensaje "No past consultations available", informando claramente al profesional que no existe historial disponible por el momento, sin generar errores ni elementos rotos en la interfaz.
+**Unhappy path (sin horarios programados):**
+Si el dermatólogo accede a la sección Availability y aún no tiene horarios configurados, el sistema muestra el campo Working Hours con el mensaje "No working hours programmed yet" en lugar de un rango horario definido, e indica mediante el botón "Add availability" que debe registrar su disponibilidad por primera vez. El dermatólogo selecciona los días laborales, define el horario de inicio y fin, elige la duración de cita preferida y presiona "Add availability". El sistema registra la disponibilidad y confirma el alta mostrando el banner "Availability added" en color verde.
 
 ---
 
@@ -8758,7 +8758,7 @@ Para las entrevistas de validación se evaluará la usabilidad, viabilidad y efi
 
 *Se considerarán los siguientes User Flows*:
 
-- **Userflow 20**: Configuración de Disponibilidad de citas.
+- **Userflow 20**: Configuración de Disponibilidad de atención.
 - **Userflow 6**: Realizar consulta virtual en tiempo real.
 - **Userflow 7**: Consultar historial de consultas atendidas.
 
