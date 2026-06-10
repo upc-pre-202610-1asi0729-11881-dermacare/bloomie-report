@@ -6477,13 +6477,13 @@ El usuario accede a la sección Profile desde la barra de navegación, donde vis
 **Unhappy path:**
 Si el usuario ingresa información con formato incorrecto por ejemplo, un correo electrónico sin el símbolo "@" (como "sofiabloomie.app") el sistema resalta el campo con error en color rosado y muestra el mensaje "It appears that the information in the field is incorrect" debajo del campo correspondiente, rechazando el guardado hasta que el usuario corrija el dato ingresado.
 
-20) <strong>User Flow 20:</strong> Definir disponibilidad de atención
+20) <strong>User Flow 20:</strong> Configuración de disponibilidad de citas
 
 - User goal:
 <br> Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 <br><strong>User Story asociada:</strong></br>
-US28 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
+US27 - Como dermatólogo, quiero definir mis horarios de disponibilidad para que los pacientes puedan agendar citas en horarios válidos.
 
 - web
 <p align="center">
