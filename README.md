@@ -8766,6 +8766,101 @@ Los User Flows propuestos corresponden a las funcionalidades core del panel del 
 
 ### 5.3.2. Registro de Entrevistas.
 
+## Primer segmento: Jóvenes adultos
+
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+  
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+  
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+  
+## Segundo segmento: Dermatólogos certificados
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+  
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+  
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+
+Entrevistador: 
+
+Datos del entrevistado
+
+- **Nombre:** 
+- **Apellidos:** 
+- **Edad:** 
+- **Distrito:** 
+- **Timing:** 
+  
+
+<img src="" width="500"/>
+
+**Resumen descriptivo:**
+
+
+
+
 ### 5.3.3. Evaluaciones según heurísticas.
 
 ### 5.4. Video About-the-Product.
