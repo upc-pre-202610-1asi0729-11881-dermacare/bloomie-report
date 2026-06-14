@@ -8768,20 +8768,22 @@ Los User Flows propuestos corresponden a las funcionalidades core del panel del 
 
 ## Primer segmento: Jóvenes adultos
 
-Entrevistador: 
+Entrevistador: Luciana Mechan
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
+- **Nombre:** Britny
+- **Apellidos:** Alarcon Hoyos
+- **Edad:** 20 años
+- **Distrito:** San Martin de Porres
 - **Timing:** 
   
 
-<img src="" width="500"/>
+<img src="assets/img/validation-interview-1.png" width="500"/>
 
-**Resumen descriptivo:**
+**Resumen descriptivo:** Durante la sesión de validación, Britny interactuó con el landing page de Bloomie y con el portal web del paciente. Al explorar el landing libremente, comprendió de inmediato la propuesta del producto: una aplicación de cuidado de la piel que genera rutinas personalizadas a partir de un análisis fotográfico. Destacó positivamente el mensaje "sin citas, sin esperas y sin diagnósticos genéricos", y señaló que la sección de testimonios de usuarios y especialistas le generó mayor confianza en el producto. Respecto a los planes de suscripción, los identificó sin dificultad, comprendió las diferencias entre ellos y manifestó que los precios le parecen accesibles y que estaría dispuesta a adquirir el producto.
+Al pasar al portal web, Britny realizó el flujo de búsqueda y selección de un dermatólogo de forma autónoma. Aplicó filtros por precio, exploró los perfiles disponibles y eligió un especialista en acné y piel grasa basándose en sus años de experiencia y calificación. Consideró que esa información era suficiente para generar confianza, aunque señaló que le gustaría ver una fotografía del especialista en su perfil para saber visualmente con quién va a interactuar. El proceso de selección de fecha y horario lo encontró completamente claro, destacando la visibilidad de los horarios disponibles como un punto positivo.
+En términos generales, Britny tuvo una experiencia muy positiva en ambas partes de la sesión, sin reportar confusión en ninguna de las tareas asignadas. Su única sugerencia fue incorporar la foto del especialista en el perfil. Calificó a Bloomie como una aplicación prometedora, con una interfaz intuitiva y precios accesibles para el cuidado de la piel.
 
 Entrevistador: Nickolas Ramirez Ruiz
 
@@ -8833,21 +8835,23 @@ Datos del entrevistado
 **Resumen descriptivo:**
   
 ## Segundo segmento: Dermatólogos certificados
-Entrevistador: 
+Entrevistador: Luciana Mechan
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
+- **Nombre:** Andrea
+- **Apellidos:** Rosas
+- **Edad:** 45
+- **Distrito:** San Isidro 
 - **Timing:** 
   
 
-<img src="" width="500"/>
+<img src="assets/img/validation-interview-2.png" width="500"/>
 
 **Resumen descriptivo:**
-
+Durante la sesión de validación, la especialista interactuó con el landing page de Bloomie y con el portal web del especialista. Al explorar el landing, comprendió que se trata de una aplicación de análisis de piel mediante inteligencia artificial, aunque señaló que la página está claramente orientada al usuario final y no al profesional. Identificó la sección de características con "acceso a dermatólogo" y el testimonio de un colega de Lima como los únicos elementos que la mencionan, pero observó que ninguno explica con detalle qué obtiene el especialista desde la plataforma. Al revisar los planes de precios, no encontró información sobre si los dermatólogos pagan una suscripción propia o simplemente se incluyen en un directorio, y sugirió incorporar una sección específica para profesionales que explique el proceso de registro y las herramientas disponibles.
+En el portal web del especialista, navegó de forma autónoma hacia la sección de consultas pasadas e identificó la lista de registros sin dificultad. Sin embargo, señaló que las tarjetas no muestran el nombre del paciente de forma visible, lo que en la práctica diaria dificultaría identificar cada caso sin tener que abrir el detalle. También observó que el formato de fecha en las tarjetas no es legible para una revisión rápida y que esperaría ver una fecha en lenguaje natural.
+Al acceder al detalle de una consulta, consideró que el diagnóstico y las recomendaciones están bien registrados, pero indicó que le faltaría el nombre del paciente de forma prominente, fotografías de la sesión, un campo para tratamiento o productos prescritos, y la opción de exportar o compartir el resumen con el paciente o un colega. La navegación de retorno a la lista le resultó clara e inmediata. En general, valoró el potencial del historial de consultas como herramienta clínica, condicionando su utilidad real a la incorporación de estos elementos faltantes.
 Entrevistador: 
 
 Datos del entrevistado
