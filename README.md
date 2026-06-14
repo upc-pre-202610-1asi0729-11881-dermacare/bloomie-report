@@ -8783,20 +8783,40 @@ Datos del entrevistado
 
 **Resumen descriptivo:**
 
-Entrevistador: 
+Entrevistador: Nickolas Ramirez Ruiz
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
-- **Timing:** 
-  
+- **Nombre:** Emy Lu
+- **Apellidos:** Orihuela Vargas
+- **Edad:** 20
+- **Distrito:** San Borja
+- **Timing:**
 
-<img src="" width="500"/>
+
+<img src="assets/img/validacion-nickolas.png" width="500"/>
+
 
 **Resumen descriptivo:**
+
+**Resumen de la Entrevista**
+
+Objetivo: Prueba de usabilidad guiada para validar la plataforma de cuidado de la piel "Bloomie".
+Participantes: Nickolas (Moderador) y Emy (Usuaria).
+
+**Acciones Realizadas:**
+
+Ingreso y configuración: Emy explora la página de inicio, inicia sesión con su cuenta y cambia el idioma de la interfaz a español.
+
+Gestión de rutina: Navega hacia la pestaña "Mi Rutina", donde visualiza su calendario y la secuencia de productos programados para el día.
+
+Reemplazo de producto: Reemplaza el "Producto #1" de su rutina. La aplicación le muestra opciones compatibles, y ella selecciona la "Alternativa 2" basándose en el indicador de 92% de compatibilidad con su piel.
+
+Registro de actividad: Marca la rutina diaria como completada. El sistema actualiza su estado, reflejando el progreso con un punto verde en el calendario y actualizando su racha de cumplimiento.
+
+Conclusión:
+Emy completó todas las tareas solicitadas sin problemas. Al finalizar, confirmó que no tuvo inconvenientes y que la plataforma le pareció clara y fácil de entender.
+
 
 Entrevistador: 
 
