@@ -8856,10 +8856,10 @@ Entrevistador:
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
+- **Nombre:** Justo
+- **Apellidos:** Valverde
+- **Edad:** 48 años
+- **Distrito:** San Martín de Porres
 - **Timing:** 
   
 
