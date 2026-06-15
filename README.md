@@ -8770,6 +8770,8 @@ Los User Flows propuestos corresponden a las funcionalidades core del panel del 
 
 <u>Entrevista 1:</u>
 
+**Userflow 3:** Escaneo y Diagnóstico facial.
+
 Entrevistador: Luciana Mechan
 
 Datos del entrevistado
@@ -8788,6 +8790,8 @@ Al pasar al portal web, Britny realizó el flujo de búsqueda y selección de un
 En términos generales, Britny tuvo una experiencia muy positiva en ambas partes de la sesión, sin reportar confusión en ninguna de las tareas asignadas. Su única sugerencia fue incorporar la foto del especialista en el perfil. Calificó a Bloomie como una aplicación prometedora, con una interfaz intuitiva y precios accesibles para el cuidado de la piel.
 
 <u>Entrevista 2:</u>
+
+**Userflow 5:** Generar rutina personalizada.
 
 Entrevistador: Nickolas Ramirez Ruiz
 
@@ -8825,6 +8829,8 @@ Emy completó todas las tareas solicitadas sin problemas. Al finalizar, confirm�
 
 <u>Entrevista 3:</u>
 
+**Userflow 14:** Listar y consultar un dermatólogo.
+
 Entrevistador: 
 
 Datos del entrevistado
@@ -8842,6 +8848,8 @@ Datos del entrevistado
 ## Segundo segmento: Dermatólogos certificados
 
 <u>Entrevista 1:</u>
+
+**Userflow 7:** Consultar historial de consultas atendidas.
 
 Entrevistador: Luciana Mechan
 
@@ -8863,6 +8871,8 @@ Al acceder al detalle de una consulta, consideró que el diagnóstico y las reco
 
 <u>Entrevista 2:</u>
 
+**Userflow 20:** Configuración de Disponibilidad de citas.
+
 Entrevistador: Arturo Contreras Torres
 
 Datos del entrevistado
@@ -8880,6 +8890,8 @@ Datos del entrevistado
 Justo Valverde, dermatólogo de 48 años residente en San Martín de Porres, valoró positivamente la aplicación web y landing page de Bloomie, destacando que la interfaz es sencilla, atractiva e intuitiva, sin percepciones negativas respecto a la complejidad de uso y considerando la aplicación muy interesante y útil para su práctica profesional. Expresó interés en que la plataforma permita a los dermatólogos adjuntar y compartir archivos (PDFs, imágenes, documentos, etc.) directamente a través del chat integrado durante las videollamadas con pacientes, funcionalidad que facilitaría la comunicación clínica e intercambio de información visual. Planteó una preocupación importante respecto a la credibilidad profesional mediante la implementación de un sistema de verificación de dermatólogos con certificados o credenciales profesionales para validar que los usuarios sean médicos autorizados y reducir el riesgo de falsos dermatólogos. También preguntó si las notas de consulta serían compartidas con el paciente o se mantendrían como registros privados del dermatólogo, reflejando su necesidad de comprender los límites de privacidad y confidencialidad en la plataforma. Identificó claramente el flujo de "Configuración de disponibilidad de citas" como una funcionalidad clave y bien diseñada, valorando positivamente su precisión y accesibilidad para modificar horarios y gestionar su agenda de forma eficiente con los pacientes.
 
 <u>Entrevista 3:</u>
+
+**Userflow 6:** Realizar consulta virtual en tiempo real.
 
 Entrevistador: 
 
