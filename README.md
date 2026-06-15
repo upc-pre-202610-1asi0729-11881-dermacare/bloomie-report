@@ -8877,6 +8877,7 @@ Datos del entrevistado
 <img src="assets/img/validation-interview-3.png" width="500"/>
 
 **Resumen descriptivo:**
+Justo Valverde, dermatólogo de 48 años residente en San Martín de Porres, valoró positivamente la aplicación web y landing page de Bloomie, destacando que la interfaz es sencilla, atractiva e intuitiva, sin percepciones negativas respecto a la complejidad de uso y considerando la aplicación muy interesante y útil para su práctica profesional. Expresó interés en que la plataforma permita a los dermatólogos adjuntar y compartir archivos (PDFs, imágenes, documentos, etc.) directamente a través del chat integrado durante las videollamadas con pacientes, funcionalidad que facilitaría la comunicación clínica e intercambio de información visual. Planteó una preocupación importante respecto a la credibilidad profesional mediante la implementación de un sistema de verificación de dermatólogos con certificados o credenciales profesionales para validar que los usuarios sean médicos autorizados y reducir el riesgo de falsos dermatólogos. También preguntó si las notas de consulta serían compartidas con el paciente o se mantendrían como registros privados del dermatólogo, reflejando su necesidad de comprender los límites de privacidad y confidencialidad en la plataforma. Identificó claramente el flujo de "Configuración de disponibilidad de citas" como una funcionalidad clave y bien diseñada, valorando positivamente su precisión y accesibilidad para modificar horarios y gestionar su agenda de forma eficiente con los pacientes.
 
 <u>Entrevista 3:</u>
 
