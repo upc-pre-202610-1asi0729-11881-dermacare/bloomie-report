@@ -8863,7 +8863,7 @@ Datos del entrevistado
 - **Timing:** 
   
 
-<img src="" width="500"/>
+<img src="/assets/img/validation-interview-3.png" width="500"/>
 
 **Resumen descriptivo:**
 
