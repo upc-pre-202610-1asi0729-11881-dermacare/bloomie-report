@@ -1,4 +1,4 @@
-<div align="center">
+<div style="page-break-after: always; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
 
 <img src="assets/img/upc-logo.png" alt="UPC Logo" width="150"/>
 
