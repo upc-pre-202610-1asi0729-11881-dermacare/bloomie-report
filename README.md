@@ -8770,24 +8770,31 @@ Los User Flows propuestos corresponden a las funcionalidades core del panel del 
 
 <u>Entrevista 1:</u>
 
-**Userflow 3:** Escaneo y Diagnóstico facial.
+**Userflow 14:** Listar y consultar un dermatólogo.
 
-Entrevistador: Luciana Mechan
+Entrevistador: Carla Gallardo Morales
 
 Datos del entrevistado
 
-- **Nombre:** Britny
-- **Apellidos:** Alarcon Hoyos
-- **Edad:** 20 años
-- **Distrito:** San Martin de Porres
-- **Timing:** 
-  
+- **Nombre:** Fiorella 
+- **Apellidos:** Gallardo
+- **Edad:** 25 años
+- **Distrito:** La Molina
+- **Timing:** Desde 0:00 minutos a 17:44 minutos
 
-<img src="assets/img/validation-interview-1.png" width="500"/>
 
-**Resumen descriptivo:** Durante la sesión de validación, Britny interactuó con el landing page de Bloomie y con el portal web del paciente. Al explorar el landing libremente, comprendió de inmediato la propuesta del producto: una aplicación de cuidado de la piel que genera rutinas personalizadas a partir de un análisis fotográfico. Destacó positivamente el mensaje "sin citas, sin esperas y sin diagnósticos genéricos", y señaló que la sección de testimonios de usuarios y especialistas le generó mayor confianza en el producto. Respecto a los planes de suscripción, los identificó sin dificultad, comprendió las diferencias entre ellos y manifestó que los precios le parecen accesibles y que estaría dispuesta a adquirir el producto.
-Al pasar al portal web, Britny realizó el flujo de búsqueda y selección de un dermatólogo de forma autónoma. Aplicó filtros por precio, exploró los perfiles disponibles y eligió un especialista en acné y piel grasa basándose en sus años de experiencia y calificación. Consideró que esa información era suficiente para generar confianza, aunque señaló que le gustaría ver una fotografía del especialista en su perfil para saber visualmente con quién va a interactuar. El proceso de selección de fecha y horario lo encontró completamente claro, destacando la visibilidad de los horarios disponibles como un punto positivo.
-En términos generales, Britny tuvo una experiencia muy positiva en ambas partes de la sesión, sin reportar confusión en ninguna de las tareas asignadas. Su única sugerencia fue incorporar la foto del especialista en el perfil. Calificó a Bloomie como una aplicación prometedora, con una interfaz intuitiva y precios accesibles para el cuidado de la piel.
+<img src="assets/img/validacion-carla.png" width="500"/>
+
+
+**Resumen descriptivo:**
+
+En la sesión de validación, la usuaria evaluó la plataforma Bloomie y señaló que, aunque la navegación es sencilla, el sitio requiere transmitir mayor credibilidad médica. 
+Para lograrlo, sugirió incluir los nombres y códigos profesionales reales de los dermatólogos en la sección del equipo y al agendar citas,
+añadir logotipos de laboratorios, mostrar políticas de privacidad claras antes del escaneo facial y utilizar fotos de "antes y después" en las reseñas. 
+También recomendó aclarar los términos técnicos de los planes de suscripción, explicar por qué se debe esperar cierto tiempo entre la aplicación de cada producto y corregir la mezcla de inglés y español en la interfaz. 
+Finalmente, concluyó que solo probaría el plan más barato por curiosidad, pero no usaría la aplicación a largo plazo a menos que tuviera un problema dermatológico severo.
+
+
 
 <u>Entrevista 2:</u>
 
@@ -8801,7 +8808,7 @@ Datos del entrevistado
 - **Apellidos:** Orihuela Vargas
 - **Edad:** 20
 - **Distrito:** San Borja
-- **Timing:**
+- **Timing:** Desde 17:45 minutos a 21:30 minutos
 
 
 <img src="assets/img/validacion-nickolas.png" width="500"/>
@@ -8829,47 +8836,29 @@ Emy completó todas las tareas solicitadas sin problemas. Al finalizar, confirm�
 
 <u>Entrevista 3:</u>
 
-**Userflow 14:** Listar y consultar un dermatólogo.
-
-Entrevistador: 
-
-Datos del entrevistado
-
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
-- **Timing:** 
-
-<img src="" width="500"/>
-
-**Resumen descriptivo:**
-  
-## Segundo segmento: Dermatólogos certificados
-
-<u>Entrevista 1:</u>
-
-**Userflow 7:** Consultar historial de consultas atendidas.
+**Userflow 3:** Escaneo y Diagnóstico facial.
 
 Entrevistador: Luciana Mechan
 
 Datos del entrevistado
 
-- **Nombre:** Andrea
-- **Apellidos:** Rosas
-- **Edad:** 45
-- **Distrito:** San Isidro 
-- **Timing:** 
-  
+- **Nombre:** Britny
+- **Apellidos:** Alarcon Hoyos
+- **Edad:** 20 años
+- **Distrito:** San Martin de Porres
+- **Timing:** Desde 21:31 minutos a 28:38 minutos
 
-<img src="assets/img/validation-interview-2.png" width="500"/>
 
-**Resumen descriptivo:**
-Durante la sesión de validación, la especialista interactuó con el landing page de Bloomie y con el portal web del especialista. Al explorar el landing, comprendió que se trata de una aplicación de análisis de piel mediante inteligencia artificial, aunque señaló que la página está claramente orientada al usuario final y no al profesional. Identificó la sección de características con "acceso a dermatólogo" y el testimonio de un colega de Lima como los únicos elementos que la mencionan, pero observó que ninguno explica con detalle qué obtiene el especialista desde la plataforma. Al revisar los planes de precios, no encontró información sobre si los dermatólogos pagan una suscripción propia o simplemente se incluyen en un directorio, y sugirió incorporar una sección específica para profesionales que explique el proceso de registro y las herramientas disponibles.
-En el portal web del especialista, navegó de forma autónoma hacia la sección de consultas pasadas e identificó la lista de registros sin dificultad. Sin embargo, señaló que las tarjetas no muestran el nombre del paciente de forma visible, lo que en la práctica diaria dificultaría identificar cada caso sin tener que abrir el detalle. También observó que el formato de fecha en las tarjetas no es legible para una revisión rápida y que esperaría ver una fecha en lenguaje natural.
-Al acceder al detalle de una consulta, consideró que el diagnóstico y las recomendaciones están bien registrados, pero indicó que le faltaría el nombre del paciente de forma prominente, fotografías de la sesión, un campo para tratamiento o productos prescritos, y la opción de exportar o compartir el resumen con el paciente o un colega. La navegación de retorno a la lista le resultó clara e inmediata. En general, valoró el potencial del historial de consultas como herramienta clínica, condicionando su utilidad real a la incorporación de estos elementos faltantes.
+<img src="assets/img/validation-interview-1.png" width="500"/>
 
-<u>Entrevista 2:</u>
+**Resumen descriptivo:** Durante la sesión de validación, Britny interactuó con el landing page de Bloomie y con el portal web del paciente. Al explorar el landing libremente, comprendió de inmediato la propuesta del producto: una aplicación de cuidado de la piel que genera rutinas personalizadas a partir de un análisis fotográfico. Destacó positivamente el mensaje "sin citas, sin esperas y sin diagnósticos genéricos", y señaló que la sección de testimonios de usuarios y especialistas le generó mayor confianza en el producto. Respecto a los planes de suscripción, los identificó sin dificultad, comprendió las diferencias entre ellos y manifestó que los precios le parecen accesibles y que estaría dispuesta a adquirir el producto.
+Al pasar al portal web, Britny realizó el flujo de búsqueda y selección de un dermatólogo de forma autónoma. Aplicó filtros por precio, exploró los perfiles disponibles y eligió un especialista en acné y piel grasa basándose en sus años de experiencia y calificación. Consideró que esa información era suficiente para generar confianza, aunque señaló que le gustaría ver una fotografía del especialista en su perfil para saber visualmente con quién va a interactuar. El proceso de selección de fecha y horario lo encontró completamente claro, destacando la visibilidad de los horarios disponibles como un punto positivo.
+En términos generales, Britny tuvo una experiencia muy positiva en ambas partes de la sesión, sin reportar confusión en ninguna de las tareas asignadas. Su única sugerencia fue incorporar la foto del especialista en el perfil. Calificó a Bloomie como una aplicación prometedora, con una interfaz intuitiva y precios accesibles para el cuidado de la piel.
+
+
+## Segundo segmento: Dermatólogos certificados
+
+<u>Entrevista 1:</u>
 
 **Userflow 20:** Configuración de Disponibilidad de citas.
 
@@ -8881,34 +8870,68 @@ Datos del entrevistado
 - **Apellidos:** Valverde
 - **Edad:** 48 años
 - **Distrito:** San Martín de Porres
-- **Timing:** 
-  
+- **Timing:** Desde 28:39 minutos a 41:40 minutos
+
 
 <img src="assets/img/validation-interview-3.png" width="500"/>
 
 **Resumen descriptivo:**
 Justo Valverde, dermatólogo de 48 años residente en San Martín de Porres, valoró positivamente la aplicación web y landing page de Bloomie, destacando que la interfaz es sencilla, atractiva e intuitiva, sin percepciones negativas respecto a la complejidad de uso y considerando la aplicación muy interesante y útil para su práctica profesional. Expresó interés en que la plataforma permita a los dermatólogos adjuntar y compartir archivos (PDFs, imágenes, documentos, etc.) directamente a través del chat integrado durante las videollamadas con pacientes, funcionalidad que facilitaría la comunicación clínica e intercambio de información visual. Planteó una preocupación importante respecto a la credibilidad profesional mediante la implementación de un sistema de verificación de dermatólogos con certificados o credenciales profesionales para validar que los usuarios sean médicos autorizados y reducir el riesgo de falsos dermatólogos. También preguntó si las notas de consulta serían compartidas con el paciente o se mantendrían como registros privados del dermatólogo, reflejando su necesidad de comprender los límites de privacidad y confidencialidad en la plataforma. Identificó claramente el flujo de "Configuración de disponibilidad de citas" como una funcionalidad clave y bien diseñada, valorando positivamente su precisión y accesibilidad para modificar horarios y gestionar su agenda de forma eficiente con los pacientes.
 
-<u>Entrevista 3:</u>
+
+<u>Entrevista 2:</u>
 
 **Userflow 6:** Realizar consulta virtual en tiempo real.
 
-Entrevistador: 
+Entrevistador:  Martin Alejandro Asmat Alminco
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
-- **Timing:** 
-  
+- **Nombre:** Antonio 
+- **Apellidos:** Parerdes
+- **Edad:** 67 años
+- **Distrito:** Jesus Maria
+- **Timing:** Desde 41:43 minutos a 52:15 minutos
 
-<img src="" width="500"/>
+
+
+<img src="assets/img/validacion-martin.png" width="500"/>
 
 **Resumen descriptivo:**
 
+Durante la sesión de validación de Bloomie, el dermatólogo Antonio Paredes explicó a detalle el flujo estándar de una consulta virtual y proporcionó recomendaciones clave para profesionalizar la interfaz. Entre sus sugerencias principales, 
+destacó la necesidad de utilizar terminología médica precisa, recomendando reemplazar "Notas clínicas" por "Anamnesis" y "Observaciones" por "Examen clínico",
+así como estructurar el plan de trabajo dividiéndolo claramente en exámenes auxiliares, procedimientos y tratamiento. Además, 
+subrayó la importancia de integrar los códigos de diagnóstico internacionales CIE-10 y asegurar que las recetas generadas por el sistema cuenten con un formato digital estandarizado que incluya obligatoriamente el código de colegiatura y la firma electrónica del especialista, 
+garantizando así la validez y el rigor clínico de la plataforma.
 
+
+<u>Entrevista 3:</u>
+
+**Userflow 7:** Consultar historial de consultas atendidas.
+
+Entrevistador: Luciana Mechan
+
+Datos del entrevistado
+
+- **Nombre:** Andrea
+- **Apellidos:** Rosas
+- **Edad:** 45
+- **Distrito:** San Isidro
+- **Timing:** Desde 52:18 minutos a 59:33 minutos
+
+
+<img src="assets/img/validation-interview-2.png" width="500"/>
+
+**Resumen descriptivo:**
+Durante la sesión de validación, la especialista interactuó con el landing page de Bloomie y con el portal web del especialista. Al explorar el landing, comprendió que se trata de una aplicación de análisis de piel mediante inteligencia artificial, aunque señaló que la página está claramente orientada al usuario final y no al profesional. Identificó la sección de características con "acceso a dermatólogo" y el testimonio de un colega de Lima como los únicos elementos que la mencionan, pero observó que ninguno explica con detalle qué obtiene el especialista desde la plataforma. Al revisar los planes de precios, no encontró información sobre si los dermatólogos pagan una suscripción propia o simplemente se incluyen en un directorio, y sugirió incorporar una sección específica para profesionales que explique el proceso de registro y las herramientas disponibles.
+En el portal web del especialista, navegó de forma autónoma hacia la sección de consultas pasadas e identificó la lista de registros sin dificultad. Sin embargo, señaló que las tarjetas no muestran el nombre del paciente de forma visible, lo que en la práctica diaria dificultaría identificar cada caso sin tener que abrir el detalle. También observó que el formato de fecha en las tarjetas no es legible para una revisión rápida y que esperaría ver una fecha en lenguaje natural.
+Al acceder al detalle de una consulta, consideró que el diagnóstico y las recomendaciones están bien registrados, pero indicó que le faltaría el nombre del paciente de forma prominente, fotografías de la sesión, un campo para tratamiento o productos prescritos, y la opción de exportar o compartir el resumen con el paciente o un colega. La navegación de retorno a la lista le resultó clara e inmediata. En general, valoró el potencial del historial de consultas como herramienta clínica, condicionando su utilidad real a la incorporación de estos elementos faltantes.
+
+
+
+**Enlace del video único de las entrevistas:**
+[Ver grabación aquí](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415551_upc_edu_pe/IQBdAeiP6KgmTYU3ALQ7Y3ajARgSkWhbvddpqb_bZ57s2TY?e=XbgZ1H&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 ### 5.3.3. Evaluaciones según heurísticas.
 
 CARRERA: Ingeniería de Software <br>
