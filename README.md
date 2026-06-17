@@ -8909,9 +8909,143 @@ Datos del entrevistado
 **Resumen descriptivo:**
 
 
-
-
 ### 5.3.3. Evaluaciones según heurísticas.
+
+CARRERA: Ingeniería de Software <br>
+CURSO: Open Source <br>
+SECCIÓN: 1ASI0729 <br>
+PROFESORES: Todos <br>
+AUDITOR Grupo: SpotTrack <br>
+CLIENTE(S): 
+
+- Azama Fukuda, Juan Pablo u202411310
+- Alvaro Sebastian Fernanadez Linares  u202414928
+- Valentino Andre Espinoza Orrego u202410344 
+
+SITE o APP A EVALUAR: Bloomie
+
+#### TAREAS A EVALUAR:
+
+El alcance de esta evaluación incluye la revisión de las siguientes tareas:
+
+1. Visualización del historial de consultas pasadas del dermatólogo
+2. Visualización de la rutina de cuidado de piel del usuario
+3. Consulta del detalle y compatibilidad de un producto
+4. Visualización del resultado de un escaneo facial
+5. Cancelación de una cita dermatológica
+6. Consulta al asistente virtual de skincare
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Registro e inicio de sesión de usuario
+2. Configuración de disponibilidad del dermatólogo
+3. Gestión de suscripciones y pagos
+4. Flujo completo de agendamiento de cita
+
+### ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+
+| # | Problema | Escala de severidad | Heurística/Principio violado |
+|---|---|---|---|
+| 1 | Las fechas de las consultas pasadas se muestran en formato ISO 8601 no legible para el usuario | 3 | Usability: Relación entre el sistema y el mundo real |
+| 2 | Los productos en la rutina se muestran como identificador numérico en lugar del nombre del producto | 3 | Usability: Relación entre el sistema y el mundo real |
+| 3 | No existe opción para descartar o cancelar el resultado de un escaneo facial | 2 | Usability: Libertad y control del usuario |
+| 4 | Las tarjetas de productos no tienen imagen representativa del producto | 2 | Inclusive Design: Proporciona experiencias comparables |
+| 5 | La sección de consultas pasadas muestra notas clínicas bajo una etiqueta que dice "Diagnosis" | 2 | Information Architecture: Is it communicative? |
+| 6 | La cancelación de una cita se ejecuta sin solicitar confirmación al usuario | 3 | Usability: Prevención de errores |
+
+### DESCRIPCIÓN DE PROBLEMAS:
+
+#### PROBLEMA #1: Las fechas de las consultas pasadas se muestran en formato ISO 8601
+Severidad: 3
+Heurística violada: Usability — Relación entre el sistema y el mundo real
+Problema:
+
+En la sección de consultas pasadas del dermatólogo, las fechas de cada consulta se presentan directamente en formato ISO 8601 tal como provienen del backend, por ejemplo 2026-04-10T10:00:00Z. Este formato es técnico y no corresponde al lenguaje natural que un usuario espera encontrar en una interfaz. Según la heurística de Nielsen, el sistema debe hablar el lenguaje del usuario utilizando palabras, frases y convenciones que le resulten familiares, presentando la información en un orden lógico y natural.
+
+<img src="assets/img/past-consulation-view.png" width="500"/>
+
+
+Recomendación:
+
+Formatear la fecha antes de presentarla al usuario utilizando un formato legible según el idioma activo de la aplicación, por ejemplo April 10, 2026 – 10:00 AM en inglés o 10 de abril de 2026 – 10:00 a.m. en español.
+
+
+#### PROBLEMA #2: Los productos en la rutina se muestran como identificador numérico
+Severidad: 3
+Heurística violada: Usability — Relación entre el sistema y el mundo real
+Problema:
+
+En la vista de rutina personalizada del usuario, cada paso de la rutina muestra el producto asignado como Product #1, Product #3, etc., en lugar de mostrar el nombre real del producto. El usuario no tiene manera de saber qué producto específico corresponde a cada número. Esto obliga al usuario a memorizar o buscar por separado qué producto corresponde a cada identificador, violando directamente la heurística de relación con el mundo real. Un usuario que ve Product #3 en su rutina matutina no puede saber si debe aplicar un suero, un humectante o un bloqueador solar.
+
+<img src="assets/img/skin-care-routine.png" width="500"/>
+
+Recomendación:
+
+Resolver el nombre del producto a partir de su ID antes de renderizar la vista, mostrando el nombre comercial del producto, su categoría o ambos, por ejemplo: Niacinamide 10% + Zinc 1% — Serum.
+
+#### PROBLEMA #3: No existe opción para descartar el resultado de un escaneo facial
+Severidad: 2
+Heurística violada: Usability — Libertad y control del usuario
+Problema:
+
+En la vista de resultado del escaneo facial, el único botón disponible es Save and Done, que guarda el análisis y redirige al usuario. No existe ninguna opción para descartar el escaneo en caso de que el usuario considere que el resultado no fue satisfactorio, por ejemplo si la imagen fue capturada en malas condiciones de iluminación. Nielsen establece que los usuarios deben disponer de una salida de emergencia claramente marcada para abandonar estados no deseados. La ausencia de esta opción obliga al usuario a guardar un análisis que podría no representar con precisión el estado real de su piel.
+
+<img src="assets/img/scan-result-view.png" width="500"/>
+
+Recomendación:
+
+Agregar un botón secundario como Discard and Retake que permita al usuario descartar el resultado y reiniciar el proceso de escaneo sin guardar el análisis actual.
+
+#### PROBLEMA #4: Las tarjetas de productos no tienen imagen representativa
+Severidad: 2
+Principio violado: Inclusive Design — Proporciona experiencias comparables
+Problema:
+
+En la vista de detalle de producto, el área destinada a mostrar la imagen del producto presenta únicamente un ícono genérico de caja (inventory_2). Todos los productos, independientemente de su categoría, tipo o marca, se representan con el mismo ícono. Según el principio de experiencias comparables del Inclusive Design, la interfaz debe asegurar que todos los usuarios puedan realizar las tareas de manera conveniente sin perder calidad del contenido. Un usuario que navega el catálogo de productos no puede distinguir visualmente un suero de un humectante o un bloqueador solar, lo que reduce significativamente la calidad de la experiencia de descubrimiento de productos, que es uno de los features core del producto.
+
+<img src="assets/img/product-detail-view.png" width="500"/>
+
+Recomendación:
+
+Incorporar imágenes reales de los productos en el catálogo. Como solución intermedia, se puede categorizar visualmente los productos usando íconos o colores diferenciadores por categoría (cleanser, serum, moisturizer, sunscreen) para que el usuario pueda distinguirlos visualmente mientras se implementan las imágenes reales.
+
+#### PROBLEMA #5: Etiqueta "Diagnosis" mostrando contenido de notas clínicas
+Severidad: 2
+Principio violado: Information Architecture — Is it communicative?
+Problema:
+
+En la vista de consultas pasadas del dermatólogo, cada tarjeta de consulta muestra un campo con la etiqueta Diagnosis seguido de un fragmento de texto truncado. Sin embargo, el contenido que se muestra corresponde al campo notes de la consulta, que contiene observaciones clínicas generales del dermatólogo, no un diagnóstico formal. Según la heurística de Information Architecture, los mensajes y etiquetas deben ayudar al usuario a orientarse correctamente en el producto. Mostrar notas bajo una etiqueta que dice diagnóstico genera una expectativa incorrecta y puede confundir tanto al paciente como al dermatólogo sobre la naturaleza del contenido que están leyendo.
+
+<img src="assets/img/consultation-summary-view.png" width="500"/>
+
+
+Recomendación:
+
+Corregir la etiqueta para que refleje con precisión el tipo de contenido mostrado. Si el campo corresponde a notas clínicas, la etiqueta debe ser Clinical Notes o Notes. Si se desea mostrar un diagnóstico diferenciado, este debe provenir de un campo específico del modelo de datos.
+
+#### PROBLEMA #6: Cancelación de cita se ejecuta sin solicitar confirmación
+Severidad: 3
+Heurística violada: Usability — Prevención de errores
+Problema:
+
+En la vista de citas programadas, el botón Cancel ejecuta directamente la cancelación de la cita sin mostrar ningún diálogo de confirmación ni solicitar al usuario una razón de cancelación. Según Nielsen, es importante ayudar al usuario a no cometer errores y, cuando estos ocurran, permitirle recuperarse fácilmente. En este contexto, una cancelación accidental de una cita médica pagada es una acción de alto impacto e irreversible que puede resultar en pérdida económica para el usuario, ya que según las reglas de negocio de Bloomie la cancelación fuera del período permitido no genera reembolso. La ausencia de confirmación convierte este flujo en especialmente riesgoso.
+
+<img src="assets/img/appointment-canceled-view.png" width="500"/>
+
+Recomendación:
+
+Implementar un diálogo de confirmación modal antes de ejecutar la cancelación, indicando claramente si aplica reembolso según el momento de la cancelación, solicitando opcionalmente el motivo de cancelación, y ofreciendo dos opciones: confirmar la cancelación o volver sin cancelar.
+
 
 ### 5.4. Video About-the-Product.
 
