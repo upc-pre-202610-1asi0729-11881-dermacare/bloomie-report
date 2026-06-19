@@ -8585,6 +8585,231 @@ Tabla de los commits mas importantes para el Backend, Frontend y Landing Page
 #### 5.2.3.5. Execution Evidence for Sprint Review
 Durante este Sprint, la plataforma Bloomie logró la integración entre el frontend Angular y el backend Spring Boot en los bounded contexts principales: IAM, Skin Analysis y Routine Management, Citas dermatológicas. Las principales funcionalidades implementadas y validadas incluyen el registro de usuario, la creación del perfil de piel mediante el formulario de estilo de vida, el envío del escaneo facial con generación automática del análisis de piel, la generación de rutina personalizada disparada por eventos de dominio, y el seguimiento diario de rutina. El backend fue desplegado exitosamente en Azure App Service y conectado a Azure Database for MySQL, permitiendo que el flujo completo del usuario funcione en un entorno de producción.
 
+### Swagger UI — Endpoints Documentados
+
+![swagger](assets/img/swagger.png)
+
+### Evidencias de método POST - GET en la página web
+![sign-in-db](assets/img/auth-response.png)
+![skin-db](assets/img/skin-profile-response.png) 
+![scan-response](assets/img/scan-result-response.png) 
+![routine-response](assets/img/routine-response.png)
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+## Services Documentation Evidence for Sprint Review
+
+Durante este Sprint, se documentaron todos los Web Services implementados en la plataforma Bloomie mediante OpenAPI/Swagger, integrado directamente en el backend Spring Boot. La documentación cubre los endpoints de los bounded contexts de IAM, Skin Analysis, Routine Management, Dermatology Care, Appointments, Subscriptions, Payments y Product Discovery. Todos los endpoints están desplegados y accesibles en producción a través de Azure App Service.
+
+**URL Swagger desplegado:** https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
+
+**URL repositorio backend:** https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-platform.git 
+
+> Nota: La documentación OpenAPI fue elaborada junto con la implementación del código en cada commit de feature. No se generaron commits exclusivos de documentación ya que las anotaciones `@Operation`, `@ApiResponse` y `@Tag` se incluyeron en cada controlador durante su desarrollo.
+
+---
+
+### Endpoints Documentados
+
+| Bounded Context | Verbo HTTP | Endpoint | Descripción |
+|---|---|---|---|
+| Authentication | POST | `/api/v1/authentication/register` | Registrar usuario paciente |
+| Authentication | POST | `/api/v1/authentication/register-dermatologist` | Registrar dermatólogo |
+| Users | GET | `/api/v1/users` | Obtener todos los usuarios |
+| Users | GET | `/api/v1/users/{userId}` | Obtener usuario por ID |
+| Users | PUT | `/api/v1/users/{userId}` | Actualizar perfil de usuario |
+| Users | PUT | `/api/v1/users/{userId}/photo` | Actualizar foto de perfil |
+| Skin Profiles | POST | `/api/v1/skin-profiles` | Completar perfil de piel del paciente |
+| Skin Profiles | GET | `/api/v1/skin-profiles/{skinProfileId}` | Obtener perfil de piel por ID |
+| Skin Profiles | PUT | `/api/v1/skin-profiles/{skinProfileId}` | Actualizar características de piel |
+| Skin Profiles | GET | `/api/v1/skin-profiles/patient/{patientId}` | Obtener perfil de piel por paciente |
+| Facial Scans | POST | `/api/v1/facial-scans` | Iniciar escaneo facial |
+| Facial Scans | PUT | `/api/v1/facial-scans/{facialScanId}/submit` | Enviar escaneo facial con foto |
+| Facial Scans | GET | `/api/v1/facial-scans/{facialScanId}` | Obtener escaneo facial por ID |
+| Facial Scans | GET | `/api/v1/facial-scans/patient/{patientId}` | Obtener escaneos faciales por paciente |
+| Skin Analyses | GET | `/api/v1/skin-analyses/{skinAnalysisId}` | Obtener análisis de piel por ID |
+| Skin Analyses | GET | `/api/v1/skin-analyses/patient/{patientId}` | Obtener análisis de piel por paciente |
+| Skin Analyses | GET | `/api/v1/skin-analyses/facial-scan/{facialScanId}` | Obtener análisis por escaneo facial |
+| Routines | GET | `/api/v1/routines/patient/{patientId}` | Obtener rutina activa por paciente |
+| Routines | GET | `/api/v1/routines/{routineId}` | Obtener rutina por ID |
+| Routines | PUT | `/api/v1/routines/{routineId}/items/{routineItemId}/replace` | Reemplazar producto en rutina |
+| Routines | DELETE | `/api/v1/routines/{routineId}/items/{routineItemId}` | Eliminar paso de rutina |
+| Routines | GET | `/api/v1/routines/{routineId}/items/{routineItemId}/replacement-options` | Obtener opciones de reemplazo |
+| Daily Trackings | POST | `/api/v1/daily-trackings` | Marcar rutina como completada |
+| Daily Trackings | GET | `/api/v1/daily-trackings/patient/{patientId}` | Obtener trackings por paciente |
+| Daily Trackings | GET | `/api/v1/daily-trackings/routine/{routineId}` | Obtener trackings por rutina |
+| Daily Trackings | GET | `/api/v1/daily-trackings/patient/{patientId}/weekly-summary` | Obtener resumen semanal |
+| Dermatologist Profiles | GET | `/api/v1/dermatologist-profiles` | Obtener todos los perfiles de dermatólogos |
+| Dermatologist Profiles | GET | `/api/v1/dermatologist-profiles/{profileId}` | Obtener perfil de dermatólogo por ID |
+| Dermatologist Profiles | PUT | `/api/v1/dermatologist-profiles/{profileId}` | Actualizar perfil de dermatólogo |
+| Availabilities | POST | `/api/v1/availabilities` | Definir disponibilidad del dermatólogo |
+| Availabilities | GET | `/api/v1/availabilities` | Obtener disponibilidades por dermatólogo |
+| Availabilities | PUT | `/api/v1/availabilities/{availabilityId}` | Actualizar disponibilidad |
+| Appointments | POST | `/api/v1/appointments` | Agendar cita dermatológica |
+| Appointments | GET | `/api/v1/appointments` | Obtener citas por paciente o dermatólogo |
+| Appointments | GET | `/api/v1/appointments/{id}` | Obtener cita por ID |
+| Appointments | PUT | `/api/v1/appointments/{id}/confirm` | Confirmar cita |
+| Appointments | PUT | `/api/v1/appointments/{id}/cancel` | Cancelar cita |
+| Appointments | PUT | `/api/v1/appointments/{id}/reprogram-request` | Solicitar reprogramación de cita |
+| Consultations | POST | `/api/v1/consultations` | Iniciar consulta dermatológica |
+| Consultations | GET | `/api/v1/consultations` | Obtener consulta por cita |
+| Consultations | GET | `/api/v1/consultations/{id}` | Obtener consulta por ID |
+| Consultations | PUT | `/api/v1/consultations/{id}/save-notes` | Guardar notas clínicas |
+| Consultations | PUT | `/api/v1/consultations/{id}/diagnosis` | Registrar diagnóstico final |
+| Consultations | PUT | `/api/v1/consultations/{id}/finish` | Finalizar consulta |
+| Consultations | POST | `/api/v1/consultations/{id}/photos` | Subir foto clínica |
+| Subscriptions | POST | `/api/v1/subscriptions` | Seleccionar plan de suscripción |
+| Subscriptions | GET | `/api/v1/subscriptions/{subscriptionId}` | Obtener suscripción por ID |
+| Subscriptions | GET | `/api/v1/subscriptions/patient/{patientId}` | Obtener suscripción por paciente |
+| Payments | GET | `/api/v1/payments/{paymentId}` | Obtener pago por ID |
+| Payments | GET | `/api/v1/payments/patient/{patientId}` | Obtener pagos por paciente |
+| Products | GET | `/api/v1/products` | Obtener catálogo de productos |
+| Products | GET | `/api/v1/products/{productId}` | Obtener producto por ID |
+| Favorite Products | POST | `/api/v1/favorite-products` | Guardar producto como favorito |
+| Favorite Products | GET | `/api/v1/favorite-products` | Obtener productos favoritos por usuario |
+| Favorite Products | DELETE | `/api/v1/favorite-products/{favoriteProductId}` | Eliminar producto de favoritos |
+
+---
+
+### Detalle de Endpoints Principales
+
+#### POST `/api/v1/authentication/register`
+**Parámetros:** Body JSON
+```json
+{
+  "firstName": "Ana",
+  "lastName": "Garcia",
+  "email": "ana@example.com",
+  "password": "secret123"
+}
+```
+**Response 201:**
+```json
+{
+  "id": 9,
+  "firstName": "Ana",
+  "lastName": "Garcia",
+  "email": "ana@example.com"
+}
+```
+
+#### POST `/api/v1/skin-profiles`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9,
+  "skinType": "DRY",
+  "sensitivity": "MEDIUM",
+  "waterIntake": "6-8 glasses",
+  "sunExposure": "Less than 30 min",
+  "sleepHours": "8 hours"
+}
+```
+**Response 201:**
+```json
+{
+  "id": 5,
+  "patientId": 9,
+  "skinType": "DRY",
+  "sensitivity": "MEDIUM",
+  "waterIntake": "6-8 glasses",
+  "sunExposure": "Less than 30 min",
+  "sleepHours": "8 hours",
+  "status": "COMPLETED"
+}
+```
+
+#### POST `/api/v1/facial-scans`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9
+}
+```
+**Response 201:**
+```json
+{
+  "id": 5,
+  "patientId": 9,
+  "status": "STARTED",
+  "photoUrl": null,
+  "scannedAt": "2026-06-19T20:20:27"
+}
+```
+
+#### PUT `/api/v1/facial-scans/{facialScanId}/submit`
+**Parámetros:** Path `facialScanId`, Body JSON
+```json
+{
+  "photoUrl": "https://storage.example.com/scans/photo.jpg"
+}
+```
+**Response 200:** Devuelve el `FacialScan` actualizado con status `SUBMITTED`. Dispara automáticamente la generación del `SkinAnalysis` y la `Routine` mediante eventos de dominio.
+
+#### GET `/api/v1/skin-analyses/facial-scan/{facialScanId}`
+**Parámetros:** Path `facialScanId`
+**Response 200:**
+```json
+{
+  "id": 1,
+  "patientId": 9,
+  "facialScanId": 5,
+  "overallScore": 51.25,
+  "hydrationScore": 35.0,
+  "textureScore": 55.0,
+  "sensitivityScore": 55.0,
+  "brightnessScore": 60.0,
+  "status": "COMPLETED",
+  "analyzedAt": "2026-06-19T20:20:27"
+}
+```
+
+#### GET `/api/v1/routines/patient/{patientId}`
+**Parámetros:** Path `patientId`
+**Response 200:**
+```json
+{
+  "id": 3,
+  "patientId": 9,
+  "skinAnalysisId": 1,
+  "skinType": "DRY",
+  "status": "ACTIVE",
+  "items": [
+    { "id": 8, "step": "CLEANSER", "order": 1, "scheduledTime": "AM_PM", "productRecommendation": "Cream cleanser" },
+    { "id": 9, "step": "MOISTURIZER", "order": 2, "scheduledTime": "AM_PM", "productRecommendation": "Rich moisturizer" },
+    { "id": 10, "step": "SUNSCREEN", "order": 3, "scheduledTime": "AM", "productRecommendation": "SPF 30 sunscreen" }
+  ]
+}
+```
+
+#### POST `/api/v1/daily-trackings`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9,
+  "routineId": 3,
+  "date": "2026-06-19"
+}
+```
+**Response 201:** Devuelve el ID del `DailyTracking` creado.
+
+#### GET `/api/v1/daily-trackings/patient/{patientId}/weekly-summary`
+**Parámetros:** Path `patientId`
+**Response 200:**
+```json
+{
+  "patientId": 9,
+  "weekStart": "2026-06-16",
+  "weekEnd": "2026-06-22",
+  "completedDays": 1,
+  "missedDays": 6,
+  "completionRate": 14.3
+}
+```
+
+---
+
+### Imágenes de interacción utilizando datos de prueba
 ### Registro de Usuario
 
 El usuario se registra desde la vista de sign-up. La solicitud se envía a `POST /api/v1/authentication/register` y retorna 201 Created. El nuevo registro de usuario se persiste en la base de datos.
@@ -8616,9 +8841,6 @@ Al completarse el análisis de piel, se publica un `PreliminaryDiagnosisGenerate
 ![skin-routine](assets/img/skin-care-routine.png)
 ![routine-response](assets/img/routine-response.png)
 ![routine-db](assets/img/routine-bd.png)
-
-
-#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
