@@ -8583,6 +8583,40 @@ Tabla de los commits mas importantes para el Backend, Frontend y Landing Page
 | bloomie-website | feat/call-to-action | 62f852f | feat(call-to-action): update link to webapp | 10/06/2026 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
+Durante este Sprint, la plataforma Bloomie logró la integración entre el frontend Angular y el backend Spring Boot en los bounded contexts principales: IAM, Skin Analysis y Routine Management, Citas dermatológicas. Las principales funcionalidades implementadas y validadas incluyen el registro de usuario, la creación del perfil de piel mediante el formulario de estilo de vida, el envío del escaneo facial con generación automática del análisis de piel, la generación de rutina personalizada disparada por eventos de dominio, y el seguimiento diario de rutina. El backend fue desplegado exitosamente en Azure App Service y conectado a Azure Database for MySQL, permitiendo que el flujo completo del usuario funcione en un entorno de producción.
+
+### Registro de Usuario
+
+El usuario se registra desde la vista de sign-up. La solicitud se envía a `POST /api/v1/authentication/register` y retorna 201 Created. El nuevo registro de usuario se persiste en la base de datos.
+
+![sign-in](assets/img/sign-in-view.png)
+![sign-in-response](assets/img/auth-response.png)
+![sign-in-db](assets/img/sign-in-bd.png)
+
+### Creación del Perfil de Piel
+
+Después del registro, el paciente completa el formulario de estilo de vida con su tipo de piel, ingesta de agua, exposición solar y hábitos de sueño. El sistema envía una solicitud `POST /api/v1/skin-profiles` y persiste el perfil en la base de datos.
+
+![skin-profile](assets/img/skin-profile-view.png)
+![skin-response](assets/img/skin-profile-response.png)
+![skin-db](assets/img/skin-profile-bd.png)
+
+### Envío del Escaneo Facial y Análisis de Piel
+
+El paciente envía un escaneo facial con una foto. El sistema dispara automáticamente el pipeline de análisis de piel mediante eventos de dominio, generando un aggregate `SkinAnalysis` con puntajes determinísticos basados en el tipo de piel y sensibilidad del paciente.
+
+![scan-view](assets/img/scan-result-view.png)
+![scan-response](assets/img/scan-result-response.png)
+![scan-db](assets/img/scan-bd.png)
+
+### Generación de Rutina Personalizada
+
+Al completarse el análisis de piel, se publica un `PreliminaryDiagnosisGeneratedIntegrationEvent` que es consumido por el bounded context de Routine Management, el cual genera automáticamente una rutina personalizada con recomendaciones de productos adaptadas al tipo de piel del paciente.
+
+![skin-routine](assets/img/skin-care-routine.png)
+![routine-response](assets/img/routine-response.png)
+![routine-db](assets/img/routine-bd.png)
+
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
