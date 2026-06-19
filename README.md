@@ -8450,251 +8450,37 @@ En esta sección el equipo incluye la elaboración de un artefacto Leadership-an
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de
-los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot y
-documentada con OpenAPI/Swagger. Adicionalmente se completaron funcionalidades no core
-del Frontend Web Application, se actualizaron la Landing Page y la Web Application, y
-se realizaron las entrevistas de validación con usuarios de ambos segmentos objetivo.
-A continuación se presenta el board de seguimiento utilizado durante el sprint, junto
-con la tabla de control de estado de las tareas.
+El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de los Web Services de Bloomie, cubriendo los bounded contexts de autenticación, usuarios, perfiles de piel, escaneos faciales, rutinas, productos, citas dermatológicas, consultas virtuales, pagos y suscripciones. Adicionalmente se realizaron correcciones al frontend y diagramas de clase, y se elaboraron los guiones y videos del curso introductorio de Java. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-<table border="1" cellspacing="0" cellpadding="8">
-  <tr>
-    <th colspan="2">User Story</th>
-    <th colspan="6">Work-Item / Task</th>
-  </tr>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Estimation (Hours)</th>
-    <th>Assigned To</th>
-    <th>Status</th>
-  </tr>
+**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-3-bloomie
 
-  <!-- TS01 -->
-  <tr>
-    <td>TS01</td>
-    <td>Gestionar usuarios del sistema</td>
-    <td>T-01</td>
-    <td>Implementar bounded context de usuarios</td>
-    <td>Implementar el bounded context de usuarios incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
+![Sprint Backlog 3 Board](assets/img/sprint3-board.png)
 
-  <!-- TS02 -->
-  <tr>
-    <td>TS02</td>
-    <td>Gestionar sesiones de autenticación</td>
-    <td>T-02</td>
-    <td>Implementar bounded context de autenticación</td>
-    <td>Implementar el bounded context de autenticación incluyendo generación de tokens, validación de credenciales, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Ramirez, Nickolas</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS03 -->
-  <tr>
-    <td>TS03</td>
-    <td>Gestionar perfil de piel del usuario</td>
-    <td>T-03</td>
-    <td>Implementar bounded context de skin profiles</td>
-    <td>Implementar el bounded context de skin profiles incluyendo entidad, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>4</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS04 -->
-  <tr>
-    <td>TS04</td>
-    <td>Gestionar escaneos faciales</td>
-    <td>T-04</td>
-    <td>Implementar bounded context de facial scans</td>
-    <td>Implementar el bounded context de facial scans incluyendo entidad con scores de análisis, repositorio JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS05 + TS06 -->
-  <tr>
-    <td>TS05 / TS06</td>
-    <td>Gestionar rutinas y seguimiento diario</td>
-    <td>T-05</td>
-    <td>Implementar bounded context de routine management</td>
-    <td>Implementar el bounded context de routine management incluyendo entidades Routine, RoutineItem y DailyTracking, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Contreras, Arturo</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS07 + TS08 -->
-  <tr>
-    <td>TS07 / TS08</td>
-    <td>Gestionar catálogo de productos y favoritos</td>
-    <td>T-06</td>
-    <td>Implementar bounded context de product discovery</td>
-    <td>Implementar el bounded context de product discovery incluyendo entidades Product, ProductCompatibility y FavoriteProduct, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Asmat, Martin</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS09 + TS10 + TS11 + TS12 -->
-  <tr>
-    <td>TS09 / TS10 / TS11 / TS12</td>
-    <td>Gestionar atención dermatológica</td>
-    <td>T-07</td>
-    <td>Implementar bounded context de dermatology care</td>
-    <td>Implementar el bounded context de dermatology care incluyendo entidades DermatologistProfile, DermatologistAvailability, Appointment y Consultation, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS13 + TS14 + TS15 -->
-  <tr>
-    <td>TS13 / TS14 / TS15</td>
-    <td>Gestionar pagos y suscripciones</td>
-    <td>T-08</td>
-    <td>Implementar bounded context de subscriptions y pagos</td>
-    <td>Implementar el bounded context de pagos y suscripciones incluyendo entidades Payment, Plan y Subscription, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Ramirez, Nickolas</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- TS16 + TS17 -->
-  <tr>
-    <td>TS16 / TS17</td>
-    <td>Gestionar asistente virtual y chat</td>
-    <td>T-09</td>
-    <td>Implementar bounded context de intelligent support</td>
-    <td>Implementar el bounded context de intelligent support incluyendo entidades SupportQuery y ChatMessage, repositorios JPA, service layer, endpoints REST y documentación con Swagger.</td>
-    <td>5</td>
-    <td>Gallardo, Carla</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- Tasks sin US — Configuración base -->
-  <tr>
-    <td rowspan="4">-</td>
-    <td rowspan="4">Configuración base del backend</td>
-    <td>T-10</td>
-    <td>Configurar proyecto Spring Boot</td>
-    <td>Inicializar el proyecto Spring Boot con las dependencias necesarias: Spring Web, Spring Data JPA, Spring Security, Lombok y configuración de perfiles de entorno.</td>
-    <td>3</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-11</td>
-    <td>Configurar base de datos y migraciones</td>
-    <td>Configurar la conexión a la base de datos relacional en Azure, definir el esquema inicial y configurar las migraciones del sistema.</td>
-    <td>4</td>
-    <td>Contreras, Arturo</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-12</td>
-    <td>Configurar documentación con Swagger UI</td>
-    <td>Configurar OpenAPI 3.0 con Swagger UI en el proyecto Spring Boot, definiendo la información general de la API y habilitando el acceso al portal de documentación.</td>
-    <td>2</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-13</td>
-    <td>Desplegar Web Services en Azure App Service</td>
-    <td>Configurar el recurso Azure App Service, vincular el repositorio del backend y configurar el pipeline CI/CD con GitHub Actions para el despliegue automático.</td>
-    <td>4</td>
-    <td>Contreras, Arturo</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- Tasks sin US — Correcciones frontend y landing -->
-  <tr>
-    <td rowspan="2">-</td>
-    <td rowspan="2">Correcciones y complementos del Frontend</td>
-    <td>T-14</td>
-    <td>Implementar sección de perfil de usuario</td>
-    <td>Implementar las vistas de gestión de perfil incluyendo edición de información personal, actualización de características de piel y cambio de contraseña.</td>
-    <td>4</td>
-    <td>Ramirez, Nickolas</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-15</td>
-    <td>Actualizar integración del frontend con Web Services</td>
-    <td>Actualizar las URLs base del frontend para consumir los endpoints del Web Service desplegado en Azure, reemplazando la Mock API en los bounded contexts implementados.</td>
-    <td>3</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- Tasks sin US — Landing Page -->
-  <tr>
-    <td>-</td>
-    <td>Actualización Landing Page</td>
-    <td>T-16</td>
-    <td>Actualizar Landing Page con mejoras y correcciones</td>
-    <td>Aplicar mejoras visuales y de contenido a la Landing Page incluyendo correcciones de i18n y actualización del enlace de redirección post-pago hacia el Web Application desplegado.</td>
-    <td>2</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-
-  <!-- Tasks sin US — Entrevistas de validación -->
-  <tr>
-    <td rowspan="5">-</td>
-    <td rowspan="5">Entrevistas de validación</td>
-    <td>T-17</td>
-    <td>Diseñar guía de entrevistas de validación</td>
-    <td>Elaborar el guión de preguntas y el flujo de navegación guiada para las entrevistas de validación con usuarios de ambos segmentos objetivo.</td>
-    <td>2</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-18</td>
-    <td>Realizar entrevista de validación (Luciana)</td>
-    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
-    <td>2</td>
-    <td>Mechan, Luciana</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-19</td>
-    <td>Realizar entrevista de validación (Arturo)</td>
-    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
-    <td>2</td>
-    <td>Contreras, Arturo</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-20</td>
-    <td>Realizar entrevista de validación (Carla)</td>
-    <td>Conducir entrevista de validación con usuario del segmento asignado, registrar hallazgos y documentar el video de la sesión.</td>
-    <td>2</td>
-    <td>Gallardo, Carla</td>
-    <td>Done</td>
-  </tr>
-  <tr>
-    <td>T-21</td>
-    <td>Realizar entrevistas de validación (Martin y Nickolas)</td>
-    <td>Conducir entrevistas de validación con usuarios de los segmentos asignados, registrar hallazgos y documentar los videos de las sesiones.</td>
-    <td>2</td>
-    <td>Asmat, Martin / Ramirez, Nickolas</td>
-    <td>Done</td>
-  </tr>
-
-</table>
+| User Story Id | Título | Task Id | Título | Descripción | Estimación (Hours) | Responsable | Estado |
+|---|---|---|---|---|---|---|---|
+| TS02 | Gestionar sesiones de autenticación | T-01 | Implementar endpoints de autenticación | Implementar los endpoints POST /api/v1/authentication/register y POST /api/v1/authentication/register-dermatologist con validación de credenciales y asignación de roles. | 4 | Mechan, Luciana | Done |
+| TS01 | Gestionar usuarios del sistema | T-02 | Implementar endpoints de usuarios | Implementar los endpoints GET /api/v1/users, GET /api/v1/users/{userId}, PUT /api/v1/users/{userId} y PUT /api/v1/users/{userId}/photo con validaciones de negocio. | 4 | Mechan, Luciana | Done |
+| TS09 | Gestionar perfiles de dermatólogos | T-03 | Implementar endpoints de perfiles de dermatólogos | Implementar los endpoints GET /api/v1/dermatologist-profiles, GET /api/v1/dermatologist-profiles/{profileId} y PUT /api/v1/dermatologist-profiles/{profileId} con validaciones de actualización. | 4 | Mechan, Luciana | Done |
+| TS10 | Gestionar disponibilidad de dermatólogos | T-04 | Implementar endpoints de disponibilidad | Implementar los endpoints POST /api/v1/availabilities, GET /api/v1/availabilities y PUT /api/v1/availabilities/{availabilityId} con filtrado opcional por día de semana. | 4 | Mechan, Luciana | Done |
+| TS11 | Gestionar citas dermatológicas | T-05 | Implementar endpoints de citas dermatológicas | Implementar los endpoints POST /api/v1/appointments, GET /api/v1/appointments, GET /api/v1/appointments/{id}, PUT /api/v1/appointments/{id}/confirm, PUT /api/v1/appointments/{id}/cancel y PUT /api/v1/appointments/{id}/reprogram-request con gestión de estados. | 5 | Mechan, Luciana | Done |
+| TS13 | Gestionar pagos | T-06 | Implementar endpoints de pagos | Implementar los endpoints GET /api/v1/payments/{paymentId} y GET /api/v1/payments/patient/{patientId} con consulta de estado de transacciones. | 3 | Mechan, Luciana | Done |
+| TS15 | Gestionar suscripciones de usuarios | T-07 | Implementar endpoints de suscripciones | Implementar los endpoints POST /api/v1/subscriptions, GET /api/v1/subscriptions/{subscriptionId} y GET /api/v1/subscriptions/patient/{patientId} con activación de plan seleccionado. | 4 | Mechan, Luciana | Done |
+| TS05 | Gestionar rutinas personalizadas | T-08 | Implementar endpoints de rutinas | Implementar los endpoints GET /api/v1/routines/{routineId}, GET /api/v1/routines/patient/{patientId}, GET /api/v1/routines/{routineId}/items/{routineItemId}/replacement-options, PUT /api/v1/routines/{routineId}/items/{routineItemId}/replace y DELETE /api/v1/routines/{routineId}/items/{routineItemId}. | 5 | Contreras, Arturo | Done |
+| TS06 | Gestionar seguimiento diario de rutina | T-09 | Implementar endpoints de daily trackings | Implementar los endpoints POST /api/v1/daily-trackings, GET /api/v1/daily-trackings, GET /api/v1/daily-trackings/routine/{routineId}, GET /api/v1/daily-trackings/patient/{patientId} y GET /api/v1/daily-trackings/patient/{patientId}/weekly-summary. | 5 | Contreras, Arturo | Done |
+| TS07 | Gestionar catálogo de productos | T-10 | Implementar endpoints de productos | Implementar los endpoints GET /api/v1/products y GET /api/v1/products/{productId} con retorno de catálogo completo y detalle de producto. | 3 | Contreras, Arturo | Done |
+| TS08 | Gestionar productos favoritos | T-11 | Implementar endpoints de productos favoritos | Implementar los endpoints GET /api/v1/favorite-products, POST /api/v1/favorite-products y DELETE /api/v1/favorite-products/{favoriteProductId} con filtrado por usuario. | 4 | Contreras, Arturo | Done |
+| TS03 | Gestionar perfil de piel del usuario | T-12 | Implementar endpoints de perfiles de piel | Implementar los endpoints POST /api/v1/skin-profiles, GET /api/v1/skin-profiles/{skinProfileId}, GET /api/v1/skin-profiles/patient/{patientId} y PUT /api/v1/skin-profiles/{skinProfileId} con validaciones de tipo de piel y sensibilidad. | 4 | Asmat, Martin | Done |
+| TS04 | Gestionar escaneos faciales | T-13 | Implementar endpoints de escaneos faciales y análisis | Implementar los endpoints POST /api/v1/facial-scans, PUT /api/v1/facial-scans/{facialScanId}/submit, GET /api/v1/facial-scans/{facialScanId} y GET /api/v1/facial-scans/patient/{patientId}, junto con los endpoints de skin analyses GET /api/v1/skin-analyses/{skinAnalysisId}, GET /api/v1/skin-analyses/patient/{patientId} y GET /api/v1/skin-analyses/facial-scan/{facialScanId}. | 5 | Asmat, Martin | Done |
+| TS12 | Gestionar consultas virtuales | T-14 | Implementar endpoints de consultas virtuales | Implementar los endpoints POST /api/v1/consultations, GET /api/v1/consultations, GET /api/v1/consultations/{id}, PUT /api/v1/consultations/{id}/save-notes, PUT /api/v1/consultations/{id}/diagnosis, PUT /api/v1/consultations/{id}/finish y POST /api/v1/consultations/{id}/photos con gestión de estados y notas clínicas. | 5 | Asmat, Martin | Done |
+| - | Correcciones generales | T-15 | Correcciones de diagramas de clase | Revisar y actualizar los diagramas de clase del informe incorporando los cambios realizados durante la implementación del backend. | 3 | Mechan, Luciana | Done |
+| - | Correcciones generales | T-16 | Correcciones del Frontend | Aplicar correcciones identificadas en el Frontend Web Application derivadas de la integración con el backend y feedback recibido. | 3 | — | Done |
+| - | Curso introductorio de Java | T-17 | Redacción de guión y elaboración de video — Lección 1: ¿Qué es Java y la programación? | Redactar el guión y producir el video de la Lección 1 del curso introductorio de Java para estudiantes de nivel secundario. | 3 | Mechan, Luciana | Done |
+| - | Curso introductorio de Java | T-18 | Redacción de guión y elaboración de video — Lección 2: Variables, tipos de datos y operadores | Redactar el guión y producir el video de la Lección 2 del curso introductorio de Java para estudiantes de nivel secundario. | 3 | Ramirez, Nickolas | Done |
+| - | Curso introductorio de Java | T-19 | Redacción de guión y elaboración de video — Lección 3: Estructuras de control | Redactar el guión y producir el video de la Lección 3 del curso introductorio de Java para estudiantes de nivel secundario. | 3 | Ramirez, Nickolas | Done |
+| - | Curso introductorio de Java | T-20 | Redacción de guión y elaboración de video — Lección 4: Métodos, parámetros y salida por consola | Redactar el guión y producir el video de la Lección 4 del curso introductorio de Java para estudiantes de nivel secundario. | 3 | Asmat, Martin | Done |
+| - | Curso introductorio de Java | T-21 | Redacción de guión y elaboración de video — Lección 5: Clases, objetos y encapsulación | Redactar el guión y producir el video de la Lección 5 del curso introductorio de Java para estudiantes de nivel secundario. | 4 | Asmat, Martin | Done |
+| - | Curso introductorio de Java | T-22 | Redacción de guión y elaboración de video — Lección 6: Arrays y cadenas | Redactar el guión y producir el video de la Lección 6 del curso introductorio de Java para estudiantes de nivel secundario. | 3 | Asmat, Martin | Done |
+| - | Curso introductorio de Java | T-23 | Redacción de guión y elaboración de video — Lección 7: Proyecto final — Registro de estudiantes | Redactar el guión y producir el video de la Lección 7 del curso introductorio de Java para estudiantes de nivel secundario. | 4 | Contreras, Arturo | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
