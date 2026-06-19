@@ -8893,21 +8893,22 @@ Justo Valverde, dermatólogo de 48 años residente en San Martín de Porres, val
 
 **Userflow 6:** Realizar consulta virtual en tiempo real.
 
-Entrevistador: 
+Entrevistador: Martin Alejandro Asmat Alminco
 
 Datos del entrevistado
 
-- **Nombre:** 
-- **Apellidos:** 
-- **Edad:** 
-- **Distrito:** 
-- **Timing:** 
+- **Nombre:** Antonio 
+- **Apellidos:** Paredes Mendoza
+- **Edad:** 65 años
+- **Distrito:** Pueblo Libre
+- **Timing:** 10 minutos
   
 
-<img src="" width="500"/>
+<img src="assets/img/validation-interview-dermatologo-3.png" width="500"/>
 
 **Resumen descriptivo:**
 
+Antonio Paredes, dermatólogo de 65 años de edad y residente en Pueblo Libre, valoró positivamente el valor que puede brindar la marca. Primero, consideró que la interfaz logra comprenderse, Sin embargo, considera que necesita ser un poco más intuitiva o más simplista, y centrarse más en los aspectos médicos. Dió recomendaciones de cómo mejorar las citas virtuales a través de dianósticos o mayor trazabilidad con el usuario. Considera que el negocio no necesariamente debe girar en torno a citas virtuales, por lo que insertarla en contratos con clínicas es una opción muy viable. Luego, considera que en funcionalidades básicas cubre con lo solicitado, solo que a comparación de softwares más robustos si necesita mejoras. Respecto al marco legal resaltó la importancia de validación de firmas o certififcados por de la aplicación. Mostró interés en el planteamiento de la solución. Para el flujo si comprendió claramente el recorrido.
 
 ### 5.3.3. Evaluaciones según heurísticas.
 
