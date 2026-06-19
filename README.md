@@ -8439,13 +8439,12 @@ El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2,
 
 En esta sección el equipo incluye la elaboración de un artefacto Leadership-and-Collaboration Matrix (LACX), que indica por cada aspecto dentro del alcance del Sprint, quién es el líder y quién o quiénes son colaboradores en dicho aspecto, con el fin de brindar mayor claridad y efectividad en la comunicación al interior del equipo. Para el Sprint 3 se definieron como aspectos principales los bounded contexts implementados en los Web Services, la configuración base del backend, las actualizaciones del Frontend Web Application y la Landing Page, así como la ejecución de las entrevistas de validación con usuarios de los segmentos objetivo. A continuación se presenta el cuadro correspondiente.
 
-| Team Member (Last Name, First Name) | GitHub Username | IAM & Authentication Leader (L) / Collaborator (C) | Skin Profile & Facial Scans Leader (L) / Collaborator (C) | Routine Management Leader (L) / Collaborator (C) | Product Discovery Leader (L) / Collaborator (C) | Dermatology Care Leader (L) / Collaborator (C) | Subscriptions & Payments Leader (L) / Collaborator (C) | Intelligent Support Leader (L) / Collaborator (C) | Backend Setup & Deployment Leader (L) / Collaborator (C) | Frontend Updates Leader (L) / Collaborator (C) | Landing Page Update Leader (L) / Collaborator (C) | Validation Interviews Leader (L) / Collaborator (C) |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Asmat Alminco, Martin Alejandro | Alemarr2 | C | C | C | L | C | C | C | C | C | C | C |
-| Contreras Torres, Arturo Valentino | Arturouu | C | C | L | C | C | C | C | L | C | C | C |
-| Gallardo Morales, Carla Alejandra | Carlsss28 | C | C | C | C | C | C | L | C | C | C | C |
-| Mechan Montenegro, Luciana Carolina | luuu6 | C | L | C | C | L | C | C | L | L | L | L |
-| Ramirez Ruiz, Nickolas | Bynickram02 | L | C | C | C | C | L | C | C | L | C | C |
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Authentication | Skin Profile & Facial Scans | Routine Management | Product Discovery | Dermatology Care | Subscriptions & Payments | Backend Setup & Deployment | Frontend Updates | Landing Page Update | Validation Interviews |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Asmat Alminco, Martin Alejandro | Alemarr2 | C | L | C | L | C | C | C | C | C | L |
+| Contreras Torres, Arturo Valentino | Arturouu | C | C | L | C | C | C | L | C | C | L |
+| Mechan Montenegro, Luciana Carolina | luuu6 | L | C | C | C | L | L | L | L | L | L |
+| Ramirez Ruiz, Nickolas | Bynickram02 | C | C | C | C | C | C | C | L | C | L |
 
 
 
