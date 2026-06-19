@@ -8484,6 +8484,104 @@ El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera vers
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
+Durante el Sprint 3 el equipo implementó la primera versión de los Web Services de Bloomie mediante una RESTful API desarrollada con Spring Boot, cubriendo los bounded contexts de IAM, Dermatology Care, Dermatological Appointment, Subscriptions & Payments, Product Discovery, Routine Management y Skin Analysis. Adicionalmente se realizaron actualizaciones en el Frontend Web Application para conectar los bounded contexts implementados al backend real, y se actualizó la Landing Page con los enlaces definitivos hacia la Web Application desplegada.
+
+Tabla de los commits mas importantes para el Backend, Frontend y Landing Page
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|---|---|---|---|---|
+| bloomie-platform | feature/shared | db7a49c | feat(shared): add shared bounded context | 04/06/2026 |
+| bloomie-platform | feature/iam | b3988c0 | feat(iam): add domain layer | 06/06/2026 |
+| bloomie-platform | feature/iam | 6323228 | feat(iam): add application layer | 06/06/2026 |
+| bloomie-platform | feature/iam | a315181 | feat(iam): add infrastructure layer | 06/06/2026 |
+| bloomie-platform | feature/iam | 3552262 | feat(iam): add interfaces layer | 06/06/2026 |
+| bloomie-platform | feature/iam | 2d47ae7 | feat(iam): add DermatologistRegisteredEventHandler to translate domain event to integration event | 10/06/2026 |
+| bloomie-platform | feature/iam | e29c4a0 | feat(iam): add photoUrl field and updatePhoto behavior to User aggregate | 16/06/2026 |
+| bloomie-platform | feature/iam | 5860e4d | feat(iam): add UpdateUserPhotoCommand | 16/06/2026 |
+| bloomie-platform | feature/iam | 4a854d0 | feat(iam): implement handle UpdateUserPhotoCommand in UserCommandServiceImpl | 16/06/2026 |
+| bloomie-platform | feature/iam | e2edc1e | feat(iam): add PUT /users/{userId}/photo endpoint to UsersController | 16/06/2026 |
+| bloomie-platform | feature/dermatology-care | d6e04e9 | feat(dermatology-care): add domain layer | 10/06/2026 |
+| bloomie-platform | feature/dermatology-care | 5afe36c | feat(dermatology-care): add application layer | 10/06/2026 |
+| bloomie-platform | feature/dermatology-care | 7d2a398 | feat(dermatology-care): add infrastructure layer | 10/06/2026 |
+| bloomie-platform | feature/dermatology-care | 0d3f978 | feat(dermatology-care): add interfaces layer | 10/06/2026 |
+| bloomie-platform | feature/dermatology-care | a3e76fa | feat(dermatology-care): add consultationFee field to DermatologistProfile aggregate | 16/06/2026 |
+| bloomie-platform | feature/dermatology-care | 36dc0bf | feat(dermatology-care): add consultationFee to UpdateDermatologistProfileCommand | 16/06/2026 |
+| bloomie-platform | feature/dermatology-care | de473c8 | feat(dermatology-care): map consultationFee in DermatologistProfilePersistenceAssembler | 16/06/2026 |
+| bloomie-platform | feature/dermatology-care | 66bbe3b | feat(dermatology-care): map consultationFee in UpdateDermatologistProfileCommandFromResourceAssembler | 16/06/2026 |
+| bloomie-platform | feature/dermatology-appointment | 551e1f6 | feat(dermatological-appointment): add domain layer | 11/06/2026 |
+| bloomie-platform | feature/dermatology-appointment | 0611da5 | feat(dermatological-appointment): add application layer | 11/06/2026 |
+| bloomie-platform | feature/dermatology-appointment | 2c85aa7 | feat(dermatological-appointment): add infrastructure layer | 11/06/2026 |
+| bloomie-platform | feature/dermatology-appointment | fc76097 | feat(dermatological-appointment): add interfaces layer | 11/06/2026 |
+| bloomie-platform | feature/select-subscription-plan | 60b0391 | feat(select-subscription-plan): add domain and application layer | 12/06/2026 |
+| bloomie-platform | feature/select-subscription-plan | d4189b2 | feat(select-subscription-plan): add converters for value objects in infrastructure layer | 12/06/2026 |
+| bloomie-platform | feature/select-subscription-plan | 3b9f0e5 | feat(select-subscription-plan): add assemblers for subscription and plan in infrastructure layer | 12/06/2026 |
+| bloomie-platform | feature/select-subscription-plan | b21d893 | feat(select-subscription-plan): add assembler to command from resource for select subscription plan | 12/06/2026 |
+| bloomie-platform | feature/select-subscription-plan | 845a9e8 | feat(select-subscription-plan): add controller for plan and subscription | 12/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | 7e63a00 | feat(payments): add Payment aggregate | 13/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | 9a1a6b1 | feat(payments): add ProcessSubscriptionPaymentCommand record | 13/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | f800cf1 | feat(payments): add event listener for subscriptionPlanSelectedIntegrationEvent | 14/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | 15ae5db | feat(payments): add PaymentPersistenceAssembler | 14/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | a3a3931 | add PaymentRepositoryImpl | 14/06/2026 |
+| bloomie-platform | feature/payment-process-subscription-payment | 322f7c8 | feat(payments): add PaymentsController | 14/06/2026 |
+| bloomie-platform | feature/product-discovery | c41aeea | feat(product-discovery): add product category value object | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | 1bbc5eb | feat(product-discovery): add Product aggregate | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | c2dc847 | feat(product-discovery): add product repository | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | 3e092aa | feat(product-discovery): add product query service implementation | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | 338fac0 | feat(product-discovery): add save product as favorite command | 15/06/2026 |
+| bloomie-platform | feature/product-discovery | 37ddbb6 | feat(product-discovery): add favorite product aggregate | 15/06/2026 |
+| bloomie-platform | feature/product-discovery | 602789e | feat(product-discovery): add favorite product command service implementation | 15/06/2026 |
+| bloomie-platform | feature/product-discovery | 5558fdd | feat(product-discovery): add favorite product repository implementation | 15/06/2026 |
+| bloomie-platform | feature/product-discovery | d572e14 | feat(product-discovery): add favorite product controller | 15/06/2026 |
+| bloomie-platform | feature/product-discovery | aec8281 | feat(product-discovery): add remove product from favorites command | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | dc7e893 | feat(product-discovery): update favorite product controller with new delete endpoint | 16/06/2026 |
+| bloomie-platform | feature/product-discovery | 133277c | feat(product-discovery): add product discovery event handlers | 18/06/2026 |
+| bloomie-platform | feature/routine-management | 1525a09 | feat(routine-management): add ReplaceProductInRoutineCommand | 18/06/2026 |
+| bloomie-platform | feature/routine-management-replace-product | c1b878c | feat(routine-management): add replaceProduct behavior to Routine aggregate | 18/06/2026 |
+| bloomie-platform | feature/routine-management-replace-product | bc915a4 | feat(routine-management): implement handle ReplaceProductInRoutineCommand in RoutineCommandServiceImpl | 18/06/2026 |
+| bloomie-platform | feature/routine-management-replace-product | cf44cfe | feat(routine-management): implement handle GetRecommendedProductsForRoutineItemQuery in RoutineQueryServiceImpl | 18/06/2026 |
+| bloomie-platform | feature/routine-management-replace-product | 1d12233 | feat(routine-management): add PUT /{routineId}/items/{itemId}/replace and GET replacement-options endpoints | 18/06/2026 |
+| bloomie-platform | feature/routine-management-remove-product | 57475d2 | feat(routine-management): add RemoveProductFromRoutineCommand | 19/06/2026 |
+| bloomie-platform | feature/routine-management-remove-product | e5cee91 | feat(routine-management): add removeItem behavior with mandatory steps and minimum items validation | 19/06/2026 |
+| bloomie-platform | feature/routine-management-remove-product | dff309c | feat(routine-management): add DELETE /routines/{routineId}/items/{routineItemId} endpoint | 19/06/2026 |
+| bloomie-platform | feature/routine-management-mark-routine-completed | 4ba1393 | feat(routine-management): add DailyTracking aggregate with mark as completed behavior | 19/06/2026 |
+| bloomie-platform | feature/routine-management-mark-routine-completed | 388cf74 | feat(routine-management): add MarkRoutineAsCompletedCommand | 19/06/2026 |
+| bloomie-platform | feature/routine-management-mark-routine-completed | d9092f9 | feat(routine-management): implement DailyTrackingCommandServiceImpl for MarkRoutineAsCompleted | 19/06/2026 |
+| bloomie-platform | feature/routine-management-mark-routine-completed | 190c809 | feat(routine-management): update DailyTrackingsController with POST and GET endpoints | 19/06/2026 |
+| bloomie-platform | feature/routine-management-weekly-summary | 031e94a | feat(routine-management): add GetWeeklySummaryByPatientIdQuery | 19/06/2026 |
+| bloomie-platform | feature/routine-management-weekly-summary | 964e28b | feat(routine-management): implement weekly summary calculation in DailyTrackingQueryServiceImpl | 19/06/2026 |
+| bloomie-platform | feature/routine-management-weekly-summary | 7ae5985 | feat(routine-management): add GET /daily-trackings/patient/{patientId}/weekly-summary endpoint | 19/06/2026 |
+| bloomie-platform | feature/skin-analysis-complete-skin-profile | 4b8be5f | feat(skinAnalysis): add SkinProfile aggregate | 16/06/2026 |
+| bloomie-platform | feature/skin-analysis-complete-skin-profile | 82e1b79 | feat(skin-analysis): add CompleteSkinProfileCommand | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-complete-skin-profile | 803c65f | feat(skin-analysis): implement SkinProfileCommandServiceImpl | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-complete-skin-profile | 4f13f62 | feat(skin-analysis): implement SkinProfileQueryServiceImpl | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-complete-skin-profile | e37a960 | feat(skinAnalysis): add skin profile controller | 16/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | 6b2cd4c | feat(skin-analysis): add FacialScan aggregate with start behavior | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | 54a45dc | feat(skin-analysis): add FacialScanCommandService interface | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | fa2176c | feat(skin-analysis): implement FacialScanCommandServiceImpl for StartFacialScan | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | ab6118d | feat(skin-analysis): add FacialScanPersistenceAssembler | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | 24cab9c | feat(skin-analysis): implement FacialScanRepositoryImpl with event publishing | 17/06/2026 |
+| bloomie-platform | feature/skin-analysis-facial-scan | 5474e3c | feat(skin-analysis): add FacialScansController with POST and GET endpoints | 17/06/2026 |
+| bloomie-platform | feature/skinanlysis-submit-facial-scan | 9c87dcc | feat(skin-analysis): add PUT /facial-scans/{facialScanId}/submit endpoint | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | 8068893 | feat(skin-analysis): add SkinAnalysis aggregate with deterministic score generation | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | 0c344c0 | feat(skin-analysis): add AnalyzeSkinScanCommand | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | a713a97 | feat(skin-analysis): implement SkinAnalysisCommandServiceImpl for AnalyzeSkinScan | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | 0db1eae | feat(skin-analysis): implement SkinAnalysisRepositoryImpl with event publishing | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | 92027cd | feat(skin-analysis): add SkinAnalysesController with GET endpoints | 17/06/2026 |
+| bloomie-platform | feature/analyze-skin-scan | 479146b | feat(skin-analysis): add skinType field to SkinAnalysis aggregate | 18/06/2026 |
+| bloomie-webapp | feature/iam-connect-backend | 823828c | feat(config): add backendBasePath and backend endpoint paths for IAM | 27/05/2026 |
+| bloomie-webapp | feature/iam-connect-backend | ba59fd0 | feat(iam): connect register and login to backend, use localStorage for temporary session | 27/05/2026 |
+| bloomie-webapp | feature/implement-upload-images | 3566ee8 | feat(shared): add PhotoUploadComponent for base64 photo upload | 04/06/2026 |
+| bloomie-webapp | feature/dermatology-care-connect-backend | 336e03e | feat(config): update environment with dermatology care backend paths | 10/06/2026 |
+| bloomie-webapp | feature/dermatology-care-connect-backend | 08a8aa5 | feat(dermatology-care): update profiles api endpoint to use backendBasePath | 10/06/2026 |
+| bloomie-webapp | feature/dermatology-care-connect-backend | e3be00e | feat(dermatology-care): create appointment in backend after payment confirmation | 10/06/2026 |
+| bloomie-webapp | feature/dermatology-care-connect-backend | fde2d56 | feat(dermatology-care): connect save changes to backend via store | 10/06/2026 |
+| bloomie-webapp | fix/remove-hardcoded-values | 1e016dc | fix: replace hardcoded values with dynamic data across bounded contexts | 12/06/2026 |
+| bloomie-webapp | feature/connect-routine-management-backend | 704e05b | feature(routine-management): add connection to the backend | 19/06/2026 |
+| bloomie-website | feat/menu-plan | 95abb54 | feat(menu-plan): update index html | 14/05/2026 |
+| bloomie-website | feat/menu-plan | e4fd381 | feat(menu-plan): update index html with new URLs | 14/05/2026 |
+| bloomie-website | feat/button-links | 918b421 | feat(button-links): update login button and link to login to the webapp | 27/05/2026 |
+| bloomie-website | feat/call-to-action | 62f852f | feat(call-to-action): update link to webapp | 10/06/2026 |
+
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
