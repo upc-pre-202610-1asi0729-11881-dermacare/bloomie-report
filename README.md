@@ -8682,6 +8682,7 @@ Durante este Sprint, la plataforma Bloomie logró la integración entre el front
 ![scan-response](assets/img/scan-result-response.png) 
 ![routine-response](assets/img/routine-response.png)
 
+Link de execution evidence - visualización y navegación principal lograda en este sprint: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQAUhr75Ul3qSorqNMFvfEdbAY50JtosvTVAoNP1viSJVMw?e=opwy9d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
