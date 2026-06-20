@@ -7154,9 +7154,9 @@ En esta sección el equipo elaboró la Leadership-and-Collaboration Matrix (LACX
 
 El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su totalidad: desde la documentación inicial (Lean UX, entrevistas, needfinding, especificación de requisitos y diseño UX/UI), pasando por la arquitectura del software (C4 Model, Event Storming, diagramas de base de datos), hasta la implementación y despliegue de la Landing Page. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-**URL del board:** https://trello.com/b/NP9njuOO/bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
-![Sprint Backlog 1 Board](assets/img/sprint-backlog-1-board.png)
+![Sprint Backlog 1 Board](assets/img/sprint-backlog-trello.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -7595,10 +7595,10 @@ en el flujo de suscripción de la Landing Page, y se documentaron todas las secc
 correspondientes al Sprint 2 del informe. A continuación se presenta el board de 
 seguimiento utilizado durante el sprint, junto con la tabla de control de estado.
 
-**URL del board:** https://trello.com/b/NP9njuOO/bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
 
-![Sprint Backlog 2 Board](assets/img/sprint-backlog-2-board.png)
+![Sprint Backlog 2 Board](assets/img/sprint2-backlog-trello.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -8396,9 +8396,9 @@ En esta sección el equipo incluye la elaboración de un artefacto Leadership-an
 
 El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de los Web Services de Bloomie, cubriendo los bounded contexts de autenticación, usuarios, perfiles de piel, escaneos faciales, rutinas, productos, citas dermatológicas, consultas virtuales, pagos y suscripciones. Adicionalmente se realizaron correcciones al frontend y diagramas de clase, y se elaboraron los guiones y videos del curso introductorio de Java. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-3-bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
-![Sprint Backlog 3 Board](assets/img/sprint3-board.png)
+![Sprint Backlog 3 Board](assets/img/sprint3-backlog-trello.png)
 
 | User Story Id | Título | Task Id | Título | Descripción | Estimación (Hours) | Responsable | Estado |
 |---|---|---|---|---|---|---|---|
