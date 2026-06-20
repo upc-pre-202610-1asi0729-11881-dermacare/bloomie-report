@@ -8844,6 +8844,46 @@ Al completarse el análisis de piel, se publica un `PreliminaryDiagnosisGenerate
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 3 el equipo realizó el despliegue de la primera versión de los Web Services de Bloomie mediante Azure App Service, configurando una instancia de Azure Database for MySQL Flexible Server como base de datos de producción. Este proceso incluyó la creación y configuración de los recursos en Azure, la definición de variables de entorno para la conexión entre el App Service y la base de datos, y la vinculación del repositorio de GitHub con el recurso de Azure para automatizar el proceso de despliegue. Adicionalmente se actualizó el despliegue del Frontend Web Application en Azure Static Web Apps y de la Landing Page en Vercel, incorporando los enlaces definitivos que apuntan al backend desplegado y a la Web Application.
+
+**Web Services — Azure App Service**
+
+Se creó un recurso de tipo App Service en Azure para alojar la RESTful API de Bloomie desarrollada con Spring Boot. El recurso fue configurado con el plan de servicio correspondiente y vinculado al repositorio bloomie-platform en GitHub para automatizar el proceso de build y despliegue ante cada actualización de la rama principal.
+
+![bloomie-platform](assets/img/bloomie-azure-overview.png)
+
+Las variables de entorno necesarias para la conexión con la base de datos y la configuración del perfil de Spring fueron definidas en la sección Configuration del App Service, incluyendo el string de conexión al servidor MySQL, las credenciales de acceso y el perfil activo de producción.
+
+![bloomie-environments](assets/img/environments-azure.png)
+
+Como evidencia del despliegue exitoso, se accedió a la documentación de la API mediante Swagger UI desde la URL pública del App Service, confirmando que todos los bounded contexts implementados durante el Sprint 3 están disponibles y operativos.
+
+![bloomie-swagger](assets/img/swagger-deployment.png)
+
+**Base de datos — Azure Database for MySQL Flexible Server**
+
+Se aprovisionó una instancia de Azure Database for MySQL Flexible Server para alojar la base de datos de producción de Bloomie. El servidor fue configurado con SSL enforced y TLS 1.2, garantizando la seguridad en la comunicación entre el App Service y la base de datos.
+
+![bloomie-bd](assets/img/bloomie-bd.png)
+
+
+Los datos de conexión del servidor MySQL, incluyendo el hostname, puerto, usuario y configuración SSL, fueron configurados como variables de entorno en el App Service para que la aplicación Spring Boot pueda conectarse a la base de datos en el entorno de producción.
+
+![bloomie-bd-connect](assets/img/azure-connect.png)
+
+
+**Web Application — Azure Static Web Apps**
+
+El Frontend Web Application fue actualizado y redesploy en Azure Static Web Apps, incorporando la integración con el backend real desplegado en Azure App Service en los bounded contexts implementados durante el Sprint 3.
+
+![bloomie-frontend](assets/img/deploy-frontend.png)
+
+**Landing Page — Vercel**
+
+La Landing Page fue actualizada con los enlaces definitivos hacia el Web Application desplegado y redesploy en Vercel, manteniéndose accesible desde su URL pública.
+
+![bloomie-landing](assets/img/deploy-landing.png)
+
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
 ## 5.3. Validation Interviews.
