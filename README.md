@@ -8884,7 +8884,40 @@ La Landing Page fue actualizada con los enlaces definitivos hacia el Web Applica
 
 ![bloomie-landing](assets/img/deploy-landing.png)
 
-#### 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.3.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 3 el equipo desarrolló las actividades de implementación distribuidas por bounded context según el esquema de Aspect Leaders definido en el Sprint Planning. El trabajo se organizó en ramas feature por bounded context siguiendo la convención de GitFlow establecida por el equipo, con commits atómicos y mensajes en formato Conventional Commits.
+
+En el repositorio de Web Application (bloomie-webapp) el equipo realizó las actualizaciones de integración con el backend real, acumulando 101 commits entre Luciana, Arturo y Martin. En el repositorio de Landing Page (bloomie-website) Arturo realizó las actualizaciones de enlaces y navegación con 16 commits.
+
+A continuación se presentan los analíticos de colaboración obtenidos desde GitHub Insights para cada repositorio.
+
+**Web Services — bloomie-platform**
+
+| Miembro | GitHub Username | Commits Sprint 3 |
+|---|---|---|
+| Mechan Montenegro, Luciana | luuu6 | 250 |
+| Contreras Torres, Arturo | Arturouu | 153 |
+| Asmat Alminco, Martin | Alemarr2 | 8 |
+| **Total** | | **411** |
+
+![backend-commits](assets/img/platform-commits.png)
+
+**Web Application — bloomie-webapp**
+
+| Miembro | GitHub Username | Commits Sprint 3 |
+|---|---|---|
+| Mechan Montenegro, Luciana | luuu6 | 45 |
+| Contreras Torres, Arturo | Arturouu | 47 |
+| Asmat Alminco, Martin | Alemarr2 | 7 |
+| **Total** | | **101** |
+
+![backend-commits](assets/img/frontend-commits.png)
+
+
+**Landing Page — bloomie-website**
+
+![landing-commits](assets/img/landing-commits-2.png)
 
 ## 5.3. Validation Interviews.
 
