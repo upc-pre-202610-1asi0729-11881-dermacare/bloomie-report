@@ -6730,12 +6730,6 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Layers.png" alt="C4 Diagram" width="1000"/> <br>
 
-<img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
-
 <img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Views.png" alt="C4 Diagram" width="1000"/> <br>
@@ -6743,12 +6737,6 @@ Dermatological Appointment Context <br>
 #### IAM
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/IAM/Components_IAM_Layers.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/IAM/Components_IAM_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/IAM/Components_IAM_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/IAM/Components_IAM_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/IAM/Components_IAM_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
@@ -6758,12 +6746,6 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Layers.png" alt="C4 Diagram" width="1000"/> <br>
 
-<img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
-
 <img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/IntelligentSupport/Components_IntelligentSupport_Views.png" alt="C4 Diagram" width="1000"/> <br>
@@ -6771,12 +6753,6 @@ Dermatological Appointment Context <br>
 #### Product Discovery
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/ProductDiscovery/Components_ProductDiscovery_Layers.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/ProductDiscovery/Components_ProductDiscovery_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/ProductDiscovery/Components_ProductDiscovery_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/ProductDiscovery/Components_ProductDiscovery_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/ProductDiscovery/Components_ProductDiscovery_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
@@ -6786,12 +6762,6 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Layers.png" alt="C4 Diagram" width="1000"/> <br>
 
-<img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
-
 <img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/RoutineManagement/Components_RoutineManagement_Views.png" alt="C4 Diagram" width="1000"/> <br>
@@ -6799,12 +6769,6 @@ Dermatological Appointment Context <br>
 #### Skin Analysis
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Layers.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Application.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Domain.png" alt="C4 Diagram" width="1000"/> <br>
-
-<img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Infrastructure.png" alt="C4 Diagram" width="1000"/> <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Presentation.png" alt="C4 Diagram" width="1000"/> <br>
 
