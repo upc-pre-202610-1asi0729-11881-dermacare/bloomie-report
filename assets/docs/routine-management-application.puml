@@ -1,0 +1,103 @@
+@startuml routine-management-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Routine Management - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface RoutineCommandService {
+            + generatePersonalizedRoutine(command : GeneratePersonalizedRoutineCommand) : Result<Routine>
+            + removeProduct(command : RemoveProductFromRoutineCommand) : Result<Routine>
+            + replaceProduct(command : ReplaceProductInRoutineCommand) : Result<Routine>
+        }
+
+        interface DailyTrackingCommandService {
+            + markAsCompleted(command : MarkRoutineAsCompletedCommand) : Result<DailyTracking>
+        }
+    }
+
+    package "queryservices" {
+        interface RoutineQueryService {
+            + getById(query : GetRoutineByIdQuery) : Result<Routine>
+            + getByPatientId(query : GetRoutineByPatientIdQuery) : Result<Routine>
+        }
+
+        interface DailyTrackingQueryService {
+            + getAll(query : GetAllDailyTrackingsQuery) : Result<List<DailyTracking>>
+            + getByPatientId(query : GetDailyTrackingsByPatientIdQuery) : Result<List<DailyTracking>>
+            + getByRoutineId(query : GetDailyTrackingsByRoutineIdQuery) : Result<List<DailyTracking>>
+            + getByPatientIdAndDate(query : GetDailyTrackingByPatientIdAndDateQuery) : Result<DailyTracking>
+            + getWeeklySummaryByPatientId(query : GetWeeklySummaryByPatientIdQuery) : Result<WeeklySummary>
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class RoutineCommandServiceImpl {
+                - routineRepository : RoutineRepository
+                + generatePersonalizedRoutine(command : GeneratePersonalizedRoutineCommand) : Result<Routine>
+                + removeProduct(command : RemoveProductFromRoutineCommand) : Result<Routine>
+                + replaceProduct(command : ReplaceProductInRoutineCommand) : Result<Routine>
+            }
+
+            class DailyTrackingCommandServiceImpl {
+                - dailyTrackingRepository : DailyTrackingRepository
+                - routineRepository : RoutineRepository
+                + markAsCompleted(command : MarkRoutineAsCompletedCommand) : Result<DailyTracking>
+            }
+        }
+
+        package "queryservices" {
+            class RoutineQueryServiceImpl {
+                - routineRepository : RoutineRepository
+                + getById(query : GetRoutineByIdQuery) : Result<Routine>
+                + getByPatientId(query : GetRoutineByPatientIdQuery) : Result<Routine>
+            }
+
+            class DailyTrackingQueryServiceImpl {
+                - dailyTrackingRepository : DailyTrackingRepository
+                + getAll(query : GetAllDailyTrackingsQuery) : Result<List<DailyTracking>>
+                + getByPatientId(query : GetDailyTrackingsByPatientIdQuery) : Result<List<DailyTracking>>
+                + getByRoutineId(query : GetDailyTrackingsByRoutineIdQuery) : Result<List<DailyTracking>>
+                + getByPatientIdAndDate(query : GetDailyTrackingByPatientIdAndDateQuery) : Result<DailyTracking>
+                + getWeeklySummaryByPatientId(query : GetWeeklySummaryByPatientIdQuery) : Result<WeeklySummary>
+            }
+        }
+
+        package "eventhandlers" {
+            class PersonalizedRoutineGeneratedEventHandler {
+                + on(event : PersonalizedRoutineGeneratedEvent) : void
+            }
+
+            class PreliminaryDiagnosisGeneratedEventHandler {
+                - routineCommandService : RoutineCommandService
+                + on(event : PreliminaryDiagnosisGeneratedIntegrationEvent) : void
+            }
+        }
+
+        package "outboundservices.acl" {
+            interface ExternalSkinAnalysisService {
+                + fetchSkinAnalysisById(skinAnalysisId : Long) : Optional<?>
+            }
+        }
+    }
+}
+
+' Implementations
+RoutineCommandServiceImpl ..|> RoutineCommandService
+DailyTrackingCommandServiceImpl ..|> DailyTrackingCommandService
+RoutineQueryServiceImpl ..|> RoutineQueryService
+DailyTrackingQueryServiceImpl ..|> DailyTrackingQueryService
+
+' Event handler dependencies
+PreliminaryDiagnosisGeneratedEventHandler --> RoutineCommandService
+
+@enduml

@@ -1,0 +1,135 @@
+@startuml dermatology-care-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatology Care - Infrastructure Layer
+
+package "infrastructure.persistence.jpa" {
+
+    package "entities" {
+        class DermatologistProfilePersistenceEntity {
+            - id : Long
+            - dermatologistId : Long
+            - name : PersonNamePersistenceEmbeddable
+            - specialty : String
+            - licenseNumber : String
+            - contactPhone : String
+            - biography : String
+            - consultationFee : Double
+        }
+
+        class AvailabilityPersistenceEntity {
+            - id : Long
+            - dermatologistId : Long
+            - day : String
+            - timeSlot : TimeSlotPersistenceEmbeddable
+            - active : boolean
+        }
+    }
+
+    package "embeddables" {
+        class PersonNamePersistenceEmbeddable {
+            - firstName : String
+            - lastName : String
+        }
+
+        class TimeSlotPersistenceEmbeddable {
+            - startTime : LocalTime
+            - endTime : LocalTime
+        }
+    }
+
+    package "repositories" {
+        interface DermatologistProfilePersistenceRepository {
+            + findByDermatologistId(dermatologistId : Long) : Optional<DermatologistProfilePersistenceEntity>
+        }
+
+        interface AvailabilityPersistenceRepository {
+            + findByDermatologistId(dermatologistId : Long) : List<AvailabilityPersistenceEntity>
+            + findByDermatologistIdAndDay(dermatologistId : Long, day : String) : List<AvailabilityPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class DermatologistProfileRepositoryImpl {
+            - repository : DermatologistProfilePersistenceRepository
+            - assembler : DermatologistProfilePersistenceAssembler
+            + findById(id : Long) : Optional<DermatologistProfile>
+            + findByDermatologistId(dermatologistId : DermatologistId) : Optional<DermatologistProfile>
+            + findAll() : List<DermatologistProfile>
+            + save(profile : DermatologistProfile) : DermatologistProfile
+        }
+
+        class AvailabilityRepositoryImpl {
+            - repository : AvailabilityPersistenceRepository
+            - assembler : AvailabilityPersistenceAssembler
+            + findById(id : Long) : Optional<Availability>
+            + findByDermatologistId(dermatologistId : DermatologistId) : List<Availability>
+            + findByDermatologistIdAndDay(dermatologistId : DermatologistId, day : DayOfWeek) : List<Availability>
+            + save(availability : Availability) : Availability
+        }
+    }
+
+    package "assemblers" {
+        class DermatologistProfilePersistenceAssembler {
+            + toEntity(profile : DermatologistProfile) : DermatologistProfilePersistenceEntity
+            + toDomain(entity : DermatologistProfilePersistenceEntity) : DermatologistProfile
+        }
+
+        class AvailabilityPersistenceAssembler {
+            + toEntity(availability : Availability) : AvailabilityPersistenceEntity
+            + toDomain(entity : AvailabilityPersistenceEntity) : Availability
+        }
+    }
+
+    package "converters" {
+        class DermatologistIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : DermatologistId) : Long
+            + convertToEntityAttribute(dbData : Long) : DermatologistId
+        }
+
+        class LicenseNumberPersistenceConverter {
+            + convertToDatabaseColumn(attribute : LicenseNumber) : String
+            + convertToEntityAttribute(dbData : String) : LicenseNumber
+        }
+
+        class ContactPhonePersistenceConverter {
+            + convertToDatabaseColumn(attribute : ContactPhone) : String
+            + convertToEntityAttribute(dbData : String) : ContactPhone
+        }
+
+        class SpecialtyNamePersistenceConverter {
+            + convertToDatabaseColumn(attribute : SpecialtyName) : String
+            + convertToEntityAttribute(dbData : String) : SpecialtyName
+        }
+    }
+}
+
+' Domain interfaces
+interface DermatologistProfileRepository
+interface AvailabilityRepository
+
+' Implementations
+DermatologistProfileRepositoryImpl ..|> DermatologistProfileRepository
+AvailabilityRepositoryImpl ..|> AvailabilityRepository
+
+' Adapter -> Repository & Assembler
+DermatologistProfileRepositoryImpl --> DermatologistProfilePersistenceRepository
+DermatologistProfileRepositoryImpl --> DermatologistProfilePersistenceAssembler
+AvailabilityRepositoryImpl --> AvailabilityPersistenceRepository
+AvailabilityRepositoryImpl --> AvailabilityPersistenceAssembler
+
+' Assembler -> Entity
+DermatologistProfilePersistenceAssembler --> DermatologistProfilePersistenceEntity
+AvailabilityPersistenceAssembler --> AvailabilityPersistenceEntity
+
+' Entity -> Embeddable
+DermatologistProfilePersistenceEntity --> PersonNamePersistenceEmbeddable
+AvailabilityPersistenceEntity --> TimeSlotPersistenceEmbeddable
+
+@enduml

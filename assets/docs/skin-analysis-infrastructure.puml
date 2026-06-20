@@ -1,0 +1,144 @@
+@startuml skin-analysis-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Skin Analysis - Infrastructure Layer
+
+package "infrastructure.persistence.jpa" {
+
+    package "entities" {
+        class SkinProfilePersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - skinType : String
+            - sensitivity : String
+            - waterIntake : String
+            - sunExposure : String
+            - sleepHours : String
+            - status : String
+        }
+
+        class FacialScanPersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - status : String
+            - photoUrl : String
+            - scannedAt : LocalDateTime
+        }
+
+        class SkinAnalysisPersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - facialScanId : Long
+            - skinType : String
+            - overallScore : Double
+            - hydrationScore : Double
+            - textureScore : Double
+            - sensitivityScore : Double
+            - brightnessScore : Double
+            - status : String
+            - analyzedAt : LocalDateTime
+        }
+    }
+
+    package "repositories" {
+        interface SkinProfilePersistenceRepository {
+            + findByPatientId(patientId : Long) : Optional<SkinProfilePersistenceEntity>
+        }
+
+        interface FacialScanPersistenceRepository {
+            + findByPatientId(patientId : Long) : List<FacialScanPersistenceEntity>
+        }
+
+        interface SkinAnalysisPersistenceRepository {
+            + findByFacialScanId(facialScanId : Long) : Optional<SkinAnalysisPersistenceEntity>
+            + findByPatientId(patientId : Long) : List<SkinAnalysisPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class SkinProfileRepositoryImpl {
+            - repository : SkinProfilePersistenceRepository
+            - assembler : SkinProfilePersistenceAssembler
+            + findById(id : Long) : Optional<SkinProfile>
+            + findByPatientId(patientId : PatientId) : Optional<SkinProfile>
+            + save(profile : SkinProfile) : SkinProfile
+        }
+
+        class FacialScanRepositoryImpl {
+            - repository : FacialScanPersistenceRepository
+            - assembler : FacialScanPersistenceAssembler
+            + findById(id : Long) : Optional<FacialScan>
+            + findByPatientId(patientId : PatientId) : List<FacialScan>
+            + save(scan : FacialScan) : FacialScan
+        }
+
+        class SkinAnalysisRepositoryImpl {
+            - repository : SkinAnalysisPersistenceRepository
+            - assembler : SkinAnalysisPersistenceAssembler
+            + findById(id : Long) : Optional<SkinAnalysis>
+            + findByFacialScanId(facialScanId : FacialScanId) : Optional<SkinAnalysis>
+            + findByPatientId(patientId : PatientId) : List<SkinAnalysis>
+            + save(analysis : SkinAnalysis) : SkinAnalysis
+        }
+    }
+
+    package "assemblers" {
+        class SkinProfilePersistenceAssembler {
+            + toEntity(profile : SkinProfile) : SkinProfilePersistenceEntity
+            + toDomain(entity : SkinProfilePersistenceEntity) : SkinProfile
+        }
+
+        class FacialScanPersistenceAssembler {
+            + toEntity(scan : FacialScan) : FacialScanPersistenceEntity
+            + toDomain(entity : FacialScanPersistenceEntity) : FacialScan
+        }
+
+        class SkinAnalysisPersistenceAssembler {
+            + toEntity(analysis : SkinAnalysis) : SkinAnalysisPersistenceEntity
+            + toDomain(entity : SkinAnalysisPersistenceEntity) : SkinAnalysis
+        }
+    }
+
+    package "converters" {
+        class PatientIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PatientId) : Long
+            + convertToEntityAttribute(dbData : Long) : PatientId
+        }
+
+        class FacialScanIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : FacialScanId) : Long
+            + convertToEntityAttribute(dbData : Long) : FacialScanId
+        }
+    }
+}
+
+' Domain interfaces
+interface SkinProfileRepository
+interface FacialScanRepository
+interface SkinAnalysisRepository
+
+' Implementations
+SkinProfileRepositoryImpl ..|> SkinProfileRepository
+FacialScanRepositoryImpl ..|> FacialScanRepository
+SkinAnalysisRepositoryImpl ..|> SkinAnalysisRepository
+
+' Adapter dependencies
+SkinProfileRepositoryImpl --> SkinProfilePersistenceRepository
+SkinProfileRepositoryImpl --> SkinProfilePersistenceAssembler
+FacialScanRepositoryImpl --> FacialScanPersistenceRepository
+FacialScanRepositoryImpl --> FacialScanPersistenceAssembler
+SkinAnalysisRepositoryImpl --> SkinAnalysisPersistenceRepository
+SkinAnalysisRepositoryImpl --> SkinAnalysisPersistenceAssembler
+
+' Assembler -> Entity
+SkinProfilePersistenceAssembler --> SkinProfilePersistenceEntity
+FacialScanPersistenceAssembler --> FacialScanPersistenceEntity
+SkinAnalysisPersistenceAssembler --> SkinAnalysisPersistenceEntity
+
+@enduml

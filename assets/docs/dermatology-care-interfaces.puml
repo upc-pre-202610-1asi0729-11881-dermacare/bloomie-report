@@ -1,0 +1,136 @@
+@startuml dermatology-care-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatology Care - Interfaces Layer
+
+package "interfaces" {
+
+    package "acl" {
+        interface DermatologyCareContextFacade {
+            + existsDermatologistById(dermatologistId : Long) : boolean
+            + fetchAvailabilityByDermatologistId(dermatologistId : Long) : List<?>
+        }
+    }
+
+    package "events" {
+        class AvailabilityDefinedIntegrationEvent <<record>> {
+            + dermatologistId : Long
+            + dayOfWeek : DayOfWeek
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+    }
+
+    package "rest" {
+
+        class DermatologistProfileController {
+            - profileCommandService : DermatologistProfileCommandService
+            - profileQueryService : DermatologistProfileQueryService
+            + updateProfile(id : Long, resource : UpdateDermatologistProfileResource) : ResponseEntity<DermatologistProfileResource>
+            + getProfileById(id : Long) : ResponseEntity<DermatologistProfileResource>
+            + getProfileByDermatologistId(dermatologistId : Long) : ResponseEntity<DermatologistProfileResource>
+            + getAllProfiles() : ResponseEntity<List<DermatologistProfileResource>>
+        }
+
+        class AvailabilityController {
+            - availabilityCommandService : AvailabilityCommandService
+            - availabilityQueryService : AvailabilityQueryService
+            + defineAvailability(resource : DefineAvailabilityResource) : ResponseEntity<AvailabilityResource>
+            + updateAvailability(id : Long, resource : UpdateAvailabilityResource) : ResponseEntity<AvailabilityResource>
+            + getAvailabilityByDermatologistId(dermatologistId : Long) : ResponseEntity<List<AvailabilityResource>>
+        }
+
+        package "resources" {
+            class DermatologistProfileResource <<record>> {
+                + id : Long
+                + dermatologistId : Long
+                + firstName : String
+                + lastName : String
+                + specialty : String
+                + licenseNumber : String
+                + contactPhone : String
+                + biography : String
+                + consultationFee : Double
+            }
+
+            class UpdateDermatologistProfileResource <<record>> {
+                + firstName : String
+                + lastName : String
+                + specialty : String
+                + licenseNumber : String
+                + phone : String
+                + biography : String
+                + consultationFee : Double
+            }
+
+            class AvailabilityResource <<record>> {
+                + id : Long
+                + dermatologistId : Long
+                + day : String
+                + startTime : String
+                + endTime : String
+                + active : boolean
+            }
+
+            class DefineAvailabilityResource <<record>> {
+                + dermatologistId : Long
+                + dayOfWeek : String
+                + startTime : String
+                + endTime : String
+            }
+
+            class UpdateAvailabilityResource <<record>> {
+                + dayOfWeek : String
+                + startTime : String
+                + endTime : String
+            }
+        }
+
+        package "transform" {
+            class DermatologistProfileResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : DermatologistProfile) : DermatologistProfileResource
+            }
+
+            class UpdateDermatologistProfileCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UpdateDermatologistProfileResource) : UpdateDermatologistProfileCommand
+            }
+
+            class AvailabilityResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Availability) : AvailabilityResource
+            }
+
+            class DefineAvailabilityCommandFromResourceAssembler {
+                + toCommandFromResource(resource : DefineAvailabilityResource) : DefineAvailabilityCommand
+            }
+
+            class UpdateAvailabilityCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UpdateAvailabilityResource) : UpdateAvailabilityCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+DermatologistProfileController ..> DermatologistProfileResource
+DermatologistProfileController ..> UpdateDermatologistProfileResource
+DermatologistProfileController ..> DermatologistProfileResourceFromEntityAssembler
+DermatologistProfileController ..> UpdateDermatologistProfileCommandFromResourceAssembler
+
+AvailabilityController ..> AvailabilityResource
+AvailabilityController ..> DefineAvailabilityResource
+AvailabilityController ..> UpdateAvailabilityResource
+AvailabilityController ..> AvailabilityResourceFromEntityAssembler
+AvailabilityController ..> DefineAvailabilityCommandFromResourceAssembler
+AvailabilityController ..> UpdateAvailabilityCommandFromResourceAssembler
+
+' Assembler -> Resource
+DermatologistProfileResourceFromEntityAssembler ..> DermatologistProfileResource
+AvailabilityResourceFromEntityAssembler ..> AvailabilityResource
+
+@enduml

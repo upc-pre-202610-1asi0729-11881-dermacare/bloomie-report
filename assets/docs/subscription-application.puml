@@ -1,0 +1,78 @@
+@startuml subscription-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Subscription - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface SubscriptionCommandService {
+            + selectPlan(command : SelectSubscriptionPlanCommand) : Result<Subscription>
+            + activate(command : ActivateSubscriptionCommand) : Result<Subscription>
+        }
+    }
+
+    package "queryservices" {
+        interface SubscriptionQueryService {
+            + getById(query : GetSubscriptionByIdQuery) : Result<Subscription>
+            + getByPatientId(query : GetSubscriptionByPatientIdQuery) : Result<Subscription>
+        }
+    }
+
+    package "acl" {
+        class SubscriptionContextFacadeImpl {
+            - subscriptionQueryService : SubscriptionQueryService
+            + hasActiveSubscription(patientId : Long) : boolean
+            + fetchSubscriptionStatusByPatientId(patientId : Long) : String
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class SubscriptionCommandServiceImpl {
+                - subscriptionRepository : SubscriptionRepository
+                - externalIamService : ExternalIamService
+                + selectPlan(command : SelectSubscriptionPlanCommand) : Result<Subscription>
+                + activate(command : ActivateSubscriptionCommand) : Result<Subscription>
+            }
+        }
+
+        package "queryservices" {
+            class SubscriptionQueryServiceImpl {
+                - subscriptionRepository : SubscriptionRepository
+                + getById(query : GetSubscriptionByIdQuery) : Result<Subscription>
+                + getByPatientId(query : GetSubscriptionByPatientIdQuery) : Result<Subscription>
+            }
+        }
+
+        package "eventhandlers" {
+            class SubscriptionPlanSelectedEventHandler {
+                + on(event : SubscriptionPlanSelectedEvent) : void
+            }
+        }
+
+        package "outboundservices.acl" {
+            interface ExternalIamService {
+                + existsUserById(userId : Long) : boolean
+                + fetchUserFullNameById(userId : Long) : String
+            }
+        }
+    }
+}
+
+' Implementations
+SubscriptionCommandServiceImpl ..|> SubscriptionCommandService
+SubscriptionQueryServiceImpl ..|> SubscriptionQueryService
+
+' Dependencies
+SubscriptionContextFacadeImpl --> SubscriptionQueryService
+SubscriptionCommandServiceImpl --> ExternalIamService
+
+@enduml

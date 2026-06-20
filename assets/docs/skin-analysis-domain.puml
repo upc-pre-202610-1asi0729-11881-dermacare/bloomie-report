@@ -1,0 +1,242 @@
+@startuml skin-analysis-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Skin Analysis - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class SkinProfile extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - skinType : SkinType
+            - sensitivity : Sensitivity
+            - waterIntake : String
+            - sunExposure : String
+            - sleepHours : String
+            - status : SkinProfileStatus
+            + SkinProfile(command : CompleteSkinProfileCommand)
+            + update(command : UpdateSkinCharacteristicsCommand) : void
+        }
+
+        class FacialScan extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - status : FacialScanStatus
+            - photoUrl : String
+            - scannedAt : LocalDateTime
+            + FacialScan(command : StartFacialScanCommand)
+            + submit(photoUrl : String) : void
+        }
+
+        class SkinAnalysis extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - facialScanId : FacialScanId
+            - skinType : String
+            - overallScore : Double
+            - hydrationScore : Double
+            - textureScore : Double
+            - sensitivityScore : Double
+            - brightnessScore : Double
+            - status : SkinAnalysisStatus
+            - analyzedAt : LocalDateTime
+            + SkinAnalysis(command : AnalyzeSkinScanCommand)
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "valueobjects" {
+        class PatientId <<record>> {
+            + patientId : Long
+        }
+
+        class FacialScanId <<record>> {
+            + facialScanId : Long
+        }
+
+        enum SkinType {
+            OILY
+            DRY
+            COMBINATION
+            SENSITIVE
+            NORMAL
+        }
+
+        enum Sensitivity {
+            LOW
+            MEDIUM
+            HIGH
+        }
+
+        enum SkinProfileStatus {
+            PENDING
+            COMPLETED
+        }
+
+        enum FacialScanStatus {
+            STARTED
+            SUBMITTED
+            PROCESSING
+            COMPLETED
+            FAILED
+        }
+
+        enum SkinAnalysisStatus {
+            PENDING
+            COMPLETED
+            FAILED
+        }
+    }
+
+    package "commands" {
+        class CompleteSkinProfileCommand <<record>> {
+            + patientId : Long
+            + skinType : String
+            + sensitivity : String
+            + waterIntake : String
+            + sunExposure : String
+            + sleepHours : String
+        }
+
+        class UpdateSkinCharacteristicsCommand <<record>> {
+            + skinProfileId : Long
+            + skinType : String
+            + sensitivity : String
+            + waterIntake : String
+            + sunExposure : String
+            + sleepHours : String
+        }
+
+        class StartFacialScanCommand <<record>> {
+            + patientId : Long
+        }
+
+        class SubmitFacialScanCommand <<record>> {
+            + facialScanId : Long
+            + photoUrl : String
+        }
+
+        class AnalyzeSkinScanCommand <<record>> {
+            + patientId : Long
+            + facialScanId : Long
+            + skinType : String
+            + sensitivity : String
+        }
+    }
+
+    package "events" {
+        class SkinProfileCompletedEvent <<record>> {
+            + skinProfileId : Long
+            + patientId : Long
+            + skinType : String
+        }
+
+        class SkinCharacteristicsUpdatedEvent <<record>> {
+            + skinProfileId : Long
+            + patientId : Long
+            + skinType : String
+        }
+
+        class FacialScanStartedEvent <<record>> {
+            + facialScanId : Long
+            + patientId : Long
+        }
+
+        class FacialScanSubmittedEvent <<record>> {
+            + facialScanId : Long
+            + patientId : Long
+            + photoUrl : String
+        }
+
+        class PreliminaryDiagnosisGeneratedEvent <<record>> {
+            + skinAnalysisId : Long
+            + patientId : Long
+            + facialScanId : Long
+            + overallScore : Double
+        }
+    }
+
+    package "queries" {
+        class GetSkinProfileByIdQuery <<record>> {
+            + skinProfileId : Long
+        }
+
+        class GetSkinProfileByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetFacialScanByIdQuery <<record>> {
+            + facialScanId : Long
+        }
+
+        class GetFacialScansByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetSkinAnalysisByIdQuery <<record>> {
+            + skinAnalysisId : Long
+        }
+
+        class GetSkinAnalysisByFacialScanIdQuery <<record>> {
+            + facialScanId : Long
+        }
+
+        class GetSkinAnalysesByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface SkinProfileRepository {
+        + findById(id : Long) : Optional<SkinProfile>
+        + findByPatientId(patientId : PatientId) : Optional<SkinProfile>
+        + save(profile : SkinProfile) : SkinProfile
+    }
+
+    interface FacialScanRepository {
+        + findById(id : Long) : Optional<FacialScan>
+        + findByPatientId(patientId : PatientId) : List<FacialScan>
+        + save(scan : FacialScan) : FacialScan
+    }
+
+    interface SkinAnalysisRepository {
+        + findById(id : Long) : Optional<SkinAnalysis>
+        + findByFacialScanId(facialScanId : FacialScanId) : Optional<SkinAnalysis>
+        + findByPatientId(patientId : PatientId) : List<SkinAnalysis>
+        + save(analysis : SkinAnalysis) : SkinAnalysis
+    }
+}
+
+' Aggregate relationships
+SkinProfile --> PatientId
+SkinProfile --> SkinType
+SkinProfile --> Sensitivity
+SkinProfile --> SkinProfileStatus
+
+FacialScan --> PatientId
+FacialScan --> FacialScanStatus
+
+SkinAnalysis --> PatientId
+SkinAnalysis --> FacialScanId
+SkinAnalysis --> SkinAnalysisStatus
+
+' Repository dependencies
+SkinProfileRepository ..> SkinProfile
+SkinProfileRepository ..> PatientId
+FacialScanRepository ..> FacialScan
+FacialScanRepository ..> PatientId
+SkinAnalysisRepository ..> SkinAnalysis
+SkinAnalysisRepository ..> FacialScanId
+SkinAnalysisRepository ..> PatientId
+
+@enduml

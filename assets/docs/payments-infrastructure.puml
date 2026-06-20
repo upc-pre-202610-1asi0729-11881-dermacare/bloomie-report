@@ -1,0 +1,87 @@
+@startuml payments-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Payments - Infrastructure Layer
+
+package "infrastructure.persistence.jpa" {
+
+    package "entities" {
+        class PaymentPersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - planId : Long
+            - subscriptionId : Long
+            - type : String
+            - amount : Double
+            - status : String
+        }
+    }
+
+    package "repositories" {
+        interface PaymentPersistenceRepository {
+            + findBySubscriptionId(subscriptionId : Long) : Optional<PaymentPersistenceEntity>
+            + findByPatientId(patientId : Long) : List<PaymentPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class PaymentRepositoryImpl {
+            - repository : PaymentPersistenceRepository
+            - assembler : PaymentPersistenceAssembler
+            + findById(id : Long) : Optional<Payment>
+            + findBySubscriptionId(subscriptionId : SubscriptionId) : Optional<Payment>
+            + findByPatientId(patientId : PatientId) : List<Payment>
+            + save(payment : Payment) : Payment
+        }
+    }
+
+    package "assemblers" {
+        class PaymentPersistenceAssembler {
+            + toEntity(payment : Payment) : PaymentPersistenceEntity
+            + toDomain(entity : PaymentPersistenceEntity) : Payment
+        }
+    }
+
+    package "converters" {
+        class PatientIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PatientId) : Long
+            + convertToEntityAttribute(dbData : Long) : PatientId
+        }
+
+        class SubscriptionIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : SubscriptionId) : Long
+            + convertToEntityAttribute(dbData : Long) : SubscriptionId
+        }
+
+        class PaymentAmountPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PaymentAmount) : Double
+            + convertToEntityAttribute(dbData : Double) : PaymentAmount
+        }
+
+        class PlanIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PlanId) : Long
+            + convertToEntityAttribute(dbData : Long) : PlanId
+        }
+    }
+}
+
+' Domain interface
+interface PaymentRepository
+
+' Implementation
+PaymentRepositoryImpl ..|> PaymentRepository
+
+' Adapter dependencies
+PaymentRepositoryImpl --> PaymentPersistenceRepository
+PaymentRepositoryImpl --> PaymentPersistenceAssembler
+
+' Assembler -> Entity
+PaymentPersistenceAssembler --> PaymentPersistenceEntity
+
+@enduml
