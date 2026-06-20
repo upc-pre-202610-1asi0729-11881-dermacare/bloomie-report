@@ -6726,6 +6726,7 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/Components_BoundedContexts.png" alt="C4 Diagram" width="1000"/> <br>
 
+## 4.7. Software Object-Oriented Design
 #### Dermatology Care
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Layers.png" alt="C4 Diagram" width="1000"/> <br>
@@ -6774,7 +6775,8 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Views.png" alt="C4 Diagram" width="1000"/> <br>
 
-### Diagrama de clase Backend
+### 4.7.1. Class Diagrams Backend
+
 ## Product Discovery
 
 ### Capa de Dominio
@@ -6899,32 +6901,6 @@ Dermatological Appointment Context <br>
 ### Capa de Interfaces
 ![Dermatological Appointment - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-interfaces.puml)
 
-## 4.7. Software Object-Oriented Design
-
-### 4.7.1. Class Diagrams
-### Identity and Access Management
-<img src="assets/img/Class-Diagram/iam.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Skin Analysis
-<img src="assets/img/Class-Diagram/skin-analysis.svg" alt="Class Diagrams" width="1000"/> <br>
-
-### Routine Management
-<img src="assets/img/Class-Diagram/routine-management.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Product Discovery
-<img src="assets/img/Class-Diagram/product-discovery.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Dermatology Care
-<img src="assets/img/Class-Diagram/dermatology-care.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Payments
-<img src="assets/img/Class-Diagram/payments.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Suscription
-<img src="assets/img/Class-Diagram/suscription.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Intelligent Support
-<img src="assets/img/Class-Diagram/intelligent-support.svg" alt="Class Diagram" width="1000"/> <br>
 
 ## 4.8. Database Design
 
@@ -9335,7 +9311,45 @@ Recomendación:
 Implementar un diálogo de confirmación modal antes de ejecutar la cancelación, indicando claramente si aplica reembolso según el momento de la cancelación, solicitando opcionalmente el motivo de cancelación, y ofreciendo dos opciones: confirmar la cancelación o volver sin cancelar.
 
 
-### 5.4. Video About-the-Product.
+### Video About The Product
+
+El presente video tiene como objetivo presentar Bloomie al público general de manera
+promocional, resumiendo el modelo de negocio, las características principales del
+producto y los beneficios que ofrece a sus segmentos objetivo. El video incluye escenas
+de interacción real con la aplicación, mostrando los flujos principales de escaneo facial,
+rutina personalizada, catálogo de productos y consulta dermatológica virtual, complementadas
+con el testimonio de un representante del segmento de jóvenes adultos y un representante
+del segmento de dermatólogos, quienes expresan su opinión sobre la propuesta de valor
+de Bloomie. El video está disponible en Microsoft Stream y en YouTube, y se encuentra
+incrustado en la Landing Page del producto.
+
+**Microsoft Stream:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQDu96J8TapGTJZmvkV1EdXpARUk3t7E8ITiCe4zH8EjGTw?e=7t4xlF
+
+**YouTube:** https://youtu.be/PY43RkoGocc?si=J49vvlpaSJ3fSCid
+
+<img src="assets/img/about-product.png" width="500"/>
+
+
+---
+
+### Video About The Team
+
+El presente video resume el proceso de trabajo realizado por el equipo Dermacare a lo
+largo del desarrollo de Bloomie, desde la concepción de la idea hasta la implementación
+y despliegue de los Web Services en el Sprint 3. El video incluye escenas de sesiones
+de trabajo real del equipo complementadas con narración en voz en off que describe el
+proceso seguido, las decisiones técnicas tomadas y los logros alcanzados en cada sprint.
+Adicionalmente, cada integrante del equipo comparte su testimonio ante cámara describiendo
+las actividades que realizó, los outcomes de aprendizaje logrados y las competencias
+desarrolladas a lo largo del proyecto. El video está disponible en Microsoft Stream y
+en YouTube, y se encuentra incrustado en la Landing Page del producto.
+
+**Microsoft Stream:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB47eNi7uD-SZtLrmG1C6K9Aa38Jb27oKHBTQK-y9f7yqA?e=o5ZCsk
+
+**YouTube:** https://youtu.be/EY9q8qPghf0?si=vW0y2XiUGsA_iNom
+
+<img src="assets/img/about-team.png" width="500"/>
+
 
 ## Conclusiones y recomendaciones
 
@@ -9376,8 +9390,6 @@ Las entrevistas de validación realizadas al cierre del Sprint 3 aportaron halla
 **Sobre el equipo**
 
 Se recomienda mantener el esquema de Aspect Leaders por bounded context establecido en el Sprint 2 y consolidado en el Sprint 3, ya que demostró ser efectivo para distribuir responsabilidades de forma clara con cuatro integrantes activos. Para los siguientes sprints se sugiere reforzar la convención de nomenclatura de ramas GitFlow identificada como oportunidad de mejora en la retrospectiva del Sprint 3, y establecer fechas límite internas por work item desde el inicio del sprint para evitar la concentración de commits en los últimos días del periodo de desarrollo.
-
-### Video About-the-Team
 
 # Bibliografía
 
@@ -9422,3 +9434,7 @@ URL de swagger: [Swagger](https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.az
 Video exposición TB1: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr)
 
 Video exposición AV2: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCmXMM4EPCYToLXeyIfPNHEAQLouA-oKa0d86hEqbswBPo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ALIcMA)
+
+Video About The Product: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQDu96J8TapGTJZmvkV1EdXpARUk3t7E8ITiCe4zH8EjGTw?e=7t4xlF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+Video About The Team: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416272_upc_edu_pe/IQB47eNi7uD-SZtLrmG1C6K9Aa38Jb27oKHBTQK-y9f7yqA?e=o5ZCsk&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
