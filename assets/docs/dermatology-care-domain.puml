@@ -1,0 +1,188 @@
+@startuml dermatology-care-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatology Care - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class DermatologistProfile extends AbstractDomainAggregateRoot {
+            - id : Long
+            - dermatologistId : DermatologistId
+            - name : PersonName
+            - specialtyName : SpecialtyName
+            - licenseNumber : LicenseNumber
+            - contactPhone : ContactPhone
+            - biography : String
+            - consultationFee : Double
+            + DermatologistProfile(command : RegisterDermatologistProfileCommand)
+            + update(command : UpdateDermatologistProfileCommand) : void
+        }
+
+        class Availability extends AbstractDomainAggregateRoot {
+            - id : Long
+            - dermatologistId : DermatologistId
+            - day : DayOfWeek
+            - timeSlot : TimeSlot
+            - active : boolean
+            + Availability(command : DefineAvailabilityCommand)
+            + update(command : UpdateAvailabilityCommand) : void
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "valueobjects" {
+        class DermatologistId <<record>> {
+            + dermatologistId : Long
+        }
+
+        class PersonName <<record>> {
+            + firstName : String
+            + lastName : String
+            + getFullName() : String
+        }
+
+        class SpecialtyName <<record>> {
+            + specialty : String
+        }
+
+        class LicenseNumber <<record>> {
+            + licenseNumber : String
+        }
+
+        class ContactPhone <<record>> {
+            + phoneNumber : String
+        }
+
+        class TimeSlot <<record>> {
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+    }
+
+    package "commands" {
+        class RegisterDermatologistProfileCommand <<record>> {
+            + dermatologistId : Long
+            + firstName : String
+            + lastName : String
+        }
+
+        class UpdateDermatologistProfileCommand <<record>> {
+            + dermatologistId : Long
+            + firstName : String
+            + lastName : String
+            + specialty : String
+            + licenseNumber : String
+            + phone : String
+            + biography : String
+            + consultationFee : Double
+        }
+
+        class DefineAvailabilityCommand <<record>> {
+            + dermatologistId : Long
+            + dayOfWeek : DayOfWeek
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+
+        class UpdateAvailabilityCommand <<record>> {
+            + availabilityId : Long
+            + dayOfWeek : DayOfWeek
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+    }
+
+    package "events" {
+        class DermatologistProfileRegisteredEvent <<record>> {
+            + dermatologistId : Long
+            + firstName : String
+            + lastName : String
+        }
+
+        class DermatologistProfileUpdatedEvent <<record>> {
+            + dermatologistId : Long
+            + firstName : String
+            + lastName : String
+        }
+
+        class AvailabilityDefinedEvent <<record>> {
+            + dermatologistId : Long
+            + dayOfWeek : DayOfWeek
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+
+        class AvailabilityUpdatedEvent <<record>> {
+            + availabilityId : Long
+            + dermatologistId : Long
+            + dayOfWeek : DayOfWeek
+            + startTime : LocalTime
+            + endTime : LocalTime
+        }
+    }
+
+    package "queries" {
+        class GetDermatologistProfileByIdQuery <<record>> {
+            + profileId : Long
+        }
+
+        class GetDermatologistProfileByDermatologistIdQuery <<record>> {
+            + dermatologistId : Long
+        }
+
+        class GetAllDermatologistProfilesQuery {
+        }
+
+        class GetAvailabilityByDermatologistIdQuery <<record>> {
+            + dermatologistId : Long
+        }
+
+        class GetAvailabilityByDermatologistIdAndDayQuery <<record>> {
+            + dermatologistId : Long
+            + dayOfWeek : DayOfWeek
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface DermatologistProfileRepository {
+        + findById(id : Long) : Optional<DermatologistProfile>
+        + findByDermatologistId(dermatologistId : DermatologistId) : Optional<DermatologistProfile>
+        + findAll() : List<DermatologistProfile>
+        + save(profile : DermatologistProfile) : DermatologistProfile
+    }
+
+    interface AvailabilityRepository {
+        + findById(id : Long) : Optional<Availability>
+        + findByDermatologistId(dermatologistId : DermatologistId) : List<Availability>
+        + findByDermatologistIdAndDay(dermatologistId : DermatologistId, day : DayOfWeek) : List<Availability>
+        + save(availability : Availability) : Availability
+    }
+}
+
+' Aggregate relationships
+DermatologistProfile --> DermatologistId
+DermatologistProfile --> PersonName
+DermatologistProfile --> SpecialtyName
+DermatologistProfile --> LicenseNumber
+DermatologistProfile --> ContactPhone
+
+Availability --> DermatologistId
+Availability --> TimeSlot
+
+' Repository dependencies
+DermatologistProfileRepository ..> DermatologistProfile
+DermatologistProfileRepository ..> DermatologistId
+AvailabilityRepository ..> Availability
+AvailabilityRepository ..> DermatologistId
+
+@enduml

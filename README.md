@@ -2,40 +2,35 @@
 
 <img src="assets/img/upc-logo.png" alt="UPC Logo" width="150"/>
 
-# Universidad Peruana de Ciencias Aplicadas
+<h1>Universidad Peruana de Ciencias Aplicadas</h1>
 
-## Facultad de Ingeniería
+<h2>Carrera de Ingeniería de Software</h2>
 
-## Programa Académico de Ingeniería de Software
+<h2>1ASI0729</h2>
 
-**Ciclo:** 2026-10
+<p><strong>Desarrollo de aplicaciones Open Source</strong></p>
 
-**Curso:** Desarrollo de aplicaciones Open Source
+<p><strong>NRC:</strong> 11881</p>
 
-**NRC:** 11881
+<h1>Informe de Trabajo Final</h1>
 
-**Docente del curso:** Efraín Ricardo Bautista Ubillús
-
-
-# Informe de Trabajo Final
-
-**Nombre de la Startup:** Dermacare
-
-**Nombre del producto:** Bloomie
+<p><strong>Docente del curso:</strong> Efraín Ricardo Bautista Ubillús</p>
 
 
-## Integrantes
+<p><strong>Equipo:</strong> Dermacare</p>
 
-<p align="center">
+<p><strong>Proyecto:</strong> Bloomie</p>
+
+<h2>Integrantes</h2>
+
+<p>
 u202416272 - Asmat Alminco, Martin Alejandro<br>
 u202414802 - Contreras Torres, Arturo Valentino<br>
-u202414970 - Gallardo Morales, Carla Alejandra<br>
 u20241b843 - Mechan Montenegro, Luciana Carolina<br>
-u202415551 - Ramirez Ruiz, Nickolas
 </p>
+<p><em>Periodo 202610</em></p>
 
-
-*Junio, 2026*
+<p><em>Junio, 2026</em></p>
 
 </div>
 
@@ -61,13 +56,9 @@ u202415551 - Ramirez Ruiz, Nickolas
       Contreras Torres, Arturo Valentino <br>
       <br>
       <p></p>
-      Gallardo Morales, Carla Alejandra <br>
-      <br>
-      <p></p>
       Mechan Montenegro, Luciana Carolina <br>
       <br>
       <p></p>
-      Ramirez Ruiz, Nickolas <br>
     </td>
     <td>
       Capítulo I: Introducción <br>
@@ -89,13 +80,8 @@ u202415551 - Ramirez Ruiz, Nickolas
       Contreras Torres, Arturo Valentino <br>
       <br>
       <p></p>
-      Gallardo Morales, Carla Alejandra <br>
-      <br>
-      <p></p>
       Mechan Montenegro, Luciana Carolina <br>
       <br>
-      <p></p>
-      Ramirez Ruiz, Nickolas <br>
     </td>
     <td>
       Corrección del reporte <br>
@@ -115,13 +101,8 @@ u202415551 - Ramirez Ruiz, Nickolas
       Contreras Torres, Arturo Valentino <br>
       <br>
       <p></p>
-      Gallardo Morales, Carla Alejandra <br>
-      <br>
-      <p></p>
       Mechan Montenegro, Luciana Carolina <br>
       <br>
-      <p></p>
-      Ramirez Ruiz, Nickolas <br>
     </td>
     <td>
     Corrección del reporte <br>
@@ -191,6 +172,31 @@ del trabajo de documentación a lo largo del sprint.
 
 ![GitHub Insights bloomie-report TB1](assets/img/report-commits.png)
 
+
+**Tercera Entrega (AV2)**
+
+Para la tercera entrega el equipo continuó desarrollando el Project Report de manera 
+colaborativa, expandiendo el informe con las secciones correspondientes al Sprint 3. 
+Cada integrante asumió la redacción de las subsecciones asignadas según el esquema de 
+Aspect Leaders, manteniendo el flujo de trabajo establecido en entregas anteriores: 
+creación de feature branches por sección, redacción del contenido, carga de evidencias 
+e integración mediante Pull Requests hacia la rama develop con revisión por pares.
+
+Durante esta entrega se documentaron las siguientes secciones nuevas: Sprint Planning 3, 
+Aspect Leaders and Collaborators, Sprint Backlog 3, Development Evidence for Sprint 
+Review, Execution Evidence for Sprint Review, Services Documentation Evidence for 
+Sprint Review, Software Deployment Evidence for Sprint Review, Team Collaboration 
+Insights during Sprint y Evaluaciones según Heurísticas. Adicionalmente se 
+documentaron las entrevistas de validación con usuarios de ambos segmentos objetivo 
+y se actualizaron los User Flows y el Student Outcome correspondiente a esta entrega.
+
+El repositorio del informe registró un total de 77 commits y 58 Pull Requests 
+mergeados con participación activa de los 4 integrantes del equipo, con la siguiente 
+distribución: Luciana con 34 commits, Arturo con 17, Martin con 12 y Nickolas con 4, 
+evidenciando una distribución del trabajo de documentación acorde al rol de Aspect 
+Leader de cada integrante durante el sprint.
+
+![GitHub Insights bloomie-report AV2](assets/img/report-commits.png)
 ---
 
 # Contenido
@@ -460,26 +466,6 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
 ### Perfil del Integrante
 
 <table>
-  <tr>
-    <td rowspan="4" align="center">
-      <img src="assets/img/Carla-Gallardo.png" width="650"/>
-    </td>
-    <td><b>Nombre:</b> Carla Alejandra Gallardo Morales</td>
-  </tr>
-  <tr>
-    <td><b>Código:</b> u202414970 </td>
-  </tr>
-  <tr>
-    <td>
-      <b>Descripción:</b><br/>
-      Soy <b>Carla Alejandra Gallardo Morales</b>, tengo 19 años. Desde que me incorporé en la Universidad Peruana de Ciencias Aplicadas en el periodo 2024-01, es decir que ahora mismo estoy cursando el quinto ciclo de la carrera de Ing. de Software, he adquirido y desarrollado distintos conocimientos a cerca de la programación, específicamente en el lenguaje C++ y Java, además, de forma autodidacta y extracurricular, he profundizado en el lenguaje Python, lo que ha ampliado mi perspectiva sobre la lógica y resolución de problemas.
-      <br/><br/>
-        Dentro del equipo, mi contribución se basa en el apoyo continuo del desarrollo del backend y frontend de nuestro aplicativo, asimismo ayudo en la implementación del informe de nuestro proyecto.
-    </td>
-  </tr>
-</table>
-
-
 <table>
   <tr>
     <td rowspan="4" align="center">
@@ -516,24 +502,6 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
       Soy <b>Luciana Carolina Mechan Montenegro</b>, estudiante del quinto ciclo de la carrera de Ingeniería de Software. Cuento con conocimientos en lenguajes de programación como C++, Python y Java, los cuales he aplicado en distintos proyectos académicos orientados a la resolución de problemas y desarrollo de sistemas.
       <br/><br/>
       Dentro del equipo, mi contribución se enfoca tanto en el desarrollo frontend como backend, participando en la implementación de funcionalidades y en la integración de los distintos componentes del sistema. Me caracterizo por ser responsable, proactiva y con una alta capacidad de aprendizaje, además de tener facilidad para el trabajo en equipo y la adaptación a nuevos retos dentro del proyecto.
-    </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td rowspan="4" align="center">
-      <img src="assets/img/nickolas-ramirez.png" alt="Foto de Nickolas Ramirez" width="650"/>
-    </td>
-    <td><b>Nombre:</b> Nickolas Ramirez Ruiz</td>
-  </tr>
-  <tr>
-    <td><b>Código:</b> u202415551</td>
-  </tr>
-  <tr>
-    <td>
-      <b>Descripción:</b><br/>
-      Soy <b>Nickolas Ramirez Ruiz</b>, estudiante del quinto ciclo de la carrera de Ingeniería de Software.<br/><br/>
-       A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Además, durante mis primeros ciclos, tuve la oportunidad de iniciarme en la programación con el lenguaje C++ a través del entorno de desarrollo Visual Studio. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.
     </td>
   </tr>
 </table>
@@ -6835,32 +6803,130 @@ Subscription Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Views.png" alt="C4 Diagram" width="1000"/> <br>
 
-### Backend
-<img src="assets/img/Components.png" alt="Class Diagram" width="1000"/> <br>
+### Diagrama de clase Backend
+## Product Discovery
 
-### Diagrama de componentes Dermatology Care
-<img src="assets/img/DermatologyCare_Components.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Dominio
+![Product Discovery - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/product-discovery-domain.puml)
 
-### Diagrama de componentes Identity and Access Management
-<img src="assets/img/iam-c4.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Aplicación
+![Product Discovery - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/product-discovery-application.puml)
 
-### Diagrama de componentes Intelligent Support
-<img src="assets/img/IntelligentSupport_Components.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Infraestructura
+![Product Discovery - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/product-discovery-infrastructure.puml)
 
-### Diagrama de componentes Payments
-<img src="assets/img/Payments_Components.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Interfaces
+![Product Discovery - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/product-discovery-interfaces.puml)
 
-### Diagrama de componentes Product Discovery
-<img src="assets/img/ProductDiscovery_Components.png" alt="Class Diagram" width="1000"/> <br>
+---
 
-### Diagrama de componentes Routine Management
-<img src="assets/img/RoutineManagement_Components.png" alt="Class Diagram" width="1000"/> <br>
+## Routine Management
 
-### Diagrama de componentes Skin Analysis
-<img src="assets/img/SkinAnalysis_Components.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Dominio
+![Routine Management - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/routine-management-domain.puml)
 
-### Diagrama de componentes Suscription
-<img src="assets/img/suscription.png" alt="Class Diagram" width="1000"/> <br>
+### Capa de Aplicación
+![Routine Management - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/routine-management-application.puml)
+
+### Capa de Infraestructura
+![Routine Management - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/routine-management-infrastructure.puml)
+
+### Capa de Interfaces
+![Routine Management - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/routine-management-interfaces.puml)
+
+---
+
+## Skin Analysis
+
+### Capa de Dominio
+![Skin Analysis - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/skin-analysis-domain.puml)
+
+### Capa de Aplicación
+![Skin Analysis - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/skin-analysis-application.puml)
+
+### Capa de Infraestructura
+![Skin Analysis - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/skin-analysis-infrastructure.puml)
+
+### Capa de Interfaces
+![Skin Analysis - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/skin-analysis-interfaces.puml)
+
+---
+
+## Subscription
+
+### Capa de Dominio
+![Subscription - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/subscription-domain.puml)
+
+### Capa de Aplicación
+![Subscription - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/subscription-application.puml)
+
+### Capa de Infraestructura
+![Subscription - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/subscription-infrastructure.puml)
+
+### Capa de Interfaces
+![Subscription - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/subscription-interfaces.puml)
+
+## Payments
+
+### Capa de Dominio
+![Payments - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/payments-domain.puml)
+
+### Capa de Aplicación
+![Payments - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/payments-application.puml)
+
+### Capa de Infraestructura
+![Payments - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/payments-infrastructure.puml)
+
+### Capa de Interfaces
+![Payments - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/payments-interfaces.puml)
+
+---
+
+## IAM (Identity and Access Management)
+
+### Capa de Dominio
+![IAM - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/iam-domain.puml)
+
+### Capa de Aplicación
+![IAM - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/iam-application.puml)
+
+### Capa de Infraestructura
+![IAM - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/iam-infrastructure.puml)
+
+### Capa de Interfaces
+![IAM - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/iam-interfaces.puml)
+
+---
+
+## Dermatology Care
+
+### Capa de Dominio
+![Dermatology Care - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatology-care-domain.puml)
+
+### Capa de Aplicación
+![Dermatology Care - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatology-care-application.puml)
+
+### Capa de Infraestructura
+![Dermatology Care - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatology-care-infrastructure.puml)
+
+### Capa de Interfaces
+![Dermatology Care - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatology-care-interfaces.puml)
+
+---
+
+## Dermatological Appointment
+
+### Capa de Dominio
+![Dermatological Appointment - Domain](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-domain.puml)
+
+### Capa de Aplicación
+![Dermatological Appointment - Application](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-application.puml)
+
+### Capa de Infraestructura
+![Dermatological Appointment - Infrastructure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-infrastructure.puml)
+
+### Capa de Interfaces
+![Dermatological Appointment - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-interfaces.puml)
 
 ## 4.7. Software Object-Oriented Design
 
@@ -7226,9 +7292,9 @@ En esta sección el equipo elaboró la Leadership-and-Collaboration Matrix (LACX
 
 El Sprint 1 tuvo como objetivo establecer las bases del proyecto Bloomie en su totalidad: desde la documentación inicial (Lean UX, entrevistas, needfinding, especificación de requisitos y diseño UX/UI), pasando por la arquitectura del software (C4 Model, Event Storming, diagramas de base de datos), hasta la implementación y despliegue de la Landing Page. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-**URL del board:** https://trello.com/b/NP9njuOO/bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
-![Sprint Backlog 1 Board](assets/img/sprint-backlog-1-board.png)
+![Sprint Backlog 1 Board](assets/img/sprint-backlog-trello.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -7667,10 +7733,10 @@ en el flujo de suscripción de la Landing Page, y se documentaron todas las secc
 correspondientes al Sprint 2 del informe. A continuación se presenta el board de 
 seguimiento utilizado durante el sprint, junto con la tabla de control de estado.
 
-**URL del board:** https://trello.com/b/NP9njuOO/bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
 
-![Sprint Backlog 2 Board](assets/img/sprint-backlog-2-board.png)
+![Sprint Backlog 2 Board](assets/img/sprint2-backlog-trello.png)
 
 <table border="1" cellspacing="0" cellpadding="8">
   <tr>
@@ -8468,9 +8534,9 @@ En esta sección el equipo incluye la elaboración de un artefacto Leadership-an
 
 El Sprint 3 tuvo como objetivo principal implementar y desplegar la primera versión de los Web Services de Bloomie, cubriendo los bounded contexts de autenticación, usuarios, perfiles de piel, escaneos faciales, rutinas, productos, citas dermatológicas, consultas virtuales, pagos y suscripciones. Adicionalmente se realizaron correcciones al frontend y diagramas de clase, y se elaboraron los guiones y videos del curso introductorio de Java. A continuación se presenta el board de seguimiento utilizado durante el sprint, junto con la tabla de control de estado de las tareas.
 
-**URL del board:** https://trello.com/b/PA2Tjn3g/sprint-3-bloomie
+**URL del board:** https://trello.com/invite/b/6a03942179de59aecf992694/ATTI292239de3874460f61b240610610f74d5BE6017C/bloomie
 
-![Sprint Backlog 3 Board](assets/img/sprint3-board.png)
+![Sprint Backlog 3 Board](assets/img/sprint3-backlog-trello.png)
 
 | User Story Id | Título | Task Id | Título | Descripción | Estimación (Hours) | Responsable | Estado |
 |---|---|---|---|---|---|---|---|
@@ -8601,6 +8667,231 @@ Tabla de los commits mas importantes para el Backend, Frontend y Landing Page
 #### 5.2.3.5. Execution Evidence for Sprint Review
 Durante este Sprint, la plataforma Bloomie logró la integración entre el frontend Angular y el backend Spring Boot en los bounded contexts principales: IAM, Skin Analysis y Routine Management, Citas dermatológicas. Las principales funcionalidades implementadas y validadas incluyen el registro de usuario, la creación del perfil de piel mediante el formulario de estilo de vida, el envío del escaneo facial con generación automática del análisis de piel, la generación de rutina personalizada disparada por eventos de dominio, y el seguimiento diario de rutina. El backend fue desplegado exitosamente en Azure App Service y conectado a Azure Database for MySQL, permitiendo que el flujo completo del usuario funcione en un entorno de producción.
 
+### Swagger UI — Endpoints Documentados
+
+![swagger](assets/img/swagger.png)
+
+### Evidencias de método POST - GET en la página web
+![sign-in-db](assets/img/auth-response.png)
+![skin-db](assets/img/skin-profile-response.png) 
+![scan-response](assets/img/scan-result-response.png) 
+![routine-response](assets/img/routine-response.png)
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+## Services Documentation Evidence for Sprint Review
+
+Durante este Sprint, se documentaron todos los Web Services implementados en la plataforma Bloomie mediante OpenAPI/Swagger, integrado directamente en el backend Spring Boot. La documentación cubre los endpoints de los bounded contexts de IAM, Skin Analysis, Routine Management, Dermatology Care, Appointments, Subscriptions, Payments y Product Discovery. Todos los endpoints están desplegados y accesibles en producción a través de Azure App Service.
+
+**URL Swagger desplegado:** https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
+
+**URL repositorio backend:** https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-platform.git 
+
+> Nota: La documentación OpenAPI fue elaborada junto con la implementación del código en cada commit de feature. No se generaron commits exclusivos de documentación ya que las anotaciones `@Operation`, `@ApiResponse` y `@Tag` se incluyeron en cada controlador durante su desarrollo.
+
+---
+
+### Endpoints Documentados
+
+| Bounded Context | Verbo HTTP | Endpoint | Descripción |
+|---|---|---|---|
+| Authentication | POST | `/api/v1/authentication/register` | Registrar usuario paciente |
+| Authentication | POST | `/api/v1/authentication/register-dermatologist` | Registrar dermatólogo |
+| Users | GET | `/api/v1/users` | Obtener todos los usuarios |
+| Users | GET | `/api/v1/users/{userId}` | Obtener usuario por ID |
+| Users | PUT | `/api/v1/users/{userId}` | Actualizar perfil de usuario |
+| Users | PUT | `/api/v1/users/{userId}/photo` | Actualizar foto de perfil |
+| Skin Profiles | POST | `/api/v1/skin-profiles` | Completar perfil de piel del paciente |
+| Skin Profiles | GET | `/api/v1/skin-profiles/{skinProfileId}` | Obtener perfil de piel por ID |
+| Skin Profiles | PUT | `/api/v1/skin-profiles/{skinProfileId}` | Actualizar características de piel |
+| Skin Profiles | GET | `/api/v1/skin-profiles/patient/{patientId}` | Obtener perfil de piel por paciente |
+| Facial Scans | POST | `/api/v1/facial-scans` | Iniciar escaneo facial |
+| Facial Scans | PUT | `/api/v1/facial-scans/{facialScanId}/submit` | Enviar escaneo facial con foto |
+| Facial Scans | GET | `/api/v1/facial-scans/{facialScanId}` | Obtener escaneo facial por ID |
+| Facial Scans | GET | `/api/v1/facial-scans/patient/{patientId}` | Obtener escaneos faciales por paciente |
+| Skin Analyses | GET | `/api/v1/skin-analyses/{skinAnalysisId}` | Obtener análisis de piel por ID |
+| Skin Analyses | GET | `/api/v1/skin-analyses/patient/{patientId}` | Obtener análisis de piel por paciente |
+| Skin Analyses | GET | `/api/v1/skin-analyses/facial-scan/{facialScanId}` | Obtener análisis por escaneo facial |
+| Routines | GET | `/api/v1/routines/patient/{patientId}` | Obtener rutina activa por paciente |
+| Routines | GET | `/api/v1/routines/{routineId}` | Obtener rutina por ID |
+| Routines | PUT | `/api/v1/routines/{routineId}/items/{routineItemId}/replace` | Reemplazar producto en rutina |
+| Routines | DELETE | `/api/v1/routines/{routineId}/items/{routineItemId}` | Eliminar paso de rutina |
+| Routines | GET | `/api/v1/routines/{routineId}/items/{routineItemId}/replacement-options` | Obtener opciones de reemplazo |
+| Daily Trackings | POST | `/api/v1/daily-trackings` | Marcar rutina como completada |
+| Daily Trackings | GET | `/api/v1/daily-trackings/patient/{patientId}` | Obtener trackings por paciente |
+| Daily Trackings | GET | `/api/v1/daily-trackings/routine/{routineId}` | Obtener trackings por rutina |
+| Daily Trackings | GET | `/api/v1/daily-trackings/patient/{patientId}/weekly-summary` | Obtener resumen semanal |
+| Dermatologist Profiles | GET | `/api/v1/dermatologist-profiles` | Obtener todos los perfiles de dermatólogos |
+| Dermatologist Profiles | GET | `/api/v1/dermatologist-profiles/{profileId}` | Obtener perfil de dermatólogo por ID |
+| Dermatologist Profiles | PUT | `/api/v1/dermatologist-profiles/{profileId}` | Actualizar perfil de dermatólogo |
+| Availabilities | POST | `/api/v1/availabilities` | Definir disponibilidad del dermatólogo |
+| Availabilities | GET | `/api/v1/availabilities` | Obtener disponibilidades por dermatólogo |
+| Availabilities | PUT | `/api/v1/availabilities/{availabilityId}` | Actualizar disponibilidad |
+| Appointments | POST | `/api/v1/appointments` | Agendar cita dermatológica |
+| Appointments | GET | `/api/v1/appointments` | Obtener citas por paciente o dermatólogo |
+| Appointments | GET | `/api/v1/appointments/{id}` | Obtener cita por ID |
+| Appointments | PUT | `/api/v1/appointments/{id}/confirm` | Confirmar cita |
+| Appointments | PUT | `/api/v1/appointments/{id}/cancel` | Cancelar cita |
+| Appointments | PUT | `/api/v1/appointments/{id}/reprogram-request` | Solicitar reprogramación de cita |
+| Consultations | POST | `/api/v1/consultations` | Iniciar consulta dermatológica |
+| Consultations | GET | `/api/v1/consultations` | Obtener consulta por cita |
+| Consultations | GET | `/api/v1/consultations/{id}` | Obtener consulta por ID |
+| Consultations | PUT | `/api/v1/consultations/{id}/save-notes` | Guardar notas clínicas |
+| Consultations | PUT | `/api/v1/consultations/{id}/diagnosis` | Registrar diagnóstico final |
+| Consultations | PUT | `/api/v1/consultations/{id}/finish` | Finalizar consulta |
+| Consultations | POST | `/api/v1/consultations/{id}/photos` | Subir foto clínica |
+| Subscriptions | POST | `/api/v1/subscriptions` | Seleccionar plan de suscripción |
+| Subscriptions | GET | `/api/v1/subscriptions/{subscriptionId}` | Obtener suscripción por ID |
+| Subscriptions | GET | `/api/v1/subscriptions/patient/{patientId}` | Obtener suscripción por paciente |
+| Payments | GET | `/api/v1/payments/{paymentId}` | Obtener pago por ID |
+| Payments | GET | `/api/v1/payments/patient/{patientId}` | Obtener pagos por paciente |
+| Products | GET | `/api/v1/products` | Obtener catálogo de productos |
+| Products | GET | `/api/v1/products/{productId}` | Obtener producto por ID |
+| Favorite Products | POST | `/api/v1/favorite-products` | Guardar producto como favorito |
+| Favorite Products | GET | `/api/v1/favorite-products` | Obtener productos favoritos por usuario |
+| Favorite Products | DELETE | `/api/v1/favorite-products/{favoriteProductId}` | Eliminar producto de favoritos |
+
+---
+
+### Detalle de Endpoints Principales
+
+#### POST `/api/v1/authentication/register`
+**Parámetros:** Body JSON
+```json
+{
+  "firstName": "Ana",
+  "lastName": "Garcia",
+  "email": "ana@example.com",
+  "password": "secret123"
+}
+```
+**Response 201:**
+```json
+{
+  "id": 9,
+  "firstName": "Ana",
+  "lastName": "Garcia",
+  "email": "ana@example.com"
+}
+```
+
+#### POST `/api/v1/skin-profiles`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9,
+  "skinType": "DRY",
+  "sensitivity": "MEDIUM",
+  "waterIntake": "6-8 glasses",
+  "sunExposure": "Less than 30 min",
+  "sleepHours": "8 hours"
+}
+```
+**Response 201:**
+```json
+{
+  "id": 5,
+  "patientId": 9,
+  "skinType": "DRY",
+  "sensitivity": "MEDIUM",
+  "waterIntake": "6-8 glasses",
+  "sunExposure": "Less than 30 min",
+  "sleepHours": "8 hours",
+  "status": "COMPLETED"
+}
+```
+
+#### POST `/api/v1/facial-scans`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9
+}
+```
+**Response 201:**
+```json
+{
+  "id": 5,
+  "patientId": 9,
+  "status": "STARTED",
+  "photoUrl": null,
+  "scannedAt": "2026-06-19T20:20:27"
+}
+```
+
+#### PUT `/api/v1/facial-scans/{facialScanId}/submit`
+**Parámetros:** Path `facialScanId`, Body JSON
+```json
+{
+  "photoUrl": "https://storage.example.com/scans/photo.jpg"
+}
+```
+**Response 200:** Devuelve el `FacialScan` actualizado con status `SUBMITTED`. Dispara automáticamente la generación del `SkinAnalysis` y la `Routine` mediante eventos de dominio.
+
+#### GET `/api/v1/skin-analyses/facial-scan/{facialScanId}`
+**Parámetros:** Path `facialScanId`
+**Response 200:**
+```json
+{
+  "id": 1,
+  "patientId": 9,
+  "facialScanId": 5,
+  "overallScore": 51.25,
+  "hydrationScore": 35.0,
+  "textureScore": 55.0,
+  "sensitivityScore": 55.0,
+  "brightnessScore": 60.0,
+  "status": "COMPLETED",
+  "analyzedAt": "2026-06-19T20:20:27"
+}
+```
+
+#### GET `/api/v1/routines/patient/{patientId}`
+**Parámetros:** Path `patientId`
+**Response 200:**
+```json
+{
+  "id": 3,
+  "patientId": 9,
+  "skinAnalysisId": 1,
+  "skinType": "DRY",
+  "status": "ACTIVE",
+  "items": [
+    { "id": 8, "step": "CLEANSER", "order": 1, "scheduledTime": "AM_PM", "productRecommendation": "Cream cleanser" },
+    { "id": 9, "step": "MOISTURIZER", "order": 2, "scheduledTime": "AM_PM", "productRecommendation": "Rich moisturizer" },
+    { "id": 10, "step": "SUNSCREEN", "order": 3, "scheduledTime": "AM", "productRecommendation": "SPF 30 sunscreen" }
+  ]
+}
+```
+
+#### POST `/api/v1/daily-trackings`
+**Parámetros:** Body JSON
+```json
+{
+  "patientId": 9,
+  "routineId": 3,
+  "date": "2026-06-19"
+}
+```
+**Response 201:** Devuelve el ID del `DailyTracking` creado.
+
+#### GET `/api/v1/daily-trackings/patient/{patientId}/weekly-summary`
+**Parámetros:** Path `patientId`
+**Response 200:**
+```json
+{
+  "patientId": 9,
+  "weekStart": "2026-06-16",
+  "weekEnd": "2026-06-22",
+  "completedDays": 1,
+  "missedDays": 6,
+  "completionRate": 14.3
+}
+```
+
+---
+
+### Imágenes de interacción utilizando datos de prueba
 ### Registro de Usuario
 
 El usuario se registra desde la vista de sign-up. La solicitud se envía a `POST /api/v1/authentication/register` y retorna 201 Created. El nuevo registro de usuario se persiste en la base de datos.
@@ -8633,12 +8924,82 @@ Al completarse el análisis de piel, se publica un `PreliminaryDiagnosisGenerate
 ![routine-response](assets/img/routine-response.png)
 ![routine-db](assets/img/routine-bd.png)
 
-
-#### 5.2.3.6. Services Documentation Evidence for Sprint Review
-
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-#### 5.2.3.8. Team Collaboration Insights during Sprint
+Durante el Sprint 3 el equipo realizó el despliegue de la primera versión de los Web Services de Bloomie mediante Azure App Service, configurando una instancia de Azure Database for MySQL Flexible Server como base de datos de producción. Este proceso incluyó la creación y configuración de los recursos en Azure, la definición de variables de entorno para la conexión entre el App Service y la base de datos, y la vinculación del repositorio de GitHub con el recurso de Azure para automatizar el proceso de despliegue. Adicionalmente se actualizó el despliegue del Frontend Web Application en Azure Static Web Apps y de la Landing Page en Vercel, incorporando los enlaces definitivos que apuntan al backend desplegado y a la Web Application.
+
+**Web Services — Azure App Service**
+
+Se creó un recurso de tipo App Service en Azure para alojar la RESTful API de Bloomie desarrollada con Spring Boot. El recurso fue configurado con el plan de servicio correspondiente y vinculado al repositorio bloomie-platform en GitHub para automatizar el proceso de build y despliegue ante cada actualización de la rama principal.
+
+![bloomie-platform](assets/img/bloomie-azure-overview.png)
+
+Las variables de entorno necesarias para la conexión con la base de datos y la configuración del perfil de Spring fueron definidas en la sección Configuration del App Service, incluyendo el string de conexión al servidor MySQL, las credenciales de acceso y el perfil activo de producción.
+
+![bloomie-environments](assets/img/environments-azure.png)
+
+Como evidencia del despliegue exitoso, se accedió a la documentación de la API mediante Swagger UI desde la URL pública del App Service, confirmando que todos los bounded contexts implementados durante el Sprint 3 están disponibles y operativos.
+
+![bloomie-swagger](assets/img/swagger-deployment.png)
+
+**Base de datos — Azure Database for MySQL Flexible Server**
+
+Se aprovisionó una instancia de Azure Database for MySQL Flexible Server para alojar la base de datos de producción de Bloomie. El servidor fue configurado con SSL enforced y TLS 1.2, garantizando la seguridad en la comunicación entre el App Service y la base de datos.
+
+![bloomie-bd](assets/img/bloomie-bd.png)
+
+
+Los datos de conexión del servidor MySQL, incluyendo el hostname, puerto, usuario y configuración SSL, fueron configurados como variables de entorno en el App Service para que la aplicación Spring Boot pueda conectarse a la base de datos en el entorno de producción.
+
+![bloomie-bd-connect](assets/img/azure-connect.png)
+
+
+**Web Application — Azure Static Web Apps**
+
+El Frontend Web Application fue actualizado y redesploy en Azure Static Web Apps, incorporando la integración con el backend real desplegado en Azure App Service en los bounded contexts implementados durante el Sprint 3.
+
+![bloomie-frontend](assets/img/deploy-frontend.png)
+
+**Landing Page — Vercel**
+
+La Landing Page fue actualizada con los enlaces definitivos hacia el Web Application desplegado y redesploy en Vercel, manteniéndose accesible desde su URL pública.
+
+![bloomie-landing](assets/img/deploy-landing.png)
+
+#### 5.2.3.8. Team Collaboration Insights for Sprint Review
+
+Durante el Sprint 3 el equipo desarrolló las actividades de implementación distribuidas por bounded context según el esquema de Aspect Leaders definido en el Sprint Planning. El trabajo se organizó en ramas feature por bounded context siguiendo la convención de GitFlow establecida por el equipo, con commits atómicos y mensajes en formato Conventional Commits.
+
+En el repositorio de Web Application (bloomie-webapp) el equipo realizó las actualizaciones de integración con el backend real, acumulando 101 commits entre Luciana, Arturo y Martin. En el repositorio de Landing Page (bloomie-website) Arturo realizó las actualizaciones de enlaces y navegación con 16 commits.
+
+A continuación se presentan los analíticos de colaboración obtenidos desde GitHub Insights para cada repositorio.
+
+**Web Services — bloomie-platform**
+
+| Miembro | GitHub Username | Commits Sprint 3 |
+|---|---|---|
+| Mechan Montenegro, Luciana | luuu6 | 250 |
+| Contreras Torres, Arturo | Arturouu | 153 |
+| Asmat Alminco, Martin | Alemarr2 | 8 |
+| **Total** | | **411** |
+
+![backend-commits](assets/img/platform-commits.png)
+
+**Web Application — bloomie-webapp**
+
+| Miembro | GitHub Username | Commits Sprint 3 |
+|---|---|---|
+| Mechan Montenegro, Luciana | luuu6 | 45 |
+| Contreras Torres, Arturo | Arturouu | 47 |
+| Asmat Alminco, Martin | Alemarr2 | 7 |
+| **Total** | | **101** |
+
+![backend-commits](assets/img/frontend-commits.png)
+
+
+**Landing Page — bloomie-website**
+
+![landing-commits](assets/img/landing-commits-2.png)
 
 ## 5.3. Validation Interviews.
 

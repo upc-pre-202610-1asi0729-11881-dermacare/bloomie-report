@@ -1,0 +1,129 @@
+@startuml subscription-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Subscription - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class Subscription extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - planId : PlanId
+            - status : SubscriptionStatus
+            - startDate : LocalDateTime
+            - endDate : LocalDateTime
+            + Subscription(command : SelectSubscriptionPlanCommand)
+            + isActive() : boolean
+            + isExpired() : boolean
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "entities" {
+        class Plan {
+            - id : Long
+            - planId : PlanId
+            - name : String
+            - monthlyPrice : Double
+            - description : String
+            - planType : PlanType
+        }
+    }
+
+    package "valueobjects" {
+        class PatientId <<record>> {
+            + patientId : Long
+        }
+
+        class PlanId <<record>> {
+            + planId : Long
+        }
+
+        enum SubscriptionStatus {
+            PENDING
+            ACTIVE
+            EXPIRED
+            CANCELLED
+        }
+
+        enum PlanType {
+            BASIC
+            PREMIUM
+            PROFESSIONAL
+        }
+    }
+
+    package "commands" {
+        class SelectSubscriptionPlanCommand <<record>> {
+            + patientId : Long
+            + planId : Long
+        }
+
+        class ActivateSubscriptionCommand <<record>> {
+            + subscriptionId : Long
+        }
+    }
+
+    package "events" {
+        class SubscriptionPlanSelectedEvent <<record>> {
+            + subscriptionId : Long
+            + patientId : Long
+            + planId : Long
+        }
+
+        class SubscriptionActivatedEvent <<record>> {
+            + subscriptionId : Long
+            + patientId : Long
+            + startDate : LocalDateTime
+            + endDate : LocalDateTime
+        }
+    }
+
+    package "queries" {
+        class GetSubscriptionByIdQuery <<record>> {
+            + subscriptionId : Long
+        }
+
+        class GetSubscriptionByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetPlanByIdQuery <<record>> {
+            + planId : Long
+        }
+
+        class GetAllPlansQuery {
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface SubscriptionRepository {
+        + findById(id : Long) : Optional<Subscription>
+        + findByPatientId(patientId : PatientId) : Optional<Subscription>
+        + save(subscription : Subscription) : Subscription
+    }
+}
+
+' Aggregate relationships
+Subscription --> PatientId
+Subscription --> PlanId
+Subscription --> SubscriptionStatus
+
+Plan --> PlanId
+Plan --> PlanType
+
+' Repository dependencies
+SubscriptionRepository ..> Subscription
+SubscriptionRepository ..> PatientId
+
+@enduml

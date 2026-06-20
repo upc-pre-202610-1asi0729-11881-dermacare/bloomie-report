@@ -1,0 +1,64 @@
+@startuml payments-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Payments - Interfaces Layer
+
+package "interfaces" {
+
+    package "rest" {
+
+        class PaymentsController {
+            - paymentCommandService : PaymentCommandService
+            - paymentQueryService : PaymentQueryService
+            + processSubscriptionPayment(resource : ProcessSubscriptionPaymentResource) : ResponseEntity<PaymentResource>
+            + getPaymentById(id : Long) : ResponseEntity<PaymentResource>
+            + getPaymentsByPatientId(patientId : Long) : ResponseEntity<List<PaymentResource>>
+        }
+
+        package "resources" {
+            class PaymentResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + planId : Long
+                + subscriptionId : Long
+                + type : String
+                + amount : Double
+                + status : String
+            }
+
+            class ProcessSubscriptionPaymentResource <<record>> {
+                + patientId : Long
+                + planId : Long
+                + subscriptionId : Long
+                + amount : Double
+            }
+        }
+
+        package "transform" {
+            class PaymentResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Payment) : PaymentResource
+            }
+
+            class ProcessSubscriptionPaymentCommandFromResourceAssembler {
+                + toCommandFromResource(resource : ProcessSubscriptionPaymentResource) : ProcessSubscriptionPaymentCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+PaymentsController ..> PaymentResource
+PaymentsController ..> ProcessSubscriptionPaymentResource
+PaymentsController ..> PaymentResourceFromEntityAssembler
+PaymentsController ..> ProcessSubscriptionPaymentCommandFromResourceAssembler
+
+' Assembler -> Resource
+PaymentResourceFromEntityAssembler ..> PaymentResource
+
+@enduml

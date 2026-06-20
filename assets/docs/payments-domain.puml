@@ -1,0 +1,116 @@
+@startuml payments-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Payments - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class Payment extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - planId : PlanId
+            - subscriptionId : SubscriptionId
+            - type : PaymentType
+            - amount : PaymentAmount
+            - status : PaymentStatus
+            + Payment(command : ProcessSubscriptionPaymentCommand)
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "valueobjects" {
+        class PatientId <<record>> {
+            + patientId : Long
+        }
+
+        class PlanId <<record>> {
+            + planId : Long
+        }
+
+        class SubscriptionId <<record>> {
+            + subscriptionId : Long
+        }
+
+        class PaymentAmount <<record>> {
+            + amount : Double
+        }
+
+        enum PaymentStatus {
+            PENDING
+            COMPLETED
+            FAILED
+            REFUNDED
+        }
+
+        enum PaymentType {
+            SUBSCRIPTION
+            APPOINTMENT
+            CONSULTATION
+        }
+    }
+
+    package "commands" {
+        class ProcessSubscriptionPaymentCommand <<record>> {
+            + patientId : Long
+            + planId : Long
+            + subscriptionId : Long
+            + amount : Double
+        }
+    }
+
+    package "events" {
+        class SubscriptionPaymentProcessedEvent <<record>> {
+            + paymentId : Long
+            + patientId : Long
+            + subscriptionId : Long
+            + status : PaymentStatus
+        }
+    }
+
+    package "queries" {
+        class GetPaymentByIdQuery <<record>> {
+            + paymentId : Long
+        }
+
+        class GetPaymentBySubscriptionIdQuery <<record>> {
+            + subscriptionId : Long
+        }
+
+        class GetPaymentsByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface PaymentRepository {
+        + findById(id : Long) : Optional<Payment>
+        + findBySubscriptionId(subscriptionId : SubscriptionId) : Optional<Payment>
+        + findByPatientId(patientId : PatientId) : List<Payment>
+        + save(payment : Payment) : Payment
+    }
+}
+
+' Aggregate relationships
+Payment --> PatientId
+Payment --> PlanId
+Payment --> SubscriptionId
+Payment --> PaymentAmount
+Payment --> PaymentStatus
+Payment --> PaymentType
+
+' Repository dependencies
+PaymentRepository ..> Payment
+PaymentRepository ..> PatientId
+PaymentRepository ..> SubscriptionId
+
+@enduml

@@ -1,0 +1,180 @@
+@startuml iam-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title IAM - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class User extends AbstractDomainAggregateRoot {
+            - id : Long
+            - name : PersonName
+            - emailAddress : EmailAddress
+            - hashedPassword : HashedPassword
+            - roles : Set<Role>
+            - photoUrl : String
+            + User(command : RegisterUserCommand, role : Role)
+            + User(command : RegisterDermatologistCommand, role : Role)
+            + updateProfile(command : UpdateUserProfileCommand) : void
+            + updatePhoto(command : UpdateUserPhotoCommand) : void
+            + changePassword(command : ChangePasswordCommand) : void
+            + addRole(role : Role) : void
+            + addRoles(roles : List<Role>) : void
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "entities" {
+        class Role {
+            - id : Long
+            - name : UserRole
+            + Role()
+            + Role(name : UserRole)
+            + Role(id : Long, name : UserRole)
+            + {static} getDefaultRole() : Role
+            + {static} toRoleFromName(name : String) : Role
+            + {static} validateRoleSet(roles : List<Role>) : void
+        }
+    }
+
+    package "valueobjects" {
+        class EmailAddress <<record>> {
+            + address : String
+        }
+
+        class HashedPassword <<record>> {
+            + value : String
+        }
+
+        class PersonName <<record>> {
+            + firstName : String
+            + lastName : String
+        }
+
+        enum UserRole {
+            ROLE_YOUNG_ADULT
+            ROLE_DERMATOLOGIST
+            ROLE_ADMIN
+        }
+    }
+
+    package "commands" {
+        class RegisterUserCommand <<record>> {
+            + firstName : String
+            + lastName : String
+            + email : String
+            + password : String
+        }
+
+        class RegisterDermatologistCommand <<record>> {
+            + firstName : String
+            + lastName : String
+            + email : String
+            + password : String
+        }
+
+        class SignInCommand <<record>> {
+            + email : String
+            + password : String
+        }
+
+        class UpdateUserProfileCommand <<record>> {
+            + userId : Long
+            + firstName : String
+            + lastName : String
+            + email : String
+        }
+
+        class UpdateUserPhotoCommand <<record>> {
+            + userId : Long
+            + photoUrl : String
+        }
+
+        class ChangePasswordCommand <<record>> {
+            + userId : Long
+            + newPassword : String
+        }
+    }
+
+    package "events" {
+        class UserRegisteredEvent <<record>> {
+            + userId : Long
+            + email : String
+            + firstName : String
+            + lastName : String
+        }
+
+        class DermatologistRegisteredEvent <<record>> {
+            + userId : Long
+            + email : String
+            + firstName : String
+            + lastName : String
+        }
+
+        class UserLoggedInEvent <<record>> {
+            + userId : Long
+            + email : String
+        }
+
+        class UserProfileUpdatedEvent <<record>> {
+            + userId : Long
+            + firstName : String
+            + lastName : String
+            + email : String
+        }
+
+        class UserPhotoUpdatedEvent <<record>> {
+            + userId : Long
+            + photoUrl : String
+        }
+
+        class PasswordChangedEvent <<record>> {
+            + userId : Long
+        }
+    }
+
+    package "queries" {
+        class GetUserByIdQuery <<record>> {
+            + userId : Long
+        }
+
+        class GetUserByEmailQuery <<record>> {
+            + email : String
+        }
+
+        class GetAllUsersQuery {
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface UserRepository {
+        + findById(id : Long) : Optional<User>
+        + findByEmail(email : EmailAddress) : Optional<User>
+        + findAll() : List<User>
+        + save(user : User) : User
+        + existsByEmail(email : EmailAddress) : boolean
+    }
+}
+
+' Aggregate relationships
+User --> PersonName
+User --> EmailAddress
+User --> HashedPassword
+User --> Role
+
+Role --> UserRole
+
+' Repository dependencies
+UserRepository ..> User
+UserRepository ..> EmailAddress
+
+@enduml

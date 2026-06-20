@@ -1,0 +1,58 @@
+@startuml payments-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Payments - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface PaymentCommandService {
+            + processSubscriptionPayment(command : ProcessSubscriptionPaymentCommand) : Result<Payment>
+        }
+    }
+
+    package "queryservices" {
+        interface PaymentQueryService {
+            + getById(query : GetPaymentByIdQuery) : Result<Payment>
+            + getBySubscriptionId(query : GetPaymentBySubscriptionIdQuery) : Result<Payment>
+            + getByPatientId(query : GetPaymentsByPatientIdQuery) : Result<List<Payment>>
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class PaymentCommandServiceImpl {
+                - paymentRepository : PaymentRepository
+                + processSubscriptionPayment(command : ProcessSubscriptionPaymentCommand) : Result<Payment>
+            }
+        }
+
+        package "queryservices" {
+            class PaymentQueryServiceImpl {
+                - paymentRepository : PaymentRepository
+                + getById(query : GetPaymentByIdQuery) : Result<Payment>
+                + getBySubscriptionId(query : GetPaymentBySubscriptionIdQuery) : Result<Payment>
+                + getByPatientId(query : GetPaymentsByPatientIdQuery) : Result<List<Payment>>
+            }
+        }
+
+        package "eventhandlers" {
+            class SubscriptionPaymentProcessedEventHandler {
+                + on(event : SubscriptionPaymentProcessedEvent) : void
+            }
+        }
+    }
+}
+
+' Implementations
+PaymentCommandServiceImpl ..|> PaymentCommandService
+PaymentQueryServiceImpl ..|> PaymentQueryService
+
+@enduml

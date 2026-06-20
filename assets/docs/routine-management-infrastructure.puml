@@ -1,0 +1,128 @@
+@startuml routine-management-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Routine Management - Infrastructure Layer
+
+package "infrastructure.persistence.jpa" {
+
+    package "entities" {
+        class RoutinePersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - skinAnalysisId : Long
+            - status : String
+            - skinType : String
+            - items : List<RoutineItemPersistenceEntity>
+            - createdAt : LocalDateTime
+        }
+
+        class RoutineItemPersistenceEntity {
+            - id : Long
+            - step : String
+            - order : Integer
+            - scheduledTime : String
+            - productRecommendation : String
+            - routine : RoutinePersistenceEntity
+        }
+
+        class DailyTrackingPersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - routineId : Long
+            - date : LocalDate
+            - completed : boolean
+            - completedAt : LocalDateTime
+        }
+    }
+
+    package "repositories" {
+        interface RoutinePersistenceRepository {
+            + findByPatientId(patientId : Long) : Optional<RoutinePersistenceEntity>
+        }
+
+        interface DailyTrackingPersistenceRepository {
+            + findByPatientId(patientId : Long) : List<DailyTrackingPersistenceEntity>
+            + findByRoutineId(routineId : Long) : List<DailyTrackingPersistenceEntity>
+            + findByPatientIdAndDate(patientId : Long, date : LocalDate) : Optional<DailyTrackingPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class RoutineRepositoryImpl {
+            - repository : RoutinePersistenceRepository
+            - assembler : RoutinePersistenceAssembler
+            + findById(id : Long) : Optional<Routine>
+            + findByPatientId(patientId : PatientId) : Optional<Routine>
+            + save(routine : Routine) : Routine
+        }
+
+        class DailyTrackingRepositoryImpl {
+            - repository : DailyTrackingPersistenceRepository
+            - assembler : DailyTrackingPersistenceAssembler
+            + findById(id : Long) : Optional<DailyTracking>
+            + findByPatientId(patientId : PatientId) : List<DailyTracking>
+            + findByRoutineId(routineId : RoutineId) : List<DailyTracking>
+            + findByPatientIdAndDate(patientId : PatientId, date : LocalDate) : Optional<DailyTracking>
+            + save(tracking : DailyTracking) : DailyTracking
+        }
+    }
+
+    package "assemblers" {
+        class RoutinePersistenceAssembler {
+            + toEntity(routine : Routine) : RoutinePersistenceEntity
+            + toDomain(entity : RoutinePersistenceEntity) : Routine
+        }
+
+        class DailyTrackingPersistenceAssembler {
+            + toEntity(tracking : DailyTracking) : DailyTrackingPersistenceEntity
+            + toDomain(entity : DailyTrackingPersistenceEntity) : DailyTracking
+        }
+    }
+
+    package "converters" {
+        class PatientIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PatientId) : Long
+            + convertToEntityAttribute(dbData : Long) : PatientId
+        }
+
+        class RoutineIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : RoutineId) : Long
+            + convertToEntityAttribute(dbData : Long) : RoutineId
+        }
+
+        class SkinAnalysisIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : SkinAnalysisId) : Long
+            + convertToEntityAttribute(dbData : Long) : SkinAnalysisId
+        }
+    }
+}
+
+' Domain interfaces
+interface RoutineRepository
+interface DailyTrackingRepository
+
+' Implementations
+RoutineRepositoryImpl ..|> RoutineRepository
+DailyTrackingRepositoryImpl ..|> DailyTrackingRepository
+
+' Adapter dependencies
+RoutineRepositoryImpl --> RoutinePersistenceRepository
+RoutineRepositoryImpl --> RoutinePersistenceAssembler
+DailyTrackingRepositoryImpl --> DailyTrackingPersistenceRepository
+DailyTrackingRepositoryImpl --> DailyTrackingPersistenceAssembler
+
+' Assembler -> Entity
+RoutinePersistenceAssembler --> RoutinePersistenceEntity
+DailyTrackingPersistenceAssembler --> DailyTrackingPersistenceEntity
+
+' Entity relationships
+RoutinePersistenceEntity --> RoutineItemPersistenceEntity
+RoutineItemPersistenceEntity --> RoutinePersistenceEntity
+
+@enduml

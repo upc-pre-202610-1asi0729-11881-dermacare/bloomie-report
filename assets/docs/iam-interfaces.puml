@@ -1,0 +1,127 @@
+@startuml iam-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title IAM - Interfaces Layer
+
+package "interfaces" {
+
+    package "acl" {
+        interface IamContextFacade {
+            + existsUserById(userId : Long) : boolean
+            + fetchUserFullNameById(userId : Long) : String
+            + fetchUserEmailById(userId : Long) : String
+        }
+    }
+
+    package "rest" {
+
+        class AuthenticationController {
+            - userCommandService : UserCommandService
+            - userQueryService : UserQueryService
+            + registerUser(resource : RegisterUserResource) : ResponseEntity<UserResource>
+            + registerDermatologist(resource : RegisterDermatologistResource) : ResponseEntity<UserResource>
+            + signIn(resource : SignInResource) : ResponseEntity<?>
+        }
+
+        class UsersController {
+            - userCommandService : UserCommandService
+            - userQueryService : UserQueryService
+            + getUserById(id : Long) : ResponseEntity<UserResource>
+            + updateUserProfile(id : Long, resource : UpdateUserProfileResource) : ResponseEntity<UserResource>
+            + updateUserPhoto(id : Long, resource : UpdateUserPhotoResource) : ResponseEntity<UserResource>
+        }
+
+        package "resources" {
+            class UserResource <<record>> {
+                + id : Long
+                + firstName : String
+                + lastName : String
+                + email : String
+                + photoUrl : String
+                + roles : List<String>
+            }
+
+            class RegisterUserResource <<record>> {
+                + firstName : String
+                + lastName : String
+                + email : String
+                + password : String
+            }
+
+            class RegisterDermatologistResource <<record>> {
+                + firstName : String
+                + lastName : String
+                + email : String
+                + password : String
+            }
+
+            class SignInResource <<record>> {
+                + email : String
+                + password : String
+            }
+
+            class UpdateUserProfileResource <<record>> {
+                + firstName : String
+                + lastName : String
+                + email : String
+            }
+
+            class UpdateUserPhotoResource <<record>> {
+                + photoUrl : String
+            }
+        }
+
+        package "transform" {
+            class UserResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : User) : UserResource
+            }
+
+            class RegisterUserCommandFromResourceAssembler {
+                + toCommandFromResource(resource : RegisterUserResource) : RegisterUserCommand
+            }
+
+            class RegisterDermatologistCommandFromResourceAssembler {
+                + toCommandFromResource(resource : RegisterDermatologistResource) : RegisterDermatologistCommand
+            }
+
+            class SignInCommandFromResourceAssembler {
+                + toCommandFromResource(resource : SignInResource) : SignInCommand
+            }
+
+            class UpdateUserProfileCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UpdateUserProfileResource) : UpdateUserProfileCommand
+            }
+
+            class UpdateUserPhotoCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UpdateUserPhotoResource) : UpdateUserPhotoCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+AuthenticationController ..> UserResource
+AuthenticationController ..> RegisterUserResource
+AuthenticationController ..> RegisterDermatologistResource
+AuthenticationController ..> SignInResource
+AuthenticationController ..> UserResourceFromEntityAssembler
+AuthenticationController ..> RegisterUserCommandFromResourceAssembler
+AuthenticationController ..> RegisterDermatologistCommandFromResourceAssembler
+
+UsersController ..> UserResource
+UsersController ..> UpdateUserProfileResource
+UsersController ..> UpdateUserPhotoResource
+UsersController ..> UserResourceFromEntityAssembler
+UsersController ..> UpdateUserProfileCommandFromResourceAssembler
+UsersController ..> UpdateUserPhotoCommandFromResourceAssembler
+
+' Assembler -> Resource
+UserResourceFromEntityAssembler ..> UserResource
+
+@enduml

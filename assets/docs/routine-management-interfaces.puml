@@ -1,0 +1,137 @@
+@startuml routine-management-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Routine Management - Interfaces Layer
+
+package "interfaces" {
+
+    package "events" {
+        class PersonalizedRoutineGeneratedIntegrationEvent <<record>> {
+            + routineId : Long
+            + patientId : Long
+            + skinAnalysisId : Long
+            + skinType : String
+        }
+
+        class PreliminaryDiagnosisGeneratedIntegrationEvent <<record>> {
+            + skinAnalysisId : Long
+            + patientId : Long
+            + facialScanId : Long
+            + overallScore : Double
+        }
+    }
+
+    package "rest" {
+
+        class RoutineController {
+            - routineCommandService : RoutineCommandService
+            - routineQueryService : RoutineQueryService
+            + generateRoutine(resource : GenerateRoutineResource) : ResponseEntity<RoutineResource>
+            + removeProductFromRoutine(routineId : Long, itemId : Long) : ResponseEntity<RoutineResource>
+            + replaceProductInRoutine(routineId : Long, itemId : Long, resource : ReplaceProductInRoutineResource) : ResponseEntity<RoutineResource>
+            + getRoutineById(id : Long) : ResponseEntity<RoutineResource>
+            + getRoutineByPatientId(patientId : Long) : ResponseEntity<RoutineResource>
+        }
+
+        class DailyTrackingController {
+            - dailyTrackingCommandService : DailyTrackingCommandService
+            - dailyTrackingQueryService : DailyTrackingQueryService
+            + markRoutineAsCompleted(resource : MarkRoutineAsCompletedResource) : ResponseEntity<DailyTrackingResource>
+            + getAllDailyTrackings() : ResponseEntity<List<DailyTrackingResource>>
+            + getWeeklySummaryByPatientId(patientId : Long) : ResponseEntity<WeeklySummaryResource>
+        }
+
+        package "resources" {
+            class RoutineResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + skinAnalysisId : Long
+                + status : String
+                + skinType : String
+                + items : List<RoutineItemResource>
+                + createdAt : String
+            }
+
+            class RoutineItemResource <<record>> {
+                + id : Long
+                + step : String
+                + order : Integer
+                + scheduledTime : String
+                + productRecommendation : String
+            }
+
+            class DailyTrackingResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + routineId : Long
+                + date : String
+                + completed : boolean
+                + completedAt : String
+            }
+
+            class WeeklySummaryResource <<record>> {
+                + patientId : Long
+                + weekStart : String
+                + weekEnd : String
+                + completedDays : Integer
+                + totalDays : Integer
+                + completionRate : Double
+            }
+
+            class ReplaceProductInRoutineResource <<record>> {
+                + newProductRecommendation : String
+            }
+
+            class MarkRoutineAsCompletedResource <<record>> {
+                + patientId : Long
+                + routineId : Long
+                + date : String
+            }
+        }
+
+        package "transform" {
+            class RoutineResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Routine) : RoutineResource
+            }
+
+            class DailyTrackingResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : DailyTracking) : DailyTrackingResource
+            }
+
+            class ReplaceProductInRoutineCommandFromResourceAssembler {
+                + toCommandFromResource(routineId : Long, itemId : Long, resource : ReplaceProductInRoutineResource) : ReplaceProductInRoutineCommand
+            }
+
+            class MarkRoutineAsCompletedCommandFromResourceAssembler {
+                + toCommandFromResource(resource : MarkRoutineAsCompletedResource) : MarkRoutineAsCompletedCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+RoutineController ..> RoutineResource
+RoutineController ..> ReplaceProductInRoutineResource
+RoutineController ..> RoutineResourceFromEntityAssembler
+RoutineController ..> ReplaceProductInRoutineCommandFromResourceAssembler
+
+DailyTrackingController ..> DailyTrackingResource
+DailyTrackingController ..> WeeklySummaryResource
+DailyTrackingController ..> MarkRoutineAsCompletedResource
+DailyTrackingController ..> DailyTrackingResourceFromEntityAssembler
+DailyTrackingController ..> MarkRoutineAsCompletedCommandFromResourceAssembler
+
+' Resource relationships
+RoutineResource --> RoutineItemResource
+
+' Assembler -> Resource
+RoutineResourceFromEntityAssembler ..> RoutineResource
+DailyTrackingResourceFromEntityAssembler ..> DailyTrackingResource
+
+@enduml
