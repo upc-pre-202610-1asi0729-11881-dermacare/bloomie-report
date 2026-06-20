@@ -9439,20 +9439,22 @@ Se recomienda mantener el esquema de Aspect Leaders por bounded context establec
 
 ## Anexo A
 
-URL del repositorio (Report):  https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report
+URL del repositorio (Report):  [Repositorio Reporte](https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report)
 
-URL del repositorio (Backend): https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-platform
+URL del repositorio (Backend): [Repositorio Backend](https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-platform)
 
-URL del repositorio (Frontend): https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-webapp
+URL del repositorio (Frontend): [Repositorio Frontend](https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-webapp)
 
-URL del repositorio (Landing Page): https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-website
+URL del repositorio (Landing Page): [Repositorio Landing page](https://github.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-website)
 
-URL de Landing Page: https://bloomie-landing-page.vercel.app/
+URL de Landing Page: [Enlace a Landing page](https://bloomie-landing-page.vercel.app/)
 
-URL de WebApp: https://witty-beach-0bf4c770f.7.azurestaticapps.net
+URL de WebApp: [WebApp](https://witty-beach-0bf4c770f.7.azurestaticapps.net)
 
-URL de MockAPI: https://bloomie-frontend-mockapi.azurewebsites.net/api/v1
+URL de MockAPI: [MockAPI](https://bloomie-frontend-mockapi.azurewebsites.net/api/v1)
 
-URL de swagger: https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
+URL de swagger: [Swagger](https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html)
 
 Video exposición TB1: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr)
+
+Video exposición AV2: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCmXMM4EPCYToLXeyIfPNHEAQLouA-oKa0d86hEqbswBPo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ALIcMA)
