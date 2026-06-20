@@ -1,0 +1,129 @@
+@startuml product-discovery-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Product Discovery - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class Product extends AbstractDomainAggregateRoot {
+            - id : Long
+            - name : String
+            - brand : String
+            - category : ProductCategory
+            - description : String
+            - benefits : List<String>
+            - aiRecommended : boolean
+            + Product()
+        }
+
+        class FavoriteProduct extends AbstractDomainAggregateRoot {
+            - id : Long
+            - productId : ProductId
+            - userId : UserId
+            - savedAt : Date
+            + FavoriteProduct(productId : Long, userId : Long)
+            + removeFromFavorites() : void
+            + getProductIdValue() : Long
+            + getUserIdValue() : Long
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "valueobjects" {
+        class ProductId <<record>> {
+            + productId : Long
+        }
+
+        class UserId <<record>> {
+            + userId : Long
+        }
+
+        enum ProductCategory {
+            CLEANSER
+            MOISTURIZER
+            SERUM
+            SUNSCREEN
+            MASK
+            TONER
+            EXFOLIATOR
+        }
+    }
+
+    package "commands" {
+        class SaveProductAsFavoriteCommand <<record>> {
+            + productId : Long
+            + userId : Long
+        }
+
+        class RemoveProductFromFavoritesCommand <<record>> {
+            + favoriteProductId : Long
+            + userId : Long
+        }
+
+        class SeedProductsCommand {
+        }
+    }
+
+    package "events" {
+        class ProductSavedAsFavoriteEvent <<record>> {
+            + favoriteProductId : Long
+            + productId : Long
+            + userId : Long
+        }
+
+        class ProductRemovedFromFavoritesEvent <<record>> {
+            + favoriteProductId : Long
+            + productId : Long
+            + userId : Long
+        }
+    }
+
+    package "queries" {
+        class GetAllProductsQuery {
+        }
+
+        class GetProductByIdQuery <<record>> {
+            + productId : Long
+        }
+
+        class GetFavoriteProductsByUserIdQuery <<record>> {
+            + userId : Long
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface ProductRepository {
+        + findById(id : Long) : Optional<Product>
+        + findAll() : List<Product>
+        + save(product : Product) : Product
+    }
+
+    interface FavoriteProductRepository {
+        + findById(id : Long) : Optional<FavoriteProduct>
+        + findByUserId(userId : UserId) : List<FavoriteProduct>
+        + save(favorite : FavoriteProduct) : FavoriteProduct
+        + delete(favorite : FavoriteProduct) : void
+    }
+}
+
+' Aggregate relationships
+Product --> ProductCategory
+FavoriteProduct --> ProductId
+FavoriteProduct --> UserId
+
+' Repository dependencies
+ProductRepository ..> Product
+FavoriteProductRepository ..> FavoriteProduct
+FavoriteProductRepository ..> UserId
+
+@enduml

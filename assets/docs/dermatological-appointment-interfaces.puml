@@ -1,0 +1,197 @@
+@startuml dermatological-appointment-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatological Appointment - Interfaces Layer
+
+package "interfaces" {
+
+    package "acl" {
+        interface DermatologicalAppointmentContextFacade {
+            + existsAppointmentByPatientId(patientId : Long) : boolean
+            + fetchAppointmentStatusById(appointmentId : Long) : String
+        }
+    }
+
+    package "events" {
+        class RequestConsultationPaymentIntegrationEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+            + amount : Double
+        }
+
+        class ProcessRefundIntegrationEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+            + paymentId : Long
+        }
+    }
+
+    package "rest" {
+
+        class AppointmentController {
+            - appointmentCommandService : AppointmentCommandService
+            - appointmentQueryService : AppointmentQueryService
+            + scheduleAppointment(resource : ScheduleAppointmentResource) : ResponseEntity<AppointmentResource>
+            + confirmAppointment(id : Long, resource : ConfirmAppointmentResource) : ResponseEntity<AppointmentResource>
+            + cancelAppointment(id : Long, resource : CancelAppointmentResource) : ResponseEntity<AppointmentResource>
+            + reprogramAppointment(id : Long, resource : ReprogramRequestResource) : ResponseEntity<AppointmentResource>
+            + getAppointmentById(id : Long) : ResponseEntity<AppointmentResource>
+            + getAppointmentsByPatientId(patientId : Long) : ResponseEntity<List<AppointmentResource>>
+            + getAppointmentsByDermatologistId(dermatologistId : Long) : ResponseEntity<List<AppointmentResource>>
+        }
+
+        class ConsultationController {
+            - consultationCommandService : ConsultationCommandService
+            - consultationQueryService : ConsultationQueryService
+            + startConsultation(resource : StartConsultationResource) : ResponseEntity<ConsultationResource>
+            + saveNotes(id : Long, resource : SaveNotesResource) : ResponseEntity<ConsultationResource>
+            + recordDiagnosis(id : Long, resource : RecordDiagnosisResource) : ResponseEntity<ConsultationResource>
+            + uploadPhoto(id : Long, resource : UploadClinicalPhotoResource) : ResponseEntity<ConsultationResource>
+            + finishConsultation(id : Long, resource : FinishConsultationResource) : ResponseEntity<ConsultationResource>
+            + getConsultationById(id : Long) : ResponseEntity<ConsultationResource>
+            + getConsultationByAppointmentId(appointmentId : Long) : ResponseEntity<ConsultationResource>
+        }
+
+        package "resources" {
+            class AppointmentResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + dermatologistId : Long
+                + scheduledAt : String
+                + status : String
+            }
+
+            class ConsultationResource <<record>> {
+                + id : Long
+                + appointmentId : Long
+                + patientId : Long
+                + dermatologistId : Long
+                + status : String
+                + notes : String
+                + recommendations : String
+                + clinicalPhotoUrls : List<String>
+            }
+
+            class ScheduleAppointmentResource <<record>> {
+                + patientId : Long
+                + dermatologistId : Long
+                + scheduledAt : String
+            }
+
+            class ConfirmAppointmentResource <<record>> {
+                + appointmentId : Long
+            }
+
+            class CancelAppointmentResource <<record>> {
+                + appointmentId : Long
+                + cancellationReason : String
+            }
+
+            class ReprogramRequestResource <<record>> {
+                + appointmentId : Long
+                + newDate : String
+            }
+
+            class StartConsultationResource <<record>> {
+                + appointmentId : Long
+                + patientId : Long
+                + dermatologistId : Long
+            }
+
+            class SaveNotesResource <<record>> {
+                + notes : String
+            }
+
+            class RecordDiagnosisResource <<record>> {
+                + notes : String
+                + recommendations : String
+            }
+
+            class UploadClinicalPhotoResource <<record>> {
+                + photoUrl : String
+            }
+
+            class FinishConsultationResource <<record>> {
+                + consultationId : Long
+            }
+        }
+
+        package "transform" {
+            class AppointmentResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Appointment) : AppointmentResource
+            }
+
+            class ConsultationResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Consultation) : ConsultationResource
+            }
+
+            class ScheduleAppointmentCommandFromResourceAssembler {
+                + toCommandFromResource(resource : ScheduleAppointmentResource) : ScheduleDermatologyAppointmentCommand
+            }
+
+            class ConfirmAppointmentCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : ConfirmAppointmentResource) : ConfirmAppointmentCommand
+            }
+
+            class CancelAppointmentCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : CancelAppointmentResource) : CancelAppointmentCommand
+            }
+
+            class ReprogramRequestCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : ReprogramRequestResource) : ReprogramAppointmentCommand
+            }
+
+            class StartConsultationCommandFromResourceAssembler {
+                + toCommandFromResource(resource : StartConsultationResource) : StartConsultationCommand
+            }
+
+            class SaveNotesCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : SaveNotesResource) : SaveNotesCommand
+            }
+
+            class RecordDiagnosisCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : RecordDiagnosisResource) : RecordDermatologicalDiagnosisCommand
+            }
+
+            class UploadClinicalPhotoCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UploadClinicalPhotoResource) : UploadClinicalPhotoCommand
+            }
+
+            class FinishConsultationCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : FinishConsultationResource) : FinishConsultationCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+AppointmentController ..> AppointmentResource
+AppointmentController ..> ScheduleAppointmentResource
+AppointmentController ..> CancelAppointmentResource
+AppointmentController ..> ConfirmAppointmentResource
+AppointmentController ..> ReprogramRequestResource
+AppointmentController ..> AppointmentResourceFromEntityAssembler
+AppointmentController ..> ScheduleAppointmentCommandFromResourceAssembler
+AppointmentController ..> CancelAppointmentCommandFromResourceAssembler
+AppointmentController ..> ConfirmAppointmentCommandFromResourceAssembler
+
+ConsultationController ..> ConsultationResource
+ConsultationController ..> StartConsultationResource
+ConsultationController ..> SaveNotesResource
+ConsultationController ..> RecordDiagnosisResource
+ConsultationController ..> UploadClinicalPhotoResource
+ConsultationController ..> FinishConsultationResource
+ConsultationController ..> ConsultationResourceFromEntityAssembler
+ConsultationController ..> StartConsultationCommandFromResourceAssembler
+
+' Assembler dependencies
+AppointmentResourceFromEntityAssembler ..> AppointmentResource
+ConsultationResourceFromEntityAssembler ..> ConsultationResource
+
+@enduml

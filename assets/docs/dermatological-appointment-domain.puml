@@ -1,0 +1,277 @@
+@startuml dermatological-appointment-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatological Appointment - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class Appointment extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - dermatologistId : DermatologistId
+            - paymentId : Long
+            - scheduledAt : AppointmentDateTime
+            - status : AppointmentStatus
+            - cancellationReason : String
+            - pendingReprogramDate : String
+            + Appointment(command : ScheduleDermatologyAppointmentCommand)
+            + cancel(command : CancelAppointmentCommand) : void
+            + confirm() : void
+            + markInProgress() : void
+            + complete() : void
+            + requestReprogram(command : RequestReprogramAppointmentCommand) : void
+            + reprogram(command : ReprogramAppointmentCommand) : void
+            + isEligibleForRefund() : boolean
+        }
+
+        class Consultation extends AbstractDomainAggregateRoot {
+            - id : Long
+            - appointmentId : Long
+            - patientId : PatientId
+            - dermatologistId : DermatologistId
+            - status : ConsultationStatus
+            - notes : ClinicalNotes
+            - recommendations : ClinicalNotes
+            - clinicalPhotoUrls : List<String>
+            - startedAt : String
+            - finishedAt : String
+            + Consultation(command : StartConsultationCommand)
+            + start() : void
+            + saveNotes(command : SaveNotesCommand) : void
+            + recordDiagnosis(command : RecordDermatologicalDiagnosisCommand) : void
+            + uploadPhoto(command : UploadClinicalPhotoCommand) : void
+            + finish(command : FinishConsultationCommand) : void
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "valueobjects" {
+        class PatientId <<record>> {
+            + patientId : Long
+        }
+
+        class DermatologistId <<record>> {
+            + dermatologistId : Long
+        }
+
+        class AppointmentDateTime <<record>> {
+            + value : String
+        }
+
+        class ClinicalNotes <<record>> {
+            + value : String
+        }
+
+        class PhotoUrl <<record>> {
+            + value : String
+        }
+
+        enum AppointmentStatus {
+            SCHEDULED
+            CONFIRMED
+            IN_PROGRESS
+            COMPLETED
+            CANCELLED
+        }
+
+        enum ConsultationStatus {
+            PENDING
+            IN_PROGRESS
+            COMPLETED
+        }
+    }
+
+    package "commands" {
+        class ScheduleDermatologyAppointmentCommand <<record>> {
+            + patientId : Long
+            + dermatologistId : Long
+            + scheduledAt : String
+        }
+
+        class ConfirmAppointmentCommand <<record>> {
+            + appointmentId : Long
+        }
+
+        class CancelAppointmentCommand <<record>> {
+            + appointmentId : Long
+            + cancellationReason : String
+        }
+
+        class ReprogramAppointmentCommand <<record>> {
+            + appointmentId : Long
+            + newDate : String
+        }
+
+        class RequestReprogramAppointmentCommand <<record>> {
+            + appointmentId : Long
+            + newDate : String
+        }
+
+        class MarkAppointmentInProgressCommand <<record>> {
+            + appointmentId : Long
+        }
+
+        class CompleteAppointmentCommand <<record>> {
+            + appointmentId : Long
+        }
+
+        class StartConsultationCommand <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+            + dermatologistId : Long
+        }
+
+        class SaveNotesCommand <<record>> {
+            + consultationId : Long
+            + notes : String
+        }
+
+        class RecordDermatologicalDiagnosisCommand <<record>> {
+            + consultationId : Long
+            + notes : String
+            + recommendations : String
+        }
+
+        class UploadClinicalPhotoCommand <<record>> {
+            + consultationId : Long
+            + photoUrl : String
+        }
+
+        class FinishConsultationCommand <<record>> {
+            + consultationId : Long
+        }
+    }
+
+    package "events" {
+        class DermatologyAppointmentScheduledEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+            + dermatologistId : Long
+            + scheduledAt : String
+        }
+
+        class AppointmentConfirmedEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+        }
+
+        class AppointmentCancelledEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+            + cancellationReason : String
+        }
+
+        class AppointmentReprogrammedEvent <<record>> {
+            + appointmentId : Long
+            + newDate : String
+        }
+
+        class AppointmentReprogramRequestSubmittedEvent <<record>> {
+            + appointmentId : Long
+            + proposedDate : String
+        }
+
+        class AppointmentCompletedEvent <<record>> {
+            + appointmentId : Long
+            + patientId : Long
+        }
+
+        class ConsultationStartedEvent <<record>> {
+            + consultationId : Long
+            + appointmentId : Long
+        }
+
+        class ClinicalNotesSavedEvent <<record>> {
+            + consultationId : Long
+            + notes : String
+        }
+
+        class DermatologicalDiagnosisRecordedEvent <<record>> {
+            + consultationId : Long
+            + notes : String
+            + recommendations : String
+        }
+
+        class ClinicalPhotoUploadedEvent <<record>> {
+            + consultationId : Long
+            + photoUrl : String
+        }
+
+        class ConsultationFinishedEvent <<record>> {
+            + consultationId : Long
+        }
+    }
+
+    package "queries" {
+        class GetAppointmentByIdQuery <<record>> {
+            + appointmentId : Long
+        }
+
+        class GetAppointmentsByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetAppointmentsByDermatologistIdQuery <<record>> {
+            + dermatologistId : Long
+        }
+
+        class GetConsultationByIdQuery <<record>> {
+            + consultationId : Long
+        }
+
+        class GetConsultationByAppointmentIdQuery <<record>> {
+            + appointmentId : Long
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface AppointmentRepository {
+        + findById(id : Long) : Optional<Appointment>
+        + findByPatientId(patientId : PatientId) : List<Appointment>
+        + findByDermatologistId(dermatologistId : DermatologistId) : List<Appointment>
+        + save(appointment : Appointment) : Appointment
+        + existsById(id : Long) : boolean
+        + existsByDermatologistIdAndDate(dermatologistId : DermatologistId, scheduledAt : AppointmentDateTime) : boolean
+    }
+
+    interface ConsultationRepository {
+        + findById(id : Long) : Optional<Consultation>
+        + findByAppointmentId(appointmentId : Long) : Optional<Consultation>
+        + findByPatientId(patientId : PatientId) : List<Consultation>
+        + save(consultation : Consultation) : Consultation
+        + existsByAppointmentId(appointmentId : Long) : boolean
+    }
+}
+
+' Relationships - Aggregates
+Appointment --> PatientId
+Appointment --> DermatologistId
+Appointment --> AppointmentDateTime
+Appointment --> AppointmentStatus
+Appointment --> ClinicalNotes
+
+Consultation --> PatientId
+Consultation --> DermatologistId
+Consultation --> ConsultationStatus
+Consultation --> ClinicalNotes
+
+' Repository dependencies
+AppointmentRepository ..> Appointment
+AppointmentRepository ..> PatientId
+AppointmentRepository ..> DermatologistId
+AppointmentRepository ..> AppointmentDateTime
+
+ConsultationRepository ..> Consultation
+ConsultationRepository ..> PatientId
+
+@enduml

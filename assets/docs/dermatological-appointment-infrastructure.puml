@@ -1,0 +1,151 @@
+@startuml dermatological-appointment-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatological Appointment - Infrastructure Layer
+
+package "infrastructure" {
+
+    package "acl" {
+        class ExternalDermatologyCareServiceImpl {
+            - dermatologyCareContextFacade : DermatologyCareContextFacade
+            + existsDermatologistById(dermatologistId : Long) : boolean
+            + fetchAvailabilityByDermatologistId(dermatologistId : Long) : List<?>
+        }
+
+        class ExternalIamServiceImpl {
+            - iamContextFacade : IamContextFacade
+            + existsUserById(userId : Long) : boolean
+            + fetchUserFullNameById(userId : Long) : String
+        }
+    }
+
+    package "persistence.jpa" {
+
+        package "entities" {
+            class AppointmentPersistenceEntity {
+                - id : Long
+                - patientId : Long
+                - dermatologistId : Long
+                - paymentId : Long
+                - scheduledAt : String
+                - status : String
+                - cancellationReason : String
+                - pendingReprogramDate : String
+            }
+
+            class ConsultationPersistenceEntity {
+                - id : Long
+                - appointmentId : Long
+                - patientId : Long
+                - dermatologistId : Long
+                - status : String
+                - notes : String
+                - recommendations : String
+                - clinicalPhotoUrls : List<String>
+                - startedAt : String
+                - finishedAt : String
+            }
+        }
+
+        package "repositories" {
+            interface AppointmentPersistenceRepository {
+                + findByPatientId(patientId : Long) : List<AppointmentPersistenceEntity>
+                + findByDermatologistId(dermatologistId : Long) : List<AppointmentPersistenceEntity>
+                + existsByDermatologistIdAndScheduledAt(dermatologistId : Long, scheduledAt : String) : boolean
+            }
+
+            interface ConsultationPersistenceRepository {
+                + findByAppointmentId(appointmentId : Long) : Optional<ConsultationPersistenceEntity>
+                + findByPatientId(patientId : Long) : List<ConsultationPersistenceEntity>
+                + existsByAppointmentId(appointmentId : Long) : boolean
+            }
+        }
+
+        package "adapters" {
+            class AppointmentRepositoryImpl {
+                - repository : AppointmentPersistenceRepository
+                - assembler : AppointmentPersistenceAssembler
+                + findById(id : Long) : Optional<Appointment>
+                + findByPatientId(patientId : PatientId) : List<Appointment>
+                + findByDermatologistId(dermatologistId : DermatologistId) : List<Appointment>
+                + save(appointment : Appointment) : Appointment
+                + existsById(id : Long) : boolean
+                + existsByDermatologistIdAndDate(dermatologistId : DermatologistId, scheduledAt : AppointmentDateTime) : boolean
+            }
+
+            class ConsultationRepositoryImpl {
+                - repository : ConsultationPersistenceRepository
+                - assembler : ConsultationPersistenceAssembler
+                + findById(id : Long) : Optional<Consultation>
+                + findByAppointmentId(appointmentId : Long) : Optional<Consultation>
+                + findByPatientId(patientId : PatientId) : List<Consultation>
+                + save(consultation : Consultation) : Consultation
+                + existsByAppointmentId(appointmentId : Long) : boolean
+            }
+        }
+
+        package "assemblers" {
+            class AppointmentPersistenceAssembler {
+                + toEntity(appointment : Appointment) : AppointmentPersistenceEntity
+                + toDomain(entity : AppointmentPersistenceEntity) : Appointment
+            }
+
+            class ConsultationPersistenceAssembler {
+                + toEntity(consultation : Consultation) : ConsultationPersistenceEntity
+                + toDomain(entity : ConsultationPersistenceEntity) : Consultation
+            }
+        }
+
+        package "converters" {
+            class AppointmentDateTimePersistenceConverter {
+                + convertToDatabaseColumn(attribute : AppointmentDateTime) : String
+                + convertToEntityAttribute(dbData : String) : AppointmentDateTime
+            }
+
+            class ClinicalNotesPersistenceConverter {
+                + convertToDatabaseColumn(attribute : ClinicalNotes) : String
+                + convertToEntityAttribute(dbData : String) : ClinicalNotes
+            }
+
+            class PatientIdPersistenceConverter {
+                + convertToDatabaseColumn(attribute : PatientId) : Long
+                + convertToEntityAttribute(dbData : Long) : PatientId
+            }
+
+            class DermatologistIdPersistenceConverter {
+                + convertToDatabaseColumn(attribute : DermatologistId) : Long
+                + convertToEntityAttribute(dbData : Long) : DermatologistId
+            }
+        }
+    }
+}
+
+' Implementations
+AppointmentRepositoryImpl ..|> AppointmentRepository
+ConsultationRepositoryImpl ..|> ConsultationRepository
+ExternalDermatologyCareServiceImpl ..|> ExternalDermatologyCareService
+ExternalIamServiceImpl ..|> ExternalIamService
+
+' Adapter -> Repository
+AppointmentRepositoryImpl --> AppointmentPersistenceRepository
+AppointmentRepositoryImpl --> AppointmentPersistenceAssembler
+ConsultationRepositoryImpl --> ConsultationPersistenceRepository
+ConsultationRepositoryImpl --> ConsultationPersistenceAssembler
+
+' Assembler -> Entity
+AppointmentPersistenceAssembler --> AppointmentPersistenceEntity
+ConsultationPersistenceAssembler --> ConsultationPersistenceEntity
+
+' Domain interfaces referenced
+interface AppointmentRepository
+interface ConsultationRepository
+interface ExternalDermatologyCareService
+interface ExternalIamService
+
+@enduml

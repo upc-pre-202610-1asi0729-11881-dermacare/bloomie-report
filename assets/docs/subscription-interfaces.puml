@@ -1,0 +1,99 @@
+@startuml subscription-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Subscription - Interfaces Layer
+
+package "interfaces" {
+
+    package "acl" {
+        interface SubscriptionContextFacade {
+            + hasActiveSubscription(patientId : Long) : boolean
+            + fetchSubscriptionStatusByPatientId(patientId : Long) : String
+        }
+    }
+
+    package "events" {
+        class SubscriptionPlanSelectedIntegrationEvent <<record>> {
+            + subscriptionId : Long
+            + patientId : Long
+            + planId : Long
+            + amount : Double
+        }
+    }
+
+    package "rest" {
+
+        class SubscriptionController {
+            - subscriptionCommandService : SubscriptionCommandService
+            - subscriptionQueryService : SubscriptionQueryService
+            + selectSubscriptionPlan(resource : SelectSubscriptionPlanResource) : ResponseEntity<SubscriptionResource>
+            + getSubscriptionById(id : Long) : ResponseEntity<SubscriptionResource>
+            + getSubscriptionByPatientId(patientId : Long) : ResponseEntity<SubscriptionResource>
+        }
+
+        class PlanController {
+            - subscriptionQueryService : SubscriptionQueryService
+            + getAllPlans() : ResponseEntity<List<PlanResource>>
+            + getPlanById(id : Long) : ResponseEntity<PlanResource>
+        }
+
+        package "resources" {
+            class SubscriptionResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + planId : Long
+                + status : String
+                + startDate : String
+                + endDate : String
+            }
+
+            class PlanResource <<record>> {
+                + id : Long
+                + name : String
+                + monthlyPrice : Double
+                + description : String
+                + planType : String
+            }
+
+            class SelectSubscriptionPlanResource <<record>> {
+                + patientId : Long
+                + planId : Long
+            }
+        }
+
+        package "transform" {
+            class SubscriptionResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Subscription) : SubscriptionResource
+            }
+
+            class PlanResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Plan) : PlanResource
+            }
+
+            class SelectSubscriptionPlanCommandFromResourceAssembler {
+                + toCommandFromResource(resource : SelectSubscriptionPlanResource) : SelectSubscriptionPlanCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+SubscriptionController ..> SubscriptionResource
+SubscriptionController ..> SelectSubscriptionPlanResource
+SubscriptionController ..> SubscriptionResourceFromEntityAssembler
+SubscriptionController ..> SelectSubscriptionPlanCommandFromResourceAssembler
+
+PlanController ..> PlanResource
+PlanController ..> PlanResourceFromEntityAssembler
+
+' Assembler -> Resource
+SubscriptionResourceFromEntityAssembler ..> SubscriptionResource
+PlanResourceFromEntityAssembler ..> PlanResource
+
+@enduml

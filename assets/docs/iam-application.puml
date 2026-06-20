@@ -1,0 +1,87 @@
+@startuml iam-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title IAM - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface UserCommandService {
+            + registerUser(command : RegisterUserCommand) : Result<User>
+            + registerDermatologist(command : RegisterDermatologistCommand) : Result<User>
+            + updateProfile(command : UpdateUserProfileCommand) : Result<User>
+            + updatePhoto(command : UpdateUserPhotoCommand) : Result<User>
+            + changePassword(command : ChangePasswordCommand, currentPasswordHash : String) : Result<User>
+        }
+    }
+
+    package "queryservices" {
+        interface UserQueryService {
+            + getById(query : GetUserByIdQuery) : Result<User>
+            + getByEmail(query : GetUserByEmailQuery) : Result<User>
+            + getAll(query : GetAllUsersQuery) : Result<List<User>>
+        }
+    }
+
+    package "acl" {
+        class IamContextFacadeImpl {
+            - userQueryService : UserQueryService
+            + existsUserById(userId : Long) : boolean
+            + fetchUserFullNameById(userId : Long) : String
+            + fetchUserEmailById(userId : Long) : String
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class UserCommandServiceImpl {
+                - userRepository : UserRepository
+                - hashingService : HashingService
+                + registerUser(command : RegisterUserCommand) : Result<User>
+                + registerDermatologist(command : RegisterDermatologistCommand) : Result<User>
+                + updateProfile(command : UpdateUserProfileCommand) : Result<User>
+                + updatePhoto(command : UpdateUserPhotoCommand) : Result<User>
+                + changePassword(command : ChangePasswordCommand, currentPasswordHash : String) : Result<User>
+            }
+        }
+
+        package "queryservices" {
+            class UserQueryServiceImpl {
+                - userRepository : UserRepository
+                + getById(query : GetUserByIdQuery) : Result<User>
+                + getByEmail(query : GetUserByEmailQuery) : Result<User>
+                + getAll(query : GetAllUsersQuery) : Result<List<User>>
+            }
+        }
+
+        package "eventhandlers" {
+            class DermatologistRegisteredEventHandler {
+                + on(event : DermatologistRegisteredEvent) : void
+            }
+        }
+
+        package "outboundservices.hashing" {
+            interface HashingService {
+                + encode(rawPassword : String) : String
+                + matches(rawPassword : String, encodedPassword : String) : boolean
+            }
+        }
+    }
+}
+
+' Implementations
+UserCommandServiceImpl ..|> UserCommandService
+UserQueryServiceImpl ..|> UserQueryService
+
+' Dependencies
+UserCommandServiceImpl --> HashingService
+IamContextFacadeImpl --> UserQueryService
+
+@enduml

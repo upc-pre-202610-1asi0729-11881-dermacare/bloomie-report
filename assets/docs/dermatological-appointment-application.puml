@@ -1,0 +1,144 @@
+@startuml dermatological-appointment-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Dermatological Appointment - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface AppointmentCommandService {
+            + schedule(command : ScheduleDermatologyAppointmentCommand) : Result<Appointment>
+            + confirm(command : ConfirmAppointmentCommand) : Result<Appointment>
+            + cancel(command : CancelAppointmentCommand) : Result<Appointment>
+            + reprogram(command : ReprogramAppointmentCommand) : Result<Appointment>
+            + requestReprogram(command : RequestReprogramAppointmentCommand) : Result<Appointment>
+        }
+
+        interface ConsultationCommandService {
+            + start(command : StartConsultationCommand) : Result<Consultation>
+            + saveNotes(command : SaveNotesCommand) : Result<Consultation>
+            + recordDiagnosis(command : RecordDermatologicalDiagnosisCommand) : Result<Consultation>
+            + uploadPhoto(command : UploadClinicalPhotoCommand) : Result<Consultation>
+            + finish(command : FinishConsultationCommand) : Result<Consultation>
+        }
+    }
+
+    package "queryservices" {
+        interface AppointmentQueryService {
+            + getById(query : GetAppointmentByIdQuery) : Result<Appointment>
+            + getByPatientId(query : GetAppointmentsByPatientIdQuery) : Result<List<Appointment>>
+            + getByDermatologistId(query : GetAppointmentsByDermatologistIdQuery) : Result<List<Appointment>>
+        }
+
+        interface ConsultationQueryService {
+            + getById(query : GetConsultationByIdQuery) : Result<Consultation>
+            + getByAppointmentId(query : GetConsultationByAppointmentIdQuery) : Result<Consultation>
+        }
+    }
+
+    package "acl" {
+        class DermatologicalAppointmentContextFacadeImpl {
+            - appointmentQueryService : AppointmentQueryService
+            + existsAppointmentByPatientId(patientId : Long) : boolean
+            + fetchAppointmentStatusById(appointmentId : Long) : String
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class AppointmentCommandServiceImpl {
+                - appointmentRepository : AppointmentRepository
+                - externalIamService : ExternalIamService
+                - externalDermatologyCareService : ExternalDermatologyCareService
+                + schedule(command : ScheduleDermatologyAppointmentCommand) : Result<Appointment>
+                + confirm(command : ConfirmAppointmentCommand) : Result<Appointment>
+                + cancel(command : CancelAppointmentCommand) : Result<Appointment>
+                + reprogram(command : ReprogramAppointmentCommand) : Result<Appointment>
+                + requestReprogram(command : RequestReprogramAppointmentCommand) : Result<Appointment>
+            }
+
+            class ConsultationCommandServiceImpl {
+                - consultationRepository : ConsultationRepository
+                - appointmentRepository : AppointmentRepository
+                + start(command : StartConsultationCommand) : Result<Consultation>
+                + saveNotes(command : SaveNotesCommand) : Result<Consultation>
+                + recordDiagnosis(command : RecordDermatologicalDiagnosisCommand) : Result<Consultation>
+                + uploadPhoto(command : UploadClinicalPhotoCommand) : Result<Consultation>
+                + finish(command : FinishConsultationCommand) : Result<Consultation>
+            }
+        }
+
+        package "queryservices" {
+            class AppointmentQueryServiceImpl {
+                - appointmentRepository : AppointmentRepository
+                + getById(query : GetAppointmentByIdQuery) : Result<Appointment>
+                + getByPatientId(query : GetAppointmentsByPatientIdQuery) : Result<List<Appointment>>
+                + getByDermatologistId(query : GetAppointmentsByDermatologistIdQuery) : Result<List<Appointment>>
+            }
+
+            class ConsultationQueryServiceImpl {
+                - consultationRepository : ConsultationRepository
+                + getById(query : GetConsultationByIdQuery) : Result<Consultation>
+                + getByAppointmentId(query : GetConsultationByAppointmentIdQuery) : Result<Consultation>
+            }
+        }
+
+        package "eventhandlers" {
+            class DermatologyAppointmentScheduledEventHandler {
+                + on(event : DermatologyAppointmentScheduledEvent) : void
+            }
+
+            class AppointmentCancelledEventHandler {
+                + on(event : AppointmentCancelledEvent) : void
+            }
+
+            class AppointmentReprogramRequestSubmittedEventHandler {
+                + on(event : AppointmentReprogramRequestSubmittedEvent) : void
+            }
+
+            class ConsultationStartedEventHandler {
+                + on(event : ConsultationStartedEvent) : void
+            }
+
+            class ConsultationFinishedEventHandler {
+                + on(event : ConsultationFinishedEvent) : void
+            }
+
+            class AvailabilityDefinedIntegrationEventHandler {
+                + on(event : AvailabilityDefinedIntegrationEvent) : void
+            }
+        }
+
+        package "outboundservices.acl" {
+            interface ExternalIamService {
+                + existsUserById(userId : Long) : boolean
+                + fetchUserFullNameById(userId : Long) : String
+            }
+
+            interface ExternalDermatologyCareService {
+                + existsDermatologistById(dermatologistId : Long) : boolean
+                + fetchAvailabilityByDermatologistId(dermatologistId : Long) : List<?>
+            }
+        }
+    }
+}
+
+' Implementations
+AppointmentCommandServiceImpl ..|> AppointmentCommandService
+ConsultationCommandServiceImpl ..|> ConsultationCommandService
+AppointmentQueryServiceImpl ..|> AppointmentQueryService
+ConsultationQueryServiceImpl ..|> ConsultationQueryService
+
+' Internal dependencies
+AppointmentCommandServiceImpl --> ExternalIamService
+AppointmentCommandServiceImpl --> ExternalDermatologyCareService
+DermatologicalAppointmentContextFacadeImpl --> AppointmentQueryService
+
+@enduml

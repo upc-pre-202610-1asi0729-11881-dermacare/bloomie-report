@@ -1,0 +1,104 @@
+@startuml product-discovery-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Product Discovery - Infrastructure Layer
+
+package "infrastructure.persistence.jpa" {
+
+    package "entities" {
+        class ProductPersistenceEntity {
+            - id : Long
+            - name : String
+            - brand : String
+            - category : String
+            - description : String
+            - benefits : List<String>
+            - aiRecommended : boolean
+        }
+
+        class FavoriteProductPersistenceEntity {
+            - id : Long
+            - productId : Long
+            - userId : Long
+            - savedAt : Date
+        }
+    }
+
+    package "repositories" {
+        interface ProductPersistenceRepository {
+        }
+
+        interface FavoriteProductPersistenceRepository {
+            + findByUserId(userId : Long) : List<FavoriteProductPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class ProductRepositoryImpl {
+            - repository : ProductPersistenceRepository
+            - assembler : ProductPersistenceAssembler
+            + findById(id : Long) : Optional<Product>
+            + findAll() : List<Product>
+            + save(product : Product) : Product
+        }
+
+        class FavoriteProductRepositoryImpl {
+            - repository : FavoriteProductPersistenceRepository
+            - assembler : FavoriteProductPersistenceAssembler
+            + findById(id : Long) : Optional<FavoriteProduct>
+            + findByUserId(userId : UserId) : List<FavoriteProduct>
+            + save(favorite : FavoriteProduct) : FavoriteProduct
+            + delete(favorite : FavoriteProduct) : void
+        }
+    }
+
+    package "assemblers" {
+        class ProductPersistenceAssembler {
+            + toEntity(product : Product) : ProductPersistenceEntity
+            + toDomain(entity : ProductPersistenceEntity) : Product
+        }
+
+        class FavoriteProductPersistenceAssembler {
+            + toEntity(favorite : FavoriteProduct) : FavoriteProductPersistenceEntity
+            + toDomain(entity : FavoriteProductPersistenceEntity) : FavoriteProduct
+        }
+    }
+
+    package "converters" {
+        class ProductIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : ProductId) : Long
+            + convertToEntityAttribute(dbData : Long) : ProductId
+        }
+
+        class UserIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : UserId) : Long
+            + convertToEntityAttribute(dbData : Long) : UserId
+        }
+    }
+}
+
+' Domain interfaces
+interface ProductRepository
+interface FavoriteProductRepository
+
+' Implementations
+ProductRepositoryImpl ..|> ProductRepository
+FavoriteProductRepositoryImpl ..|> FavoriteProductRepository
+
+' Adapter dependencies
+ProductRepositoryImpl --> ProductPersistenceRepository
+ProductRepositoryImpl --> ProductPersistenceAssembler
+FavoriteProductRepositoryImpl --> FavoriteProductPersistenceRepository
+FavoriteProductRepositoryImpl --> FavoriteProductPersistenceAssembler
+
+' Assembler -> Entity
+ProductPersistenceAssembler --> ProductPersistenceEntity
+FavoriteProductPersistenceAssembler --> FavoriteProductPersistenceEntity
+
+@enduml

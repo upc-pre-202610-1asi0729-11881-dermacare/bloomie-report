@@ -1,0 +1,83 @@
+@startuml product-discovery-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Product Discovery - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface ProductCommandService {
+            + seed(command : SeedProductsCommand) : Result<List<Product>>
+        }
+
+        interface FavoriteProductCommandService {
+            + saveAsFavorite(command : SaveProductAsFavoriteCommand) : Result<FavoriteProduct>
+            + removeFromFavorites(command : RemoveProductFromFavoritesCommand) : Result<Void>
+        }
+    }
+
+    package "queryservices" {
+        interface ProductQueryService {
+            + getAll(query : GetAllProductsQuery) : Result<List<Product>>
+            + getById(query : GetProductByIdQuery) : Result<Product>
+        }
+
+        interface FavoriteProductQueryService {
+            + getByUserId(query : GetFavoriteProductsByUserIdQuery) : Result<List<FavoriteProduct>>
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class ProductCommandServiceImpl {
+                - productRepository : ProductRepository
+                + seed(command : SeedProductsCommand) : Result<List<Product>>
+            }
+
+            class FavoriteProductCommandServiceImpl {
+                - favoriteProductRepository : FavoriteProductRepository
+                - productRepository : ProductRepository
+                + saveAsFavorite(command : SaveProductAsFavoriteCommand) : Result<FavoriteProduct>
+                + removeFromFavorites(command : RemoveProductFromFavoritesCommand) : Result<Void>
+            }
+        }
+
+        package "queryservices" {
+            class ProductQueryServiceImpl {
+                - productRepository : ProductRepository
+                + getAll(query : GetAllProductsQuery) : Result<List<Product>>
+                + getById(query : GetProductByIdQuery) : Result<Product>
+            }
+
+            class FavoriteProductQueryServiceImpl {
+                - favoriteProductRepository : FavoriteProductRepository
+                + getByUserId(query : GetFavoriteProductsByUserIdQuery) : Result<List<FavoriteProduct>>
+            }
+        }
+
+        package "eventhandlers" {
+            class ApplicationReadyEventHandler {
+                - productCommandService : ProductCommandService
+                + onApplicationReady(event : ApplicationReadyEvent) : void
+            }
+        }
+    }
+}
+
+' Implementations
+ProductCommandServiceImpl ..|> ProductCommandService
+FavoriteProductCommandServiceImpl ..|> FavoriteProductCommandService
+ProductQueryServiceImpl ..|> ProductQueryService
+FavoriteProductQueryServiceImpl ..|> FavoriteProductQueryService
+
+' Event handler dependencies
+ApplicationReadyEventHandler --> ProductCommandService
+
+@enduml

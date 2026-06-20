@@ -1,0 +1,199 @@
+@startuml routine-management-domain
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Routine Management - Domain Layer
+
+package "domain.model" {
+
+    package "aggregates" {
+        class Routine extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - skinAnalysisId : SkinAnalysisId
+            - status : RoutineStatus
+            - skinType : String
+            - items : List<RoutineItem>
+            - createdAt : LocalDateTime
+            + Routine()
+            + Routine(command : GeneratePersonalizedRoutineCommand)
+            + removeItem(command : RemoveProductFromRoutineCommand) : void
+            + replaceProduct(command : ReplaceProductInRoutineCommand) : void
+        }
+
+        class DailyTracking extends AbstractDomainAggregateRoot {
+            - id : Long
+            - patientId : PatientId
+            - routineId : RoutineId
+            - date : LocalDate
+            - completed : boolean
+            - completedAt : LocalDateTime
+            + DailyTracking()
+            + DailyTracking(command : MarkRoutineAsCompletedCommand)
+        }
+
+        abstract class AbstractDomainAggregateRoot {
+        }
+    }
+
+    package "entities" {
+        class RoutineItem {
+            - id : Long
+            - step : String
+            - order : Integer
+            - scheduledTime : String
+            - productRecommendation : String
+            + RoutineItem(id : Long, step : String, order : Integer, scheduledTime : String, productRecommendation : String)
+            + updateProductRecommendation(newProduct : String) : void
+        }
+    }
+
+    package "valueobjects" {
+        class PatientId <<record>> {
+            + patientId : Long
+        }
+
+        class SkinAnalysisId <<record>> {
+            + skinAnalysisId : Long
+        }
+
+        class RoutineId <<record>> {
+            + routineId : Long
+        }
+
+        enum RoutineStatus {
+            ACTIVE
+            INACTIVE
+            PAUSED
+        }
+
+        enum TrackingStatus {
+            PENDING
+            COMPLETED
+            MISSED
+        }
+    }
+
+    package "commands" {
+        class GeneratePersonalizedRoutineCommand <<record>> {
+            + patientId : Long
+            + skinAnalysisId : Long
+            + skinType : String
+        }
+
+        class RemoveProductFromRoutineCommand <<record>> {
+            + routineId : Long
+            + routineItemId : Long
+        }
+
+        class ReplaceProductInRoutineCommand <<record>> {
+            + routineId : Long
+            + routineItemId : Long
+            + newProductRecommendation : String
+        }
+
+        class MarkRoutineAsCompletedCommand <<record>> {
+            + patientId : Long
+            + routineId : Long
+            + date : LocalDate
+        }
+    }
+
+    package "events" {
+        class PersonalizedRoutineGeneratedEvent <<record>> {
+            + routineId : Long
+            + patientId : Long
+            + skinAnalysisId : Long
+            + skinType : String
+        }
+
+        class ProductRemovedFromRoutineEvent <<record>> {
+            + routineId : Long
+            + routineItemId : Long
+            + removedProduct : String
+        }
+
+        class ProductReplacedInRoutineEvent <<record>> {
+            + routineId : Long
+            + routineItemId : Long
+            + previousProduct : String
+            + newProduct : String
+        }
+
+        class DailyRoutineCompletionRecordedEvent <<record>> {
+            + trackingId : Long
+            + patientId : Long
+            + routineId : Long
+            + date : LocalDate
+        }
+    }
+
+    package "queries" {
+        class GetRoutineByIdQuery <<record>> {
+            + routineId : Long
+        }
+
+        class GetRoutineByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetAllDailyTrackingsQuery {
+        }
+
+        class GetDailyTrackingByPatientIdAndDateQuery <<record>> {
+            + patientId : Long
+            + date : LocalDate
+        }
+
+        class GetDailyTrackingsByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+
+        class GetDailyTrackingsByRoutineIdQuery <<record>> {
+            + routineId : Long
+        }
+
+        class GetWeeklySummaryByPatientIdQuery <<record>> {
+            + patientId : Long
+        }
+    }
+}
+
+package "domain.repositories" {
+    interface RoutineRepository {
+        + findById(id : Long) : Optional<Routine>
+        + findByPatientId(patientId : PatientId) : Optional<Routine>
+        + save(routine : Routine) : Routine
+    }
+
+    interface DailyTrackingRepository {
+        + findById(id : Long) : Optional<DailyTracking>
+        + findByPatientId(patientId : PatientId) : List<DailyTracking>
+        + findByRoutineId(routineId : RoutineId) : List<DailyTracking>
+        + findByPatientIdAndDate(patientId : PatientId, date : LocalDate) : Optional<DailyTracking>
+        + save(tracking : DailyTracking) : DailyTracking
+    }
+}
+
+' Aggregate relationships
+Routine --> PatientId
+Routine --> SkinAnalysisId
+Routine --> RoutineStatus
+Routine --> RoutineItem
+
+DailyTracking --> PatientId
+DailyTracking --> RoutineId
+
+' Repository dependencies
+RoutineRepository ..> Routine
+RoutineRepository ..> PatientId
+DailyTrackingRepository ..> DailyTracking
+DailyTrackingRepository ..> PatientId
+DailyTrackingRepository ..> RoutineId
+
+@enduml
