@@ -8332,7 +8332,7 @@ por el Frontend Web Application desplegado durante este Sprint.
 
 [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241b843_upc_edu_pe/IQCGbvSsmNlRR5uoLUp40HBnAQHmYxRo2Ye1EXiwG79cVyA?e=3OJmc3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-Link de la página web: https://zealous-grass-0de82540f.7.azurestaticapps.net
+Link de la página web: https://witty-beach-0bf4c770f.7.azurestaticapps.net/
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -8342,7 +8342,7 @@ Bloomie. Se definieron y documentaron 19 endpoints que el Frontend Web Applicati
 consume para todas las funcionalidades core implementadas en este sprint. Dado que en 
 esta etapa aún no se cuenta con una RESTful API desarrollada internamente, los endpoints 
 apuntan a la Mock API desplegada en 
-`https://bloomie-mock-api.azurewebsites.net/api/v1`. La documentación formal con 
+`https://bloomie-frontend-mockapi.azurewebsites.net/api/v1`. La documentación formal con 
 OpenAPI se elaborará a partir del Sprint 3 cuando se inicie el desarrollo del backend.
 A continuación se detalla la especificación de cada endpoint con sus acciones, 
 parámetros y ejemplos de response basados en los datos de muestra configurados.
@@ -8447,7 +8447,7 @@ Los productos desplegados durante el Sprint 2 se encuentran operativos en las
 siguientes URLs:
 
 - **Landing Page:** https://bloomie-landing-page.vercel.app
-- **Frontend Web Application:** https://zealous-grass-0de82540f.7.azurestaticapps.net/
+- **Frontend Web Application:** https://witty-beach-0bf4c770f.7.azurestaticapps.net/
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -9449,9 +9449,9 @@ URL del repositorio (Landing Page): https://github.com/upc-pre-202610-1asi0729-1
 
 URL de Landing Page: https://bloomie-landing-page.vercel.app/
 
-URL de WebApp: https://zealous-grass-0de82540f.7.azurestaticapps.net/
+URL de WebApp: https://witty-beach-0bf4c770f.7.azurestaticapps.net
 
-URL de MockAPI: https://bloomie-mock-api.azurewebsites.net/api/v1
+URL de MockAPI: https://bloomie-frontend-mockapi.azurewebsites.net/api/v1
 
 URL de swagger: https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
 
