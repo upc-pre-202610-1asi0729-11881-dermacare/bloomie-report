@@ -1,0 +1,83 @@
+@startuml product-discovery-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Product Discovery - Interfaces Layer
+
+package "interfaces" {
+
+    package "rest" {
+
+        class ProductController {
+            - productQueryService : ProductQueryService
+            + getAllProducts() : ResponseEntity<List<ProductResource>>
+            + getProductById(id : Long) : ResponseEntity<ProductResource>
+        }
+
+        class FavoriteProductController {
+            - favoriteProductCommandService : FavoriteProductCommandService
+            - favoriteProductQueryService : FavoriteProductQueryService
+            + getFavoriteProductsByUserId(userId : Long) : ResponseEntity<List<FavoriteProductResource>>
+            + saveAsFavorite(resource : SaveFavoriteProductResource) : ResponseEntity<FavoriteProductResource>
+            + removeFromFavorites(id : Long) : ResponseEntity<Void>
+        }
+
+        package "resources" {
+            class ProductResource <<record>> {
+                + id : Long
+                + name : String
+                + brand : String
+                + category : String
+                + description : String
+                + benefits : List<String>
+                + aiRecommended : boolean
+            }
+
+            class FavoriteProductResource <<record>> {
+                + id : Long
+                + productId : Long
+                + userId : Long
+                + savedAt : String
+            }
+
+            class SaveFavoriteProductResource <<record>> {
+                + productId : Long
+                + userId : Long
+            }
+        }
+
+        package "transform" {
+            class ProductResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : Product) : ProductResource
+            }
+
+            class FavoriteProductResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : FavoriteProduct) : FavoriteProductResource
+            }
+
+            class SaveProductAsFavoriteCommandFromResourceAssembler {
+                + toCommandFromResource(resource : SaveFavoriteProductResource) : SaveProductAsFavoriteCommand
+            }
+        }
+    }
+}
+
+' Controller dependencies
+ProductController ..> ProductResource
+ProductController ..> ProductResourceFromEntityAssembler
+
+FavoriteProductController ..> FavoriteProductResource
+FavoriteProductController ..> SaveFavoriteProductResource
+FavoriteProductController ..> FavoriteProductResourceFromEntityAssembler
+FavoriteProductController ..> SaveProductAsFavoriteCommandFromResourceAssembler
+
+' Assembler -> Resource
+ProductResourceFromEntityAssembler ..> ProductResource
+FavoriteProductResourceFromEntityAssembler ..> FavoriteProductResource
+
+@enduml

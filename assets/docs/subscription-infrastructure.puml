@@ -1,0 +1,93 @@
+@startuml subscription-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Subscription - Infrastructure Layer
+
+package "infrastructure" {
+
+    package "entities" {
+        class SubscriptionPersistenceEntity {
+            - id : Long
+            - patientId : Long
+            - planId : Long
+            - status : String
+            - startDate : LocalDateTime
+            - endDate : LocalDateTime
+        }
+
+        class PlanPersistenceEntity {
+            - id : Long
+            - planId : Long
+            - name : String
+            - monthlyPrice : Double
+            - description : String
+            - planType : String
+        }
+    }
+
+    package "repositories" {
+        interface SubscriptionPersistenceRepository {
+            + findByPatientId(patientId : Long) : Optional<SubscriptionPersistenceEntity>
+        }
+
+        interface PlanPersistenceRepository {
+            + findByPlanId(planId : Long) : Optional<PlanPersistenceEntity>
+        }
+    }
+
+    package "adapters" {
+        class SubscriptionRepositoryImpl {
+            - repository : SubscriptionPersistenceRepository
+            - assembler : SubscriptionPersistenceAssembler
+            + findById(id : Long) : Optional<Subscription>
+            + findByPatientId(patientId : PatientId) : Optional<Subscription>
+            + save(subscription : Subscription) : Subscription
+        }
+    }
+
+    package "assemblers" {
+        class SubscriptionPersistenceAssembler {
+            + toEntity(subscription : Subscription) : SubscriptionPersistenceEntity
+            + toDomain(entity : SubscriptionPersistenceEntity) : Subscription
+        }
+
+        class PlanPersistenceAssembler {
+            + toEntity(plan : Plan) : PlanPersistenceEntity
+            + toDomain(entity : PlanPersistenceEntity) : Plan
+        }
+    }
+
+    package "converters" {
+        class PatientIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PatientId) : Long
+            + convertToEntityAttribute(dbData : Long) : PatientId
+        }
+
+        class PlanIdPersistenceConverter {
+            + convertToDatabaseColumn(attribute : PlanId) : Long
+            + convertToEntityAttribute(dbData : Long) : PlanId
+        }
+    }
+}
+
+' Domain interface
+interface SubscriptionRepository
+
+' Implementation
+SubscriptionRepositoryImpl ..|> SubscriptionRepository
+
+' Adapter dependencies
+SubscriptionRepositoryImpl --> SubscriptionPersistenceRepository
+SubscriptionRepositoryImpl --> SubscriptionPersistenceAssembler
+
+' Assembler -> Entity
+SubscriptionPersistenceAssembler --> SubscriptionPersistenceEntity
+PlanPersistenceAssembler --> PlanPersistenceEntity
+
+@enduml

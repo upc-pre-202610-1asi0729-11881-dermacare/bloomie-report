@@ -1,0 +1,133 @@
+@startuml iam-infrastructure
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title IAM - Infrastructure Layer
+
+package "infrastructure" {
+
+    package "authorization.sfs.configuration" {
+        class WebSecurityConfiguration {
+            + securityFilterChain(http : HttpSecurity) : SecurityFilterChain
+            + passwordEncoder() : PasswordEncoder
+            + authenticationManager(config : AuthenticationConfiguration) : AuthenticationManager
+        }
+    }
+
+    package "hashing.bcrypt" {
+        class BCryptHashingService {
+            - passwordEncoder : BCryptPasswordEncoder
+        }
+
+        package "services" {
+            class HashingServiceImpl {
+                - passwordEncoder : PasswordEncoder
+                + encode(rawPassword : String) : String
+                + matches(rawPassword : String, encodedPassword : String) : boolean
+            }
+        }
+    }
+
+    package "persistence.jpa" {
+
+        package "entities" {
+            class UserPersistenceEntity {
+                - id : Long
+                - firstName : String
+                - lastName : String
+                - email : String
+                - hashedPassword : String
+                - photoUrl : String
+                - roles : List<RolePersistenceEntity>
+            }
+
+            class RolePersistenceEntity {
+                - id : Long
+                - name : String
+            }
+        }
+
+        package "embeddables" {
+            class PersonNamePersistenceEmbeddable {
+                - firstName : String
+                - lastName : String
+            }
+        }
+
+        package "repositories" {
+            interface UserPersistenceRepository {
+                + findByEmail(email : String) : Optional<UserPersistenceEntity>
+                + existsByEmail(email : String) : boolean
+            }
+
+            interface RolePersistenceRepository {
+                + findByName(name : String) : Optional<RolePersistenceEntity>
+            }
+        }
+
+        package "adapters" {
+            class UserRepositoryImpl {
+                - userPersistenceRepository : UserPersistenceRepository
+                - userPersistenceAssembler : UserPersistenceAssembler
+                + findById(id : Long) : Optional<User>
+                + findByEmail(email : EmailAddress) : Optional<User>
+                + findAll() : List<User>
+                + save(user : User) : User
+                + existsByEmail(email : EmailAddress) : boolean
+            }
+        }
+
+        package "assemblers" {
+            class UserPersistenceAssembler {
+                + toEntity(user : User) : UserPersistenceEntity
+                + toDomain(entity : UserPersistenceEntity) : User
+            }
+
+            class RolePersistenceAssembler {
+                + toEntity(role : Role) : RolePersistenceEntity
+                + toDomain(entity : RolePersistenceEntity) : Role
+            }
+        }
+
+        package "converters" {
+            class EmailAddressPersistenceConverter {
+                + convertToDatabaseColumn(attribute : EmailAddress) : String
+                + convertToEntityAttribute(dbData : String) : EmailAddress
+            }
+
+            class HashedPasswordPersistenceConverter {
+                + convertToDatabaseColumn(attribute : HashedPassword) : String
+                + convertToEntityAttribute(dbData : String) : HashedPassword
+            }
+        }
+    }
+}
+
+' Domain interfaces
+interface UserRepository
+interface HashingService
+
+' Implementations
+UserRepositoryImpl ..|> UserRepository
+HashingServiceImpl ..|> HashingService
+BCryptHashingService --> HashingServiceImpl
+
+' Adapter dependencies
+UserRepositoryImpl --> UserPersistenceRepository
+UserRepositoryImpl --> UserPersistenceAssembler
+
+' Assembler dependencies
+UserPersistenceAssembler --> UserPersistenceEntity
+UserPersistenceAssembler --> RolePersistenceAssembler
+RolePersistenceAssembler --> RolePersistenceEntity
+
+' Entity dependencies
+UserPersistenceEntity --> RolePersistenceEntity
+UserPersistenceEntity --> PersonNamePersistenceEmbeddable
+
+@enduml

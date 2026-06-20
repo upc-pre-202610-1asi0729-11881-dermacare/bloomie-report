@@ -1,0 +1,170 @@
+@startuml skin-analysis-interfaces
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Skin Analysis - Interfaces Layer
+
+package "interfaces" {
+
+    package "events" {
+        class FacialScanSubmittedIntegrationEvent <<record>> {
+            + facialScanId : Long
+            + patientId : Long
+            + photoUrl : String
+        }
+
+        class PreliminaryDiagnosisGeneratedIntegrationEvent <<record>> {
+            + skinAnalysisId : Long
+            + patientId : Long
+            + facialScanId : Long
+            + overallScore : Double
+        }
+    }
+
+    package "rest" {
+
+        class SkinProfilesController {
+            - skinProfileCommandService : SkinProfileCommandService
+            - skinProfileQueryService : SkinProfileQueryService
+            + completeSkinProfile(resource : CompleteSkinProfileResource) : ResponseEntity<SkinProfileResource>
+            + updateSkinCharacteristics(id : Long, resource : UpdateSkinCharacteristicsResource) : ResponseEntity<SkinProfileResource>
+            + getSkinProfileById(id : Long) : ResponseEntity<SkinProfileResource>
+            + getSkinProfileByPatientId(patientId : Long) : ResponseEntity<SkinProfileResource>
+        }
+
+        class FacialScansController {
+            - facialScanCommandService : FacialScanCommandService
+            - facialScanQueryService : FacialScanQueryService
+            + startFacialScan(resource : StartFacialScanResource) : ResponseEntity<FacialScanResource>
+            + submitFacialScan(id : Long, resource : SubmitFacialScanResource) : ResponseEntity<FacialScanResource>
+            + getFacialScanById(id : Long) : ResponseEntity<FacialScanResource>
+            + getFacialScansByPatientId(patientId : Long) : ResponseEntity<List<FacialScanResource>>
+        }
+
+        class SkinAnalysesController {
+            - skinAnalysisQueryService : SkinAnalysisQueryService
+            + getSkinAnalysisById(id : Long) : ResponseEntity<SkinAnalysisResource>
+            + getSkinAnalysesByPatientId(patientId : Long) : ResponseEntity<List<SkinAnalysisResource>>
+        }
+
+        package "resources" {
+            class SkinProfileResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + skinType : String
+                + sensitivity : String
+                + waterIntake : String
+                + sunExposure : String
+                + sleepHours : String
+                + status : String
+            }
+
+            class CompleteSkinProfileResource <<record>> {
+                + patientId : Long
+                + skinType : String
+                + sensitivity : String
+                + waterIntake : String
+                + sunExposure : String
+                + sleepHours : String
+            }
+
+            class UpdateSkinCharacteristicsResource <<record>> {
+                + skinType : String
+                + sensitivity : String
+                + waterIntake : String
+                + sunExposure : String
+                + sleepHours : String
+            }
+
+            class FacialScanResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + status : String
+                + photoUrl : String
+                + scannedAt : String
+            }
+
+            class StartFacialScanResource <<record>> {
+                + patientId : Long
+            }
+
+            class SubmitFacialScanResource <<record>> {
+                + photoUrl : String
+            }
+
+            class SkinAnalysisResource <<record>> {
+                + id : Long
+                + patientId : Long
+                + facialScanId : Long
+                + skinType : String
+                + overallScore : Double
+                + hydrationScore : Double
+                + textureScore : Double
+                + sensitivityScore : Double
+                + brightnessScore : Double
+                + status : String
+                + analyzedAt : String
+            }
+        }
+
+        package "transform" {
+            class SkinProfileResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : SkinProfile) : SkinProfileResource
+            }
+
+            class CompleteSkinProfileCommandFromResourceAssembler {
+                + toCommandFromResource(resource : CompleteSkinProfileResource) : CompleteSkinProfileCommand
+            }
+
+            class UpdateSkinCharacteristicsCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : UpdateSkinCharacteristicsResource) : UpdateSkinCharacteristicsCommand
+            }
+
+            class FacialScanResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : FacialScan) : FacialScanResource
+            }
+
+            class StartFacialScanCommandFromResourceAssembler {
+                + toCommandFromResource(resource : StartFacialScanResource) : StartFacialScanCommand
+            }
+
+            class SubmitFacialScanCommandFromResourceAssembler {
+                + toCommandFromResource(id : Long, resource : SubmitFacialScanResource) : SubmitFacialScanCommand
+            }
+
+            class SkinAnalysisResourceFromEntityAssembler {
+                + toResourceFromEntity(entity : SkinAnalysis) : SkinAnalysisResource
+            }
+        }
+    }
+}
+
+' Controller dependencies
+SkinProfilesController ..> SkinProfileResource
+SkinProfilesController ..> CompleteSkinProfileResource
+SkinProfilesController ..> UpdateSkinCharacteristicsResource
+SkinProfilesController ..> SkinProfileResourceFromEntityAssembler
+SkinProfilesController ..> CompleteSkinProfileCommandFromResourceAssembler
+SkinProfilesController ..> UpdateSkinCharacteristicsCommandFromResourceAssembler
+
+FacialScansController ..> FacialScanResource
+FacialScansController ..> StartFacialScanResource
+FacialScansController ..> SubmitFacialScanResource
+FacialScansController ..> FacialScanResourceFromEntityAssembler
+FacialScansController ..> StartFacialScanCommandFromResourceAssembler
+FacialScansController ..> SubmitFacialScanCommandFromResourceAssembler
+
+SkinAnalysesController ..> SkinAnalysisResource
+SkinAnalysesController ..> SkinAnalysisResourceFromEntityAssembler
+
+' Assembler -> Resource
+SkinProfileResourceFromEntityAssembler ..> SkinProfileResource
+FacialScanResourceFromEntityAssembler ..> FacialScanResource
+SkinAnalysisResourceFromEntityAssembler ..> SkinAnalysisResource
+
+@enduml

@@ -1,0 +1,123 @@
+@startuml skin-analysis-application
+
+skinparam linetype ortho
+skinparam classBackgroundColor #FEFEFE
+skinparam classBorderColor #333333
+skinparam packageBorderColor #666666
+skinparam arrowColor #333333
+skinparam shadowing false
+
+title Skin Analysis - Application Layer
+
+package "application" {
+
+    package "commandservices" {
+        interface SkinProfileCommandService {
+            + complete(command : CompleteSkinProfileCommand) : Result<SkinProfile>
+            + updateCharacteristics(command : UpdateSkinCharacteristicsCommand) : Result<SkinProfile>
+        }
+
+        interface FacialScanCommandService {
+            + start(command : StartFacialScanCommand) : Result<FacialScan>
+            + submit(command : SubmitFacialScanCommand) : Result<FacialScan>
+        }
+
+        interface SkinAnalysisCommandService {
+            + analyze(command : AnalyzeSkinScanCommand) : Result<SkinAnalysis>
+        }
+    }
+
+    package "queryservices" {
+        interface SkinProfileQueryService {
+            + getById(query : GetSkinProfileByIdQuery) : Result<SkinProfile>
+            + getByPatientId(query : GetSkinProfileByPatientIdQuery) : Result<SkinProfile>
+        }
+
+        interface FacialScanQueryService {
+            + getById(query : GetFacialScanByIdQuery) : Result<FacialScan>
+            + getByPatientId(query : GetFacialScansByPatientIdQuery) : Result<List<FacialScan>>
+        }
+
+        interface SkinAnalysisQueryService {
+            + getById(query : GetSkinAnalysisByIdQuery) : Result<SkinAnalysis>
+            + getByFacialScanId(query : GetSkinAnalysisByFacialScanIdQuery) : Result<SkinAnalysis>
+            + getByPatientId(query : GetSkinAnalysesByPatientIdQuery) : Result<List<SkinAnalysis>>
+        }
+    }
+
+    package "internal" {
+
+        package "commandservices" {
+            class SkinProfileCommandServiceImpl {
+                - skinProfileRepository : SkinProfileRepository
+                + complete(command : CompleteSkinProfileCommand) : Result<SkinProfile>
+                + updateCharacteristics(command : UpdateSkinCharacteristicsCommand) : Result<SkinProfile>
+            }
+
+            class FacialScanCommandServiceImpl {
+                - facialScanRepository : FacialScanRepository
+                + start(command : StartFacialScanCommand) : Result<FacialScan>
+                + submit(command : SubmitFacialScanCommand) : Result<FacialScan>
+            }
+
+            class SkinAnalysisCommandServiceImpl {
+                - skinAnalysisRepository : SkinAnalysisRepository
+                + analyze(command : AnalyzeSkinScanCommand) : Result<SkinAnalysis>
+            }
+        }
+
+        package "queryservices" {
+            class SkinProfileQueryServiceImpl {
+                - skinProfileRepository : SkinProfileRepository
+                + getById(query : GetSkinProfileByIdQuery) : Result<SkinProfile>
+                + getByPatientId(query : GetSkinProfileByPatientIdQuery) : Result<SkinProfile>
+            }
+
+            class FacialScanQueryServiceImpl {
+                - facialScanRepository : FacialScanRepository
+                + getById(query : GetFacialScanByIdQuery) : Result<FacialScan>
+                + getByPatientId(query : GetFacialScansByPatientIdQuery) : Result<List<FacialScan>>
+            }
+
+            class SkinAnalysisQueryServiceImpl {
+                - skinAnalysisRepository : SkinAnalysisRepository
+                + getById(query : GetSkinAnalysisByIdQuery) : Result<SkinAnalysis>
+                + getByFacialScanId(query : GetSkinAnalysisByFacialScanIdQuery) : Result<SkinAnalysis>
+                + getByPatientId(query : GetSkinAnalysesByPatientIdQuery) : Result<List<SkinAnalysis>>
+            }
+        }
+
+        package "eventhandlers" {
+            class FacialScanSubmittedEventHandler {
+                - skinAnalysisCommandService : SkinAnalysisCommandService
+                - skinProfileQueryService : SkinProfileQueryService
+                + on(event : FacialScanSubmittedEvent) : void
+            }
+
+            class PreliminaryDiagnosisGeneratedEventHandler {
+                + on(event : PreliminaryDiagnosisGeneratedEvent) : void
+            }
+        }
+
+        package "outboundservices.acl" {
+            interface ExternalIamService {
+                + existsUserById(userId : Long) : boolean
+                + fetchUserFullNameById(userId : Long) : String
+            }
+        }
+    }
+}
+
+' Implementations
+SkinProfileCommandServiceImpl ..|> SkinProfileCommandService
+FacialScanCommandServiceImpl ..|> FacialScanCommandService
+SkinAnalysisCommandServiceImpl ..|> SkinAnalysisCommandService
+SkinProfileQueryServiceImpl ..|> SkinProfileQueryService
+FacialScanQueryServiceImpl ..|> FacialScanQueryService
+SkinAnalysisQueryServiceImpl ..|> SkinAnalysisQueryService
+
+' Event handler dependencies
+FacialScanSubmittedEventHandler --> SkinAnalysisCommandService
+FacialScanSubmittedEventHandler --> SkinProfileQueryService
+
+@enduml
