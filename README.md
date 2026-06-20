@@ -6726,6 +6726,7 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/Components_BoundedContexts.png" alt="C4 Diagram" width="1000"/> <br>
 
+## 4.7. Software Object-Oriented Design
 #### Dermatology Care
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/DermatologyCare/Components_DermatologyCare_Layers.png" alt="C4 Diagram" width="1000"/> <br>
@@ -6774,7 +6775,8 @@ Dermatological Appointment Context <br>
 
 <img src="assets/img/bloomie-c4-diagrams/frontend/SkinAnalysis/Components_SkinAnalysis_Views.png" alt="C4 Diagram" width="1000"/> <br>
 
-### Diagrama de clase Backend
+### 4.7.1. Class Diagrams Backend
+
 ## Product Discovery
 
 ### Capa de Dominio
@@ -6899,32 +6901,6 @@ Dermatological Appointment Context <br>
 ### Capa de Interfaces
 ![Dermatological Appointment - Interfaces](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/upc-pre-202610-1asi0729-11881-dermacare/bloomie-report/refs/heads/main/assets/docs/dermatological-appointment-interfaces.puml)
 
-## 4.7. Software Object-Oriented Design
-
-### 4.7.1. Class Diagrams
-### Identity and Access Management
-<img src="assets/img/Class-Diagram/iam.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Skin Analysis
-<img src="assets/img/Class-Diagram/skin-analysis.svg" alt="Class Diagrams" width="1000"/> <br>
-
-### Routine Management
-<img src="assets/img/Class-Diagram/routine-management.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Product Discovery
-<img src="assets/img/Class-Diagram/product-discovery.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Dermatology Care
-<img src="assets/img/Class-Diagram/dermatology-care.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Payments
-<img src="assets/img/Class-Diagram/payments.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Suscription
-<img src="assets/img/Class-Diagram/suscription.svg" alt="Class Diagram" width="1000"/> <br>
-
-### Intelligent Support
-<img src="assets/img/Class-Diagram/intelligent-support.svg" alt="Class Diagram" width="1000"/> <br>
 
 ## 4.8. Database Design
 
