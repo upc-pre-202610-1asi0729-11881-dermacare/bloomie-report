@@ -8507,7 +8507,7 @@ El Sprint 3 tuvo como punto de partida los resultados alcanzados en el Sprint 2,
 | **Time** | 9:00 p.m. – 11:00 p.m. |
 | **Location** | Reunión presencial sede UPC Monterrico |
 | **Prepared By** | Mechan Montenegro, Luciana |
-| **Attendees (to planning meeting)** | Asmat Alminco, Martin Alejandro / Contreras Torres, Arturo Valentino / Gallardo Morales, Carla Alejandra / Mechan Montenegro, Luciana Carolina / Ramirez Ruiz, Nickolas |
+| **Attendees (to planning meeting)** | Asmat Alminco, Martin Alejandro / Contreras Torres, Arturo Valentino / Mechan Montenegro, Luciana Carolina|
 | **Sprint 2 Review Summary** | Durante el Sprint 2 se completó el despliegue de la primera versión funcional del Frontend Web Application en Azure Static Web Apps, estructurada por bounded contexts bajo Domain-Driven Design e integrada con una Mock API desplegada en Azure App Service. Se implementaron las funcionalidades core del producto: escaneo facial, rutina personalizada con seguimiento diario, catálogo de productos, asistente virtual y gestión de citas dermatológicas con consulta virtual. Adicionalmente se integró Stripe como pasarela de pagos en el flujo de suscripción de la Landing Page y se completaron las correcciones de diseño UX/UI en Figma. El equipo cumplió con el alcance planificado y subsanó la deuda técnica heredada del Sprint 1. |
 | **Sprint 2 Retrospective Summary** | El equipo identificó como aciertos la organización del trabajo por bounded contexts mediante el esquema de Aspect Leaders y la definición de fechas internas por work item. Como oportunidades de mejora, a partir de la revisión del Sprint 2 se detectaron observaciones puntuales: algunas ramas no siguieron de forma consistente la convención de nomenclatura de GitFlow establecida por el equipo, y faltó definir con mayor claridad y detalle los diagramas de diseño del Frontend, los cuales requirieron correcciones posteriores. El equipo reconoció también la necesidad de iniciar antes el desarrollo de los Web Services para disponer de mayor tiempo de pruebas de integración. Para el Sprint 3 el equipo se comprometió a respetar estrictamente las convenciones de nomenclatura de ramas, revisar y completar correctamente los diagramas antes de darlos por finalizados, y priorizar el desarrollo del backend desde el inicio del sprint documentando los endpoints en paralelo a su implementación. |
 | **Sprint Goal & User Stories** | |
@@ -8526,8 +8526,6 @@ En esta sección el equipo incluye la elaboración de un artefacto Leadership-an
 | Asmat Alminco, Martin Alejandro | Alemarr2 | C | L | C | L | C | C | C | C | C | L |
 | Contreras Torres, Arturo Valentino | Arturouu | C | C | L | C | C | C | L | C | C | L |
 | Mechan Montenegro, Luciana Carolina | luuu6 | L | C | C | C | L | L | L | L | L | L |
-| Ramirez Ruiz, Nickolas | Bynickram02 | C | C | C | C | C | C | C | L | C | L |
-
 
 
 #### 5.2.3.3. Sprint Backlog 3
@@ -8679,7 +8677,6 @@ Durante este Sprint, la plataforma Bloomie logró la integración entre el front
 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
-## Services Documentation Evidence for Sprint Review
 
 Durante este Sprint, se documentaron todos los Web Services implementados en la plataforma Bloomie mediante OpenAPI/Swagger, integrado directamente en el backend Spring Boot. La documentación cubre los endpoints de los bounded contexts de IAM, Skin Analysis, Routine Management, Dermatology Care, Appointments, Subscriptions, Payments y Product Discovery. Todos los endpoints están desplegados y accesibles en producción a través de Azure App Service.
 
@@ -8927,6 +8924,8 @@ Al completarse el análisis de piel, se publica un `PreliminaryDiagnosisGenerate
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3 el equipo realizó el despliegue de la primera versión de los Web Services de Bloomie mediante Azure App Service, configurando una instancia de Azure Database for MySQL Flexible Server como base de datos de producción. Este proceso incluyó la creación y configuración de los recursos en Azure, la definición de variables de entorno para la conexión entre el App Service y la base de datos, y la vinculación del repositorio de GitHub con el recurso de Azure para automatizar el proceso de despliegue. Adicionalmente se actualizó el despliegue del Frontend Web Application en Azure Static Web Apps y de la Landing Page en Vercel, incorporando los enlaces definitivos que apuntan al backend desplegado y a la Web Application.
+
+URL de swagger: https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
 
 **Web Services — Azure App Service**
 
@@ -9372,19 +9371,19 @@ Implementar un diálogo de confirmación modal antes de ejecutar la cancelación
 
 **En relación a los Problem Statements**
 
-El proyecto Bloomie surge como respuesta a una problemática real y verificada: los jóvenes adultos de 21 a 30 años enfrentan una sobrecarga de información contradictoria sobre skincare, carecen de herramientas personalizadas para el cuidado de su piel y tienen acceso limitado a orientación dermatológica asequible. A lo largo de los dos sprints ejecutados, el equipo logró construir una solución concreta que aborda directamente estas dificultades mediante análisis de piel con IA, rutinas personalizadas, catálogo de productos con score de compatibilidad y acceso a consultas dermatológicas virtuales. La implementación del Frontend Web Application integrado con una Mock API confirma que la arquitectura definida es técnicamente viable para resolver el problema planteado.
+El proyecto Bloomie surge como respuesta a una problemática real y verificada: los jóvenes adultos de 21 a 30 años enfrentan una sobrecarga de información contradictoria sobre skincare, carecen de herramientas personalizadas para el cuidado de su piel y tienen acceso limitado a orientación dermatológica asequible. A lo largo de los tres sprints ejecutados, el equipo logró construir una solución concreta que aborda directamente estas dificultades mediante análisis de piel con IA, rutinas personalizadas, catálogo de productos con score de compatibilidad y acceso a consultas dermatológicas virtuales. La implementación del Frontend Web Application integrado con la primera versión de los Web Services desplegados en Azure confirma que la arquitectura definida es técnicamente viable y que la solución opera con datos reales y persistentes, superando la etapa de simulación con Mock API del sprint anterior.
 
 **En relación a los Lean UX Assumptions**
 
-Los assumptions definidos en la etapa inicial del proyecto mostraron ser coherentes con las decisiones de diseño y desarrollo tomadas a lo largo de los sprints. La hipótesis de que los usuarios necesitan identificar correctamente su tipo de piel para tomar mejores decisiones se reflejó directamente en la priorización de las funcionalidades de escaneo facial y diagnóstico como features core del Sprint 2. El assumption de que la interfaz debe ser intuitiva, con colores suaves y jerarquía visual clara, fue validado en el diseño del sistema visual implementado en la Web Application, el cual presenta una estructura de navegación limpia y consistente con la identidad de marca de Bloomie. El assumption de negocio sobre el modelo de suscripción escalonado fue implementado desde la Landing Page con la integración de Stripe, permitiendo al visitante seleccionar un plan y completar el pago antes de acceder a la aplicación.
+Los assumptions definidos en la etapa inicial del proyecto mostraron ser coherentes con las decisiones de diseño y desarrollo tomadas a lo largo de los sprints. La hipótesis de que los usuarios necesitan identificar correctamente su tipo de piel para tomar mejores decisiones se reflejó directamente en la priorización de las funcionalidades de escaneo facial y diagnóstico como features core, y en este sprint se materializó con la implementación del backend de Skin Analysis que genera scores reales de análisis dermatológico. El assumption de que la interfaz debe ser intuitiva, con colores suaves y jerarquía visual clara, fue contrastado durante las entrevistas de validación realizadas en el Sprint 3 con usuarios de ambos segmentos objetivo, obteniendo feedback directo sobre la experiencia de navegación. El assumption de negocio sobre el modelo de suscripción escalonado fue implementado de punta a punta en este sprint, con el bounded context de Subscriptions y Payments conectado al backend real.
 
 **En relación a los Lean UX Hypothesis Statements**
 
-Las hipótesis establecidas orientaron la definición del alcance funcional del producto. La hipótesis de que ofrecer recomendaciones personalizadas permitirá a los usuarios elegir productos más adecuados motivó la implementación del módulo de catálogo con score de compatibilidad y del sistema de rutinas personalizadas basadas en el diagnóstico de piel. La hipótesis de que visualizar el progreso incrementará la constancia del usuario se tradujo en la implementación del módulo de métricas con racha de días, tasa de adherencia y gráfico de evolución del skin health score. La hipótesis relacionada con la integración de dermatólogos como factor de confianza se materializó en el bounded context de Dermatology Care, que incluye el listado de especialistas, el agendamiento de citas y la consulta virtual con chat en tiempo real. Si bien las métricas de éxito definidas en las hipótesis (retención mensual, tasa de suscripción, uso de funcionalidades premium) aún no pueden ser medidas en esta etapa al no contar con usuarios reales, la arquitectura implementada sienta las bases necesarias para su futura medición.
+Las hipótesis establecidas orientaron la definición del alcance funcional del producto. La hipótesis de que ofrecer recomendaciones personalizadas permitirá a los usuarios elegir productos más adecuados motivó la implementación del módulo de catálogo con score de compatibilidad y del sistema de rutinas personalizadas, ambos ahora respaldados por Web Services reales con persistencia en base de datos. La hipótesis de que visualizar el progreso incrementará la constancia del usuario se consolidó con la implementación del endpoint de weekly summary en el bounded context de Routine Management, que permite calcular y exponer métricas reales de adherencia a la rutina. La hipótesis relacionada con la integración de dermatólogos como factor de confianza se materializó completamente en este sprint con los bounded contexts de Dermatology Care y Dermatological Appointment desplegados, permitiendo que los pacientes agenden citas con dermatólogos reales registrados en el sistema. Las entrevistas de validación realizadas al finalizar el Sprint 3 con participantes de ambos segmentos objetivo permitieron contrastar por primera vez las hipótesis del Lean UX Canvas con comportamiento real de usuarios, aportando evidencia concreta para orientar las decisiones del siguiente sprint.
 
 **En relación al proceso de desarrollo**
 
-El equipo demostró capacidad para estructurar un proyecto de software complejo bajo metodología Scrum con dos sprints ejecutados. En el Sprint 1 se establecieron todos los fundamentos del proyecto: documentación, diseño UX/UI, arquitectura C4, Event Storming y despliegue de la Landing Page. En el Sprint 2 se implementó la primera versión funcional del frontend estructurada por bounded contexts bajo Domain-Driven Design, lo que garantiza escalabilidad y mantenibilidad para los sprints futuros. La identificación de deuda técnica del Sprint 1 (prototipo y Sprint Backlog incompletos) y su resolución al inicio del Sprint 2 evidencia una mejora en la gestión interna del equipo.
+El equipo demostró capacidad para estructurar y escalar un proyecto de software complejo bajo metodología Scrum a lo largo de tres sprints ejecutados. En el Sprint 1 se establecieron todos los fundamentos del proyecto: documentación, diseño UX/UI, arquitectura C4, Event Storming y despliegue de la Landing Page. En el Sprint 2 se implementó la primera versión funcional del Frontend Web Application estructurada por bounded contexts bajo Domain-Driven Design integrada con una Mock API. En el Sprint 3 el equipo implementó y desplegó la primera versión de los Web Services mediante una RESTful API desarrollada con Spring Boot, cubriendo doce bounded contexts y más de cuarenta endpoints documentados con OpenAPI/Swagger, logrando una integración real entre el frontend desplegado en Azure Static Web Apps y el backend desplegado en Azure App Service con base de datos MySQL Flexible Server. La distribución del trabajo por bounded context bajo el esquema de Aspect Leaders demostró ser efectiva para mantener la autonomía de cada integrante y reducir los conflictos de integración a lo largo del sprint.
 
 ---
 
@@ -9392,21 +9391,19 @@ El equipo demostró capacidad para estructurar un proyecto de software complejo 
 
 **Roadmap de próximos sprints**
 
-Para el Sprint 3 se recomienda priorizar los bounded contexts de IAM (autenticación real con JWT), Skin Profiles y Routines, ya que son los más críticos para el flujo core del usuario. Adicionalmente, se recomienda documentar todos los endpoints con OpenAPI/Swagger desde el inicio del desarrollo backend para mantener coherencia con las Technical Stories especificadas.
-
-Para el Sprint 4 se recomienda integrar los bounded contexts de Product Discovery y Dermatology Care al backend, incorporar las pasarelas de pago reales (Stripe para suscripciones y pagos de consultas), e iniciar las pruebas de integración entre el frontend desplegado en Azure y la API desplegada en Azure App Service.
+Para el Sprint 4 se recomienda priorizar la integración completa del frontend con todos los bounded contexts del backend implementados en el Sprint 3, comenzando por los que aún consumen la Mock API. Adicionalmente se recomienda incorporar autenticación real con JWT para reemplazar la solución temporal de localStorage implementada en este sprint, garantizando la seguridad de las sesiones de usuario. Se recomienda también implementar los bounded contexts de Intelligent Support (asistente virtual) y el módulo de chat en tiempo real durante la consulta virtual, que quedaron fuera del alcance del Sprint 3.
 
 **Sobre la arquitectura**
 
-Se recomienda mantener la estructura de bounded contexts definida en el DDD como guía para la organización del backend, asegurando que cada contexto tenga su propio módulo, servicios y repositorios independientes. Esto facilitará la asignación de responsabilidades por integrante y reducirá los conflictos de integración.
+Se recomienda mantener la estructura de bounded contexts definida en el DDD como guía para la organización del backend, asegurando que cada contexto mantenga su propio módulo, servicios y repositorios independientes. Para los próximos sprints se recomienda incorporar pruebas de integración automatizadas entre el frontend y el backend desplegados, aprovechando la infraestructura de CI/CD configurada en GitHub Actions y Azure durante el Sprint 3.
 
 **Sobre la experiencia de usuario**
 
-Se recomienda incorporar las entrevistas de validación con usuarios reales en el Sprint 3 para contrastar los assumptions definidos en el Lean UX Canvas con el comportamiento real de los segmentos objetivo. Los módulos de rutina, catálogo y escaneo facial son los más prioritarios para validar, dado que representan el core de la propuesta de valor de Bloomie.
+Las entrevistas de validación realizadas al cierre del Sprint 3 aportaron hallazgos concretos sobre la usabilidad del producto que deben ser priorizados en el siguiente sprint. Se recomienda aplicar las correcciones identificadas en la evaluación heurística, particularmente el formato de fechas en las consultas pasadas, la visualización del nombre de productos en la rutina en lugar del identificador numérico, y la implementación de un diálogo de confirmación previo a la cancelación de citas. Estas correcciones tienen impacto directo en la percepción de calidad del producto por parte de los usuarios validados.
 
 **Sobre el equipo**
 
-Se recomienda mantener el esquema de Aspect Leaders por bounded context establecido en el Sprint 2, ya que demostró ser efectivo para distribuir responsabilidades de forma clara. Para los siguientes sprints se sugiere implementar daily standups breves y definir fechas límite internas por work item desde el inicio de cada sprint para evitar la acumulación de trabajo identificada como oportunidad de mejora en la retrospectiva del Sprint 1.
+Se recomienda mantener el esquema de Aspect Leaders por bounded context establecido en el Sprint 2 y consolidado en el Sprint 3, ya que demostró ser efectivo para distribuir responsabilidades de forma clara con cuatro integrantes activos. Para los siguientes sprints se sugiere reforzar la convención de nomenclatura de ramas GitFlow identificada como oportunidad de mejora en la retrospectiva del Sprint 3, y establecer fechas límite internas por work item desde el inicio del sprint para evitar la concentración de commits en los últimos días del periodo de desarrollo.
 
 ### Video About-the-Team
 
@@ -9447,5 +9444,7 @@ URL de Landing Page: https://bloomie-landing-page.vercel.app/
 URL de WebApp: https://zealous-grass-0de82540f.7.azurestaticapps.net/
 
 URL de MockAPI: https://bloomie-mock-api.azurewebsites.net/api/v1
+
+URL de swagger: https://bloomie-platform-awb7d0fyajc6fgby.eastus-01.azurewebsites.net/swagger-ui/index.html
 
 Video exposición TB1: [Click aquí...](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414802_upc_edu_pe/IQCKeg4piZGNTI7G23a5TmkuAVNuTLRdybkudyfXssl6KJo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wZFehr)
