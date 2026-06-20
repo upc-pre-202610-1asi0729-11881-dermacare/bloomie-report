@@ -6706,6 +6706,13 @@ Subscription Context <br>
     <img src="assets/img/Design-Level-Event-Storming/Subscription-Context.png" alt="Subscription Context - Bloomie" width="500"/>
   </div>
 
+  <br>
+Dermatological Appointment Context <br>
+
+  <div>
+    <img src="assets/img/Design-Level-Event-Storming/DermatologicalAppointment.png" alt="Dermatological Appointment Context - Bloomie" width="500"/>
+  </div>
+
 ### 4.6.2. Software Architecture Context Diagram
 
 <img src="assets/img/bloomie-c4-diagrams/system-context.png" alt="C4 Diagram" width="1000"/> <br>
