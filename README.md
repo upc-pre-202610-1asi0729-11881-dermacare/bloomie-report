@@ -24,13 +24,15 @@
 <h2>Integrantes</h2>
 
 <p>
+u - Acuache Lucas, Mathias Joaquin<br>
 u202416272 - Asmat Alminco, Martin Alejandro<br>
 u202414802 - Contreras Torres, Arturo Valentino<br>
+u - Hurtado Balcázar, Rommel Daniel<br>
 u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 </p>
 <p><em>Periodo 202610</em></p>
 
-<p><em>Junio, 2026</em></p>
+<p><em>Julio, 2026</em></p>
 
 </div>
 
@@ -48,7 +50,7 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 
   <tr>
     <td><b>Primera Entrega (AV1)</b></td>
-    <td>12/04/2026</td>
+    <td>25/04/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -72,7 +74,7 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 
   <tr>
     <td><b>Segunda Entrega (TB1)</b></td>
-    <td>4/05/2026</td>
+    <td>14/05/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -91,9 +93,10 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
       Capítulo V: Product Implementation, Validation & Deployment (Sprint 2) <br>
     </td>
   </tr>
+
   <tr>
     <td><b>Tercera Entrega (AV2)</b></td>
-    <td>01/06/2026</td>
+    <td>20/06/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -113,6 +116,37 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
     Primera versión publicada de Video About-The-Product <br>
     Primera versión publicada de Video About-The-Team <br>
     Capítulo V: Product Implementation, Validation & Deployment (Sprint 3 / Validation Interviews) <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>Cuarta Entrega (TB2)</b></td>
+    <td>05/07/2026</td>
+    <td>
+      Acuache Lucas, Mathias Joaquin <br>
+      <br>
+      <p></p>
+      Asmat Alminco, Martin Alejandro <br>
+      <br>
+      <p></p>
+      Contreras Torres, Arturo Valentino <br>
+      <br>
+      <p></p>
+      Hurtado Balcázar, Rommel Daniel <br>
+      <br>
+      <p></p>
+      Mechan Montenegro, Luciana Carolina <br>
+      <br>
+    </td>
+    <td>
+    Mejora de reporte <br>
+    Mejora de artefactos <br>
+    Nueva versión desplegada de Landing Page <br>
+    Nueva versión desplegada de Frontend Web Applications <br>
+    Nueva versión desplegada de Web Services <br>
+    Nueva versión publicada de Video About-The-Product <br>
+    Nueva versión publicada de Video About-The-Team <br>
+    Capítulo V: Product Implementation, Validation & Deployment (Sprint 4) <br>
     </td>
   </tr>
 </table>
@@ -197,6 +231,9 @@ evidenciando una distribución del trabajo de documentación acorde al rol de As
 Leader de cada integrante durante el sprint.
 
 ![GitHub Insights bloomie-report AV2](assets/img/report-commits.png)
+
+**Cuarta Entrega (TB2)**
+
 ---
 
 # Contenido
