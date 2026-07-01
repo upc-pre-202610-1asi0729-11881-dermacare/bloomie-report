@@ -466,7 +466,6 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
 ### Perfil del Integrante
 
 <table>
-<table>
   <tr>
     <td rowspan="4" align="center">
       <img src="assets/img/arturo-contreras.PNG" alt="Foto de Arturo Contreras" width="650"/>
@@ -522,6 +521,42 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
       Soy <b>Martin Alejandro Asmat Alminco</b>, estudiante de quinto ciclo de la carrera de Ingeniería de Software. Cuento con experiencia en lenguajes de programación como Python y C++ para proyectos enfocados en el desarrollo de habilidades computacionales, las cuales apliqué en proyectos académicos enfocados en solucionar un problema a través de procesos de documentación de Ingeniería de software.
       <br/><br/>
         Dentro del equipo, cumplo el rol de un full stack al realizar actividades de documentación y programación a un nivel medio. Considero que soy una persona responsable y adaptable a distintas situaciones con buen time-management.  
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td rowspan="4" align="center">
+      <img src="" alt="Foto de Mathias Acuache" width="650"/>
+    </td>
+    <td><b>Nombre:</b> Mathias Joaquin Acuache Lucas</td>
+  </tr>
+  <tr>
+    <td><b>Código:</b> u</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Descripción:</b><br/>
+      Soy 
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td rowspan="4" align="center">
+      <img src="" alt="Foto de Rommel Hurtado" width="650"/>
+    </td>
+    <td><b>Nombre:</b> Rommel Daniel Hurtado Balcázar</td>
+  </tr>
+  <tr>
+    <td><b>Código:</b> u</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Descripción:</b><br/>
+      Soy 
     </td>
   </tr>
 </table>
