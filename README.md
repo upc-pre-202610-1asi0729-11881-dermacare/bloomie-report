@@ -24,13 +24,15 @@
 <h2>Integrantes</h2>
 
 <p>
+u - Acuache Lucas, Mathias Joaquin<br>
 u202416272 - Asmat Alminco, Martin Alejandro<br>
 u202414802 - Contreras Torres, Arturo Valentino<br>
+u - Hurtado Balcázar, Rommel Daniel<br>
 u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 </p>
 <p><em>Periodo 202610</em></p>
 
-<p><em>Junio, 2026</em></p>
+<p><em>Julio, 2026</em></p>
 
 </div>
 
@@ -48,7 +50,7 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 
   <tr>
     <td><b>Primera Entrega (AV1)</b></td>
-    <td>12/04/2026</td>
+    <td>25/04/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -72,7 +74,7 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
 
   <tr>
     <td><b>Segunda Entrega (TB1)</b></td>
-    <td>4/05/2026</td>
+    <td>14/05/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -91,9 +93,10 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
       Capítulo V: Product Implementation, Validation & Deployment (Sprint 2) <br>
     </td>
   </tr>
+
   <tr>
     <td><b>Tercera Entrega (AV2)</b></td>
-    <td>01/06/2026</td>
+    <td>20/06/2026</td>
     <td>
       Asmat Alminco, Martin Alejandro <br>
       <br>
@@ -113,6 +116,37 @@ u20241b843 - Mechan Montenegro, Luciana Carolina<br>
     Primera versión publicada de Video About-The-Product <br>
     Primera versión publicada de Video About-The-Team <br>
     Capítulo V: Product Implementation, Validation & Deployment (Sprint 3 / Validation Interviews) <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>Cuarta Entrega (TB2)</b></td>
+    <td>05/07/2026</td>
+    <td>
+      Acuache Lucas, Mathias Joaquin <br>
+      <br>
+      <p></p>
+      Asmat Alminco, Martin Alejandro <br>
+      <br>
+      <p></p>
+      Contreras Torres, Arturo Valentino <br>
+      <br>
+      <p></p>
+      Hurtado Balcázar, Rommel Daniel <br>
+      <br>
+      <p></p>
+      Mechan Montenegro, Luciana Carolina <br>
+      <br>
+    </td>
+    <td>
+    Mejora de reporte <br>
+    Mejora de artefactos <br>
+    Nueva versión desplegada de Landing Page <br>
+    Nueva versión desplegada de Frontend Web Applications <br>
+    Nueva versión desplegada de Web Services <br>
+    Nueva versión publicada de Video About-The-Product <br>
+    Nueva versión publicada de Video About-The-Team <br>
+    Capítulo V: Product Implementation, Validation & Deployment (Sprint 4) <br>
     </td>
   </tr>
 </table>
@@ -197,6 +231,9 @@ evidenciando una distribución del trabajo de documentación acorde al rol de As
 Leader de cada integrante durante el sprint.
 
 ![GitHub Insights bloomie-report AV2](assets/img/report-commits.png)
+
+**Cuarta Entrega (TB2)**
+
 ---
 
 # Contenido
@@ -339,6 +376,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Expuso el despliegue del Mock API en Azure y la pasarela de pagos del landing page ante el equipo y evaluadores, empleando demostraciones en vivo como medio audiovisual para validar el funcionamiento real de los componentes. Al presentar el Sprint Planning, dirigió su comunicación hacia la organización del equipo y los objetivos del sprint, escuchando las observaciones del equipo antes de ajustar la planificación.<br><br>
       <u>AV2</u><br>
       Como líder del backend en este entregable, lideró la presentación del avance del desarrollo backend, explicando ante el equipo y los evaluadores las decisiones técnicas detrás de la conexión entre frontend y backend, adaptando el nivel de detalle según quién preguntaba. Presentó los hallazgos de la entrevista de validación y la evaluación según heurísticas, comunicando con claridad qué aspectos del producto debían ajustarse y por qué. Participó en la grabación del Video About the Team, compartiendo de forma cercana la experiencia del equipo durante el sprint. Al exponer el despliegue del backend en Azure, mostró evidencia en vivo del servicio funcionando, dirigiendo la explicación hacia la disponibilidad real del sistema.<br><br>
+      <u>TB2</u><br>
+      <br><br>
       <b>Asmat Alminco, Martin Alejandro</b><br>
       <u>AV1</u><br>
       Presentó las Lean UX Assumptions y el diseño de entrevistas empleando un lenguaje orientado a validar hipótesis con audiencias mixtas (técnicas y de negocio), diferenciando los supuestos del producto de los hallazgos del usuario. En la exposición del Sprint Review, utilizó tablas y evidencias de commits como medios de soporte visual, enfocando la presentación en demostrar el avance funcional alcanzado dentro del sprint.<br><br>
@@ -346,11 +385,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Expuso los wireflows y userflows con descripciones verbales detalladas, adaptando el nivel de abstracción según si la audiencia era técnica o de diseño. Presentó los videos de prototyping como medio audiovisual principal para validar con el equipo que los flujos diseñados representaban correctamente la experiencia esperada por el usuario, recogiendo retroalimentación antes de cerrar las iteraciones de diseño.<br><br>
       <u>AV2</u><br>
       Expuso el avance del desarrollo backend explicando los bounded contexts implementados, adaptando el discurso según si la audiencia tenía perfil técnico o no. Compartió los resultados de la entrevista de validación, explicando cómo los hallazgos motivaron la mejora del userflow presentado. Participó en el Video About the Team, comunicando de forma cercana y honesta la experiencia del equipo a lo largo del proyecto.<br><br>
-      <b>Gallardo Morales, Carla Alejandra</b><br>
-      <u>AV1</u><br>
-      Sustentó los Lean UX Problem Statements y las Lean UX Hypothesis Statements empleando un lenguaje centrado en el problema del usuario, comprensible tanto para evaluadores técnicos como para audiencias sin perfil de ingeniería. Al exponer el Impact Mapping y el Product Backlog, orientó su comunicación hacia los objetivos de priorización del producto, utilizando el tablero visual como apoyo para mostrar la relación entre metas de negocio y funcionalidades.<br><br>
-      <u>TB1</u><br>
-      Lideró la exposición de los mockups y wireframes apoyándose en prototipos navegables como medio audiovisual, lo que permitió que audiencias no técnicas comprendieran la propuesta de interfaz sin necesidad de conocimiento previo de diseño. Utilizó el tablero Trello del Sprint 2 como herramienta visual de respaldo durante la presentación del avance del equipo, enfocando la explicación en los objetivos de entrega del sprint.<br><br>
+      <u>TB2</u><br>
+      <br><br>
       <b>Contreras Torres, Arturo Valentino</b><br>
       <u>AV1</u><br>
       Presentó los diagramas de arquitectura C4 (Context, Container y Components) empleando los niveles de abstracción adecuados para cada audiencia. Al exponer el Big Picture Event Storming y el Design-Level Event Storming, utilizó los tableros de eventos como medios visuales estructurados, orientando cada explicación hacia el objetivo de delimitar los bounded contexts del sistema.<br><br>
@@ -358,11 +394,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Presentó las correcciones del diagrama C4 explicando puntualmente los cambios realizados respecto a la versión anterior, lo que evidenció capacidad de escucha objetiva frente a las observaciones del AV1. Al exponer el despliegue del Static Web App en Azure, empleó capturas del entorno de nube como apoyo visual, dirigiendo la presentación hacia el objetivo de demostrar la disponibilidad real del frontend desplegado.<br><br>
       <u>AV2</u><br>
       Presentó el avance del desarrollo backend junto con las mejoras realizadas en la webapp, explicando cómo se integraron los nuevos cambios al sistema existente. Expuso los resultados de la entrevista de validación, comunicando los hallazgos de forma estructurada. Lideró la grabación del Video About the Product, presentando el producto terminado a una audiencia externa al curso, cuidando que el mensaje fuera comprensible sin necesidad de contexto técnico previo. Mostró en vivo el despliegue de la segunda versión de la webapp en Azure, validando ante el equipo que la nueva versión estuviera disponible y funcionando correctamente.<br><br>
-      <b>Ramirez Ruiz, Nickolas</b><br>
-      <u>AV1</u><br>
-      Presentó el Startup Profile y la descripción de la startup adaptando el discurso a una audiencia general, destacando la propuesta de valor sin recurrir a terminología técnica innecesaria. Al exponer el User Journey Mapping y el Empathy Mapping, empleó los mapas visuales como medios de comunicación que permitieron transmitir la experiencia del usuario de forma empática y comprensible. Orientó la presentación del Sprint Planning 1 y el Sprint Backlog hacia los objetivos de organización del equipo, escuchando observaciones antes de definir los acuerdos de trabajo.<br><br>
-      <u>TB1</u><br>
-      Coordinó la grabación del Web Application Prototyping como medio audiovisual para comunicar el estado funcional de la aplicación a audiencias que no participan directamente en el desarrollo. Revisó y actualizó los userflows, mockups y wireflows antes de la presentación, asegurando que los medios visuales estuvieran alineados con los objetivos del sprint y fueran comprensibles para diferentes rangos de audiencia.<br><br>
+      <u>TB2</u><br>
+      <br><br>
+      <b>Acuache Lucas, Mathias Joaquin</b><br>
+      <u>TB2</u><br>
+      <br><br>
+      <b>Hurtado Balcázar, Rommel Daniel</b><br>
+      <u>TB2</u><br>
+      <br><br>
     </td>
     <td>
       <u>AV1</u><br>
@@ -370,7 +409,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <u>TB1</u><br>
       Como equipo, durante el TB1 se fortaleció la comunicación oral mediante el uso de demostraciones en vivo, prototipos navegables y videos de prototyping como medios audiovisuales que validaron el funcionamiento real del sistema ante diferentes audiencias. Cada integrante orientó sus presentaciones hacia los objetivos del sprint y recogió observaciones del equipo y evaluadores antes de ajustar los entregables, evidenciando escucha activa y capacidad de conciliación en el proceso de revisión.<br><br>
       <u>AV2</u><br>
-      Como equipo, durante el AV2 la comunicación oral se orientó hacia audiencias más diversas: el equipo interno, los evaluadores del curso y, por primera vez, una audiencia externa a través del Video About the Product. Esto exigió adaptar el lenguaje según quién recibía el mensaje, sin perder claridad ni rigor. Las entrevistas de validación y la evaluación según heurísticas se convirtieron en un espacio donde se practicó escuchar primero y comunicar después, asegurando que los hallazgos del usuario fueran el punto de partida de cualquier ajuste presentado. El Video About the Team, además, permitió que cada integrante comunicara su experiencia personal dentro del proyecto de forma honesta y cercana.
+      Como equipo, durante el AV2 la comunicación oral se orientó hacia audiencias más diversas: el equipo interno, los evaluadores del curso y, por primera vez, una audiencia externa a través del Video About the Product. Esto exigió adaptar el lenguaje según quién recibía el mensaje, sin perder claridad ni rigor. Las entrevistas de validación y la evaluación según heurísticas se convirtieron en un espacio donde se practicó escuchar primero y comunicar después, asegurando que los hallazgos del usuario fueran el punto de partida de cualquier ajuste presentado. El Video About the Team, además, permitió que cada integrante comunicara su experiencia personal dentro del proyecto de forma honesta y cercana.<br><br>
+      <u>TB2</u><br>
+      <br><br>
     </td>
   </tr>
   <tr>
@@ -383,6 +424,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Documentó el diagrama de base de datos y el diagrama de clases con sus respectivas descripciones escritas, verificando que las convenciones de nomenclatura y las relaciones entre entidades fueran coherentes con el estándar técnico establecido. Redactó el Sprint Planning del capítulo 5 sintetizando los acuerdos del equipo de forma estructurada, adecuando el lenguaje a lectores que requieren comprender el alcance del sprint sin conocimiento previo del sistema.<br><br>
       <u>AV2</u><br>
       Como líder del backend, documentó el desarrollo de los bounded contexts implementados y la conexión entre frontend y backend, dejando registro técnico claro de las decisiones tomadas para que cualquier integrante del equipo pudiera continuar el trabajo sin perder contexto. Redactó los hallazgos de la entrevista de validación y de la evaluación según heurísticas, sintetizando los resultados en un lenguaje comprensible tanto para el equipo técnico como para quien revisara el informe sin haber participado en las pruebas. Documentó el Sprint 3 y las mejoras de diagramas aplicadas, además del despliegue del backend en Azure, dejando evidencia escrita verificable del avance.<br><br>
+      <u>TB2</u><br>
+      <br><br>
       <b>Asmat Alminco, Martin Alejandro</b><br>
       <u>AV1</u><br>
       Redactó las Lean UX Assumptions y las User Stories siguiendo el formato estándar del informe, utilizando un lenguaje orientado al usuario que permitiera a lectores no técnicos comprender las hipótesis y los criterios de aceptación del producto. Documentó las evidencias de desarrollo para el Sprint Review con un nivel de detalle técnico adecuado para evaluadores del curso, incluyendo referencias a commits y entornos de despliegue.<br><br>
@@ -390,11 +433,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Documentó los wireflows y userflows con descripciones escritas detalladas que acompañaban cada diagrama, permitiendo que lectores sin experiencia en diseño UX comprendieran los flujos de interacción del sistema. Redactó las correcciones de las hipótesis del AV1 de forma clara, sintetizando los ajustes realizados respecto a la versión anterior en un lenguaje comprensible para diferentes audiencias del informe.<br><br>
       <u>AV2</u><br>
       Documentó el avance del desarrollo backend explicando por escrito los bounded contexts trabajados, con un nivel de detalle técnico pensado para evaluadores del curso. Redactó los hallazgos de la entrevista de validación, sintetizando los resultados de forma que motivaran con claridad las mejoras aplicadas al userflow. Dejó registro escrito de los ajustes realizados al userflow tras la validación, explicando qué cambió respecto a la versión anterior.<br><br>
-      <b>Gallardo Morales, Carla Alejandra</b><br>
-      <u>AV1</u><br>
-      Redactó los Lean UX Problem Statements y las Lean UX Hypothesis Statements con un lenguaje centrado en el problema del usuario, verificando antes de la entrega que la redacción fuera coherente con el público objetivo del informe. Documentó el Impact Mapping y el Product Backlog con una estructura que permite a lectores técnicos y de gestión identificar con claridad la priorización de funcionalidades y su relación con las metas del producto.<br><br>
-      <u>TB1</u><br>
-      Redactó las descripciones escritas de los userflows y wireflows, sintetizando de forma precisa la lógica de cada flujo de usuario en un lenguaje comprensible para audiencias de diseño y desarrollo. Documentó el estado del Sprint 2 a través del tablero Trello y su respectivo registro escrito, garantizando que la información reflejara con claridad los objetivos y el progreso del equipo para diferentes lectores del informe.<br><br>
+      <u>TB2</u><br>
+      <br><br>
       <b>Contreras Torres, Arturo Valentino</b><br>
       <u>AV1</u><br>
       Documentó los diagramas de arquitectura C4, el Big Picture Event Storming y el Design-Level Event Storming con descripciones escritas que acompañaban cada vista del sistema, utilizando un lenguaje técnico preciso adecuado para evaluadores de ingeniería de software. Redactó las User Personas y el User Task Matrix con un nivel de síntesis que permite a lectores no técnicos comprender el comportamiento y las necesidades de los usuarios del sistema.<br><br>
@@ -402,11 +442,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       Documentó las correcciones del diagrama C4 detallando por escrito los cambios aplicados respecto a la versión del AV1, facilitando la trazabilidad del diseño arquitectónico para diferentes lectores del informe. Redactó la documentación del despliegue del Static Web App en Azure siguiendo los estándares del informe técnico, sintetizando los pasos y evidencias del proceso en un lenguaje comprensible tanto para perfiles técnicos como para revisores externos.<br><br>
       <u>AV2</u><br>
       Documentó el avance del desarrollo backend y las mejoras aplicadas a la webapp, explicando por escrito cómo se integraron los cambios al sistema existente. Redactó los hallazgos de la entrevista de validación de forma estructurada. Documentó el guion y la justificación del Video About the Product, sintetizando el mensaje del producto en un lenguaje accesible para una audiencia externa al curso. Redactó la evidencia del despliegue de la segunda versión de la webapp en Azure, dejando registro técnico verificable del proceso.<br><br>
-      <b>Ramirez Ruiz, Nickolas</b><br>
-      <u>AV1</u><br>
-      Redactó el Startup Profile y la descripción de la startup con un lenguaje accesible para audiencias generales, sintetizando la identidad y propuesta de valor del proyecto sin recurrir a terminología técnica innecesaria. Documentó el User Journey Mapping y el Empathy Mapping con descripciones escritas que complementaban los diagramas visuales, permitiendo que lectores con diferentes perfiles comprendieran la experiencia y emociones del usuario a lo largo del flujo del producto.<br><br>
-      <u>TB1</u><br>
-      Actualizó y documentó por escrito los userflows, mockups y wireflows revisados, verificando que las descripciones escritas estuvieran alineadas con los cambios del sprint y fueran comprensibles para lectores de diseño y desarrollo. Redactó los Aspect Leaders and Collaborators y el Sprint Backlog con un lenguaje claro y estructurado, sintetizando las responsabilidades del equipo de forma que cualquier lector del informe pudiera identificar los acuerdos de trabajo establecidos.<br><br>
+      <u>TB2</u><br>
+      <br><br>
+      <b>Acuache Lucas, Mathias Joaquin</b><br>
+      <u>TB2</u><br>
+      <br><br>
+      <b>Hurtado Balcázar, Rommel Daniel</b><br>
+      <u>TB2</u><br>
+      <br><br>
     </td>
     <td>
       <u>AV1</u><br>
@@ -414,7 +457,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       <u>TB1</u><br>
       Como equipo, durante el TB1 se consolidó la comunicación escrita mediante la documentación estructurada de los avances del sprint, los diagramas del sistema, los flujos de usuario y las evidencias de despliegue. La redacción de cada sección mantuvo coherencia con los estándares técnicos del informe y fue adaptada al rango de audiencia correspondiente, garantizando que tanto evaluadores técnicos como lectores generales pudieran comprender el progreso y los resultados del proyecto.<br><br>
       <u>AV2</u><br>
-      Como equipo, durante el AV2 la documentación escrita se volvió más exigente porque el proyecto empezó a tener piezas funcionando de extremo a extremo: backend desplegado, frontend conectado, validaciones reales con usuarios. Aprendimos a sintetizar resultados de entrevistas y heurísticas sin perder la voz del usuario en el camino, y a documentar el trabajo técnico de forma que fuera comprensible incluso para quien no participó directamente en el desarrollo. El Video About the Product también nos obligó a pensar por primera vez en una audiencia completamente externa al curso, lo que reforzó la importancia de comunicar con claridad sin asumir conocimiento previo.
+      Como equipo, durante el AV2 la documentación escrita se volvió más exigente porque el proyecto empezó a tener piezas funcionando de extremo a extremo: backend desplegado, frontend conectado, validaciones reales con usuarios. Aprendimos a sintetizar resultados de entrevistas y heurísticas sin perder la voz del usuario en el camino, y a documentar el trabajo técnico de forma que fuera comprensible incluso para quien no participó directamente en el desarrollo. El Video About the Product también nos obligó a pensar por primera vez en una audiencia completamente externa al curso, lo que reforzó la importancia de comunicar con claridad sin asumir conocimiento previo.<br><br>
+      <u>TB2</u><br>
+      <br><br>
     </td>
   </tr>
 </table>
@@ -465,7 +510,6 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
 
 ### Perfil del Integrante
 
-<table>
 <table>
   <tr>
     <td rowspan="4" align="center">
@@ -522,6 +566,42 @@ Convertirnos en la plataforma líder de cuidado de la piel a nivel global, recon
       Soy <b>Martin Alejandro Asmat Alminco</b>, estudiante de quinto ciclo de la carrera de Ingeniería de Software. Cuento con experiencia en lenguajes de programación como Python y C++ para proyectos enfocados en el desarrollo de habilidades computacionales, las cuales apliqué en proyectos académicos enfocados en solucionar un problema a través de procesos de documentación de Ingeniería de software.
       <br/><br/>
         Dentro del equipo, cumplo el rol de un full stack al realizar actividades de documentación y programación a un nivel medio. Considero que soy una persona responsable y adaptable a distintas situaciones con buen time-management.  
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td rowspan="4" align="center">
+      <img src="" alt="Foto de Mathias Acuache" width="650"/>
+    </td>
+    <td><b>Nombre:</b> Mathias Joaquin Acuache Lucas</td>
+  </tr>
+  <tr>
+    <td><b>Código:</b> u</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Descripción:</b><br/>
+      Soy 
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td rowspan="4" align="center">
+      <img src="" alt="Foto de Rommel Hurtado" width="650"/>
+    </td>
+    <td><b>Nombre:</b> Rommel Daniel Hurtado Balcázar</td>
+  </tr>
+  <tr>
+    <td><b>Código:</b> u</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Descripción:</b><br/>
+      Soy 
     </td>
   </tr>
 </table>
